@@ -478,12 +478,12 @@ export default function HomePage() {
       {/* ============================================================
           4.6 SOLUTION PROCESS (5-STAGE ASCENDING ARCHITECTURAL STAIRCASE)
       ============================================================ */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-[#F8FAFC] relative overflow-hidden border-b border-slate-200">
+      <section className="pt-12 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-24 bg-[#F8FAFC] relative overflow-hidden border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Main Heading matching previous sections style */}
-          <ScrollReveal direction="up" className="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16 gap-6">
+          <ScrollReveal direction="up" className="flex flex-col md:flex-row md:items-center justify-between mb-8 lg:mb-10 gap-6">
             <div>
-              <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-3">
+              <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-2">
                 <Home className="w-4 h-4 text-brand-blue" />
                 <span>How We Work</span>
               </div>
@@ -501,112 +501,98 @@ export default function HomePage() {
             </Link>
           </ScrollReveal>
 
-          {/* 5 Stages Ascending Architectural Staircase */}
-          <div className="relative pt-4 pb-2">
-            <StaggerContainer staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-4 items-end">
+          {/* 5 Stages Ascending Architectural Staircase (Matching Image 1) */}
+          <div className="pt-0 pb-2">
+            {/* Desktop True Stepped Staircase with Clean Gaps */}
+            <div className="hidden lg:flex items-start w-full gap-3.5 lg:gap-4">
               {processStages.map((stage, idx) => {
-                // Harmonious Ascending Staircase Heights (30px step-up per level on desktop)
-                const stepHeights = [
-                  "lg:h-[310px]",
-                  "lg:h-[340px]",
-                  "lg:h-[370px]",
-                  "lg:h-[400px]",
-                  "lg:h-[430px]"
+                const stepOffsets = [
+                  "mt-[80px]",
+                  "mt-[60px]",
+                  "mt-[40px]",
+                  "mt-[20px]",
+                  "mt-0"
                 ];
-                const stepHeight = stepHeights[idx] || "lg:h-[430px]";
-
-                const stepElevations = [
-                  "Riser 01 • EL +0.00m",
-                  "Riser 02 • EL +0.75m",
-                  "Riser 03 • EL +1.50m",
-                  "Riser 04 • EL +2.25m",
-                  "Summit 05 • EL +3.00m"
-                ];
-                const stepElevation = stepElevations[idx] || `Step 0${idx + 1}`;
-
-                const stepLevels = [
-                  "Ground Zero",
-                  "Blueprint & BOQ",
-                  "3D Elevation",
-                  "Civil Execution",
-                  "Key Handover"
-                ];
-                const stepLevel = stepLevels[idx] || `Stage 0${idx + 1}`;
-
-                // Deliverable items to fill vertical space naturally
-                const deliverablesToShow = idx < 2 ? 2 : 3;
 
                 return (
-                  <StaggerItem key={stage.number} className="w-full flex flex-col justify-end">
-                    <div
-                      className={`group relative rounded-2xl p-5 transition-all duration-300 flex flex-col justify-between border w-full min-h-[260px] ${stepHeight} bg-white text-navy-950 border-slate-200/90 shadow-[0_4px_16px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-xl hover:border-brand-blue/50`}
-                    >
-                      {/* Top Step Header */}
-                      <div>
-                        <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                          <div className="w-8 h-8 rounded-xl flex items-center justify-center font-mono font-bold text-xs shadow-sm bg-navy-950 text-white group-hover:bg-brand-blue transition-colors">
-                            0{stage.number}
-                          </div>
-                          <div className="text-right">
-                            <span className="text-[10px] font-mono font-bold uppercase tracking-wider block text-brand-blue">
-                              {stepElevation}
-                            </span>
-                            <span className="text-[9px] font-mono block text-slate-400">
-                              {stepLevel}
-                            </span>
-                          </div>
-                        </div>
-
-                        {/* Step Title & Tagline */}
-                        <div className="mt-3 space-y-1">
-                          <h3 className="font-sans font-bold text-base sm:text-lg text-navy-950 group-hover:text-brand-blue transition-colors leading-snug">
-                            {stage.title}
-                          </h3>
-                          <p className="text-xs font-normal leading-relaxed text-slate-600">
-                            {stage.tagline}
-                          </p>
-                        </div>
-
-                        {/* Checkpoint Deliverables List (Fills height naturally without empty void) */}
-                        <div className="mt-3 pt-2.5 border-t border-slate-100 space-y-1.5">
-                          <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 block">
-                            Milestone Checks:
-                          </span>
-                          <ul className="space-y-1">
-                            {stage.keyOutputs.slice(0, deliverablesToShow).map((item, oIdx) => (
-                              <li key={oIdx} className="flex items-start gap-1.5 text-[11px] text-slate-700 leading-snug font-sans">
-                                <span className="text-brand-blue font-bold shrink-0">✓</span>
-                                <span className="line-clamp-1">{item}</span>
-                              </li>
-                            ))}
-                          </ul>
+                  <div
+                    key={stage.number}
+                    className={`flex-1 bg-white rounded-xl border border-slate-200 border-l-[3px] border-l-brand-blue border-t-[3px] border-t-brand-blue p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 min-h-[210px] flex flex-col justify-between ${stepOffsets[idx]}`}
+                  >
+                    <div>
+                      {/* Top Header Row: STEP 0X + 5 Indicator Dots */}
+                      <div className="flex items-center justify-between">
+                        <span className="font-mono text-xs font-bold text-brand-blue uppercase tracking-wider">
+                          STEP 0{idx + 1}
+                        </span>
+                        <div className="flex items-center gap-1">
+                          {[0, 1, 2, 3, 4].map((dotIdx) => (
+                            <span
+                              key={dotIdx}
+                              className={`w-1.5 h-1.5 rounded-full ${
+                                dotIdx <= idx ? 'bg-amber-400' : 'bg-slate-200'
+                              }`}
+                            />
+                          ))}
                         </div>
                       </div>
 
-                      {/* Step Deliverable Pill */}
-                      <div className="pt-3 mt-auto">
-                        <div className="text-[11px] font-medium rounded-lg p-2 flex items-center justify-between border bg-slate-50 border-slate-200/80 text-slate-700 group-hover:bg-blue-50 group-hover:border-blue-200 group-hover:text-brand-blue transition-colors">
-                          <span className="truncate">{stage.keyOutputs[0] || 'Milestone sign-off'}</span>
-                          <ArrowRight className="w-3 h-3 shrink-0 opacity-40 group-hover:opacity-100" />
-                        </div>
+                      {/* Large Amber Step Number */}
+                      <div className="text-4xl sm:text-5xl font-black text-amber-500 tracking-tight my-2 font-mono select-none">
+                        0{idx + 1}
                       </div>
+
+                      {/* Title */}
+                      <h3 className="text-base sm:text-lg font-bold text-navy-950 leading-snug">
+                        {stage.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-xs text-slate-600 leading-relaxed mt-1.5">
+                        {stage.tagline}
+                      </p>
                     </div>
-                  </StaggerItem>
+                  </div>
                 );
               })}
-            </StaggerContainer>
+            </div>
 
-            {/* Architectural Staircase Plinth Datum Baseline (Desktop) */}
-            <div className="hidden lg:flex items-center justify-between pt-4 mt-2 border-t-2 border-slate-300/80 text-[11px] font-mono text-slate-400">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-brand-blue" />
-                <span>PLINTH DATUM: 0.00m (Ground Level)</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <span>ASCENDING PROGRESSION • 5 STAGES</span>
-                <span>→</span>
-                <span className="text-navy-950 font-bold">FINAL SUMMIT: OCCUPANCY READY</span>
-              </div>
+            {/* Mobile / Tablet Stepped Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:hidden">
+              {processStages.map((stage, idx) => (
+                <div
+                  key={stage.number}
+                  className="bg-white rounded-xl border border-slate-200 border-l-[3px] border-l-brand-blue border-t-[3px] border-t-brand-blue p-5 shadow-sm"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-xs font-bold text-brand-blue uppercase tracking-wider">
+                      STEP 0{idx + 1}
+                    </span>
+                    <div className="flex items-center gap-1">
+                      {[0, 1, 2, 3, 4].map((dotIdx) => (
+                        <span
+                          key={dotIdx}
+                          className={`w-1.5 h-1.5 rounded-full ${
+                            dotIdx <= idx ? 'bg-amber-400' : 'bg-slate-200'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="text-4xl font-black text-amber-500 tracking-tight my-2 font-mono select-none">
+                    0{idx + 1}
+                  </div>
+
+                  <h3 className="text-base font-bold text-navy-950 leading-snug">
+                    {stage.title}
+                  </h3>
+
+                  <p className="text-xs text-slate-600 leading-relaxed mt-1.5">
+                    {stage.tagline}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 

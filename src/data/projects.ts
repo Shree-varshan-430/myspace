@@ -26,7 +26,7 @@ export const projectsData: ProjectItem[] = [
     location: "HSR Layout Sector 2, Bengaluru",
     builtUpArea: "4,200 sq.ft (G+2 Duplex)",
     summary: "A contemporary tropical home centered around an internal double-height courtyard that maximizes natural light and cross-ventilation on a 40x60 plot.",
-    heroImage: "/images/company/showroom-1.jpeg",
+    heroImage: "/images/company/real-project-62.jpeg",
     clientBrief: "The client wanted a spacious 4BHK family residence with ample natural greenery, dedicated home-office space, private terraces, and intuitive flow between common areas while maintaining bedroom privacy.",
     mySpaceContribution: [
       "2D Architectural spatial planning & 3D Isometric floor planning",
@@ -43,18 +43,18 @@ export const projectsData: ProjectItem[] = [
     ],
     galleryImages: [
       {
-        url: "/images/company/showroom-1.jpeg",
-        caption: "Main façade showing terracotta screen and cantilevered upper deck",
+        url: "/images/company/real-project-62.jpeg",
+        caption: "Main façade showing cantilevered upper decks and vertical greens",
         type: "photo"
       },
       {
         url: "/images/company/real-project-69.jpeg",
-        caption: "Double-height living space with courtyard integration",
+        caption: "Multi-storey contemporary residential villa",
         type: "photo"
       },
       {
-        url: "/images/company/real-project-54.jpeg",
-        caption: "Minimalist modular kitchen with quartz countertop and hidden pantry",
+        url: "/images/company/interior-design-hero.jpeg",
+        caption: "Master bedroom suite with integrated warm lighting",
         type: "photo"
       },
       {
@@ -117,32 +117,32 @@ export const projectsData: ProjectItem[] = [
     status: "Ongoing",
     location: "Sarjapur Road, Bengaluru",
     builtUpArea: "3,600 sq.ft (G+1 Villa)",
-    summary: "A sustainable brick-and-concrete villa featuring cantilevered roof canopies, solar integration, and courtyard gardens.",
-    heroImage: "/images/company/real-project-83.jpeg",
-    clientBrief: "A low-carbon villa incorporating exposed brick masonry, deep overhangs for Bengaluru's monsoon and summer sun, and open living spaces for a young family.",
+    summary: "A sustainable contemporary villa featuring prominent cantilevered roof canopies, parking porch, and courtyard gardens.",
+    heroImage: "/images/company/turnkey-house-hero.jpeg",
+    clientBrief: "A custom villa incorporating sheltered overhangs for Bengaluru's monsoon and summer sun, open living spaces, and secure compound gates.",
     mySpaceContribution: [
       "Concept sketch to 3D photorealistic elevation modeling",
-      "Precision exposed wire-cut brick masonry and exposed concrete form-finish ceilings",
-      "Structural steel canopy fabrication and thermal insulation detailing"
+      "Turnkey structural civil execution and roof canopy construction",
+      "High-grade block masonry and weather-resistant external wall finishes"
     ],
     keyFeatures: [
-      "Exposed wire-cut clay brickwork with flush pointing",
-      "3-meter cantilevered canopy shading south-facing windows",
-      "Integrated graywater recycling for garden irrigation"
+      "Prominent architectural tile canopy shading ground entry and porch",
+      "Cantilevered upper floor balcony decks",
+      "Integrated rainwater drainage and landscaped courtyard perimeter"
     ],
     galleryImages: [
       {
-        url: "/images/company/real-project-83.jpeg",
-        caption: "3D architectural visual render of South-facing elevation",
+        url: "/images/company/turnkey-house-hero.jpeg",
+        caption: "3D architectural visual render of canopy villa elevation",
         type: "render"
       },
       {
         url: "/images/company/real-project-18.jpeg",
-        caption: "Current site progress: First floor slab shuttering and rebar inspection",
+        caption: "Current site progress: Civil frame and footing reinforcement",
         type: "photo"
       }
     ],
-    materialsUsed: ["Exposed Clay Brick", "Form-finish Concrete", "Weathering Steel", "Teak Accents"],
+    materialsUsed: ["Roof Tile Canopy", "Form-finish Concrete", "Weathering Steel", "Teak Accents"],
     year: "2025"
   },
   {
@@ -153,34 +153,29 @@ export const projectsData: ProjectItem[] = [
     status: "Completed",
     location: "Indiranagar, Bengaluru",
     builtUpArea: "2,800 sq.ft",
-    summary: "Refined minimalist interior transformation featuring warm oak wood veneers, fluted glass partitions, and customized concealed storage.",
-    heroImage: "/images/company/real-project-54.jpeg",
+    summary: "Refined minimalist interior transformation featuring warm wood veneers, fluted paneling, and customized concealed storage.",
+    heroImage: "/images/company/interior-design-hero.jpeg",
     clientBrief: "Transform an empty shell apartment into a warm, clutter-free home with dedicated reading nooks, customized pantry ergonomics, and warm ambient lighting.",
     mySpaceContribution: [
       "Detailed 3D walkthroughs and material finish boards",
       "Custom cabinetry fabrication with IS 710 marine ply and imported natural oak veneers",
       "Architectural false ceiling with magnetic track and low-glare spotlighting",
-      "Concealed electrical rerouting and bespoke marble vanity counters"
+      "Concealed electrical rerouting and bespoke vanity counters"
     ],
     keyFeatures: [
-      "Full-height pocket sliding doors between living and study",
-      "Concealed air-conditioning grills and hidden bar unit",
-      "Custom Italian Statuario marble TV backdrop with integrated warm LED glow"
+      "Full-height custom cabinetry and floating workstation desk",
+      "Integrated architectural warm LED cove wall washers",
+      "Bespoke upholstered headboard with fluted floral accent panels"
     ],
     galleryImages: [
       {
-        url: "/images/company/real-project-54.jpeg",
-        caption: "Main living lounge with fluted wood paneling and marble console",
+        url: "/images/company/interior-design-hero.jpeg",
+        caption: "Primary bedroom suite with custom study and cove illumination",
         type: "photo"
       },
       {
-        url: "/images/company/real-project-61.jpeg",
-        caption: "Primary bedroom suite with upholstered headboard and cove lighting",
-        type: "photo"
-      },
-      {
-        url: "/images/company/real-project-40.jpeg",
-        caption: "Island kitchen with quartz countertop and hidden breakfast bar",
+        url: "/images/company/real-project-50.jpeg",
+        caption: "Executive suite interior with floor-to-ceiling wardrobes",
         type: "photo"
       }
     ],
@@ -195,8 +190,8 @@ export const projectsData: ProjectItem[] = [
     status: "Concept",
     location: "Koramangala 4th Block, Bengaluru",
     builtUpArea: "3,800 sq.ft (G+3)",
-    summary: "A clean geometric 3D façade design proposal utilizing floating concrete planes, timber louvers, and vertical greenery planters.",
-    heroImage: "/images/company/showroom-4.jpeg",
+    summary: "A clean geometric 3D façade design proposal utilizing floating concrete planes, timber louvers, and vertical decorative screens.",
+    heroImage: "/images/company/real-project-54.jpeg",
     clientBrief: "Develop an architectural elevation concept that provides privacy from a busy street while allowing morning sunlight into the primary living spaces.",
     mySpaceContribution: [
       "Day and Night 3D architectural perspective renders",
@@ -204,19 +199,19 @@ export const projectsData: ProjectItem[] = [
       "2D exterior working drawings with cladding grid dimensions"
     ],
     keyFeatures: [
-      "Motorized aluminium privacy louvers with faux timber texture",
-      "Integrated vertical planter boxes with automated drip irrigation channels",
+      "CNC cut geometric privacy jali screen on first and second floors",
+      "Warm faux wood exterior texture and floating grey frame accents",
       "Recessed entryway with warm architectural downlighting"
     ],
     galleryImages: [
       {
-        url: "/images/company/showroom-4.jpeg",
-        caption: "3D Perspective render of street façade with planter boxes",
+        url: "/images/company/real-project-54.jpeg",
+        caption: "3D Perspective render of street façade with jali screen and louvers",
         type: "render"
       },
       {
-        url: "/images/company/showroom-5.jpeg",
-        caption: "Dusk lighting study emphasizing warm architectural wall washers",
+        url: "/images/company/real-project-69.jpeg",
+        caption: "Contemporary vertical elevation perspective",
         type: "render"
       }
     ],

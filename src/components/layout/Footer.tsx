@@ -1,80 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { siteConfig } from '@/data/siteConfig';
-import { Phone, Mail, MapPin, Clock, ArrowRight, ShieldCheck, CheckCircle2, Compass, Eye } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
 
 export default function Footer() {
   return (
     <footer className="bg-navy-950 text-white border-t border-navy-800 relative overflow-hidden">
       {/* Subtle blueprint grid background */}
       <div className="absolute inset-0 blueprint-grid-dark opacity-40 pointer-events-none" />
-
-      {/* Starting of Footer: Redesigned 4-Pillar Architectural Assurance Bar */}
-      <div className="border-b border-navy-800/80 bg-navy-900/40 backdrop-blur-sm relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
-            {/* Pillar 1 */}
-            <div className="flex items-start gap-4 sm:px-4 first:pl-0 pt-4 sm:pt-0 group">
-              <div className="w-10 h-10 rounded-xl bg-brand-blue/15 border border-brand-blue/30 text-sky-400 flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300">
-                <Compass className="w-5 h-5" />
-              </div>
-              <div className="space-y-1">
-                <h4 className="text-white font-sans font-bold text-sm group-hover:text-sky-400 transition-colors">
-                  Start With Clarity
-                </h4>
-                <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                  Know what needs to happen before physical work begins. Fixed line-item BOQ and transparent scope.
-                </p>
-              </div>
-            </div>
-
-            {/* Pillar 2 */}
-            <div className="flex items-start gap-4 sm:px-4 pt-4 sm:pt-0 group">
-              <div className="w-10 h-10 rounded-xl bg-brand-blue/15 border border-brand-blue/30 text-sky-400 flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300">
-                <Eye className="w-5 h-5" />
-              </div>
-              <div className="space-y-1">
-                <h4 className="text-white font-sans font-bold text-sm group-hover:text-sky-400 transition-colors">
-                  See the Idea First
-                </h4>
-                <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                  Photorealistic 3D elevations and 2D floor plans so you approve every detail before construction.
-                </p>
-              </div>
-            </div>
-
-            {/* Pillar 3 */}
-            <div className="flex items-start gap-4 sm:px-4 pt-4 sm:pt-0 group">
-              <div className="w-10 h-10 rounded-xl bg-brand-blue/15 border border-brand-blue/30 text-sky-400 flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300">
-                <CheckCircle2 className="w-5 h-5" />
-              </div>
-              <div className="space-y-1">
-                <h4 className="text-white font-sans font-bold text-sm group-hover:text-sky-400 transition-colors">
-                  Visible Stages
-                </h4>
-                <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                  Weekly digital photo logs, slump test reports, and milestone stage sign-offs at each floor casting.
-                </p>
-              </div>
-            </div>
-
-            {/* Pillar 4 */}
-            <div className="flex items-start gap-4 sm:px-4 last:pr-0 pt-4 sm:pt-0 group">
-              <div className="w-10 h-10 rounded-xl bg-brand-blue/15 border border-brand-blue/30 text-sky-400 flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300">
-                <ShieldCheck className="w-5 h-5" />
-              </div>
-              <div className="space-y-1">
-                <h4 className="text-white font-sans font-bold text-sm group-hover:text-sky-400 transition-colors">
-                  One Accountable Team
-                </h4>
-                <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                  Architectural design, civil execution, interior fit-outs, and certified property valuation under one roof.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16 relative z-10">

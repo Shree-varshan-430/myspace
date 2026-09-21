@@ -97,7 +97,7 @@ export default function AboutPage() {
         </div>
 
         {/* 4 Core Pillars of Governance */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-subtle space-y-8">
+        <div className="space-y-8">
           <div className="max-w-2xl">
             <span className="text-xs font-bold text-brand-gold uppercase tracking-wider block mb-1">
               Construction Quality
@@ -108,7 +108,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-5 rounded-2xl bg-surface-ice border border-slate-200/80 space-y-2.5">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs space-y-2.5">
               <div className="w-8 h-8 rounded-lg bg-navy-950 text-white flex items-center justify-center font-bold text-xs">
                 01
               </div>
@@ -118,7 +118,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-surface-ice border border-slate-200/80 space-y-2.5">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs space-y-2.5">
               <div className="w-8 h-8 rounded-lg bg-navy-950 text-white flex items-center justify-center font-bold text-xs">
                 02
               </div>
@@ -128,7 +128,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-surface-ice border border-slate-200/80 space-y-2.5">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs space-y-2.5">
               <div className="w-8 h-8 rounded-lg bg-navy-950 text-white flex items-center justify-center font-bold text-xs">
                 03
               </div>
@@ -138,7 +138,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-surface-ice border border-slate-200/80 space-y-2.5">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs space-y-2.5">
               <div className="w-8 h-8 rounded-lg bg-navy-950 text-white flex items-center justify-center font-bold text-xs">
                 04
               </div>
