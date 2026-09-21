@@ -20,13 +20,18 @@ import {
   FileSearch,
   Paintbrush,
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  Factory,
+  Ruler,
+  Landmark,
+  TrendingUp,
+  FileText
 } from 'lucide-react';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<'construction' | 'planning' | 'valuation' | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -37,19 +42,41 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
+  // Close mobile menu & dropdown on route change
   useEffect(() => {
     setMobileMenuOpen(false);
-    setServicesDropdownOpen(false);
+    setActiveDropdown(null);
   }, [pathname]);
 
   const isHome = pathname === '/';
+
+  const isConstructionActive = [
+    '/services/house-construction-bangalore',
+    '/services/commercial-construction-bangalore',
+    '/services/industrial-construction-bangalore',
+    '/services/civil-construction-bangalore'
+  ].includes(pathname);
+
+  const isPlanningActive = [
+    '/services/interior-design-bangalore',
+    '/services/2d-design-bangalore',
+    '/services/3d-design-bangalore',
+    '/services/structural-design-bangalore',
+    '/services/elevation-design-bangalore',
+    '/services/3d-floor-plan-design-bangalore'
+  ].includes(pathname);
+
+  const isValuationActive = [
+    '/services/land-valuation-bangalore',
+    '/services/property-valuation-bangalore',
+    '/services/business-valuation-bangalore'
+  ].includes(pathname);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       {/* Top Utility Bar - White Background for Social Links & Contact */}
       <div className="bg-white border-b border-slate-200/80 text-slate-600 text-[11px] sm:text-xs font-sans">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 flex items-center justify-between">
+        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 py-1.5 flex items-center justify-between">
           {/* Left: Contact Phone, Email & Working Hours */}
           <div className="flex items-center gap-3 sm:gap-5">
             <a
@@ -148,308 +175,412 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main Navbar */}
+      {/* Main Navbar - Full Width with Logo Fully to the Left */}
       <div
-        className={`bg-white/80 backdrop-blur-xl backdrop-saturate-150 border-b border-black/[0.06] shadow-[0_1px_3px_rgba(0,0,0,0.03)] transition-all duration-300 ${
-          isScrolled ? 'py-2' : 'py-3'
+        className={`bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.02)] transition-all duration-300 ${
+          isScrolled ? 'py-2' : 'py-2.5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            {/* Brand Logo & Wordmark */}
-            <Link href="/" className="flex items-center gap-3 group focus:outline-none">
+        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div className="flex items-center justify-between gap-4">
+            {/* Brand Logo & Wordmark (Pinned Fully Left) */}
+            <Link href="/" className="flex items-center gap-2.5 group focus:outline-none shrink-0">
               <div className="w-9 h-9 rounded-xl bg-navy-950 flex items-center justify-center text-white font-bold text-lg shadow-sm group-hover:bg-brand-blue transition-colors">
                 <span className="font-bold tracking-tight">M</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-lg tracking-tight text-navy-950 group-hover:text-brand-blue transition-colors">
+                <span className="font-bold text-base sm:text-lg tracking-tight text-navy-950 group-hover:text-brand-blue transition-colors leading-tight">
                   MY SPACE
                 </span>
-                <span className="text-[9px] tracking-widest text-slate-500 uppercase font-medium">
+                <span className="text-[8.5px] sm:text-[9px] tracking-wider text-slate-500 uppercase font-medium">
                   Engineering & Construction
                 </span>
               </div>
             </Link>
 
-          {/* Desktop Navigation Links (Apple-style subtle pills) */}
-          <nav className="hidden lg:flex items-center gap-1 font-sans text-xs font-medium tracking-wide" aria-label="Main Navigation">
-            {/* Services Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setServicesDropdownOpen(true)}
-              onMouseLeave={() => setServicesDropdownOpen(false)}
-            >
-              <button
-                type="button"
-                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full transition-all ${
-                  pathname.startsWith('/services')
-                    ? 'text-navy-950 bg-black/[0.06] font-semibold'
-                    : 'text-slate-600 hover:text-navy-950 hover:bg-black/[0.04]'
+            {/* Desktop Navigation Links */}
+            <nav className="hidden xl:flex items-center gap-0.5 2xl:gap-1 font-sans text-[13px] font-medium" aria-label="Main Navigation">
+              {/* Home */}
+              <Link
+                href="/"
+                className={`whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-all ${
+                  isHome
+                    ? 'text-brand-blue font-semibold bg-brand-blue/[0.08]'
+                    : 'text-slate-600 hover:text-navy-950 hover:bg-slate-100/70'
                 }`}
-                aria-expanded={servicesDropdownOpen}
               >
-                Services
-                <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                    servicesDropdownOpen ? 'rotate-180 text-brand-blue' : 'text-slate-400'
+                Home
+              </Link>
+
+              {/* Construction Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setActiveDropdown('construction')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button
+                  type="button"
+                  className={`whitespace-nowrap inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg transition-all ${
+                    isConstructionActive || activeDropdown === 'construction'
+                      ? 'text-brand-blue font-semibold bg-brand-blue/[0.08]'
+                      : 'text-slate-600 hover:text-navy-950 hover:bg-slate-100/70'
                   }`}
-                />
-              </button>
+                  aria-expanded={activeDropdown === 'construction'}
+                >
+                  <span>Construction</span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                      activeDropdown === 'construction' ? 'rotate-180 text-brand-blue' : 'text-slate-400'
+                    }`}
+                  />
+                </button>
 
-              {/* Services Mega Menu Dropdown Bridge */}
-              {servicesDropdownOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2.5 z-50">
-                  <div className="w-[840px] bg-white border border-slate-200/90 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-6 grid grid-cols-3 gap-6 animate-in fade-in slide-in-from-top-1 duration-150">
-                    {/* Build Category */}
-                    <div>
-                      <div className="flex items-center gap-2 text-brand-blue font-semibold text-xs tracking-wider uppercase mb-3 pb-1.5 border-b border-slate-100">
-                        <Building2 className="w-4 h-4" />
-                        <span>Build</span>
-                      </div>
-                      <ul className="space-y-2">
-                        <li>
-                          <Link
-                            href="/services/house-construction-bangalore"
-                            className="group block p-2 rounded-lg hover:bg-slate-50 transition-colors"
-                          >
-                            <div className="text-navy-950 font-medium text-sm group-hover:text-brand-blue transition-colors flex items-center justify-between">
-                              <span>Residential Construction</span>
-                              <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <p className="text-xs text-slate-500 mt-0.5 leading-snug">
-                              Turnkey custom homes & luxury villas built with engineering supervision.
-                            </p>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/services/commercial-construction-bangalore"
-                            className="group block p-2 rounded-lg hover:bg-slate-50 transition-colors"
-                          >
-                            <div className="text-navy-950 font-medium text-sm group-hover:text-brand-blue transition-colors flex items-center justify-between">
-                              <span>Commercial Construction</span>
-                              <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <p className="text-xs text-slate-500 mt-0.5 leading-snug">
-                              Offices, retail spaces, clinics & commercial interiors.
-                            </p>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/services/civil-construction-bangalore"
-                            className="group block p-2 rounded-lg hover:bg-slate-50 transition-colors"
-                          >
-                            <div className="text-navy-950 font-medium text-sm group-hover:text-brand-blue transition-colors flex items-center justify-between">
-                              <span>Civil & Structural Works</span>
-                              <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <p className="text-xs text-slate-500 mt-0.5 leading-snug">
-                              RCC frame execution, deep foundations & site excavation.
-                            </p>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-
-                    {/* Design Category */}
-                    <div>
-                      <div className="flex items-center gap-2 text-brand-gold font-semibold text-xs tracking-wider uppercase mb-3 pb-1.5 border-b border-slate-100">
-                        <Compass className="w-4 h-4" />
-                        <span>Design & Visualize</span>
-                      </div>
-                      <ul className="space-y-2">
-                        <li>
-                          <Link
-                            href="/services/interior-design-bangalore"
-                            className="group block p-2 rounded-lg hover:bg-slate-50 transition-colors"
-                          >
-                            <div className="text-navy-950 font-medium text-sm group-hover:text-brand-gold transition-colors flex items-center justify-between">
-                              <span>Interior Design & Execution</span>
-                              <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <p className="text-xs text-slate-500 mt-0.5 leading-snug">
-                              Turnkey joinery, modular kitchens, warm lighting & custom storage.
-                            </p>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/services/elevation-design-bangalore"
-                            className="group block p-2 rounded-lg hover:bg-slate-50 transition-colors"
-                          >
-                            <div className="text-navy-950 font-medium text-sm group-hover:text-brand-gold transition-colors flex items-center justify-between">
-                              <span>3D Elevation Design</span>
-                              <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <p className="text-xs text-slate-500 mt-0.5 leading-snug">
-                              Façade renders, textural finishes & curated material palettes.
-                            </p>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/services/3d-floor-plan-design-bangalore"
-                            className="group block p-2 rounded-lg hover:bg-slate-50 transition-colors"
-                          >
-                            <div className="text-navy-950 font-medium text-sm group-hover:text-brand-gold transition-colors flex items-center justify-between">
-                              <span>3D Floor Plans</span>
-                              <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <p className="text-xs text-slate-500 mt-0.5 leading-snug">
-                              Vastu-compliant spatial layouts & furnished room plans.
-                            </p>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-
-                    {/* Assess Category */}
-                    <div className="bg-slate-50/80 rounded-xl p-4 border border-slate-200/80 flex flex-col justify-between">
-                      <div>
-                        <div className="flex items-center gap-2 text-brand-blue font-semibold text-xs tracking-wider uppercase mb-2.5">
-                          <FileSearch className="w-4 h-4" />
-                          <span>Assess & Value</span>
+                {/* Dropdown Menu */}
+                {activeDropdown === 'construction' && (
+                  <div className="absolute top-full left-0 pt-2 z-50">
+                    <div className="w-80 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-2.5 animate-in fade-in slide-in-from-top-1 duration-150 space-y-1">
+                      <Link
+                        href="/services/house-construction-bangalore"
+                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                          <Home className="w-4 h-4" />
                         </div>
-                        <Link
-                          href="/services/property-valuation-bangalore"
-                          className="group block"
-                        >
-                          <div className="text-navy-950 font-semibold text-sm group-hover:text-brand-blue transition-colors flex items-center justify-between">
-                            <span>Property Valuation</span>
-                            <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-brand-blue" />
+                        <div className="flex-1 min-w-0">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
+                            <span>Residential Construction</span>
+                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
-                          <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                            Government-approved valuation reports for bank loans, property transactions, capital gains tax, and asset records.
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                            Turnkey custom homes & luxury villas.
                           </p>
-                        </Link>
-                      </div>
-                      <div className="pt-4 mt-4 border-t border-slate-200/60">
-                        <Link
-                          href="/services"
-                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-blue hover:text-brand-steel active:scale-[0.98] transition-all group"
-                        >
-                          <span>View All Services</span>
-                          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
-                        </Link>
-                      </div>
+                        </div>
+                      </Link>
+
+                      <Link
+                        href="/services/commercial-construction-bangalore"
+                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                          <Building2 className="w-4 h-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
+                            <span>Commercial Construction</span>
+                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                            Offices, retail, clinics & commercial spaces.
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link
+                        href="/services/industrial-construction-bangalore"
+                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                          <Factory className="w-4 h-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
+                            <span>Industrial construction</span>
+                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                            Warehouses, PEB sheds & factories.
+                          </p>
+                        </div>
+                      </Link>
                     </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
+
+              {/* Planning and Design Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setActiveDropdown('planning')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button
+                  type="button"
+                  className={`whitespace-nowrap inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg transition-all ${
+                    isPlanningActive || activeDropdown === 'planning'
+                      ? 'text-brand-blue font-semibold bg-brand-blue/[0.08]'
+                      : 'text-slate-600 hover:text-navy-950 hover:bg-slate-100/70'
+                  }`}
+                  aria-expanded={activeDropdown === 'planning'}
+                >
+                  <span>Planning & Design</span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                      activeDropdown === 'planning' ? 'rotate-180 text-brand-blue' : 'text-slate-400'
+                    }`}
+                  />
+                </button>
+
+                {/* Dropdown Menu */}
+                {activeDropdown === 'planning' && (
+                  <div className="absolute top-full left-0 pt-2 z-50">
+                    <div className="w-80 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-2.5 animate-in fade-in slide-in-from-top-1 duration-150 space-y-1">
+                      <Link
+                        href="/services/interior-design-bangalore"
+                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-amber-50 text-brand-gold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                          <Paintbrush className="w-4 h-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-gold transition-colors flex items-center justify-between">
+                            <span>Interior design</span>
+                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                            Turnkey interiors, modular kitchens & joinery.
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link
+                        href="/services/2d-design-bangalore"
+                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-amber-50 text-brand-gold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                          <FileText className="w-4 h-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-gold transition-colors flex items-center justify-between">
+                            <span>2D design</span>
+                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                            Vastu floor plans, sanction & working drawings.
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link
+                        href="/services/3d-design-bangalore"
+                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-amber-50 text-brand-gold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                          <Sparkles className="w-4 h-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-gold transition-colors flex items-center justify-between">
+                            <span>3D design</span>
+                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                            Façade elevations, 3D views & walkthroughs.
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link
+                        href="/services/structural-design-bangalore"
+                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-amber-50 text-brand-gold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                          <Ruler className="w-4 h-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-gold transition-colors flex items-center justify-between">
+                            <span>Structural design</span>
+                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                            RCC detailing, footings & IS code design.
+                          </p>
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Valuation Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setActiveDropdown('valuation')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button
+                  type="button"
+                  className={`whitespace-nowrap inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg transition-all ${
+                    isValuationActive || activeDropdown === 'valuation'
+                      ? 'text-brand-blue font-semibold bg-brand-blue/[0.08]'
+                      : 'text-slate-600 hover:text-navy-950 hover:bg-slate-100/70'
+                  }`}
+                  aria-expanded={activeDropdown === 'valuation'}
+                >
+                  <span>Valuation</span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                      activeDropdown === 'valuation' ? 'rotate-180 text-brand-blue' : 'text-slate-400'
+                    }`}
+                  />
+                </button>
+
+                {/* Dropdown Menu */}
+                {activeDropdown === 'valuation' && (
+                  <div className="absolute top-full left-0 pt-2 z-50">
+                    <div className="w-80 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-2.5 animate-in fade-in slide-in-from-top-1 duration-150 space-y-1">
+                      <Link
+                        href="/services/land-valuation-bangalore"
+                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                          <MapPin className="w-4 h-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
+                            <span>Land</span>
+                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                            Plot appraisal, guidance value & survey reports.
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link
+                        href="/services/property-valuation-bangalore"
+                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                          <Landmark className="w-4 h-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
+                            <span>Property</span>
+                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                            Bank loans, tax records & fair market value.
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link
+                        href="/services/business-valuation-bangalore"
+                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                          <TrendingUp className="w-4 h-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
+                            <span>Business valuation</span>
+                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                            Commercial assets, plant & enterprise value.
+                          </p>
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Projects */}
+              <Link
+                href="/projects"
+                className={`whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-all ${
+                  pathname.startsWith('/projects')
+                    ? 'text-brand-blue font-semibold bg-brand-blue/[0.08]'
+                    : 'text-slate-600 hover:text-navy-950 hover:bg-slate-100/70'
+                }`}
+              >
+                Projects
+              </Link>
+
+              {/* About */}
+              <Link
+                href="/about"
+                className={`whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-all ${
+                  pathname === '/about'
+                    ? 'text-brand-blue font-semibold bg-brand-blue/[0.08]'
+                    : 'text-slate-600 hover:text-navy-950 hover:bg-slate-100/70'
+                }`}
+              >
+                About
+              </Link>
+
+              {/* Insights */}
+              <Link
+                href="/insights"
+                className={`whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-all ${
+                  pathname.startsWith('/insights')
+                    ? 'text-brand-blue font-semibold bg-brand-blue/[0.08]'
+                    : 'text-slate-600 hover:text-navy-950 hover:bg-slate-100/70'
+                }`}
+              >
+                Insights
+              </Link>
+
+              {/* Packages (Replaces FAQs) */}
+              <Link
+                href="/packages"
+                className={`whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-all ${
+                  pathname === '/packages'
+                    ? 'text-brand-blue font-semibold bg-brand-blue/[0.08]'
+                    : 'text-slate-600 hover:text-navy-950 hover:bg-slate-100/70'
+                }`}
+              >
+                Packages
+              </Link>
+
+              {/* Contact */}
+              <Link
+                href="/contact"
+                className={`whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-all ${
+                  pathname === '/contact'
+                    ? 'text-brand-blue font-semibold bg-brand-blue/[0.08]'
+                    : 'text-slate-600 hover:text-navy-950 hover:bg-slate-100/70'
+                }`}
+              >
+                Contact
+              </Link>
+            </nav>
+
+            {/* Right Action Utilities - Start a Project Button Only */}
+            <div className="hidden lg:flex items-center gap-2 shrink-0">
+              <Link
+                href="/contact?intent=start-project"
+                className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-semibold bg-navy-950 text-white hover:bg-brand-blue shadow-sm active:scale-[0.98] transition-all duration-100 ease-out"
+              >
+                Start a Project
+              </Link>
             </div>
 
-            <Link
-              href="/projects"
-              className={`px-3.5 py-1.5 rounded-full transition-all ${
-                pathname.startsWith('/projects')
-                  ? 'text-navy-950 bg-black/[0.06] font-semibold'
-                  : 'text-slate-600 hover:text-navy-950 hover:bg-black/[0.04]'
-              }`}
-            >
-              Projects
-            </Link>
+            {/* Mobile Menu & Direct Call button */}
+            <div className="flex items-center gap-2 lg:hidden">
+              <a
+                href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                className="p-2 rounded-full bg-slate-100 text-brand-blue hover:bg-slate-200 active:scale-[0.98] transition-all"
+                aria-label="Call My Space directly"
+              >
+                <Phone className="w-4 h-4" />
+              </a>
 
-            <Link
-              href="/process"
-              className={`px-3.5 py-1.5 rounded-full transition-all ${
-                pathname === '/process'
-                  ? 'text-navy-950 bg-black/[0.06] font-semibold'
-                  : 'text-slate-600 hover:text-navy-950 hover:bg-black/[0.04]'
-              }`}
-            >
-              How It Works
-            </Link>
-
-            <Link
-              href="/about"
-              className={`px-3.5 py-1.5 rounded-full transition-all ${
-                pathname === '/about'
-                  ? 'text-navy-950 bg-black/[0.06] font-semibold'
-                  : 'text-slate-600 hover:text-navy-950 hover:bg-black/[0.04]'
-              }`}
-            >
-              About
-            </Link>
-
-            <Link
-              href="/insights"
-              className={`px-3.5 py-1.5 rounded-full transition-all ${
-                pathname.startsWith('/insights')
-                  ? 'text-navy-950 bg-black/[0.06] font-semibold'
-                  : 'text-slate-600 hover:text-navy-950 hover:bg-black/[0.04]'
-              }`}
-            >
-              Insights
-            </Link>
-
-            <Link
-              href="/faqs"
-              className={`px-3.5 py-1.5 rounded-full transition-all ${
-                pathname === '/faqs'
-                  ? 'text-navy-950 bg-black/[0.06] font-semibold'
-                  : 'text-slate-600 hover:text-navy-950 hover:bg-black/[0.04]'
-              }`}
-            >
-              FAQs
-            </Link>
-
-            <Link
-              href="/contact"
-              className={`px-3.5 py-1.5 rounded-full transition-all ${
-                pathname === '/contact'
-                  ? 'text-navy-950 bg-black/[0.06] font-semibold'
-                  : 'text-slate-600 hover:text-navy-950 hover:bg-black/[0.04]'
-              }`}
-            >
-              Contact
-            </Link>
-          </nav>
-
-          {/* Right Action Utilities */}
-          <div className="hidden lg:flex items-center gap-2.5">
-            <a
-              href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
-              className="flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-navy-950 px-3.5 py-1.5 rounded-full hover:bg-black/[0.04] transition-all"
-              title="Call My Space"
-            >
-              <Phone className="w-3.5 h-3.5 text-brand-blue" />
-              <span>{siteConfig.contact.phoneDisplay}</span>
-            </a>
-
-            <Link
-              href="/contact?intent=start-project"
-              className="inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-semibold bg-navy-950 text-white hover:bg-brand-blue shadow-sm active:scale-[0.98] transition-all duration-100 ease-out"
-            >
-              Start a Project
-            </Link>
-          </div>
-
-          {/* Mobile Menu & Direct Call button */}
-          <div className="flex items-center gap-2 lg:hidden">
-            <a
-              href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
-              className="p-2.5 rounded-full bg-black/[0.04] text-brand-blue hover:bg-black/[0.08] active:scale-[0.98] transition-all duration-100 ease-out"
-              aria-label="Call My Space directly"
-            >
-              <Phone className="w-4 h-4" />
-            </a>
-
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-full bg-black/[0.04] text-slate-700 hover:text-navy-950 hover:bg-black/[0.08] active:scale-[0.98] transition-all duration-100 ease-out"
-              aria-label={mobileMenuOpen ? 'Close main navigation menu' : 'Open main navigation menu'}
-              aria-expanded={mobileMenuOpen}
-            >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 rounded-full bg-slate-100 text-slate-700 hover:text-navy-950 hover:bg-slate-200 active:scale-[0.98] transition-all"
+                aria-label={mobileMenuOpen ? 'Close main navigation menu' : 'Open main navigation menu'}
+                aria-expanded={mobileMenuOpen}
+              >
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-      {/* Mobile Drawer Menu (Pure White) */}
+      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-4 pb-8 max-h-[85vh] overflow-y-auto animate-in slide-in-from-top-4 duration-300 shadow-2xl">
           <div className="space-y-4">
@@ -462,93 +593,134 @@ export default function Header() {
               <ArrowRight className="w-4 h-4" />
             </Link>
 
-            {/* Navigation links */}
-            <div className="py-2 border-b border-slate-200">
-              <span className="text-[11px] font-semibold tracking-wider text-slate-500 uppercase block mb-2 px-2">
-                Services
+            {/* Home link */}
+            <div className="pt-2">
+              <Link
+                href="/"
+                className="block px-3 py-2 rounded-lg text-base font-semibold text-slate-800 hover:text-brand-blue hover:bg-slate-50"
+              >
+                Home
+              </Link>
+            </div>
+
+            {/* Construction Category */}
+            <div className="py-2 border-t border-slate-100">
+              <span className="text-[11px] font-bold tracking-wider text-brand-blue uppercase block mb-1.5 px-3">
+                Construction
               </span>
               <div className="space-y-1">
                 <Link
                   href="/services/house-construction-bangalore"
-                  className="block px-3 py-2 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
                 >
-                  Residential House Construction
+                  Residential Construction
                 </Link>
                 <Link
                   href="/services/commercial-construction-bangalore"
-                  className="block px-3 py-2 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
                 >
                   Commercial Construction
                 </Link>
                 <Link
-                  href="/services/civil-construction-bangalore"
-                  className="block px-3 py-2 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                  href="/services/industrial-construction-bangalore"
+                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
                 >
-                  Civil & Structural Works
-                </Link>
-                <Link
-                  href="/services/interior-design-bangalore"
-                  className="block px-3 py-2 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
-                >
-                  Interior Design & Execution
-                </Link>
-                <Link
-                  href="/services/elevation-design-bangalore"
-                  className="block px-3 py-2 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
-                >
-                  3D Elevation Design
-                </Link>
-                <Link
-                  href="/services/3d-floor-plan-design-bangalore"
-                  className="block px-3 py-2 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
-                >
-                  3D Floor Plan Design
-                </Link>
-                <Link
-                  href="/services/property-valuation-bangalore"
-                  className="block px-3 py-2 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
-                >
-                  Property Valuation Enquiries
+                  Industrial construction
                 </Link>
               </div>
             </div>
 
-            <div className="space-y-1 pt-1">
+            {/* Planning and Design Category */}
+            <div className="py-2 border-t border-slate-100">
+              <span className="text-[11px] font-bold tracking-wider text-brand-gold uppercase block mb-1.5 px-3">
+                Planning and Design
+              </span>
+              <div className="space-y-1">
+                <Link
+                  href="/services/interior-design-bangalore"
+                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                >
+                  Interior design
+                </Link>
+                <Link
+                  href="/services/2d-design-bangalore"
+                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                >
+                  2D design
+                </Link>
+                <Link
+                  href="/services/3d-design-bangalore"
+                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                >
+                  3D design
+                </Link>
+                <Link
+                  href="/services/structural-design-bangalore"
+                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                >
+                  Structural design
+                </Link>
+              </div>
+            </div>
+
+            {/* Valuation Category */}
+            <div className="py-2 border-t border-slate-100">
+              <span className="text-[11px] font-bold tracking-wider text-brand-blue uppercase block mb-1.5 px-3">
+                Valuation
+              </span>
+              <div className="space-y-1">
+                <Link
+                  href="/services/land-valuation-bangalore"
+                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                >
+                  Land
+                </Link>
+                <Link
+                  href="/services/property-valuation-bangalore"
+                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                >
+                  Property
+                </Link>
+                <Link
+                  href="/services/business-valuation-bangalore"
+                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                >
+                  Business valuation
+                </Link>
+              </div>
+            </div>
+
+            {/* General Pages */}
+            <div className="space-y-1 pt-2 border-t border-slate-200">
               <Link
                 href="/projects"
-                className="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
               >
-                Selected Projects
-              </Link>
-              <Link
-                href="/process"
-                className="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
-              >
-                How It Works (5-Stage Process)
+                Projects
               </Link>
               <Link
                 href="/about"
-                className="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
               >
-                About My Space
+                About
               </Link>
               <Link
                 href="/insights"
-                className="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
               >
-                Insights & Guides
+                Insights
               </Link>
               <Link
-                href="/faqs"
-                className="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                href="/packages"
+                className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
               >
-                Frequently Asked Questions
+                Packages & Pricing
               </Link>
               <Link
                 href="/contact"
-                className="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
               >
-                Contact & Location
+                Contact
               </Link>
             </div>
 

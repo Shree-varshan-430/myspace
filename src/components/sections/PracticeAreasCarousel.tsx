@@ -135,13 +135,13 @@ export default function PracticeAreasCarousel() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-3">
               <Home className="w-4 h-4 text-brand-blue" />
-              <span>Core Disciplines</span>
+              <span>Turnkey Services</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-950 tracking-tight leading-[1.15]">
-              What would you like to build?
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
+              Construction, Design & Valuation Services in Bangalore
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-              Explore our core construction and design divisions across Bengaluru.
+              Explore turnkey house construction, custom modular interiors, 3D elevation designs, and accredited property valuation in Bengaluru.
             </p>
           </div>
 

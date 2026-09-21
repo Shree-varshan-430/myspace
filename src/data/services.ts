@@ -513,5 +513,309 @@ export const servicesData: ServiceItem[] = [
         answer: "No. The valuation report assesses the physical asset's collateral value. Final loan approval depends on the lender's credit appraisal, applicant income eligibility, and legal title clearance."
       }
     ]
+  },
+  {
+    id: "industrial-construction",
+    slug: "industrial-construction-bangalore",
+    title: "Industrial Construction",
+    category: "Build",
+    h1: "Heavy-duty industrial infrastructure built for operational longevity.",
+    primaryKeyword: "industrial construction company in Bangalore",
+    metaTitle: "Industrial Construction Company in Bangalore | Warehouses & Factories | My Space",
+    metaDescription: "Turnkey industrial construction in Bangalore. Heavy PEB structures, manufacturing plants, logistics warehouses, and industrial civil flooring.",
+    tagline: "Pre-Engineered Buildings, Manufacturing Sheds & Logistics Warehouses",
+    heroImage: "/images/company/real-project-18.jpeg",
+    eyebrow: "INDUSTRIAL CIVIL & PEB INFRASTRUCTURE",
+    primaryCta: "Discuss an Industrial Project",
+    summary: "From heavy manufacturing sheds and Pre-Engineered Steel Buildings (PEB) to logistics hubs and cleanrooms, My Space delivers turnkey industrial construction engineered for heavy floor loads, high equipment vibration, and rapid project delivery.",
+    whoIsThisFor: [
+      "Factory and manufacturing plant owners needing expandable industrial sheds",
+      "Logistics and e-commerce operators planning automated warehouse hubs",
+      "Industrial estate plot owners developing custom rental units in Peenya, Bommasandra, or Hoskote",
+      "Enterprises requiring heavy-duty industrial VDF (Vacuum Dewatered) concrete flooring"
+    ],
+    whatWeHelpWith: [
+      {
+        title: "PEB & Heavy Structural Steel Fabrication",
+        desc: "High-clearance portal frames, crane girders, thermal insulated sandwich panel roofing, and turbo ventilators."
+      },
+      {
+        title: "Heavy Load-Bearing Foundations & VDF Flooring",
+        desc: "Laser-leveled Vacuum Dewatered Flooring (VDF/Tremix) with metallic hardeners capable of supporting high-tonnage forklifts."
+      },
+      {
+        title: "Industrial Utilities & Safety Compliance",
+        desc: "Dedicated transformer yard foundations, fire sprinkler loops, ETP/STP plant civil works, and stormwater retention."
+      }
+    ],
+    whatToPrepare: [
+      "Industrial plot boundaries and KIADB/BMRDA zoning approvals",
+      "Clear height requirement under the hook and crane capacity (e.g. 5T, 10T)",
+      "Floor load bearing requirements (e.g., 5 to 10 MT/sq.m)",
+      "Target industrial machinery installation schedule"
+    ],
+    scopeInclusions: [
+      "Heavy civil excavation, soil compaction, and machine foundation casting",
+      "Factory fabricated structural steel trusses, purlins, and galvanized sheeting",
+      "High-durability industrial Tremix flooring with expansion joints",
+      "Perimeter security walls, security gatehouses, and high-clearance truck loading bays"
+    ],
+    scopeExclusions: [
+      "Industrial manufacturing process machinery and plant assembly",
+      "Pollution control board (KSPCB) statutory operating clearances"
+    ],
+    relatedServiceSlugs: ["commercial-construction-bangalore", "civil-construction-bangalore"],
+    faqs: [
+      {
+        question: "What industrial areas in Bengaluru do you cover?",
+        answer: "We execute industrial projects across Peenya, Bommasandra, Electronic City, Bidadi, Dabaspet, Hoskote, and surrounding industrial corridors in Karnataka."
+      }
+    ]
+  },
+  {
+    id: "2d-design",
+    slug: "2d-design-bangalore",
+    title: "2D Architectural Design",
+    category: "Design",
+    h1: "Precision 2D architectural drawings and municipal sanction plans.",
+    primaryKeyword: "2D architectural design Bangalore",
+    metaTitle: "2D Architectural Design & Floor Plans Bangalore | My Space",
+    metaDescription: "Detailed 2D architectural plans, BBMP/BDA sanction drawings, working fabrication details, and electrical/plumbing conduit layouts.",
+    tagline: "Working Fabrication Drawings, Municipal Sanction Plans & Dimensioned Layouts",
+    heroImage: "/images/company/real-project-01.jpeg",
+    eyebrow: "ARCHITECTURAL SPATIAL PLANNING & WORKING DRAWINGS",
+    primaryCta: "Request 2D Plan Review",
+    summary: "A successful build depends on uncompromising precision in 2D technical working drawings. We craft dimensioned floor plans, door/window schedules, structural grids, and sanction drawings that ensure seamless site execution without ambiguity.",
+    whoIsThisFor: [
+      "Plot owners requiring custom 2D floor plans optimized for light and Vastu",
+      "Builders needing comprehensive working drawing sets for site masonry and carpenters",
+      "Homeowners submitting architectural plans for BBMP or local authority sanction"
+    ],
+    whatWeHelpWith: [
+      {
+        title: "Dimensional Spatial Layouts",
+        desc: "Clear room-by-room dimensions, wall thicknesses, door swing arcs, and stair riser/tread geometry."
+      },
+      {
+        title: "MEP & Electrical Working Conduits",
+        desc: "Precise switchboard positions, plumbing drop shafts, wastewater line slope angles, and AC core-cut locations."
+      }
+    ],
+    whatToPrepare: [
+      "Plot survey drawing and dimensions",
+      "Specific family or commercial spatial requirements"
+    ],
+    scopeInclusions: [
+      "Architectural conceptual floor plans",
+      "Detailed working drawings and sectional elevations",
+      "Door and window schedules with hardware specifications"
+    ],
+    scopeExclusions: [
+      "Government plan sanction fee deposits"
+    ],
+    relatedServiceSlugs: ["3d-floor-plan-design-bangalore", "elevation-design-bangalore", "house-construction-bangalore"],
+    faqs: [
+      {
+        question: "Do your 2D plans conform to Bengaluru building bylaws?",
+        answer: "Yes, all our plans strictly consider BBMP/BDA setback rules, Floor Area Ratio (FAR), road width criteria, and light/ventilation requirements."
+      }
+    ]
+  },
+  {
+    id: "3d-design",
+    slug: "3d-design-bangalore",
+    title: "3D Design & Visualization",
+    category: "Design",
+    h1: "Photorealistic 3D architectural models, elevations, and walkthroughs.",
+    primaryKeyword: "3D design services Bangalore",
+    metaTitle: "3D Design & Façade Visualization Bangalore | My Space",
+    metaDescription: "High-definition 3D elevations, spatial visualizations, and realistic exterior/interior 3D modeling for residential and commercial spaces.",
+    tagline: "Photorealistic Textures, Lighting Studies & Virtual Walkthroughs",
+    heroImage: "/images/company/front-elevation-hero.jpeg",
+    eyebrow: "3D ARCHITECTURAL VISUALIZATION & ELEVATIONS",
+    primaryCta: "Get 3D Design Quote",
+    summary: "Experience every architectural nuance before construction starts. Our 3D design services transform blueprints into vivid exterior façades, furnished isometric spatial layouts, and daylight/nighttime illumination models.",
+    whoIsThisFor: [
+      "Homeowners looking to approve exterior finishes, textures, and lighting before building",
+      "Architects and developers seeking photorealistic marketing renders for clients",
+      "Commercial entities seeking distinctive street-facing brand identity"
+    ],
+    whatWeHelpWith: [
+      {
+        title: "3D Exterior Façade Design",
+        desc: "Terracotta louvers, cantilevered balconies, micro-cement textures, and architectural up-down wall lighting."
+      },
+      {
+        title: "Furnished 3D Spatial Models",
+        desc: "Isometric top-down views showing furniture proportions and circulation paths."
+      }
+    ],
+    whatToPrepare: [
+      "2D floor layout with dimensions",
+      "Preferred architectural style references"
+    ],
+    scopeInclusions: [
+      "High-resolution 3D perspective renders (Day and Dusk views)",
+      "Material callout sheets for contractor site execution"
+    ],
+    scopeExclusions: [
+      "Physical structural modifications without civil approval"
+    ],
+    relatedServiceSlugs: ["elevation-design-bangalore", "interior-design-bangalore", "2d-design-bangalore"],
+    faqs: [
+      {
+        question: "How long does a 3D elevation design take?",
+        answer: "Initial 3D design concepts are presented within 3 to 5 working days following 2D layout confirmation."
+      }
+    ]
+  },
+  {
+    id: "structural-design",
+    slug: "structural-design-bangalore",
+    title: "Structural Design",
+    category: "Design",
+    h1: "Certified structural engineering and RCC framework design.",
+    primaryKeyword: "structural engineers in Bangalore",
+    metaTitle: "Structural Design & Engineering Services Bangalore | My Space",
+    metaDescription: "Certified structural engineering, RCC detailing, bar bending schedules, foundation design, and seismic analysis in Bangalore conforming to IS codes.",
+    tagline: "IS Code Compliance, Foundation Optimization & Structural Stability",
+    heroImage: "/images/company/real-project-18.jpeg",
+    eyebrow: "CERTIFIED STRUCTURAL ENGINEERING & RCC DESIGN",
+    primaryCta: "Consult Structural Engineers",
+    summary: "Every safe building starts with rigorous structural engineering. We perform soil-bearing analysis, seismic load computations (IS 1893), frame design (IS 456), and bar bending schedules (BBS) to deliver strong, cost-effective structural drawings.",
+    whoIsThisFor: [
+      "Homeowners seeking certified structural drawings for new house construction",
+      "Developers adding extra floors requiring structural stability verification",
+      "Builders needing optimized steel reinforcement detailing to prevent over-design"
+    ],
+    whatWeHelpWith: [
+      {
+        title: "Footing & Raft Foundation Calculations",
+        desc: "Soil-matched foundation sizing to prevent differential settlement in challenging Bangalore clay soils."
+      },
+      {
+        title: "RCC Frame & Steel Detailing",
+        desc: "Column, beam, and slab reinforcement drawings with bar-bending schedules for site contractors."
+      }
+    ],
+    whatToPrepare: [
+      "Soil investigation report",
+      "Architectural floor plans and floor-to-floor heights"
+    ],
+    scopeInclusions: [
+      "Structural calculation report and framing layouts",
+      "Column center-line and footing detail drawings",
+      "Structural engineer certification"
+    ],
+    scopeExclusions: [
+      "Geotechnical soil borehole drilling equipment"
+    ],
+    relatedServiceSlugs: ["civil-construction-bangalore", "house-construction-bangalore"],
+    faqs: [
+      {
+        question: "Are your structural designs compliant with Indian Standards?",
+        answer: "Yes, all designs strictly conform to IS 456:2000 (Plain and Reinforced Concrete), IS 1893 (Earthquake Resistant Design), and IS 875 (Design Loads)."
+      }
+    ]
+  },
+  {
+    id: "land-valuation",
+    slug: "land-valuation-bangalore",
+    title: "Land Valuation",
+    category: "Assess",
+    h1: "Accurate land and plot valuation for bank loans, transactions, and tax.",
+    primaryKeyword: "land valuation in Bangalore",
+    metaTitle: "Land Valuation Services in Bangalore | Plot Appraisal | My Space",
+    metaDescription: "Certified land and plot valuation in Bangalore. Guidance value benchmarking, physical boundary survey, and bank-compliant land appraisal reports.",
+    tagline: "Guideline Rate Benchmark, Real-Market Analysis & Boundary Inspection",
+    heroImage: "/images/company/real-project-75.jpeg",
+    eyebrow: "CERTIFIED LAND & PLOT VALUATION",
+    primaryCta: "Request Land Valuation",
+    summary: "Accurate land valuation requires deep understanding of local revenue records, sub-registrar guideline rates, road width multiplier factors, and active market transactions across Bengaluru. My Space delivers certified land appraisal reports within 3–5 days.",
+    whoIsThisFor: [
+      "Plot buyers and sellers needing an independent fair market value appraisal",
+      "Landowners applying for bank mortgage loans against vacant sites",
+      "Property owners assessing Capital Gains Tax (Section 54/54EC) on plot sales",
+      "Families dividing ancestral land parcels or completing legal probate records"
+    ],
+    whatWeHelpWith: [
+      {
+        title: "Physical Boundary & Approach Road Audit",
+        desc: "On-site verification of survey boundaries, approach road width, commercial frontage, and infrastructure."
+      },
+      {
+        title: "Guideline vs Fair Market Value Analysis",
+        desc: "Benchmarking government guidance rates against actual micro-market transaction values."
+      }
+    ],
+    whatToPrepare: [
+      "Land title deed and mother deed chain",
+      "Latest e-Khata extract and Tax paid receipt",
+      "Survey sketch / Village map extract"
+    ],
+    scopeInclusions: [
+      "Physical land inspection and dimensional survey",
+      "Valuation report stamped by Government-Registered Valuer"
+    ],
+    scopeExclusions: [
+      "Litigation dispute legal arguments"
+    ],
+    relatedServiceSlugs: ["property-valuation-bangalore", "business-valuation-bangalore"],
+    faqs: [
+      {
+        question: "How is vacant land valued for bank loans?",
+        answer: "Banks evaluate the lesser of the guideline value and the assessed fair market value, factoring in road accessibility, legal title clarity, and locality infrastructure."
+      }
+    ]
+  },
+  {
+    id: "business-valuation",
+    slug: "business-valuation-bangalore",
+    title: "Business Valuation",
+    category: "Assess",
+    h1: "Certified business, commercial asset, and enterprise valuation.",
+    primaryKeyword: "business valuation in Bangalore",
+    metaTitle: "Business Valuation Services Bangalore | Commercial Enterprise Valuation | My Space",
+    metaDescription: "Comprehensive business asset valuation, commercial plant/machinery appraisal, and enterprise net-worth certification in Bangalore by registered valuers.",
+    tagline: "Enterprise Worth, Plant & Machinery Appraisal & Financial Due Diligence",
+    heroImage: "/images/company/showroom-2.jpeg",
+    eyebrow: "BUSINESS & COMMERCIAL ASSET VALUATION",
+    primaryCta: "Request Business Valuation",
+    summary: "Whether evaluating an enterprise for merger/acquisition, partnership dissolution, bank credit facilities, or financial audit compliance, My Space provides rigorous asset-based and discounted cash flow business valuation dossiers recognized by financial institutions.",
+    whoIsThisFor: [
+      "Companies seeking credit sanction against commercial business assets",
+      "Business owners preparing for partnership buyouts or equity restructuring",
+      "Enterprises requiring plant and machinery asset registers with CPWD depreciation",
+      "Firms conducting balance sheet compliance audits and statutory reporting"
+    ],
+    whatWeHelpWith: [
+      {
+        title: "Tangible Fixed Asset Valuation",
+        desc: "Physical inspection and depreciated replacement value of commercial buildings, plant setups, and fixtures."
+      },
+      {
+        title: "Statutory Valuation Dossier",
+        desc: "Certified valuation documentation stamped by IBBI / Wealth Tax Act registered valuers."
+      }
+    ],
+    whatToPrepare: [
+      "Financial statements and audited balance sheets for past 3 years",
+      "Fixed asset register and physical plant equipment list",
+      "Specific statutory purpose of the valuation"
+    ],
+    scopeInclusions: [
+      "Site physical inspection of commercial/industrial assets",
+      "Comprehensive valuation report compliant with IBBI standards"
+    ],
+    scopeExclusions: [
+      "Tax filing and audit certifications (undertaken by Chartered Accountants)"
+    ],
+    relatedServiceSlugs: ["property-valuation-bangalore", "land-valuation-bangalore", "commercial-construction-bangalore"],
+    faqs: [
+      {
+        question: "Are your valuation reports accepted by nationalized banks?",
+        answer: "Yes, our reports are prepared by registered valuers under the Wealth Tax Act and IBBI, accepted by all major scheduled commercial banks and NBFCs."
+      }
+    ]
   }
 ];

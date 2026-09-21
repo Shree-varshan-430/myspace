@@ -118,13 +118,13 @@ export default function ValuationProcessModule() {
         <ScrollReveal direction="up" className="max-w-3xl mb-10">
           <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-3">
             <Home className="w-4 h-4 text-brand-blue" />
-            <span>Property Valuation & Advisory</span>
+            <span>Approved Property Valuers</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-950 tracking-tight leading-[1.15]">
-            Official Property Valuation in 5 Simple Steps
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
+            Government Approved Property Valuation in Bangalore
           </h2>
           <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-            Government-registered valuation reports with on-site measurements and guideline rate calculations delivered within 3–5 days.
+            Certified property and commercial asset valuation reports prepared by registered valuers for bank loans, capital gains tax, and visas.
           </p>
 
           <div className="flex flex-wrap items-center gap-2.5 pt-4">

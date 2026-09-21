@@ -56,15 +56,15 @@ export default function HomePage() {
           <ScrollReveal direction="up" delay={0.1} duration={0.8} className="max-w-3xl">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-xs font-mono font-medium tracking-wider uppercase">
-                <span>Turnkey Construction & Valuation • Bengaluru</span>
+                <span>Construction, Design & Valuation • Bengaluru</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
-                Crafting spaces designed for generations.
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
+                House Construction, Design & Valuation in Bangalore
               </h1>
 
-              <p className="text-base sm:text-lg text-slate-200 font-sans leading-relaxed max-w-2xl">
-                From foundation excavation and structural engineering to bespoke interiors, we build custom homes and commercial spaces with complete transparency.
+              <p className="text-sm sm:text-base text-slate-200 font-sans leading-relaxed max-w-2xl">
+                Turnkey residential construction, 3D architectural elevations, and government-approved valuation reports across Bengaluru with fixed per-sq.ft pricing.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -72,14 +72,14 @@ export default function HomePage() {
                   href="#about-section"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-blue text-white text-sm font-semibold hover:bg-blue-600 active:scale-[0.98] transition-transform duration-100 ease-out shadow-lg"
                 >
-                  <span>Explore Our Work</span>
+                  <span>Explore Construction Services</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
-                  href="#enquiry"
+                  href="/packages"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/15 hover:bg-white/25 text-white text-sm font-semibold backdrop-blur-md border border-white/30 active:scale-[0.98] transition-transform duration-100 ease-out"
                 >
-                  <span>Get Project Estimate</span>
+                  <span>View Construction Packages</span>
                 </a>
               </div>
             </div>
@@ -139,11 +139,11 @@ export default function HomePage() {
             <ScrollReveal direction="right" duration={0.7} className="lg:col-span-6 space-y-6">
               <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider">
                 <Home className="w-4 h-4 text-brand-blue" />
-                <span>Who We Are</span>
+                <span>House Construction in Bangalore</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-950 tracking-tight leading-[1.15]">
-                Design, engineering, and construction under one roof.
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
+                Turnkey Construction & Civil Engineering in Bangalore
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
@@ -266,15 +266,15 @@ export default function HomePage() {
             <ScrollReveal direction="right" duration={0.7} className="lg:col-span-7 space-y-4">
               <div className="flex items-center gap-2 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-2">
                 <Home className="w-4 h-4 text-sky-400" />
-                <span>Free Initial Consultation</span>
+                <span>Construction Consultation</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.15]">
-                Have a plot or floor plan you want to discuss?
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-snug">
+                Free Construction Consultation & BOQ Estimate
               </h2>
 
               <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed max-w-2xl">
-                Schedule a consultation at our studio or on your site. We review your plot dimensions, check BBMP setback feasibility, and prepare an itemized Bill of Quantities (BOQ) with specified material grades before you commit to construction.
+                Schedule a consultation at our studio or on your plot. We review your setback feasibility and share an itemized Bill of Quantities (BOQ) before you build.
               </p>
             </ScrollReveal>
 
@@ -339,13 +339,13 @@ export default function HomePage() {
           <ScrollReveal direction="up" className="max-w-3xl mb-12">
             <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-3">
               <Home className="w-4 h-4 text-brand-blue" />
-              <span>Why Homeowners Trust Us</span>
+              <span>Bangalore Construction Pricing</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-950 tracking-tight leading-[1.15]">
-              Clear pricing, honest advice, and zero surprise costs.
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
+              Transparent House Construction Cost & Fixed BOQ
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-              From initial soil testing to final key handover, we replace traditional construction guesswork with fixed itemized pricing, transparent contracts, and dependable engineering.
+              From initial soil testing to final key handover, we provide fixed itemized pricing, transparent contracts, and dependable engineering.
             </p>
           </ScrollReveal>
 
@@ -485,15 +485,14 @@ export default function HomePage() {
             <div>
               <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-2">
                 <Home className="w-4 h-4 text-brand-blue" />
-                <span>How We Work</span>
+                <span>Construction Methodology</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-950 tracking-tight leading-[1.15] max-w-4xl">
-                Step-by-step clarity from <br className="hidden sm:inline" />
-                blueprint to handover.
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug max-w-4xl">
+                5-Stage House Construction Process
               </h2>
             </div>
             <Link
-              href="/process"
+              href="/about#how-it-works"
               className="inline-flex items-center gap-2 text-xs font-bold text-navy-950 hover:text-brand-blue uppercase tracking-wider transition-colors shrink-0 group"
             >
               <span>Explore Complete Process</span>
@@ -620,11 +619,10 @@ export default function HomePage() {
             <div>
               <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-3">
                 <Home className="w-4 h-4 text-brand-blue" />
-                <span>Our Portfolio</span>
+                <span>Completed Projects</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-950 tracking-tight leading-[1.15]">
-                Explore homes and spaces <br className="hidden sm:inline" />
-                we’ve built in Bengaluru.
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
+                Completed Homes & Commercial Projects in Bangalore
               </h2>
             </div>
             <Link
@@ -746,9 +744,8 @@ export default function HomePage() {
                 <Home className="w-4 h-4 text-sky-400" />
                 <span>Construction Quality & Safety</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.15]">
-                How we guarantee structural <br className="hidden sm:inline" />
-                strength for your building.
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-snug">
+                Guaranteed Structural Strength & Quality Control
               </h2>
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
                 We test every batch of concrete, verify steel grades on-site, and follow strict national engineering standards so your home stays safe and solid forever.
@@ -820,9 +817,8 @@ export default function HomePage() {
                 <span>Questions & Answers</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-950 tracking-tight leading-[1.15]">
-                Got questions? <br />
-                We’ve got clear answers.
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
+                Frequently Asked Questions
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
@@ -865,8 +861,8 @@ export default function HomePage() {
                 <Home className="w-4 h-4 text-brand-blue" />
                 <span>Let's Talk</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-950 tracking-tight leading-[1.15]">
-                You don't need blueprints ready to talk to us.
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
+                Start Your Project Conversation With Us
               </h2>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                 Tell us about your plot, ideas, or budget. Our team is here to guide you with honest advice, clear options, and zero pressure.

@@ -50,10 +50,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Build & Civil Services */}
+          {/* Col 2: Construction Services */}
           <div>
             <h3 className="text-xs font-semibold text-brand-blue uppercase tracking-wider mb-4">
-              Build & Civil
+              Construction
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
@@ -61,7 +61,7 @@ export default function Footer() {
                   href="/services/house-construction-bangalore"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  Residential House Construction
+                  Residential Construction
                 </Link>
               </li>
               <li>
@@ -74,10 +74,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services/civil-construction-bangalore"
+                  href="/services/industrial-construction-bangalore"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  Civil & Structural Works
+                  Industrial Construction
                 </Link>
               </li>
               <li>
@@ -85,21 +85,29 @@ export default function Footer() {
                   href="/projects"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  Selected Projects Portfolio
+                  Selected Projects
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/process"
+                  href="/packages"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  Our 5-Stage Process
+                  Packages & Pricing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
+                  About & Process
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Design, 3D & Valuation */}
+          {/* Col 3: Planning, Design & Valuation */}
           <div>
             <h3 className="text-xs font-semibold text-brand-gold uppercase tracking-wider mb-4">
               Design & Valuation
@@ -110,23 +118,39 @@ export default function Footer() {
                   href="/services/interior-design-bangalore"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  Interior Design & Execution
+                  Interior Design
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/elevation-design-bangalore"
+                  href="/services/2d-design-bangalore"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  3D Elevation Façade Design
+                  2D Architectural Design
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/3d-floor-plan-design-bangalore"
+                  href="/services/3d-design-bangalore"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  3D Floor Plan Planning
+                  3D Façade & Design
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/structural-design-bangalore"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
+                  Structural Design
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/land-valuation-bangalore"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
+                  Land Valuation
                 </Link>
               </li>
               <li>
@@ -134,15 +158,15 @@ export default function Footer() {
                   href="/services/property-valuation-bangalore"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  Property Valuation Enquiries
+                  Property Valuation
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/insights"
+                  href="/services/business-valuation-bangalore"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  Cost & Design Guides
+                  Business Valuation
                 </Link>
               </li>
             </ul>

@@ -36,13 +36,13 @@ export default function ServicesPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-blue/20 border border-brand-blue/40 text-brand-blue text-xs font-bold uppercase tracking-widest mb-4">
               <Home className="w-3.5 h-3.5" />
-              <span>What We Do</span>
+              <span>Bangalore Engineering Services</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
-              All your construction, design & valuation needs in one place.
+            <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
+              Construction, Design & Valuation Services in Bangalore
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 mt-4 leading-relaxed">
-              Whether you want to build a new home, design modern interiors, get 3D elevations, or obtain an accredited property valuation — our specialized teams have you covered.
+            <p className="text-sm sm:text-base text-slate-300 mt-3 leading-relaxed">
+              From turnkey home building and 3D elevations to government-approved valuation reports — our engineering team delivers end-to-end excellence.
             </p>
           </div>
         </div>
@@ -57,11 +57,11 @@ export default function ServicesPage() {
               <Building2 className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-navy-950">
-                1. Home & Commercial Construction
+              <h2 className="text-xl sm:text-2xl font-bold text-navy-950">
+                1. Residential, Commercial & Civil Construction
               </h2>
               <p className="text-xs sm:text-sm text-slate-600">
-                Turnkey house construction, commercial spaces, and solid civil foundation engineering.
+                Turnkey house construction, commercial buildings, industrial sheds, and civil engineering.
               </p>
             </div>
           </div>
@@ -114,11 +114,11 @@ export default function ServicesPage() {
               <Compass className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-navy-950">
-                2. 3D Elevation & Interior Fit-Outs
+              <h2 className="text-xl sm:text-2xl font-bold text-navy-950">
+                2. Interior Design, 2D Floor Plans & 3D Elevations
               </h2>
               <p className="text-xs sm:text-sm text-slate-600">
-                Photorealistic 3D exterior views, architectural floor plans, and custom modular woodwork.
+                Photorealistic 3D architectural rendering, Vastu-compliant floor plans, and bespoke modular interiors.
               </p>
             </div>
           </div>
@@ -171,11 +171,11 @@ export default function ServicesPage() {
               <FileSearch className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-navy-950">
-                3. Property Valuation & Legal Scrutiny
+              <h2 className="text-xl sm:text-2xl font-bold text-navy-950">
+                3. Government Approved Property Valuation
               </h2>
               <p className="text-xs sm:text-sm text-slate-600">
-                Accredited property valuation reports for bank loans, visa applications, and title verification.
+                Certified valuation reports accepted across SBI, HDFC, ICICI, nationalized banks, visa consulates, and tax authorities.
               </p>
             </div>
           </div>
@@ -224,8 +224,8 @@ export default function ServicesPage() {
         {/* Global Enquiry Section */}
         <section className="pt-12 border-t border-slate-200">
           <EnquiryForm
-            title="Not Sure Which Service Fits Your Project?"
-            subtitle="Tell us what you are planning, and our team will recommend the right engineering and design approach."
+            title="Free Construction, Design or Valuation Consultation"
+            subtitle="Tell us about your plot size, building requirements, or valuation purpose, and our engineers will share an estimate."
           />
         </section>
       </div>

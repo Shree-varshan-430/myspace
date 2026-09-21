@@ -32,13 +32,13 @@ export default function InsightsPage() {
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-blue/20 border border-brand-blue/40 text-brand-blue text-xs font-bold uppercase tracking-widest">
               <BookOpen className="w-3.5 h-3.5" />
-              <span>Guides & Advice</span>
+              <span>BANGALORE PROPERTY GUIDES</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
-              Helpful guides to plan your property with confidence.
+            <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
+              Construction Cost Guides & Valuation Insights in Bangalore
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 mt-2 leading-relaxed">
-              Learn how construction costs work in Bengaluru, how to plan your 3D layout, and what documents you need for property valuation.
+            <p className="text-sm sm:text-base text-slate-300 mt-2 leading-relaxed">
+              Practical engineering guides for Bengaluru property owners: construction costs per sq.ft, 3D elevation planning, and property valuation checklists.
             </p>
           </div>
         </div>
@@ -104,8 +104,8 @@ export default function InsightsPage() {
         {/* Bottom Lead CTA */}
         <div className="mt-20 pt-12 border-t border-slate-200">
           <EnquiryForm
-            title="Have Questions About Your Plot or Budget?"
-            subtitle="We are here to help you evaluate your setback limits, layout options, and estimated costs in Bengaluru."
+            title="Free Construction Cost Estimation & Layout Advice"
+            subtitle="We are here to help you evaluate your setback limits, layout options, and estimated costs in Bengaluru with an itemized preliminary BOQ."
           />
         </div>
       </section>

@@ -41,15 +41,15 @@ export default function ContactPage() {
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-blue/20 border border-brand-blue/40 text-brand-blue text-xs font-bold uppercase tracking-widest">
               <Home className="w-3.5 h-3.5" />
-              <span>Get In Touch</span>
+              <span>BANGALORE CONSULTATIONS</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
-              Let’s talk about what you want to build.
+            <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
+              Contact Construction & Valuation Experts in Bangalore
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-300 font-sans leading-relaxed">
-              Have a plot, an idea, or questions about construction costs? Give us a call or send a quick message — no pressure, just helpful advice.
+            <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed">
+              Planning house construction, turnkey renovations, or need an accredited property valuation report? Contact our senior engineering team.
             </p>
           </div>
         </div>
@@ -61,8 +61,8 @@ export default function ContactPage() {
           {/* Left Column: Direct Connect & Office Context */}
           <div className="lg:col-span-5 space-y-8">
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-subtle space-y-6">
-              <h2 className="text-2xl font-bold text-navy-950">
-                Direct Contact Channels
+              <h2 className="text-xl sm:text-2xl font-bold text-navy-950">
+                Direct Consultation Channels
               </h2>
 
               <div className="space-y-4">
@@ -150,8 +150,8 @@ export default function ContactPage() {
           {/* Right Column: Progressive Lead Enquiry Form */}
           <div className="lg:col-span-7">
             <EnquiryForm
-              title="Tell Us About Your Project"
-              subtitle="Fill out the quick form below. We will review your details and reach out with honest advice and options."
+              title="Free Construction & Valuation Consultation"
+              subtitle="Fill out the quick form below. Our senior civil engineers will review your plot dimensions or requirements and provide an itemized BOQ."
             />
           </div>
         </div>
