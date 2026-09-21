@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), 'SF Mono', Consolas, Monaco, monospace;
+  --color-navy: #0B1F3A;
+  --color-blue: #155EEF;
+  --color-steel: #2F6FED;
+  --color-sky-mist: #EAF2FF;
+  --color-ice-white: #F7FAFF;
+  --color-gold: #B77A32;
+  --color-slate: #334155;
+  --color-concrete: #D8DDE5;
+  --color-brick: #A85D3A;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-inter), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #334155;
+    background-color: #F7FAFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading, .font-migra, .font-serif {
+    font-family: var(--font-inter), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-script, .font-baskerville {
+    font-family: var(--font-inter), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+  }
+
+  ::selection {
+    background-color: #155EEF;
+    color: #ffffff;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid #155EEF;
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .blueprint-grid {
+    background-size: 32px 32px;
+    background-image: linear-gradient(to right, rgba(11, 31, 58, 0.04) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(11, 31, 58, 0.04) 1px, transparent 1px);
+  }
+
+  .blueprint-grid-dark {
+    background-size: 32px 32px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+
+  .blueprint-lines {
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(21, 94, 239, 0.08) 39px, rgba(21, 94, 239, 0.08) 40px);
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Reduced motion media query */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
