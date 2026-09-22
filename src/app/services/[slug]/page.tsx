@@ -191,8 +191,8 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Text Col Left */}
             <div className="lg:col-span-6 space-y-6">
-              <div className="flex items-center gap-3">
-                <span className="text-3xl sm:text-4xl font-mono font-extrabold text-brand-blue/30 tracking-tight">
+              <div className="flex items-center gap-4">
+                <span className="text-6xl sm:text-7xl lg:text-8xl font-mono font-black text-brand-blue/25 tracking-tighter leading-none select-none">
                   01
                 </span>
                 <span className="px-3 py-1 rounded-md bg-blue-50 text-brand-blue font-bold text-xs uppercase tracking-wider border border-blue-200">
@@ -204,13 +204,13 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 Execution Quality & Key Scope
               </h3>
 
-              <ul className="space-y-3.5">
+              <ul className="space-y-3">
                 {service.scopeInclusions.slice(0, 4).map((inc, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                      <Check className="w-3 h-3" />
+                      <Check className="w-3.5 h-3.5" />
                     </div>
-                    <span className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
+                    <span className="text-sm text-slate-700 leading-relaxed font-medium">
                       {inc}
                     </span>
                   </li>
@@ -228,22 +228,18 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </div>
             </div>
 
-            {/* Image Col Right */}
-            <div className="lg:col-span-6">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 aspect-[16/12] bg-navy-950 group">
+            {/* Image Col Right (No dark blue card background, clean text) */}
+            <div className="lg:col-span-6 space-y-3">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
                 <img
                   src={img1.url}
                   alt={img1.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/20 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 bg-navy-950/90 backdrop-blur-md rounded-2xl text-white border border-white/15">
-                  <span className="text-[10px] font-mono text-sky-300 font-bold uppercase tracking-wider block mb-0.5">
-                    Showcase 01
-                  </span>
-                  <h4 className="font-bold text-sm text-white">{img1.title}</h4>
-                  <p className="text-xs text-slate-300 mt-0.5">{img1.caption}</p>
-                </div>
+              </div>
+              <div className="px-1">
+                <h4 className="font-bold text-base text-navy-950">{img1.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img1.caption}</p>
               </div>
             </div>
           </div>
@@ -252,29 +248,25 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               ROW 2: IMAGE LEFT, TEXT RIGHT (02: Suitability & Target Profile)
           ------------------------------------------------------------ */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Image Col Left */}
-            <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 aspect-[16/12] bg-navy-950 group">
+            {/* Image Col Left (No dark blue card background, clean text) */}
+            <div className="lg:col-span-6 order-2 lg:order-1 space-y-3">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
                 <img
                   src={img2.url}
                   alt={img2.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/20 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 bg-navy-950/90 backdrop-blur-md rounded-2xl text-white border border-white/15">
-                  <span className="text-[10px] font-mono text-sky-300 font-bold uppercase tracking-wider block mb-0.5">
-                    Showcase 02
-                  </span>
-                  <h4 className="font-bold text-sm text-white">{img2.title}</h4>
-                  <p className="text-xs text-slate-300 mt-0.5">{img2.caption}</p>
-                </div>
+              </div>
+              <div className="px-1">
+                <h4 className="font-bold text-base text-navy-950">{img2.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img2.caption}</p>
               </div>
             </div>
 
-            {/* Text Col Right */}
+            {/* Text Col Right (No white background cards on subpoints) */}
             <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-              <div className="flex items-center gap-3">
-                <span className="text-3xl sm:text-4xl font-mono font-extrabold text-brand-blue/30 tracking-tight">
+              <div className="flex items-center gap-4">
+                <span className="text-6xl sm:text-7xl lg:text-8xl font-mono font-black text-brand-blue/25 tracking-tighter leading-none select-none">
                   02
                 </span>
                 <span className="px-3 py-1 rounded-md bg-amber-50 text-amber-800 font-bold text-xs uppercase tracking-wider border border-amber-200">
@@ -288,11 +280,11 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
 
               <ul className="space-y-3">
                 {service.whoIsThisFor.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 p-3 rounded-xl bg-white border border-slate-200/80 shadow-xs hover:border-brand-blue/40 transition-colors">
+                  <li key={i} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-brand-blue/15 text-brand-blue flex items-center justify-center shrink-0 mt-0.5">
-                      <Check className="w-3 h-3" />
+                      <Check className="w-3.5 h-3.5" />
                     </div>
-                    <span className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
+                    <span className="text-sm text-slate-700 leading-relaxed font-medium">
                       {item}
                     </span>
                   </li>
@@ -315,10 +307,10 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               ROW 3: TEXT LEFT, IMAGE RIGHT (03: Execution Governance & Steps)
           ------------------------------------------------------------ */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Text Col Left */}
+            {/* Text Col Left (No white background cards on subpoints) */}
             <div className="lg:col-span-6 space-y-6">
-              <div className="flex items-center gap-3">
-                <span className="text-3xl sm:text-4xl font-mono font-extrabold text-brand-blue/30 tracking-tight">
+              <div className="flex items-center gap-4">
+                <span className="text-6xl sm:text-7xl lg:text-8xl font-mono font-black text-brand-blue/25 tracking-tighter leading-none select-none">
                   03
                 </span>
                 <span className="px-3 py-1 rounded-md bg-emerald-50 text-emerald-800 font-bold text-xs uppercase tracking-wider border border-emerald-200">
@@ -330,18 +322,18 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 How My Space manages this work.
               </h3>
 
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {service.whatWeHelpWith.map((item, i) => (
-                  <div key={i} className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-brand-blue/40 transition-all">
-                    <div className="flex items-center gap-2.5 mb-1">
-                      <span className="w-5 h-5 rounded bg-brand-blue text-white flex items-center justify-center text-[10px] font-mono font-bold">
+                  <div key={i} className="space-y-1">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-6 h-6 rounded bg-brand-blue text-white flex items-center justify-center text-xs font-mono font-bold shrink-0">
                         {i + 1}
                       </span>
-                      <h4 className="font-bold text-xs sm:text-sm text-navy-950">
+                      <h4 className="font-bold text-sm sm:text-base text-navy-950">
                         {item.title}
                       </h4>
                     </div>
-                    <p className="text-xs text-slate-600 pl-7 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-600 pl-8.5 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -359,22 +351,18 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </div>
             </div>
 
-            {/* Image Col Right */}
-            <div className="lg:col-span-6">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 aspect-[16/12] bg-navy-950 group">
+            {/* Image Col Right (No dark blue card background, clean text) */}
+            <div className="lg:col-span-6 space-y-3">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
                 <img
                   src={img3.url}
                   alt={img3.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/20 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 bg-navy-950/90 backdrop-blur-md rounded-2xl text-white border border-white/15">
-                  <span className="text-[10px] font-mono text-sky-300 font-bold uppercase tracking-wider block mb-0.5">
-                    Showcase 03
-                  </span>
-                  <h4 className="font-bold text-sm text-white">{img3.title}</h4>
-                  <p className="text-xs text-slate-300 mt-0.5">{img3.caption}</p>
-                </div>
+              </div>
+              <div className="px-1">
+                <h4 className="font-bold text-base text-navy-950">{img3.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img3.caption}</p>
               </div>
             </div>
           </div>
@@ -383,29 +371,25 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               ROW 4: IMAGE LEFT, TEXT RIGHT (04: Preparation & Scope Boundaries)
           ------------------------------------------------------------ */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Image Col Left */}
-            <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 aspect-[16/12] bg-navy-950 group">
+            {/* Image Col Left (No dark blue card background, clean text) */}
+            <div className="lg:col-span-6 order-2 lg:order-1 space-y-3">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
                 <img
                   src={img4.url}
                   alt={img4.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/20 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 bg-navy-950/90 backdrop-blur-md rounded-2xl text-white border border-white/15">
-                  <span className="text-[10px] font-mono text-sky-300 font-bold uppercase tracking-wider block mb-0.5">
-                    Showcase 04
-                  </span>
-                  <h4 className="font-bold text-sm text-white">{img4.title}</h4>
-                  <p className="text-xs text-slate-300 mt-0.5">{img4.caption}</p>
-                </div>
+              </div>
+              <div className="px-1">
+                <h4 className="font-bold text-base text-navy-950">{img4.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img4.caption}</p>
               </div>
             </div>
 
-            {/* Text Col Right */}
+            {/* Text Col Right (No white background cards on subpoints) */}
             <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-              <div className="flex items-center gap-3">
-                <span className="text-3xl sm:text-4xl font-mono font-extrabold text-brand-blue/30 tracking-tight">
+              <div className="flex items-center gap-4">
+                <span className="text-6xl sm:text-7xl lg:text-8xl font-mono font-black text-brand-blue/25 tracking-tighter leading-none select-none">
                   04
                 </span>
                 <span className="px-3 py-1 rounded-md bg-purple-50 text-purple-800 font-bold text-xs uppercase tracking-wider border border-purple-200">
@@ -417,14 +401,14 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 Clear preparation & transparent scope.
               </h3>
 
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {/* Preparation points */}
-                <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs space-y-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
-                    <ClipboardList className="w-3.5 h-3.5 text-brand-blue" />
+                <div className="space-y-2">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-navy-950 flex items-center gap-2">
+                    <ClipboardList className="w-4 h-4 text-brand-blue" />
                     <span>Helpful To Prepare Before We Speak</span>
                   </h4>
-                  <ul className="space-y-1.5 text-xs text-slate-600">
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-600 pl-6">
                     {service.whatToPrepare.slice(0, 3).map((prep, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <Check className="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5" />
@@ -435,15 +419,15 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 </div>
 
                 {/* Exclusions Note */}
-                <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs space-y-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
-                    <XCircle className="w-3.5 h-3.5 text-slate-400" />
+                <div className="space-y-2">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-navy-950 flex items-center gap-2">
+                    <XCircle className="w-4 h-4 text-slate-500" />
                     <span>Separately Quoted Items</span>
                   </h4>
-                  <ul className="space-y-1 text-xs text-slate-500">
+                  <ul className="space-y-1.5 text-xs sm:text-sm text-slate-600 pl-6">
                     {service.scopeExclusions.slice(0, 3).map((exc, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-slate-300 shrink-0 mt-1.5" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0 mt-1.5" />
                         <span>{exc}</span>
                       </li>
                     ))}
