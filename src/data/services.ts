@@ -136,6 +136,14 @@ export const servicesData: ServiceItem[] = [
       {
         question: "What happens if I want to make changes during construction?",
         answer: "We follow a formal change-management process. Before any structural or material change is initiated, we provide a written variance note outlining timeline and cost implications so there are never unapproved surprises on your bill."
+      },
+      {
+        question: "What is the typical construction timeline for a G+2 or G+3 house in Bangalore?",
+        answer: "A standard 3,000 to 4,500 sq.ft residential house typically takes 9 to 14 months from foundation excavation to final painting and snag-clearance handover, subject to monsoon intervals and stage payment confirmations."
+      },
+      {
+        question: "Do you assist with BBMP plan sanctions and utility connections?",
+        answer: "We prepare complete municipal sanction drawing sets conforming to BBMP/BDA bylaws, setbacks, and FAR limits, and coordinate technical documentation required for BESCOM and BWSSB connections."
       }
     ]
   },
@@ -228,6 +236,18 @@ export const servicesData: ServiceItem[] = [
       {
         question: "Do you build shell-and-core or turnkey commercial fit-outs?",
         answer: "We execute both: pure shell-and-core structural builds ready for tenant leasing, as well as comprehensive turnkey design-and-build fit-outs including MEP, glass partitions, ceilings, and workstations."
+      },
+      {
+        question: "How do you optimize commercial floor plates for maximum rental yield?",
+        answer: "We engineer wide structural column grids (6m to 9m spans) and consolidate vertical service cores (elevators, staircases, AHU rooms, restrooms) against property edges, maximizing contiguous, open-plan usable carpet area."
+      },
+      {
+        question: "What MEP and fire safety systems are integrated into commercial builds?",
+        answer: "We coordinate dedicated 3-phase electrical risers, transformer yard foundations, DG back-up synchronisation, VRV/VRF air conditioning sleeves, fire hydrant loops, smoke dampers, and emergency illumination networks."
+      },
+      {
+        question: "How do you ensure strict commercial handover deadlines?",
+        answer: "We employ critical-path project management (CPM/PERT) with parallel trade scheduling—allowing civil, electrical conduits, and facade framing to proceed concurrently across multiple floor levels."
       }
     ]
   },
@@ -308,6 +328,22 @@ export const servicesData: ServiceItem[] = [
       {
         question: "What industrial areas in Bengaluru do you cover?",
         answer: "We execute industrial projects across Peenya, Bommasandra, Electronic City, Bidadi, Dabaspet, Hoskote, and surrounding industrial corridors in Karnataka."
+      },
+      {
+        question: "What is the difference between PEB structures and conventional civil construction?",
+        answer: "Pre-Engineered Buildings (PEBs) use factory-fabricated high-strength steel portal frames that are bolted on-site, offering 40% faster erection, clear spans up to 60 meters without internal columns, and easy future modular expansion."
+      },
+      {
+        question: "How is industrial Tremix VDF flooring constructed for forklift traffic?",
+        answer: "We cast high-grade concrete (M25/M30) with double-layer wire mesh, apply vacuum dewatering to extract excess water, and power-float non-metallic or metallic mineral hardeners into the surface to create an abrasion-resistant, dust-free floor."
+      },
+      {
+        question: "Can you build vibration-isolated foundations for heavy machinery?",
+        answer: "Yes. For CNC machines, power presses, and heavy generators, we design isolated deep concrete mass blocks separated from the surrounding slab by high-density elastomeric dampening cork sheets to eliminate vibration transmission."
+      },
+      {
+        question: "What clear heights and crane capacities can be accommodated?",
+        answer: "We engineer industrial sheds with eave heights ranging from 6m to 14m, with crane brackets and runway girders supporting EOT overhead travelling cranes from 3-ton to 25-ton capacities."
       }
     ]
   },
@@ -396,6 +432,18 @@ export const servicesData: ServiceItem[] = [
       {
         question: "Do you supply the materials or work on labour-only contracts?",
         answer: "We primarily execute on a Material + Labour turnkey basis to guarantee structural material quality (certified 550D TMT steel, 53-grade OPC/PPC cement), but also evaluate structured project-management civil contracts."
+      },
+      {
+        question: "What concrete grades and TMT steel specifications do you use?",
+        answer: "We use minimum M20 to M30 grade concrete for structural elements with test cubes taken per batch, and primary branded Fe550D TMT rebars (Tata Tiscon, JSW Neosteel, or SAIL) ensuring high ductility and seismic resistance."
+      },
+      {
+        question: "How do you handle foundation challenges in clay or low-bearing Bangalore soils?",
+        answer: "We perform soil-bearing capacity (SBC) calculations and design deep raft foundations, under-reamed piles, or rubble masonry footing cushions to eliminate differential settlement and foundation sinking."
+      },
+      {
+        question: "What multi-stage waterproofing systems are implemented?",
+        answer: "We install integral crystalline admixtures in concrete, applied 2-coat elastomeric polymer membranes for sunken slabs and terraces, fiber-mesh reinforcement in corners, and pressure injection grouting for sumps and basements."
       }
     ]
   },
@@ -485,6 +533,18 @@ export const servicesData: ServiceItem[] = [
       {
         question: "Can you coordinate interior civil modifications like moving a door or electrical points?",
         answer: "Yes. Because we have in-house civil and electrical teams, we handle wall shifts, plumbing rerouting, and switchboard additions directly without relying on outside sub-contractors."
+      },
+      {
+        question: "What is the typical timeline for turnkey residential interior execution?",
+        answer: "A complete 3BHK interior project typically takes 45 to 60 days from 3D design freeze and factory fabrication to on-site assembly, painting, and deep cleaning."
+      },
+      {
+        question: "Do you manufacture cabinetry in a factory setup or build on-site?",
+        answer: "All modular carcasses and shutters are precision CNC cut and edge-banded in our partner factory facility using hot-melt polyurethane glue, with only final assembly and customized filler scribing executed on-site."
+      },
+      {
+        question: "What hardware brands and warranties do you provide?",
+        answer: "We fit genuine German hardware (Hettich, Hafele, Blum) with manufacturer warranties up to 10 years on soft-close hinges, drawer channels, and lift-up mechanisms."
       }
     ]
   },
@@ -556,6 +616,22 @@ export const servicesData: ServiceItem[] = [
       {
         question: "Do your 2D plans conform to Bengaluru building bylaws?",
         answer: "Yes, all our plans strictly consider BBMP/BDA setback rules, Floor Area Ratio (FAR), road width criteria, and light/ventilation requirements."
+      },
+      {
+        question: "What technical working drawings are included in the complete 2D set?",
+        answer: "A complete set includes dimensioned floor layouts, column center-line grids, door/window schedules, stair sectional elevations, toilet plumbing schematics, and electrical conduit routing diagrams."
+      },
+      {
+        question: "How do you balance Vastu Shastra with modern spatial efficiency?",
+        answer: "We incorporate core Vastu alignments (master bedroom in Southwest, kitchen in Southeast, main entrance orientation) while ensuring optimal natural cross-ventilation, daylighting, and zero dead hallway space."
+      },
+      {
+        question: "Can I order standalone 2D floor plans without construction contracting?",
+        answer: "Yes. You can engage My Space solely for architectural 2D concept design and working drawing sets for your own independent civil contractor."
+      },
+      {
+        question: "How many design revisions are included during 2D planning?",
+        answer: "We provide iterative design rounds until you are 100% satisfied with the room dimensions, furniture layout, and circulation flow before freezing final working drawings."
       }
     ]
   },
@@ -626,6 +702,22 @@ export const servicesData: ServiceItem[] = [
       {
         question: "How long does a 3D elevation design take?",
         answer: "Initial 3D design concepts are presented within 3 to 5 working days following 2D layout confirmation."
+      },
+      {
+        question: "What inputs are required to start a 3D architectural visualization?",
+        answer: "We require your approved 2D floor plans with floor-to-floor heights, cardinal site orientation (for sunlight studies), and any exterior reference images you like."
+      },
+      {
+        question: "Do you provide both daytime and evening illumination renders?",
+        answer: "Yes, our standard 3D package includes high-resolution daylight sun-study views as well as warm evening dusk renders showing exterior up-down wall washers, step lights, and landscape illumination."
+      },
+      {
+        question: "Will the 3D renders reflect materials that are locally available in Bangalore?",
+        answer: "Yes. We texture our 3D models using real-world materials readily available in Bengaluru—including wire-cut terracotta jali, Sadarahalli granite, exterior HPL sheets, and Asian Paints exterior texture shades."
+      },
+      {
+        question: "Can you provide 3D isometric floor plan cutaways and walkthrough animations?",
+        answer: "Yes. In addition to exterior elevations, we generate furnished 3D isometric floor cutaways and high-definition cinematic video walkthroughs upon request."
       }
     ]
   },
@@ -697,6 +789,22 @@ export const servicesData: ServiceItem[] = [
       {
         question: "Are your structural designs compliant with Indian Standards?",
         answer: "Yes, all designs strictly conform to IS 456:2000 (Plain and Reinforced Concrete), IS 1893 (Earthquake Resistant Design), and IS 875 (Design Loads)."
+      },
+      {
+        question: "Why is a geotechnical soil investigation test essential before structural design?",
+        answer: "A soil test determines the exact Safe Bearing Capacity (SBC) and water table depth. Designing foundations without a soil test risks either dangerous structural settlement or expensive over-design of concrete footings."
+      },
+      {
+        question: "What are Bar Bending Schedules (BBS) and how do they prevent steel wastage?",
+        answer: "A BBS provides the site rebar cutting and bending lengths, hook angles, and bar diameters for every structural element, minimizing steel off-cut scrap and ensuring exact alignment with engineering drawings."
+      },
+      {
+        question: "Can you certify structural stability for vertical expansion (adding extra floors)?",
+        answer: "Yes. We perform non-destructive concrete testing (Rebound Hammer / UPV), review original drawings, calculate additional dead/live loads, and provide certified structural feasibility reports with retrofitting details if required."
+      },
+      {
+        question: "Do your structural engineers visit the site during reinforcement tying and casting?",
+        answer: "Yes. Our engineers conduct critical pre-pour inspections to verify rebar sizes, spacing, lap lengths, chair bars, and concrete cover blocks before issuing the casting clearance certificate."
       }
     ]
   },
@@ -786,6 +894,18 @@ export const servicesData: ServiceItem[] = [
       {
         question: "Can you provide the elevation design if My Space is not doing the construction?",
         answer: "Yes. You can engage My Space solely for 3D Elevation Design and dimensioned fabrication drawings for your own contractor to execute."
+      },
+      {
+        question: "How do you select exterior cladding materials like terracotta jali, HPL, and natural stone?",
+        answer: "We recommend materials based on orientation and weather exposure. For example, UV-resistant exterior HPL or terracotta jali provides thermal shading on West-facing façades without long-term paint fading."
+      },
+      {
+        question: "Do you provide 2D dimensioned fabrication drawings for the elevation elements?",
+        answer: "Yes. We deliver sectional drawings with exact millimeter measurements for balcony railings, box projections, CNC metal louvers, and pergola structures so site teams can build accurately."
+      },
+      {
+        question: "Can you redesign the elevation for an existing old house without demolishing the structure?",
+        answer: "Yes. We specialize in exterior modernization and facelifts—incorporating lightweight framing, modern exterior textures, composite panel cladding, and contemporary window replacements onto existing civil frames."
       }
     ]
   },
@@ -870,6 +990,22 @@ export const servicesData: ServiceItem[] = [
       {
         question: "Why should I get a 3D floor plan before starting construction?",
         answer: "A 3D floor plan prevents expensive on-site alterations. It reveals cramped passages, inconvenient bathroom entries, and inadequate wardrobe space before you cast a single column or lay a brick."
+      },
+      {
+        question: "How do 3D floor plans assist with furniture planning and walkway clearances?",
+        answer: "We render standard-sized Indian and international furniture items to scale (e.g. 6x6.5 ft king beds, 6-seater dining sets) ensuring minimum 3-foot unobstructed walking corridors throughout every room."
+      },
+      {
+        question: "Can 3D floor plans depict duplex voids and double-height living spaces?",
+        answer: "Yes. Our isometric multi-level cutaway views show internal open-to-sky courtyards, floating staircases, mezzanine study balconies, and skylight cutouts with complete spatial depth."
+      },
+      {
+        question: "How quickly can you convert an existing 2D CAD or PDF plan into 3D?",
+        answer: "Once you share your 2D CAD file or dimensioned PDF, our team delivers high-resolution furnished 3D isometric views within 2 to 4 working days."
+      },
+      {
+        question: "Can I share the 3D plans with my family or builder digitally?",
+        answer: "Yes, we export high-resolution PDFs and JPEG packages formatted for easy sharing on mobile WhatsApp, email, or high-definition tablets for site carpenters and contractors."
       }
     ]
   },
@@ -942,6 +1078,22 @@ export const servicesData: ServiceItem[] = [
       {
         question: "How is vacant land valued for bank loans?",
         answer: "Banks evaluate the lesser of the guideline value and the assessed fair market value, factoring in road accessibility, legal title clarity, and locality infrastructure."
+      },
+      {
+        question: "What documents are required for an independent land valuation in Bangalore?",
+        answer: "We require the registered Sale Deed / Title Deed, Mother Deed chain, latest e-Khata (A-Khata) certificate and extract, recent property tax paid receipt, Encumbrance Certificate (EC), and survey layout sketch."
+      },
+      {
+        question: "How does the Sub-Registrar Guideline Value differ from prevailing Market Value?",
+        answer: "Guideline Value is the statutory minimum threshold set by the Karnataka Department of Stamps and Registration for stamp duty calculation. Market Value is the actual transactional price determined by locality demand, road width, corner plot advantages, and infrastructure development."
+      },
+      {
+        question: "How quickly can the land valuation report be issued?",
+        answer: "Following on-site boundary inspection and verification of revenue documents, the comprehensive certified valuation dossier is issued within 2 to 4 business days."
+      },
+      {
+        question: "Are your land valuation reports accepted for Capital Gains Tax (54EC) and visa asset proof?",
+        answer: "Yes, our reports are prepared by registered valuers under Section 34AB of the Wealth Tax Act and IBBI, making them legally valid for income tax filings, capital gains computation, and visa financial proof."
       }
     ]
   },
@@ -1036,6 +1188,14 @@ export const servicesData: ServiceItem[] = [
       {
         question: "Does a valuation report guarantee my bank loan approval?",
         answer: "No. The valuation report assesses the physical asset's collateral value. Final loan approval depends on the lender's credit appraisal, applicant income eligibility, and legal title clearance."
+      },
+      {
+        question: "What types of built properties do you inspect and value across Bangalore?",
+        answer: "We assess independent houses, residential villas, multi-storey apartment flats, commercial complexes, industrial factories, and school/institutional buildings."
+      },
+      {
+        question: "How is building depreciation calculated in the valuation assessment?",
+        answer: "We calculate building replacement value using current CPWD/state PWD schedule of rates and apply straight-line or constant-percentage depreciation based on the building's structural age, maintenance condition, and remaining economic life."
       }
     ]
   },
@@ -1108,6 +1268,22 @@ export const servicesData: ServiceItem[] = [
       {
         question: "Are your valuation reports accepted by nationalized banks?",
         answer: "Yes, our reports are prepared by registered valuers under the Wealth Tax Act and IBBI, accepted by all major scheduled commercial banks and NBFCs."
+      },
+      {
+        question: "What methodologies are used for commercial enterprise valuation?",
+        answer: "We apply the Asset-Based Approach (Net Asset Value of tangible land, buildings, plant & machinery), the Income Approach (Discounted Cash Flow / Capitalization of Earnings), and Market Multiples depending on the entity's sector."
+      },
+      {
+        question: "What financial and operational documents are needed to initiate a business valuation?",
+        answer: "We require audited balance sheets and P&L statements for the last 3-5 years, the fixed asset register with purchase invoices, existing lease agreements, and debt/collateral obligation statements."
+      },
+      {
+        question: "Can you perform plant and machinery valuation with physical inspection in Karnataka?",
+        answer: "Yes, our technical team inspects machine make, installation year, rated capacity, maintenance logs, and physical operational condition to calculate accurate Depreciated Replacement Cost (DRC)."
+      },
+      {
+        question: "How do you ensure strict client confidentiality during business valuation due diligence?",
+        answer: "We execute strict Non-Disclosure Agreements (NDAs) prior to data intake, ensuring all proprietary financial statements, asset registers, and commercial strategies remain entirely confidential."
       }
     ]
   }
