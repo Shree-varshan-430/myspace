@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { servicesData, ServiceItem } from '@/data/services';
+import { serviceDetailsLookup, DetailedServiceData } from '@/data/serviceDetailsData';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import FaqAccordion from '@/components/faq/FaqAccordion';
 import EnquiryForm, { ServiceType } from '@/components/forms/EnquiryForm';
@@ -29,7 +30,9 @@ import {
   FileCheck2,
   Sliders,
   Scale,
-  Hammer
+  Hammer,
+  Calculator,
+  Grid
 } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 
@@ -60,12 +63,77 @@ export function generateMetadata({ params }: ServicePageProps): Metadata {
   };
 }
 
+// Helper to render icon for typology cards
+function renderTypologyIcon(type: string) {
+  switch (type) {
+    case 'home':
+      return <Home className="w-6 h-6" />;
+    case 'building':
+      return <Building2 className="w-6 h-6" />;
+    case 'layers':
+      return <Layers className="w-6 h-6" />;
+    case 'grid':
+      return <Grid className="w-6 h-6" />;
+    case 'compass':
+      return <Compass className="w-6 h-6" />;
+    case 'hammer':
+      return <Hammer className="w-6 h-6" />;
+    case 'calculator':
+      return <Calculator className="w-6 h-6" />;
+    case 'file':
+      return <FileCheck2 className="w-6 h-6" />;
+    case 'shield':
+    default:
+      return <ShieldCheck className="w-6 h-6" />;
+  }
+}
+
 export default function ServiceDetailPage({ params }: ServicePageProps) {
   const service = servicesData.find((s) => s.slug === params.slug);
 
   if (!service) {
     notFound();
   }
+
+  // Get rich detailed service data or default from lookup
+  const details: DetailedServiceData = serviceDetailsLookup[service.slug] || {
+    typologiesTitle: `What We Deliver in ${service.title}`,
+    typologiesSubtitle: `We deliver specialized solutions tailored to your plot and specifications in Bengaluru:`,
+    typologies: [
+      { title: `${service.title} Planning`, desc: service.summary, iconType: 'compass' },
+      { title: `Customized Execution`, desc: service.whoIsThisFor[0] || 'Engineered according to site specifications.', iconType: 'hammer' },
+      { title: `Engineering Quality`, desc: service.whoIsThisFor[1] || 'Conforming to IS-Standards and quality checks.', iconType: 'shield' },
+      { title: `Verified Handover`, desc: service.whoIsThisFor[2] || 'Complete documentation and warranty handover.', iconType: 'file' }
+    ],
+    processTitle: `Our ${service.title} Process`,
+    processSubtitle: `We execute every project through a disciplined engineering workflow:`,
+    processStages: service.whatWeHelpWith.map((step, idx) => ({
+      stageNumber: `0${idx + 1}`,
+      title: step.title,
+      desc: step.desc
+    })),
+    scopeTitle: `What Is Included In Our ${service.title} Service?`,
+    scopeSubtitle: `Our turnkey delivery in Bangalore covers everything required for complete project success:`,
+    detailedScope: service.scopeInclusions.map((inc) => ({
+      title: inc,
+      desc: 'Executed with certified materials, engineering supervision, and quality compliance.'
+    })),
+    costTitle: `${service.title} Cost in Bangalore`,
+    costSubtitle: `Understanding what drives costs in Bangalore helps you plan your budget without compromising on quality:`,
+    costDrivers: [
+      { number: '1', title: 'Site Location & Logistics Access', desc: 'Approach road width and locality transport rules influence concrete and equipment mobilization.' },
+      { number: '2', title: 'Specification & Material Quality', desc: 'Choices of structural steel grades, cement types, and architectural finishes define total budget.' },
+      { number: '3', title: 'Structural & Geotechnical Requirements', desc: 'Soil bearing capacity and foundation depth determine excavation and reinforcement quantities.' },
+      { number: '4', title: 'Statutory & Regulatory Clearances', desc: 'Municipal approvals, setback rules, and utility deposits in Bengaluru.' }
+    ],
+    timelineTitle: `How Long Does It Take to Deliver?`,
+    timelineSubtitle: `A structured overview of how key project milestones are scheduled across the project lifecycle:`,
+    timelineSchedule: [
+      { durationBadge: 'STAGE 1', title: 'Planning & Documentation', desc: 'Site inspection, requirement gathering, and preliminary drawings.' },
+      { durationBadge: 'STAGE 2', title: 'Engineering & Execution', desc: 'Stage-wise execution with continuous quality inspections.' },
+      { durationBadge: 'STAGE 3', title: 'Finishing & Handover', desc: 'Snag rectifications, testing, and formal project handover.' }
+    ]
+  };
 
   // Map service slug to form initial service
   const serviceFormMap: Record<string, ServiceType> = {
@@ -129,7 +197,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       />
 
       {/* ============================================================
-          PAGE HERO BANNER (BioArtha Reference Style)
+          PAGE HERO BANNER
       ============================================================ */}
       <section className="bg-navy-950 text-white py-14 lg:py-20 relative overflow-hidden border-b border-navy-800">
         <div className="absolute inset-0 bg-radial-vignette opacity-70 pointer-events-none" />
@@ -180,16 +248,197 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       </section>
 
       {/* ============================================================
-          SERVICES ZIGZAG SECTION (BioArtha Style: Left-Right-Left-Right)
+          SECTION 1: WHAT WE BUILD / TYPOLOGIES (Screenshot 1 Style)
       ============================================================ */}
-      <section className="py-16 lg:py-24 bg-surface-ice">
+      <section className="py-16 lg:py-24 bg-surface-ice border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="space-y-3 max-w-3xl">
+            <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block">
+              Typologies & Solutions
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-950 tracking-tight">
+              {details.typologiesTitle}
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              {details.typologiesSubtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {details.typologies.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-3xl p-7 sm:p-8 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all space-y-4 group"
+              >
+                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  {renderTypologyIcon(item.iconType)}
+                </div>
+                <h3 className="text-xl font-bold text-navy-950 tracking-tight">
+                  {item.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          SECTION 2: OUR PROCESS WORKFLOW (Screenshot 2 Style)
+      ============================================================ */}
+      <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="space-y-3 max-w-3xl">
+            <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block">
+              Engineering Workflow
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-950 tracking-tight">
+              {details.processTitle}
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              {details.processSubtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {details.processStages.map((stage, idx) => (
+              <div
+                key={idx}
+                className="relative bg-surface-ice rounded-3xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all overflow-hidden space-y-2"
+              >
+                <span className="absolute top-4 right-6 text-4xl sm:text-5xl font-mono font-black text-amber-500/20 select-none pointer-events-none">
+                  {stage.stageNumber}
+                </span>
+                <h3 className="text-base sm:text-lg font-bold text-navy-950 pr-12">
+                  {stage.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
+                  {stage.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          SECTION 3: WHAT IS INCLUDED (Screenshot 3 Style with Left Border Accent)
+      ============================================================ */}
+      <section className="py-16 lg:py-24 bg-surface-ice border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="space-y-3 max-w-3xl">
+            <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block">
+              Deliverables & Specifications
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-950 tracking-tight">
+              {details.scopeTitle}
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              {details.scopeSubtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {details.detailedScope.map((scope, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 border-l-4 border-l-amber-500 shadow-sm hover:shadow-md hover:border-slate-300 transition-all space-y-2"
+              >
+                <h3 className="text-base sm:text-lg font-bold text-navy-950">
+                  {scope.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {scope.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          SECTION 4: COST DRIVERS & BUDGET GUIDANCE (Screenshot 4 Style)
+      ============================================================ */}
+      <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="space-y-3 max-w-3xl">
+            <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block">
+              Budget & Cost Transparency
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-950 tracking-tight">
+              {details.costTitle}
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              {details.costSubtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {details.costDrivers.map((cost, idx) => (
+              <div
+                key={idx}
+                className="bg-surface-ice rounded-3xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all space-y-2.5"
+              >
+                <h3 className="text-base sm:text-lg font-bold text-navy-950">
+                  {cost.number}. {cost.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {cost.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          SECTION 5: PROJECT TIMELINE & SCHEDULE (Screenshot 5 Style)
+      ============================================================ */}
+      <section className="py-16 lg:py-24 bg-surface-ice border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="space-y-3 max-w-3xl">
+            <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block">
+              Milestones & Durations
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-950 tracking-tight">
+              {details.timelineTitle}
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              {details.timelineSubtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {details.timelineSchedule.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-3xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all space-y-3"
+              >
+                <span className="inline-block px-3 py-1 rounded-md bg-navy-950 text-white font-mono text-xs font-bold uppercase tracking-wider">
+                  {item.durationBadge}
+                </span>
+                <h3 className="text-base sm:text-lg font-bold text-navy-950">
+                  {item.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          SERVICES ZIGZAG 4-IMAGE SHOWCASE (BioArtha Style with Clean Text & Big Numbers)
+      ============================================================ */}
+      <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 lg:space-y-28">
 
-          {/* ------------------------------------------------------------
-              ROW 1: TEXT LEFT, IMAGE RIGHT (01: Core Scope & Specifications)
-          ------------------------------------------------------------ */}
+          {/* Row 1: Text Left, Image Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Text Col Left */}
             <div className="lg:col-span-6 space-y-6">
               <div className="flex items-center gap-4">
                 <span className="text-6xl sm:text-7xl lg:text-8xl font-mono font-black text-brand-blue/25 tracking-tighter leading-none select-none">
@@ -228,7 +477,6 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </div>
             </div>
 
-            {/* Image Col Right (No dark blue card background, clean text) */}
             <div className="lg:col-span-6 space-y-3">
               <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
                 <img
@@ -244,11 +492,8 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
             </div>
           </div>
 
-          {/* ------------------------------------------------------------
-              ROW 2: IMAGE LEFT, TEXT RIGHT (02: Suitability & Target Profile)
-          ------------------------------------------------------------ */}
+          {/* Row 2: Image Left, Text Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Image Col Left (No dark blue card background, clean text) */}
             <div className="lg:col-span-6 order-2 lg:order-1 space-y-3">
               <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
                 <img
@@ -263,7 +508,6 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </div>
             </div>
 
-            {/* Text Col Right (No white background cards on subpoints) */}
             <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
               <div className="flex items-center gap-4">
                 <span className="text-6xl sm:text-7xl lg:text-8xl font-mono font-black text-brand-blue/25 tracking-tighter leading-none select-none">
@@ -303,11 +547,8 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
             </div>
           </div>
 
-          {/* ------------------------------------------------------------
-              ROW 3: TEXT LEFT, IMAGE RIGHT (03: Execution Governance & Steps)
-          ------------------------------------------------------------ */}
+          {/* Row 3: Text Left, Image Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Text Col Left (No white background cards on subpoints) */}
             <div className="lg:col-span-6 space-y-6">
               <div className="flex items-center gap-4">
                 <span className="text-6xl sm:text-7xl lg:text-8xl font-mono font-black text-brand-blue/25 tracking-tighter leading-none select-none">
@@ -351,7 +592,6 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </div>
             </div>
 
-            {/* Image Col Right (No dark blue card background, clean text) */}
             <div className="lg:col-span-6 space-y-3">
               <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
                 <img
@@ -367,11 +607,8 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
             </div>
           </div>
 
-          {/* ------------------------------------------------------------
-              ROW 4: IMAGE LEFT, TEXT RIGHT (04: Preparation & Scope Boundaries)
-          ------------------------------------------------------------ */}
+          {/* Row 4: Image Left, Text Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Image Col Left (No dark blue card background, clean text) */}
             <div className="lg:col-span-6 order-2 lg:order-1 space-y-3">
               <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
                 <img
@@ -386,7 +623,6 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </div>
             </div>
 
-            {/* Text Col Right (No white background cards on subpoints) */}
             <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
               <div className="flex items-center gap-4">
                 <span className="text-6xl sm:text-7xl lg:text-8xl font-mono font-black text-brand-blue/25 tracking-tighter leading-none select-none">
@@ -402,7 +638,6 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </h3>
 
               <div className="space-y-5">
-                {/* Preparation points */}
                 <div className="space-y-2">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-navy-950 flex items-center gap-2">
                     <ClipboardList className="w-4 h-4 text-brand-blue" />
@@ -418,7 +653,6 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                   </ul>
                 </div>
 
-                {/* Exclusions Note */}
                 <div className="space-y-2">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-navy-950 flex items-center gap-2">
                     <XCircle className="w-4 h-4 text-slate-500" />
@@ -460,9 +694,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       </section>
 
       {/* ============================================================
-          WHY CHOOSE MY SPACE SECTION (BioArtha 6-Card Grid)
+          WHY CHOOSE MY SPACE SECTION
       ============================================================ */}
-      <section className="py-16 lg:py-24 bg-white border-t border-slate-200">
+      <section className="py-16 lg:py-24 bg-surface-ice border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center space-y-3 max-w-3xl mx-auto">
             <span className="text-xs font-bold text-brand-blue uppercase tracking-widest block">
@@ -477,7 +711,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-surface-ice border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
+            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
               <div className="w-10 h-10 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center">
                 <ShieldCheck className="w-5 h-5" />
               </div>
@@ -487,7 +721,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-surface-ice border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
+            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
               <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center">
                 <Sliders className="w-5 h-5" />
               </div>
@@ -497,7 +731,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-surface-ice border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
+            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
               <div className="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-600 flex items-center justify-center">
                 <Clock className="w-5 h-5" />
               </div>
@@ -507,7 +741,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-surface-ice border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
+            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
               <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
                 <FileCheck2 className="w-5 h-5" />
               </div>
@@ -517,7 +751,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-surface-ice border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
+            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
               <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center">
                 <Building2 className="w-5 h-5" />
               </div>
@@ -527,7 +761,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-surface-ice border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
+            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
               <div className="w-10 h-10 rounded-xl bg-red-500/10 text-brand-steel flex items-center justify-center">
                 <Award className="w-5 h-5" />
               </div>
@@ -541,9 +775,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       </section>
 
       {/* ============================================================
-          SERVICE FAQS (2-Column Questions & Answers Layout)
+          STANDARDIZED 2-COLUMN FAQ SECTION
       ============================================================ */}
-      <section className="bg-surface-ice border-t border-slate-200">
+      <section className="bg-white border-b border-slate-200">
         <FaqAccordion
           faqs={service.faqs.map((f, i) => ({
             id: `service-faq-${i}`,
@@ -563,7 +797,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
           RELATED SERVICES
       ============================================================ */}
       {relatedServices.length > 0 && (
-        <section className="py-12 bg-white border-t border-slate-200">
+        <section className="py-12 bg-surface-ice border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 className="text-lg font-bold text-navy-950 mb-5">
               Complementary Services
@@ -573,7 +807,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 <Link
                   key={rel.id}
                   href={`/services/${rel.slug}`}
-                  className="group p-4 rounded-xl border border-slate-200 bg-surface-ice hover:border-brand-blue hover:shadow-card transition-all flex items-center justify-between"
+                  className="group p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue hover:shadow-card transition-all flex items-center justify-between"
                 >
                   <div>
                     <span className="text-[10px] font-bold text-brand-blue uppercase tracking-wider block">
@@ -594,7 +828,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       {/* ============================================================
           CONTEXTUAL LEAD FORM
       ============================================================ */}
-      <section id="enquiry" className="py-16 lg:py-20 bg-surface-ice border-t border-slate-200">
+      <section id="enquiry" className="py-16 lg:py-20 bg-surface-ice">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <EnquiryForm
             initialService={currentFormService}
