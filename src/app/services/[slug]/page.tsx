@@ -541,21 +541,22 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       </section>
 
       {/* ============================================================
-          SERVICE FAQS
+          SERVICE FAQS (2-Column Questions & Answers Layout)
       ============================================================ */}
-      <section className="py-16 bg-surface-ice">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FaqAccordion
-            faqs={service.faqs.map((f, i) => ({
-              id: `service-faq-${i}`,
-              category: 'General',
-              question: f.question,
-              answer: f.answer,
-            }))}
-            title={`${service.title} FAQs`}
-            subtitle="Frequently asked questions specific to this service in Bangalore."
-          />
-        </div>
+      <section className="bg-surface-ice border-t border-slate-200">
+        <FaqAccordion
+          faqs={service.faqs.map((f, i) => ({
+            id: `service-faq-${i}`,
+            category: 'General',
+            question: f.question,
+            answer: f.answer,
+          }))}
+          title={`${service.title} FAQs`}
+          subtitle="Frequently asked questions specific to this service in Bangalore."
+          showViewAll={true}
+          viewAllLink="/faqs"
+          viewAllText="Explore all general FAQs"
+        />
       </section>
 
       {/* ============================================================
