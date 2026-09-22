@@ -328,11 +328,11 @@ export default function Header() {
                         href="/services/interior-design-bangalore"
                         className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                       >
-                        <div className="w-8 h-8 rounded-lg bg-amber-50 text-brand-gold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
                           <Paintbrush className="w-4 h-4" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-gold transition-colors flex items-center justify-between">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
                             <span>Interior design</span>
                             <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
@@ -346,11 +346,11 @@ export default function Header() {
                         href="/services/2d-design-bangalore"
                         className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                       >
-                        <div className="w-8 h-8 rounded-lg bg-amber-50 text-brand-gold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
                           <FileText className="w-4 h-4" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-gold transition-colors flex items-center justify-between">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
                             <span>2D design</span>
                             <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
@@ -364,11 +364,11 @@ export default function Header() {
                         href="/services/3d-design-bangalore"
                         className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                       >
-                        <div className="w-8 h-8 rounded-lg bg-amber-50 text-brand-gold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
                           <Sparkles className="w-4 h-4" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-gold transition-colors flex items-center justify-between">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
                             <span>3D design</span>
                             <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
@@ -382,11 +382,11 @@ export default function Header() {
                         href="/services/structural-design-bangalore"
                         className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                       >
-                        <div className="w-8 h-8 rounded-lg bg-amber-50 text-brand-gold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
                           <Ruler className="w-4 h-4" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-gold transition-colors flex items-center justify-between">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
                             <span>Structural design</span>
                             <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
@@ -436,7 +436,7 @@ export default function Header() {
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
-                            <span>Land</span>
+                            <span>Land Valuation</span>
                             <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
                           <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
@@ -454,7 +454,7 @@ export default function Header() {
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
-                            <span>Property</span>
+                            <span>Property Valuation</span>
                             <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
                           <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
@@ -673,13 +673,13 @@ export default function Header() {
                   href="/services/land-valuation-bangalore"
                   className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
                 >
-                  Land
+                  Land Valuation
                 </Link>
                 <Link
                   href="/services/property-valuation-bangalore"
                   className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
                 >
-                  Property
+                  Property Valuation
                 </Link>
                 <Link
                   href="/services/business-valuation-bangalore"

@@ -10,89 +10,151 @@ export interface ProcessStage {
   image: string;
 }
 
-export const processStages: ProcessStage[] = [
+export const constructionProcessStages: ProcessStage[] = [
   {
     number: "01",
-    title: "Understand",
-    tagline: "Goals, Site, Context & Practical Constraints",
-    description: "Every successful project starts with listening. We analyze your plot dimensions, family or commercial space requirements, budget parameters, and Bengaluru municipal regulations before suggesting solutions.",
-    keyInputs: ["Plot dimensions & location", "Family or business requirements", "Budget parameters", "Timeline expectations"],
-    keyOutputs: ["Site feasibility assessment", "Zoning & setback verification", "Preliminary scope boundary document"],
-    clientRole: "Share your vision, current situation, site photos, and what is currently unclear.",
-    mySpaceRole: "Conduct site inspection, verify physical access, and outline initial feasibility.",
+    title: "Site & Goal Discovery",
+    tagline: "Site Analysis, Requirements & Feasibility",
+    description: "We evaluate your plot dimensions, soil context, family/commercial requirements, and municipal bylaws to establish project feasibility.",
+    keyInputs: ["Plot dimensions & location", "Space requirements", "Target budget & timeline"],
+    keyOutputs: ["Site feasibility report", "Zoning & setback guidelines", "Initial scope outline"],
+    clientRole: "Share your vision, spatial needs, and budget boundaries.",
+    mySpaceRole: "Conduct physical site audit and verify municipal feasibility.",
     image: "/images/company/real-project-01.jpeg"
   },
   {
     number: "02",
-    title: "Plan",
-    tagline: "Scope Definition, Material Packages & Transparent Estimates",
-    description: "Unclear scope is the number one cause of construction disputes. We formulate an itemized Bill of Quantities (BOQ), define exact material grades, articulate assumptions, and outline stage-wise payment milestones.",
-    keyInputs: ["Approved functional layout", "Structural engineering calculations", "Selected finish specifications"],
-    keyOutputs: ["Transparent Itemized BOQ", "Milestone-based Stage Payment Schedule", "Project Timeline & Execution Agreement"],
-    clientRole: "Review scope inclusions/exclusions and confirm material specifications.",
-    mySpaceRole: "Engineer cost-effective solutions and lock in fixed line-item pricing.",
+    title: "Planning & BOQ Estimation",
+    tagline: "Itemized BOQ, Clear Specs & Stage Milestones",
+    description: "Zero ambiguity. We build a line-item Bill of Quantities (BOQ) with defined material grades and stage-linked payment schedules.",
+    keyInputs: ["Approved floor layout", "Structural engineering parameters", "Finish package selection"],
+    keyOutputs: ["Line-item BOQ estimate", "Milestone payment schedule", "Execution contract agreement"],
+    clientRole: "Review package specifications and confirm milestone schedule.",
+    mySpaceRole: "Value-engineer specifications and fix transparent line-item pricing.",
     image: "/images/company/showroom-3.jpeg"
   },
   {
     number: "03",
-    title: "Visualize",
-    tagline: "2D Plans, 3D Elevations, Furniture Layouts & Material Samples",
-    description: "Never build blindly. We create realistic 3D exterior elevations, 3D isometric floor plans, and material sample boards so you see and approve every detail before construction begins on site.",
-    keyInputs: ["Approved room sizes", "Façade aesthetic preferences", "Lighting & interior requirements"],
-    keyOutputs: ["Photorealistic 3D Elevations (Day & Night)", "3D Isometric Furnished Floor Plans", "Detailed 2D Working Fabrication Drawings"],
-    clientRole: "Review visual renders and make design refinements in guided review sessions.",
-    mySpaceRole: "Iterate 3D models and provide physical material swatches for tactile verification.",
+    title: "3D Visualization & Design",
+    tagline: "2D Working Drawings & Photorealistic 3D",
+    description: "Visualize every angle before breaking ground with photorealistic 3D elevations, structural working drawings, and material boards.",
+    keyInputs: ["Design preferences", "Façade style & exterior finishes", "Lighting & joinery brief"],
+    keyOutputs: ["Photorealistic 3D elevations", "3D isometric floor layouts", "Complete 2D working drawing set"],
+    clientRole: "Review renders and approve finish palettes in design review sessions.",
+    mySpaceRole: "Refine 3D designs and prepare execution drawings for site team.",
     image: "/images/company/showroom-4.jpeg"
   },
   {
     number: "04",
-    title: "Build",
-    tagline: "Staged Civil Execution, Engineering Supervision & Live Updates",
-    description: "Execution is managed with strict engineering governance. We conduct regular site quality audits, slump/cube tests for concrete, rebar alignment checks, and send you weekly photo/video progress reports.",
-    keyInputs: ["2D working drawings", "Material delivery schedules", "Inspection checklists"],
-    keyOutputs: ["Stage-wise milestone completions", "Quality test compliance reports", "Weekly digital progress updates"],
-    clientRole: "Track weekly digital updates and verify stage milestones for milestone releases.",
-    mySpaceRole: "Full site engineering supervision, material quality control, and safety adherence.",
+    title: "Quality-Controlled Build",
+    tagline: "On-Site Engineering & Weekly Progress Reports",
+    description: "Strict on-site engineering supervision. We conduct regular concrete cube tests, rebar audits, and provide weekly digital photo reports.",
+    keyInputs: ["Execution drawings", "Material delivery schedule", "Quality audit checklist"],
+    keyOutputs: ["Stage-wise structural completion", "Material test certificates", "Weekly digital progress updates"],
+    clientRole: "Review weekly progress and verify completed stage milestones.",
+    mySpaceRole: "Full site engineering, material QA/QC, and adherence to IS standards.",
     image: "/images/company/real-project-18.jpeg"
   },
   {
     number: "05",
-    title: "Handover",
-    tagline: "Snag Rectification, As-Built Drawings & Warranty Handover",
-    description: "A smooth, confident transition into your new space. We conduct systematic room-by-room snag audits, provide complete as-built electrical/plumbing routing maps, and hand over certified waterproofing warranty documentation.",
-    keyInputs: ["Pre-handover snag checklist", "Commissioning tests for plumbing/electrical"],
-    keyOutputs: ["Completed Snag Clearance Certificate", "As-Built Drawing Dossier", "Waterproofing & Structural Warranty Documents"],
-    clientRole: "Walk through the completed space with our project lead for final snag verification.",
-    mySpaceRole: "Deliver deep-cleaned handover package with complete operational documentation.",
+    title: "Snag Clearance & Handover",
+    tagline: "Deep Clean, Warranty Pack & Key Handover",
+    description: "Systematic room-by-room snag audit, as-built MEP drawings dossier, and certified waterproofing & structural warranty handover.",
+    keyInputs: ["Pre-handover snag checklist", "Plumbing & electrical commissioning checks"],
+    keyOutputs: ["Snag clearance certificate", "As-built drawing dossier", "Written warranty certificates"],
+    clientRole: "Conduct final walkthrough verification with our project lead.",
+    mySpaceRole: "Deliver deep-cleaned property with comprehensive documentation.",
     image: "/images/company/showroom-1.jpeg"
+  }
+];
+
+// Backwards compatibility alias
+export const processStages = constructionProcessStages;
+
+export const valuationProcessStages: ProcessStage[] = [
+  {
+    number: "01",
+    title: "Intake & Document Review",
+    tagline: "Objective Verification & Title Documents",
+    description: "We review your property documents (Sale Deed, Khata, Mother Deed, EC) and understand the appraisal purpose (Bank loan, Visa, Tax, Sale).",
+    keyInputs: ["Sale Deed / Title copy", "e-Khata / Tax receipts", "Purpose of valuation report"],
+    keyOutputs: ["Document verification checklist", "Valuation mandate confirmation", "Site inspection schedule"],
+    clientRole: "Provide digital/physical copies of property ownership records.",
+    mySpaceRole: "Verify document completeness and identify legal property bounds.",
+    image: "/images/company/real-project-75.jpeg"
+  },
+  {
+    number: "02",
+    title: "Physical Site Inspection",
+    tagline: "Boundary Audit, Measurements & Structural Health",
+    description: "Our chartered valuer inspects the property, verifies physical boundaries, measures carpet/built-up area, and checks construction quality and age.",
+    keyInputs: ["Site access coordination", "Floor layout & approved plans", "Existing structural modifications"],
+    keyOutputs: ["Field inspection log", "As-measured area dimensions", "Structural condition & age audit"],
+    clientRole: "Facilitate site access for physical measurement and photographic audit.",
+    mySpaceRole: "Verify physical dimensions, road access width, and construction grade.",
+    image: "/images/company/real-project-01.jpeg"
+  },
+  {
+    number: "03",
+    title: "Market & Guideline Analysis",
+    tagline: "Kaveri 2.0 Guidance Rates & Real Micro-Market Data",
+    description: "We cross-reference Karnataka Sub-Registrar guidance values with real transaction data and micro-market demand in Bengaluru.",
+    keyInputs: ["Local sub-registrar boundary", "Recent neighborhood transaction data", "Micro-market infrastructure trends"],
+    keyOutputs: ["Guidance rate comparative sheet", "Micro-market rate analysis", "Locality appreciation matrix"],
+    clientRole: "Share any recent commercial lease rates or surrounding plot sales.",
+    mySpaceRole: "Synthesize statutory guidance rates with realistic open-market comparables.",
+    image: "/images/company/showroom-2.jpeg"
+  },
+  {
+    number: "04",
+    title: "Valuation Computations",
+    tagline: "Cost Approach, Land+Building & Rental Yield Methods",
+    description: "Rigorous mathematical valuation using Land & Building Method, Plinth Area Cost Method (CPWD/KPWD specs), and depreciation factoring.",
+    keyInputs: ["Calculated built-up area", "Standard construction replacement rates", "Depreciation factor as per age"],
+    keyOutputs: ["Land component valuation", "Depreciated building structure value", "Fair market & distress value computations"],
+    clientRole: "Review draft computation figures and clarify any structural additions.",
+    mySpaceRole: "Apply IBBI/statutory valuation algorithms and depreciation indices.",
+    image: "/images/company/showroom-3.jpeg"
+  },
+  {
+    number: "05",
+    title: "Certified Report Handover",
+    tagline: "Signed Govt/Bank-Approved Valuation Certificate",
+    description: "Delivery of a comprehensive, legally certified Valuation Report signed by a Registered Government / IBBI Valuer, ready for Banks, Tax, or Court.",
+    keyInputs: ["Draft report sign-off", "Specific bank/consulate submission format"],
+    keyOutputs: ["Certified Valuation Report (Physical & PDF)", "Registered Valuer stamp & seal", "Fair Market & Realizable Value summary"],
+    clientRole: "Submit certified report to bank, embassy, or tax authorities.",
+    mySpaceRole: "Hand over sealed valuation dossier and answer bank queries if needed.",
+    image: "/images/company/showroom-5.jpeg"
   }
 ];
 
 export const consultationChecklist = [
   {
-    category: "Site & Plot Details",
+    category: "Construction Checklist",
     items: [
-      "Exact plot dimensions (length x width in feet or meters)",
-      "Site location and landmark in Bengaluru",
-      "Approach road width (minimum 25-30 ft recommended for concrete transit mixers)",
-      "Existing structure on site (vacant plot vs demolition required)"
+      "Plot dimensions (length x width) & location in Bengaluru",
+      "Approach road width (minimum 25-30 ft for transit mixers)",
+      "Occupancy profile: bedrooms, home office, rental units, parking",
+      "Target timeline & budget preference (standard, premium, luxury)"
     ]
   },
   {
-    category: "Functional Requirements",
+    category: "Valuation Checklist",
     items: [
-      "Occupancy profile (number of bedrooms, attached baths, living zones)",
-      "Special zones: Home office, pooja room, home theatre, utility balcony, lift provision",
-      "Rental or tenant floors (separate electrical meters, external staircase access)",
-      "Vehicle parking capacity (SUV + two-wheelers)"
+      "Copy of registered Sale Deed / Title Deed",
+      "Latest e-Khata certificate & recent tax paid receipt",
+      "Approved building plan / layout drawing (if available)",
+      "Clear appraisal objective (Bank loan, Visa, Capital Gains, Sale)"
     ]
   },
   {
-    category: "Target Timeline & Approvals",
+    category: "Document Readiness",
     items: [
-      "Desired start month and target move-in / completion date",
-      "Status of property documents (Sale deed, e-Khata, tax paid receipt)",
-      "Budget expectations (standard, premium, or luxury finish specification)"
+      "Encumbrance Certificate (EC) for past 13+ years",
+      "Utility bills (BESCOM electricity & BWSSB water)",
+      "Mother deed history (for land/commercial valuation)"
     ]
   }
 ];
+

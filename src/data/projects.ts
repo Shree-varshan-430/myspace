@@ -348,6 +348,150 @@ export const projectsData: ProjectItem[] = [
     ],
     materialsUsed: ["Sadahalli Flamed Granite", "Teak Joinery", "Tata Tiscon 550D Rebar", "Saint-Gobain Glass", "Asian Paints Royale"],
     year: "2024"
+  },
+  {
+    id: "hebbal-reinforced-superstructure",
+    slug: "hebbal-reinforced-superstructure",
+    title: "Hebbal RCC Superstructure & Civil Core",
+    category: "Civil",
+    status: "Completed",
+    location: "Hebbal, Bengaluru",
+    builtUpArea: "8,500 sq.ft (Commercial & Residential Civil)",
+    summary: "Heavy-duty reinforced concrete framed structure executing deep column footings, high-strength M30 mix design, and high-tolerance shuttering.",
+    heroImage: "/images/company/real-project-85.jpeg",
+    clientBrief: "Execute structural civil works for a multi-storey development near Hebbal with high load-bearing capacity and seismic safety conformance.",
+    mySpaceContribution: [
+      "IS 456 compliant column shuttering, starter marking, and laser leveling",
+      "Fe550D TMT rebar bending, spacing, and cover block assurance",
+      "Third-party batch plant concrete quality checks and 28-day cube strength audits"
+    ],
+    keyFeatures: [
+      "Seismic Zone II compliant structural frame detailing",
+      "High-clearance commercial ceiling spans with column optimization",
+      "Precision basement retaining walls and sump waterproofing"
+    ],
+    galleryImages: [
+      {
+        url: "/images/company/real-project-85.jpeg",
+        caption: "Heavy RCC framing and column reinforcement in progress",
+        type: "photo"
+      },
+      {
+        url: "/images/company/real-project-18.jpeg",
+        caption: "Raft foundation shuttering and rebar tying",
+        type: "photo"
+      }
+    ],
+    materialsUsed: ["UltraTech 53G Cement", "Tata Tiscon 550D Rebar", "RoboSand Manufactured Sand", "Fosroc Waterproofing Additives"],
+    year: "2024"
+  },
+  {
+    id: "yelahanka-deep-raft-foundation",
+    slug: "yelahanka-deep-raft-foundation",
+    title: "Yelahanka Foundation & Structural Civil",
+    category: "Civil",
+    status: "Completed",
+    location: "Yelahanka, Bengaluru",
+    builtUpArea: "6,200 sq.ft (Civil Foundation)",
+    summary: "Comprehensive soil strata stabilization, deep raft excavation, and engineered structural foundation pour for high-durability residential apartments.",
+    heroImage: "/images/company/real-project-01.jpeg",
+    clientBrief: "Execute complex foundation and structural core on uneven soil strata with strict waterproofing and drainage guarantees.",
+    mySpaceContribution: [
+      "Soil bearing capacity (SBC) testing and foundation depth optimization",
+      "Heavy rebar cage fabrication and continuous monolithic raft concrete pour",
+      "Integral crystalline waterproofing for underground water tanks and sump"
+    ],
+    keyFeatures: [
+      "Engineered raft foundation preventing differential settlement",
+      "Anti-termite soil treatment conforming to IS 6313 standards",
+      "Concealed PVC rainwater harvesting recharge well integration"
+    ],
+    galleryImages: [
+      {
+        url: "/images/company/real-project-01.jpeg",
+        caption: "Foundation rebar inspection and dimensional check",
+        type: "photo"
+      },
+      {
+        url: "/images/company/real-project-18.jpeg",
+        caption: "Basement civil excavation and shuttering",
+        type: "photo"
+      }
+    ],
+    materialsUsed: ["Tata Tiscon 550D", "Ready Mix Concrete M30", "Dr. Fixit Integral Waterproofing", "Sadahalli Granite Base"],
+    year: "2024"
+  },
+  {
+    id: "koramangala-modern-3d-elevation",
+    slug: "koramangala-modern-3d-elevation",
+    title: "Koramangala Modernist 3D Façade & Villa",
+    category: "Elevation & 3D",
+    status: "Completed",
+    location: "Koramangala, Bengaluru",
+    builtUpArea: "5,400 sq.ft (Villa & Elevation)",
+    summary: "Architectural 3D elevation modeling, solar shading louvers, and turnkey execution featuring contemporary wood-finish aluminium cladding.",
+    heroImage: "/images/company/front-elevation-hero.jpeg",
+    clientBrief: "Transform a dated exterior into a stunning contemporary landmark with geometric cantilevered forms and warm ambient lighting.",
+    mySpaceContribution: [
+      "Photorealistic 3D day and night elevation simulations with ray-traced lighting",
+      "Engineering fabrication drawings for CNC louvers and cantilevered planters",
+      "On-site execution of exterior ACP louvers, stone cladding, and weatherproof texture paint"
+    ],
+    keyFeatures: [
+      "Precision solar louvers cutting afternoon heat by 4°C inside living areas",
+      "Concealed architectural cove lighting on exterior balconies",
+      "Zero-maintenance aluminium composite wood-grain finish cladding"
+    ],
+    galleryImages: [
+      {
+        url: "/images/company/front-elevation-hero.jpeg",
+        caption: "Main 3D architectural façade with cantilevered louvers",
+        type: "photo"
+      },
+      {
+        url: "/images/company/real-project-39.jpeg",
+        caption: "Exposed brick jali screen and exterior textures",
+        type: "photo"
+      }
+    ],
+    materialsUsed: ["Weatherproof Wood-grain ACP", "Saint-Gobain Solar Glass", "Asian Paints Apex Ultima", "Sadahalli Granite Plinth"],
+    year: "2024"
+  },
+  {
+    id: "jayanagar-structural-retrofit",
+    slug: "jayanagar-structural-retrofit",
+    title: "Jayanagar Structural Inspection & Audit",
+    category: "Civil",
+    status: "Completed",
+    location: "Jayanagar, Bengaluru",
+    builtUpArea: "3,800 sq.ft (Audit & Civil Retrofit)",
+    summary: "Non-destructive testing (NDT), structural strength audit, column beam retrofitting, and certified valuation appraisal for a heritage residential home.",
+    heroImage: "/images/company/real-project-75.jpeg",
+    clientBrief: "Assess structural safety of an existing G+2 building for additional floor construction and obtain a certified civil engineer load clearance.",
+    mySpaceContribution: [
+      "Rebound hammer test and ultrasonic pulse velocity structural testing",
+      "Micro-concrete column jacketing and rebar epoxy anchoring",
+      "Chartered valuation appraisal report for bank mortgage approval"
+    ],
+    keyFeatures: [
+      "Seismic reinforcement and beam strengthening without complete reconstruction",
+      "Comprehensive structural stability certificate issued by registered valuer",
+      "Detailed structural load calculation report conforming to NBC standards"
+    ],
+    galleryImages: [
+      {
+        url: "/images/company/real-project-75.jpeg",
+        caption: "Senior engineer on-site rebar and structural verification",
+        type: "photo"
+      },
+      {
+        url: "/images/company/showroom-2.jpeg",
+        caption: "Restored and strengthened commercial floor plate",
+        type: "photo"
+      }
+    ],
+    materialsUsed: ["Fosroc Conbextra GP2 Grout", "Micro-Concrete M40", "Chemical Anchors", "High-Yield Rebar"],
+    year: "2024"
   }
 ];
 
