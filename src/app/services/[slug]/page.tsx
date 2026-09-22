@@ -248,120 +248,308 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       </section>
 
       {/* ============================================================
-          SECTION 1: WHAT WE BUILD / TYPOLOGIES (Screenshot 1 Style)
-      ============================================================ */}
-      <section className="py-16 lg:py-24 bg-surface-ice border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="space-y-3 max-w-3xl">
-            <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block">
-              Typologies & Solutions
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-950 tracking-tight">
-              {details.typologiesTitle}
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              {details.typologiesSubtitle}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {details.typologies.map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-3xl p-7 sm:p-8 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all space-y-4 group"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center group-hover:scale-105 transition-transform">
-                  {renderTypologyIcon(item.iconType)}
-                </div>
-                <h3 className="text-xl font-bold text-navy-950 tracking-tight">
-                  {item.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          SECTION 2: OUR PROCESS WORKFLOW (Screenshot 2 Style)
+          SERVICES INTERLEAVED ZIG-ZAG 4-BLOCK CONTENT & IMAGE SHOWCASE
       ============================================================ */}
       <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="space-y-3 max-w-3xl">
-            <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block">
-              Engineering Workflow
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-950 tracking-tight">
-              {details.processTitle}
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              {details.processSubtitle}
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 lg:space-y-28">
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {details.processStages.map((stage, idx) => (
-              <div
-                key={idx}
-                className="relative bg-surface-ice rounded-3xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all overflow-hidden space-y-2"
-              >
-                <span className="absolute top-4 right-6 text-4xl sm:text-5xl font-mono font-black text-amber-500/20 select-none pointer-events-none">
-                  {stage.stageNumber}
+          {/* ============================================================
+              BLOCK 1: WHAT WE BUILD / TYPOLOGIES (Left) & IMAGE 1 (Right)
+          ============================================================ */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            {/* Left: Content */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="flex items-center gap-4">
+                <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
+                  01
                 </span>
-                <h3 className="text-base sm:text-lg font-bold text-navy-950 pr-12">
-                  {stage.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
-                  {stage.desc}
+                <span className="px-3.5 py-1 rounded-full bg-blue-50 text-brand-blue font-bold text-xs uppercase tracking-wider border border-blue-200">
+                  Typologies & Solutions
+                </span>
+              </div>
+
+              <div className="space-y-2">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
+                  {details.typologiesTitle}
+                </h2>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  {details.typologiesSubtitle}
                 </p>
               </div>
-            ))}
+
+              {/* Typology Cards Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                {details.typologies.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-surface-ice rounded-2xl p-5 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all space-y-3 group"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center group-hover:scale-105 transition-transform">
+                      {renderTypologyIcon(item.iconType)}
+                    </div>
+                    <h3 className="text-base font-bold text-navy-950 tracking-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-3">
+                <a
+                  href="#enquiry"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-steel transition-all shadow-blueprint hover:shadow-lg hover:translate-x-0.5"
+                >
+                  <span>{service.primaryCta || 'Plan Your Project'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Right: Image 1 */}
+            <div className="lg:col-span-5 space-y-3">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
+                <img
+                  src={img1.url}
+                  alt={img1.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="px-1 pt-1">
+                <h4 className="font-bold text-base text-navy-950">{img1.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img1.caption}</p>
+              </div>
+            </div>
           </div>
+
+          {/* ============================================================
+              BLOCK 2: IMAGE 2 (Left) & OUR PROCESS WORKFLOW (Right)
+          ============================================================ */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            {/* Left: Image 2 */}
+            <div className="lg:col-span-5 order-2 lg:order-1 space-y-3">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
+                <img
+                  src={img2.url}
+                  alt={img2.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="px-1 pt-1">
+                <h4 className="font-bold text-base text-navy-950">{img2.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img2.caption}</p>
+              </div>
+            </div>
+
+            {/* Right: Content */}
+            <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
+              <div className="flex items-center gap-4">
+                <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
+                  02
+                </span>
+                <span className="px-3.5 py-1 rounded-full bg-amber-50 text-amber-800 font-bold text-xs uppercase tracking-wider border border-amber-200">
+                  Engineering Workflow
+                </span>
+              </div>
+
+              <div className="space-y-2">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
+                  {details.processTitle}
+                </h2>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  {details.processSubtitle}
+                </p>
+              </div>
+
+              {/* Process Stages Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                {details.processStages.map((stage, idx) => (
+                  <div
+                    key={idx}
+                    className="relative bg-surface-ice rounded-2xl p-5 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all overflow-hidden space-y-1.5"
+                  >
+                    <span className="absolute top-3 right-4 text-3xl sm:text-4xl font-mono font-black text-amber-500/20 select-none pointer-events-none">
+                      {stage.stageNumber}
+                    </span>
+                    <h3 className="text-sm sm:text-base font-bold text-navy-950 pr-10">
+                      {stage.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed pt-0.5">
+                      {stage.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-3">
+                <a
+                  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-navy-950 text-white text-xs font-bold uppercase tracking-wider hover:bg-navy-900 transition-all shadow-md"
+                >
+                  <Phone className="w-4 h-4 text-sky-400" />
+                  <span>Call: {siteConfig.contact.phoneDisplay}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* ============================================================
+              BLOCK 3: WHAT IS INCLUDED (Left) & IMAGE 3 (Right)
+          ============================================================ */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            {/* Left: Content */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="flex items-center gap-4">
+                <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
+                  03
+                </span>
+                <span className="px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-800 font-bold text-xs uppercase tracking-wider border border-emerald-200">
+                  Deliverables & Specifications
+                </span>
+              </div>
+
+              <div className="space-y-2">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
+                  {details.scopeTitle}
+                </h2>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  {details.scopeSubtitle}
+                </p>
+              </div>
+
+              {/* Detailed Scope Grid with Left Amber Border Accent */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                {details.detailedScope.map((scope, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-surface-ice rounded-2xl p-5 border border-slate-200/90 border-l-4 border-l-amber-500 shadow-sm hover:shadow-md hover:border-slate-300 transition-all space-y-1.5"
+                  >
+                    <h3 className="text-sm sm:text-base font-bold text-navy-950">
+                      {scope.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      {scope.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-3">
+                <a
+                  href="#enquiry"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-steel transition-all shadow-blueprint hover:shadow-lg hover:translate-x-0.5"
+                >
+                  <span>Request Scope & BOQ Consultation</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Right: Image 3 */}
+            <div className="lg:col-span-5 space-y-3">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
+                <img
+                  src={img3.url}
+                  alt={img3.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="px-1 pt-1">
+                <h4 className="font-bold text-base text-navy-950">{img3.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img3.caption}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* ============================================================
+              BLOCK 4: IMAGE 4 (Left) & PROJECT TIMELINE & MILESTONES (Right)
+          ============================================================ */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            {/* Left: Image 4 */}
+            <div className="lg:col-span-5 order-2 lg:order-1 space-y-3">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
+                <img
+                  src={img4.url}
+                  alt={img4.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="px-1 pt-1">
+                <h4 className="font-bold text-base text-navy-950">{img4.title}</h4>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img4.caption}</p>
+              </div>
+            </div>
+
+            {/* Right: Content */}
+            <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
+              <div className="flex items-center gap-4">
+                <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
+                  04
+                </span>
+                <span className="px-3.5 py-1 rounded-full bg-purple-50 text-purple-800 font-bold text-xs uppercase tracking-wider border border-purple-200">
+                  Milestones & Schedule
+                </span>
+              </div>
+
+              <div className="space-y-2">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
+                  {details.timelineTitle}
+                </h2>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  {details.timelineSubtitle}
+                </p>
+              </div>
+
+              {/* Timeline Milestones Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                {details.timelineSchedule.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-surface-ice rounded-2xl p-5 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all space-y-2.5"
+                  >
+                    <span className="inline-block px-3 py-1 rounded-md bg-navy-950 text-white font-mono text-xs font-bold uppercase tracking-wider">
+                      {item.durationBadge}
+                    </span>
+                    <h3 className="text-sm sm:text-base font-bold text-navy-950">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {service.disclaimer && (
+                <div className="flex items-start gap-2.5 p-3.5 rounded-xl bg-blue-50/70 border border-blue-200 text-xs text-slate-600 mt-2">
+                  <AlertCircle className="w-4 h-4 text-brand-blue shrink-0 mt-0.5" />
+                  <p>
+                    <strong className="text-navy-950">Notice:</strong> {service.disclaimer}
+                  </p>
+                </div>
+              )}
+
+              <div className="pt-3">
+                <a
+                  href="#enquiry"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-steel transition-all shadow-blueprint hover:shadow-lg hover:translate-x-0.5"
+                >
+                  <span>Inquire Timeline & Feasibility</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
       {/* ============================================================
-          SECTION 3: WHAT IS INCLUDED (Screenshot 3 Style with Left Border Accent)
+          SECTION 5: COST DRIVERS & BUDGET GUIDANCE (Bangalore Market Transparency)
       ============================================================ */}
       <section className="py-16 lg:py-24 bg-surface-ice border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="space-y-3 max-w-3xl">
-            <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block">
-              Deliverables & Specifications
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-950 tracking-tight">
-              {details.scopeTitle}
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              {details.scopeSubtitle}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {details.detailedScope.map((scope, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 border-l-4 border-l-amber-500 shadow-sm hover:shadow-md hover:border-slate-300 transition-all space-y-2"
-              >
-                <h3 className="text-base sm:text-lg font-bold text-navy-950">
-                  {scope.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  {scope.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          SECTION 4: COST DRIVERS & BUDGET GUIDANCE (Screenshot 4 Style)
-      ============================================================ */}
-      <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="space-y-3 max-w-3xl">
             <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block">
@@ -379,317 +567,22 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
             {details.costDrivers.map((cost, idx) => (
               <div
                 key={idx}
-                className="bg-surface-ice rounded-3xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all space-y-2.5"
+                className="bg-white rounded-3xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all space-y-2.5"
               >
-                <h3 className="text-base sm:text-lg font-bold text-navy-950">
-                  {cost.number}. {cost.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <div className="flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-600 font-mono font-bold text-sm flex items-center justify-center shrink-0">
+                    {cost.number}
+                  </span>
+                  <h3 className="text-base sm:text-lg font-bold text-navy-950">
+                    {cost.title}
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-11">
                   {cost.desc}
                 </p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          SECTION 5: PROJECT TIMELINE & SCHEDULE (Screenshot 5 Style)
-      ============================================================ */}
-      <section className="py-16 lg:py-24 bg-surface-ice border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="space-y-3 max-w-3xl">
-            <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block">
-              Milestones & Durations
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-950 tracking-tight">
-              {details.timelineTitle}
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              {details.timelineSubtitle}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {details.timelineSchedule.map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-3xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all space-y-3"
-              >
-                <span className="inline-block px-3 py-1 rounded-md bg-navy-950 text-white font-mono text-xs font-bold uppercase tracking-wider">
-                  {item.durationBadge}
-                </span>
-                <h3 className="text-base sm:text-lg font-bold text-navy-950">
-                  {item.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          SERVICES ZIGZAG 4-IMAGE SHOWCASE (BioArtha Style with Clean Text & Big Numbers)
-      ============================================================ */}
-      <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 lg:space-y-28">
-
-          {/* Row 1: Text Left, Image Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-6 space-y-6">
-              <div className="flex items-center gap-4">
-                <span className="text-6xl sm:text-7xl lg:text-8xl font-mono font-black text-brand-blue/25 tracking-tighter leading-none select-none">
-                  01
-                </span>
-                <span className="px-3 py-1 rounded-md bg-blue-50 text-brand-blue font-bold text-xs uppercase tracking-wider border border-blue-200">
-                  Core Engineering Scope
-                </span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-bold text-navy-950 tracking-tight leading-snug">
-                Execution Quality & Key Scope
-              </h3>
-
-              <ul className="space-y-3">
-                {service.scopeInclusions.slice(0, 4).map((inc, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                      <Check className="w-3.5 h-3.5" />
-                    </div>
-                    <span className="text-sm text-slate-700 leading-relaxed font-medium">
-                      {inc}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="pt-2">
-                <a
-                  href="#enquiry"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-steel transition-all shadow-blueprint hover:shadow-lg hover:translate-x-0.5"
-                >
-                  <span>{service.primaryCta}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 space-y-3">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
-                <img
-                  src={img1.url}
-                  alt={img1.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="px-1">
-                <h4 className="font-bold text-base text-navy-950">{img1.title}</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img1.caption}</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Row 2: Image Left, Text Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-6 order-2 lg:order-1 space-y-3">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
-                <img
-                  src={img2.url}
-                  alt={img2.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="px-1">
-                <h4 className="font-bold text-base text-navy-950">{img2.title}</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img2.caption}</p>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-              <div className="flex items-center gap-4">
-                <span className="text-6xl sm:text-7xl lg:text-8xl font-mono font-black text-brand-blue/25 tracking-tighter leading-none select-none">
-                  02
-                </span>
-                <span className="px-3 py-1 rounded-md bg-amber-50 text-amber-800 font-bold text-xs uppercase tracking-wider border border-amber-200">
-                  Target Profile
-                </span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-bold text-navy-950 tracking-tight leading-snug">
-                Who this service is planned for.
-              </h3>
-
-              <ul className="space-y-3">
-                {service.whoIsThisFor.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-brand-blue/15 text-brand-blue flex items-center justify-center shrink-0 mt-0.5">
-                      <Check className="w-3.5 h-3.5" />
-                    </div>
-                    <span className="text-sm text-slate-700 leading-relaxed font-medium">
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="pt-2">
-                <a
-                  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-navy-950 text-white text-xs font-bold uppercase tracking-wider hover:bg-navy-900 transition-all shadow-md"
-                >
-                  <Phone className="w-4 h-4 text-sky-400" />
-                  <span>Call: {siteConfig.contact.phoneDisplay}</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Row 3: Text Left, Image Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-6 space-y-6">
-              <div className="flex items-center gap-4">
-                <span className="text-6xl sm:text-7xl lg:text-8xl font-mono font-black text-brand-blue/25 tracking-tighter leading-none select-none">
-                  03
-                </span>
-                <span className="px-3 py-1 rounded-md bg-emerald-50 text-emerald-800 font-bold text-xs uppercase tracking-wider border border-emerald-200">
-                  Execution Governance
-                </span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-bold text-navy-950 tracking-tight leading-snug">
-                How My Space manages this work.
-              </h3>
-
-              <div className="space-y-4">
-                {service.whatWeHelpWith.map((item, i) => (
-                  <div key={i} className="space-y-1">
-                    <div className="flex items-center gap-2.5">
-                      <span className="w-6 h-6 rounded bg-brand-blue text-white flex items-center justify-center text-xs font-mono font-bold shrink-0">
-                        {i + 1}
-                      </span>
-                      <h4 className="font-bold text-sm sm:text-base text-navy-950">
-                        {item.title}
-                      </h4>
-                    </div>
-                    <p className="text-xs sm:text-sm text-slate-600 pl-8.5 leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="pt-2">
-                <a
-                  href="#enquiry"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-steel transition-all shadow-blueprint hover:shadow-lg hover:translate-x-0.5"
-                >
-                  <span>Request Process Consultation</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 space-y-3">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
-                <img
-                  src={img3.url}
-                  alt={img3.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="px-1">
-                <h4 className="font-bold text-base text-navy-950">{img3.title}</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img3.caption}</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Row 4: Image Left, Text Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-6 order-2 lg:order-1 space-y-3">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
-                <img
-                  src={img4.url}
-                  alt={img4.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="px-1">
-                <h4 className="font-bold text-base text-navy-950">{img4.title}</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img4.caption}</p>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-              <div className="flex items-center gap-4">
-                <span className="text-6xl sm:text-7xl lg:text-8xl font-mono font-black text-brand-blue/25 tracking-tighter leading-none select-none">
-                  04
-                </span>
-                <span className="px-3 py-1 rounded-md bg-purple-50 text-purple-800 font-bold text-xs uppercase tracking-wider border border-purple-200">
-                  Preparation & Scope Boundaries
-                </span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-bold text-navy-950 tracking-tight leading-snug">
-                Clear preparation & transparent scope.
-              </h3>
-
-              <div className="space-y-5">
-                <div className="space-y-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-navy-950 flex items-center gap-2">
-                    <ClipboardList className="w-4 h-4 text-brand-blue" />
-                    <span>Helpful To Prepare Before We Speak</span>
-                  </h4>
-                  <ul className="space-y-2 text-xs sm:text-sm text-slate-600 pl-6">
-                    {service.whatToPrepare.slice(0, 3).map((prep, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <Check className="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5" />
-                        <span>{prep}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="space-y-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-navy-950 flex items-center gap-2">
-                    <XCircle className="w-4 h-4 text-slate-500" />
-                    <span>Separately Quoted Items</span>
-                  </h4>
-                  <ul className="space-y-1.5 text-xs sm:text-sm text-slate-600 pl-6">
-                    {service.scopeExclusions.slice(0, 3).map((exc, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0 mt-1.5" />
-                        <span>{exc}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {service.disclaimer && (
-                <div className="flex items-start gap-2.5 p-3.5 rounded-xl bg-blue-50/70 border border-blue-200 text-xs text-slate-600">
-                  <AlertCircle className="w-4 h-4 text-brand-blue shrink-0 mt-0.5" />
-                  <p>
-                    <strong className="text-navy-950">Notice:</strong> {service.disclaimer}
-                  </p>
-                </div>
-              )}
-
-              <div className="pt-2">
-                <a
-                  href="#enquiry"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-steel transition-all shadow-blueprint hover:shadow-lg hover:translate-x-0.5"
-                >
-                  <span>Inquire This Service</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
