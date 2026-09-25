@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import InnerPageHeroBackground from '@/components/ui/InnerPageHeroBackground';
 import EnquiryForm from '@/components/forms/EnquiryForm';
+import TestimonialsCarousel from '@/components/sections/TestimonialsCarousel';
 import { constructionProcessStages, valuationProcessStages } from '@/data/process';
 import {
   ShieldCheck,
@@ -16,9 +17,7 @@ import {
   Check,
   ArrowRight,
   Home,
-  FileCheck2,
-  Star,
-  Quote
+  FileCheck2
 } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 
@@ -26,37 +25,6 @@ export default function AboutPage() {
   const [activeProcess, setActiveProcess] = useState<'construction' | 'valuation'>('construction');
 
   const currentStages = activeProcess === 'construction' ? constructionProcessStages : valuationProcessStages;
-
-  const testimonials = [
-    {
-      name: "Ramesh Kumar & Family",
-      location: "Singasandra, Bengaluru",
-      rating: 5,
-      project: "Turnkey Duplex Home Construction",
-      review: "Er. Saravanan and the My Space team delivered our duplex house with exceptional engineering quality. Their 3D elevation clarity, on-time project execution, and transparent material budgeting gave us complete peace of mind. Highly recommended for turnkey home construction in Bangalore."
-    },
-    {
-      name: "Senthil Nathan",
-      location: "HSR Layout, Bengaluru",
-      rating: 5,
-      project: "Structural Planning & Property Valuation",
-      review: "Very professional and trusted civil engineers. They handled our building plan approvals, structural drawings, and bank valuation reports with great precision. Honest communication and no hidden costs at any stage."
-    },
-    {
-      name: "Karthik Sundaram",
-      location: "Electronic City, Bengaluru",
-      rating: 5,
-      project: "2D/3D Architecture & Modular Interiors",
-      review: "We consulted My Space for 2D planning, 3D elevation, and modular interiors. Er. Saravanan provided personalized attention to our space requirements and delivered trendy, functional designs within our budget."
-    },
-    {
-      name: "Venkatesh Prasad",
-      location: "Sarjapur Road, Bengaluru",
-      rating: 5,
-      project: "Residential Villa Construction",
-      review: "The structural integrity and quality of construction materials used by My Space are top-notch. Every milestone was completed on schedule with regular site inspection updates. One of the best civil engineering teams in Bangalore."
-    }
-  ];
 
   return (
     <div className="pt-20 bg-surface-ice">
@@ -202,65 +170,8 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Client Testimonials Section (Inspired by Vaasan Builders & Google Reviews) */}
-        <div className="space-y-8 pt-6 border-t border-slate-200">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <div>
-              <div className="flex items-center gap-2 text-brand-blue text-xs font-bold uppercase tracking-wider mb-1.5">
-                <div className="flex text-amber-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <span>4.9 / 5 Rating on Google Reviews</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-navy-950 tracking-tight">
-                What Our Clients Say
-              </h2>
-            </div>
-            <p className="text-xs sm:text-sm text-slate-600 max-w-md">
-              Real feedback from homeowners and property owners who trusted MY SPACE Civil Engineers & Valuers for their construction and design projects.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {testimonials.map((item, idx) => (
-              <div
-                key={idx}
-                className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/40 transition-all flex flex-col justify-between space-y-4 group"
-              >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1 text-amber-400">
-                      {[...Array(item.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                      ))}
-                    </div>
-                    <Quote className="w-6 h-6 text-slate-200 group-hover:text-brand-blue/30 transition-colors" />
-                  </div>
-
-                  <p className="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed italic">
-                    "{item.review}"
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                  <div>
-                    <h3 className="text-sm font-bold text-navy-950 font-sans">
-                      {item.name}
-                    </h3>
-                    <p className="text-[11px] font-mono text-slate-500">
-                      {item.location}
-                    </p>
-                  </div>
-                  <span className="px-3 py-1 rounded-full bg-surface-ice text-brand-blue font-mono text-[10px] font-bold tracking-wide">
-                    {item.project}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Client Testimonials Carousel (Google Reviews for MY SPACE Civil Engineers & Valuers) */}
+        <TestimonialsCarousel />
 
         {/* Real Project Execution Showcase */}
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-subtle space-y-6">
