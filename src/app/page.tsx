@@ -56,15 +56,15 @@ export default function HomePage() {
           <ScrollReveal direction="up" delay={0.1} duration={0.8} className="max-w-3xl">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-xs font-mono font-medium tracking-wider uppercase">
-                <span>Construction, Design & Valuation • Bengaluru</span>
+                <span>Complete Building Solutions Under One Roof • Bengaluru</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
-                House Construction, Design & Valuation in Bangalore
+                You Dream It, We Design & Build It
               </h1>
 
               <p className="text-sm sm:text-base text-slate-200 font-sans leading-relaxed max-w-2xl">
-                Turnkey residential construction, 3D architectural elevations, and government-approved valuation reports across Bengaluru with fixed per-sq.ft pricing.
+                Turnkey residential construction, customized 2D/3D architectural planning, bespoke interior design, and certified valuation in Bangalore with fixed milestone pricing and direct execution.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -139,19 +139,19 @@ export default function HomePage() {
             <ScrollReveal direction="right" duration={0.7} className="lg:col-span-6 space-y-6">
               <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider">
                 <Home className="w-4 h-4 text-brand-blue" />
-                <span>House Construction in Bangalore</span>
+                <span>Complete Building Solutions Under One Roof</span>
               </div>
 
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                Turnkey Construction & Civil Engineering in Bangalore
+                Turnkey Construction, Architecture & Interiors in Bangalore
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
-                Building in Bengaluru shouldn't feel stressful or complicated. At My Space, we bring architectural planning, solid civil construction, custom interior design, and certified property valuation together under one accountable team.
+                Building your dream home should be an inspiring and worry-free experience. At My Space, we bring creative architectural design, solid structural engineering, custom interior fit-outs, and certified property valuation together under one accountable roof.
               </p>
 
               <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
-                You never have to juggle between architects who don't visit the site and contractors who cut corners. We give you transparent pricing, high-grade materials, and regular milestone updates from day one.
+                From initial 2D space planning and 3D elevations to on-site civil execution and stage-by-stage quality checks, we work directly with you—eliminating middlemen commissions, hidden costs, and contractor friction.
               </p>
 
               {/* Core Feature Points */}
@@ -168,7 +168,7 @@ export default function HomePage() {
 
                 <div className="flex items-center gap-2.5 text-navy-950 font-sans font-semibold text-sm">
                   <CheckCircle2 className="w-4 h-4 text-brand-blue shrink-0" />
-                  <span>3D Elevation & Floor Plans</span>
+                  <span>Creative 2D/3D Architecture</span>
                 </div>
 
                 <div className="flex items-center gap-2.5 text-navy-950 font-sans font-semibold text-sm">
@@ -266,15 +266,15 @@ export default function HomePage() {
             <ScrollReveal direction="right" duration={0.7} className="lg:col-span-7 space-y-4">
               <div className="flex items-center gap-2 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-2">
                 <Home className="w-4 h-4 text-sky-400" />
-                <span>Construction Consultation</span>
+                <span>Construction Consultation & Planning</span>
               </div>
 
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-snug">
-                Free Construction Consultation & BOQ Estimate
+                Get Your Customized Architectural Plan & Detailed BOQ Estimate
               </h2>
 
               <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed max-w-2xl">
-                Schedule a consultation at our studio or on your plot. We review your setback feasibility and share an itemized Bill of Quantities (BOQ) before you build.
+                Schedule a consultation at our studio or on your plot. We analyze setback feasibility, spatial layout requirements, and provide a transparent, itemized Bill of Quantities before you commit.
               </p>
             </ScrollReveal>
 
@@ -283,10 +283,10 @@ export default function HomePage() {
               <div className="p-6 sm:p-8 rounded-3xl bg-white/[0.07] backdrop-blur-xl border border-white/15 shadow-2xl space-y-5">
                 <div>
                   <h3 className="text-lg font-bold text-white">
-                    Connect With Our Engineering Team
+                    Consult Directly With Our Engineers & Architects
                   </h3>
                   <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                    Direct discussion with practicing structural engineers and architects.
+                    Direct discussion with practicing structural engineers and architects—no sales agents or middlemen.
                   </p>
                 </div>
 
@@ -339,13 +339,13 @@ export default function HomePage() {
           <ScrollReveal direction="up" className="max-w-3xl mb-12">
             <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-3">
               <Home className="w-4 h-4 text-brand-blue" />
-              <span>Bangalore Construction Pricing</span>
+              <span>Why Choose My Space</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-              Transparent House Construction Cost & Fixed BOQ
+              Experience, Trust & Complete Transparency in Every Square Foot
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-              From initial soil testing to final key handover, we provide fixed itemized pricing, transparent contracts, and dependable engineering.
+              We eliminate construction uncertainties through itemized quotations, stage-by-stage milestone payments, direct site execution, and stringent quality testing.
             </p>
           </ScrollReveal>
 
@@ -367,56 +367,56 @@ export default function HomePage() {
                       </div>
                     </div>
                     <h3 className="font-sans font-bold text-base sm:text-lg text-navy-950 group-hover:text-brand-blue transition-colors">
-                      Itemized Scope & Fixed Budget
+                      Itemized BOQ & Zero Hidden Costs
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      Every material brand, specification, and finish grade is clearly listed upfront with zero hidden costs or midway escalations.
+                      Every material brand, specification, and finish grade is documented in a transparent line-item quotation with zero midway escalations.
                     </p>
                   </div>
                 </div>
               </StaggerItem>
 
-              {/* Brick 2: Single-Point Team */}
+              {/* Brick 2: Direct Execution */}
               <StaggerItem>
                 <div className="relative overflow-hidden p-6 sm:p-7 rounded-[22px] bg-white border border-slate-300/50 ring-1 ring-slate-900/[0.02] shadow-[0_2px_8px_rgba(0,0,0,0.02),inset_0_1px_0_rgba(255,255,255,1)] hover:border-slate-400/80 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 space-y-3.5 group flex flex-col justify-between h-full">
                   <div className="space-y-3 relative z-10">
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-[11px] font-semibold text-brand-blue uppercase tracking-widest flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-brand-blue inline-block" />
-                        02 • One Team
+                        02 • Direct Execution
                       </span>
                       <div className="w-7 h-7 rounded-lg bg-surface-ice border border-slate-200/60 text-navy-950 flex items-center justify-center font-mono font-bold text-xs group-hover:bg-brand-blue group-hover:text-white group-hover:border-brand-blue transition-all">
                         02
                       </div>
                     </div>
                     <h3 className="font-sans font-bold text-base sm:text-lg text-navy-950 group-hover:text-brand-blue transition-colors">
-                      Single Accountable Team
+                      Direct Execution & No Middlemen
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      Architects, structural engineers, electricians, and interior carpenters work together under one project lead to ensure zero delays.
+                      Our in-house architects, civil engineers, and master craftsmen execute your project directly, ensuring total quality control and zero broker commissions.
                     </p>
                   </div>
                 </div>
               </StaggerItem>
 
-              {/* Brick 3: 3D Visualization */}
+              {/* Brick 3: Climate-Responsive Architecture */}
               <StaggerItem>
                 <div className="relative overflow-hidden p-6 sm:p-7 rounded-[22px] bg-white border border-slate-300/50 ring-1 ring-slate-900/[0.02] shadow-[0_2px_8px_rgba(0,0,0,0.02),inset_0_1px_0_rgba(255,255,255,1)] hover:border-slate-400/80 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 space-y-3.5 group flex flex-col justify-between h-full">
                   <div className="space-y-3 relative z-10">
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-[11px] font-semibold text-brand-blue uppercase tracking-widest flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-brand-blue inline-block" />
-                        03 • 3D Previews
+                        03 • Creative Design
                       </span>
                       <div className="w-7 h-7 rounded-lg bg-surface-ice border border-slate-200/60 text-navy-950 flex items-center justify-center font-mono font-bold text-xs group-hover:bg-brand-blue group-hover:text-white group-hover:border-brand-blue transition-all">
                         03
                       </div>
                     </div>
                     <h3 className="font-sans font-bold text-base sm:text-lg text-navy-950 group-hover:text-brand-blue transition-colors">
-                      Photorealistic 3D Previews
+                      Creative & Climate-Responsive Design
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      Walk through 3D exterior elevations and furnished spatial layouts to visualize and refine your home before breaking ground.
+                      Bespoke 2D layouts and photorealistic 3D elevations optimized for natural sunlight, cross-ventilation, and Vastu harmony.
                     </p>
                   </div>
                 </div>
@@ -439,33 +439,33 @@ export default function HomePage() {
                       </div>
                     </div>
                     <h3 className="font-sans font-bold text-base sm:text-lg text-navy-950 group-hover:text-brand-blue transition-colors">
-                      Strict Structural Quality Control
+                      Strict Structural Quality Control & Testing
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
-                      Soil-matched foundation footings, lab-tested concrete mix strength, and certified TMT steel verification at every floor casting.
+                      Soil-matched foundation footings, lab-certified concrete compression tests, and IS-standard Fe550D TMT steel verification at every casting.
                     </p>
                   </div>
                 </div>
               </StaggerItem>
 
-              {/* Brick 5: Accredited Valuation */}
+              {/* Brick 5: Milestone Payments */}
               <StaggerItem>
                 <div className="relative overflow-hidden p-6 sm:p-8 rounded-[22px] bg-white border border-slate-300/50 ring-1 ring-slate-900/[0.02] shadow-[0_2px_8px_rgba(0,0,0,0.02),inset_0_1px_0_rgba(255,255,255,1)] hover:border-slate-400/80 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 space-y-3.5 group h-full">
                   <div className="relative z-10 space-y-3.5">
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-[11px] font-semibold text-brand-blue uppercase tracking-widest flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-brand-blue inline-block" />
-                        05 • Certified Valuation
+                        05 • Milestone Payments
                       </span>
                       <div className="w-7 h-7 rounded-lg bg-surface-ice border border-slate-200/60 text-navy-950 flex items-center justify-center font-mono font-bold text-xs group-hover:bg-brand-blue group-hover:text-white group-hover:border-brand-blue transition-all">
                         05
                       </div>
                     </div>
                     <h3 className="font-sans font-bold text-base sm:text-lg text-navy-950 group-hover:text-brand-blue transition-colors">
-                      Certified Valuation & Legal Clarity
+                      Stage-by-Stage Milestone Payments
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
-                      Government-registered property valuation, thorough title verification, and institutional reports recognized by all major banks.
+                      Pay only as construction milestones are completed and verified on site, ensuring complete financial safety and peace of mind.
                     </p>
                   </div>
                 </div>
@@ -859,13 +859,13 @@ export default function HomePage() {
             <ScrollReveal direction="right" duration={0.7} className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
               <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider">
                 <Home className="w-4 h-4 text-brand-blue" />
-                <span>Let's Talk</span>
+                <span>Let's Build Your Dream Space</span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
                 Start Your Project Conversation With Us
               </h2>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Tell us about your plot, ideas, or budget. Our team is here to guide you with honest advice, clear options, and zero pressure.
+                Share your plot dimensions, ideas, or budget with our team. We provide honest engineering guidance, customized 2D/3D plans, and transparent milestone estimates with zero obligation.
               </p>
 
               <div className="pt-4 space-y-4">

@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "My Space Engineering, Construction & Valuers",
   shortName: "My Space",
-  tagline: "Build Your Own Space",
+  tagline: "Complete Building Solutions Under One Roof",
   location: "Bangalore / Bengaluru, Karnataka, India",
   address: {
     street: "14/2, 2nd Floor, Outer Ring Road, HSR Layout Sector 5",
@@ -18,9 +18,9 @@ export const siteConfig = {
     hours: "Monday – Saturday: 9:00 AM – 7:00 PM IST",
   },
   meta: {
-    defaultTitle: "My Space | Construction, Interior Design & Valuation in Bangalore",
+    defaultTitle: "My Space | Complete Building Solutions Under One Roof | Bangalore",
     titleTemplate: "%s | My Space Bangalore",
-    description: "My Space helps you plan, build, design, visualize, and value residential and commercial spaces in Bangalore. Explore construction, interiors, elevations, 3D floor plans, and valuation enquiries.",
+    description: "Complete building solutions under one roof in Bangalore: Turnkey residential construction, 2D/3D architectural planning, modular interiors, and certified property valuation with fixed milestone pricing.",
     url: "https://www.myspacebangalore.com",
     ogImage: "/images/hero-banner.jpg",
   },

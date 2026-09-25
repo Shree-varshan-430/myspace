@@ -41,15 +41,15 @@ export default function AboutPage() {
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-gold-light text-xs font-bold uppercase tracking-widest">
               <Home className="w-3.5 h-3.5" />
-              <span>ABOUT MY SPACE</span>
+              <span>ABOUT MY SPACE • FROM PLANNING TO COMPLETION</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
-              Engineering-Led Construction & Chartered Valuation in Bangalore
+              From Initial Planning to Final Handover: Complete Building Solutions in Bangalore
             </h1>
 
             <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed max-w-2xl">
-              Turnkey residential construction, architectural planning, and certified property valuation with senior engineering supervision and zero surprises.
+              Specializing in turnkey residential construction, custom 2D planning, 3D elevations, bespoke interior design, and certified property valuation with unyielding structural strength and transparent governance.
             </p>
           </div>
         </div>
@@ -60,20 +60,20 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-6 space-y-5">
             <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block">
-              Engineering Governance
+              Our Vision & Philosophy
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-navy-950 tracking-tight">
-              Why Choose My Space for Turnkey Execution
+              Complete Building Solutions Under One Roof
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              In conventional construction, clients juggle disconnected parties: architects without site supervision, contractors with hidden line-item charges, and unclear valuation estimates.
+              We specialize in residential construction, 2D architectural planning, 3D elevation design, bespoke interior works, and comprehensive turnkey project execution. From initial site inspection and municipal guideline review to final key handover, we ensure exceptional structural strength, certified quality materials, transparent processes, and timely delivery for every project we undertake.
             </p>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              My Space unifies architectural planning, structural execution, and chartered valuation under one roof with transparent BOQs, digital progress logs, and strict quality control.
+              In conventional construction, clients are often forced to coordinate between independent architects, unaccountable sub-contractors, and separate interior carpenters—leading to miscommunication, budget overruns, and compromised quality. My Space unifies all disciplines under a single accountable engineering leadership with clear stage-by-stage milestones and zero hidden costs.
             </p>
 
             <div className="p-4 rounded-xl bg-surface-mist border border-blue-100 text-xs text-navy-950 font-medium">
-              <strong>Our Promise:</strong> Predictable timelines, fixed-scope BOQ, and certified IS-standard structural engineering.
+              <strong>Our Commitment:</strong> Tailored 2D/3D planning, IS-standard structural engineering, certified branded materials, and on-time project completion.
             </div>
           </div>
 
@@ -97,13 +97,13 @@ export default function AboutPage() {
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Milestone Execution Framework</span>
+              <span>Disciplined Execution Framework</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-navy-950 tracking-tight">
-              5-Stage Construction & Valuation Process
+              5-Stage Construction & Valuation Workflow
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Select below to view our milestone stages for turnkey construction or certified property valuation:
+              Select below to view our systematic milestone stages for turnkey construction or certified property valuation:
             </p>
           </div>
 
@@ -189,10 +189,10 @@ export default function AboutPage() {
         <div className="space-y-6 pt-6 border-t border-slate-200">
           <div className="max-w-2xl">
             <span className="text-xs font-bold text-brand-gold uppercase tracking-wider block mb-1">
-              Quality Assurance
+              Quality Assurance & Standards
             </span>
             <h2 className="text-xl sm:text-2xl font-bold text-navy-950">
-              Structural Standards & Quality Protocols
+              Structural Standards, Certified Materials & Governance
             </h2>
           </div>
 
@@ -201,9 +201,9 @@ export default function AboutPage() {
               <div className="w-7 h-7 rounded-lg bg-navy-950 text-white flex items-center justify-center font-bold text-xs">
                 01
               </div>
-              <h3 className="font-bold text-sm text-navy-950">IS Structural Standards</h3>
+              <h3 className="font-bold text-sm text-navy-950">Customized 2D & 3D Planning</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                RCC framing designed strictly to IS 456 & IS 1893 seismic compliance.
+                Vastu-compliant layouts, spatial efficiency, and photorealistic 3D elevations before site work begins.
               </p>
             </div>
 
@@ -211,9 +211,9 @@ export default function AboutPage() {
               <div className="w-7 h-7 rounded-lg bg-navy-950 text-white flex items-center justify-center font-bold text-xs">
                 02
               </div>
-              <h3 className="font-bold text-sm text-navy-950">Batch Quality Sampling</h3>
+              <h3 className="font-bold text-sm text-navy-950">IS Structural Integrity</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                On-site slump tests and certified 7/28-day concrete cube strength audits.
+                Soil SBC matched footings, IS 456 RCC framing, and certified 7/28-day concrete cube strength audits.
               </p>
             </div>
 
@@ -221,9 +221,9 @@ export default function AboutPage() {
               <div className="w-7 h-7 rounded-lg bg-navy-950 text-white flex items-center justify-center font-bold text-xs">
                 03
               </div>
-              <h3 className="font-bold text-sm text-navy-950">Multi-Stage Waterproofing</h3>
+              <h3 className="font-bold text-sm text-navy-950">Certified Branded Materials</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Elastomeric membrane application and 72-hour pond testing for terraces.
+                Tata Tiscon/JSW 550D TMT steel, UltraTech/ACC 53G cement, and Century/Greenply IS 710 BWP marine ply.
               </p>
             </div>
 
@@ -231,9 +231,9 @@ export default function AboutPage() {
               <div className="w-7 h-7 rounded-lg bg-navy-950 text-white flex items-center justify-center font-bold text-xs">
                 04
               </div>
-              <h3 className="font-bold text-sm text-navy-950">Certified Material Brands</h3>
+              <h3 className="font-bold text-sm text-navy-950">Transparent Milestone Tracking</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Tata Tiscon/JSW 550D rebar, UltraTech 53G cement, and Century BWP ply.
+                Fixed itemized BOQ, stage-wise payments on physical completion, and zero surprise escalations.
               </p>
             </div>
           </div>
@@ -342,10 +342,10 @@ export default function AboutPage() {
               Bangalore Building Expertise
             </span>
             <h2 className="text-xl sm:text-2xl font-bold text-white">
-              Bangalore Approvals & Engineering Expertise
+              Bangalore Bylaws, Approvals & Site Execution
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              From soil conditions in Sarjapur and Thanisandra to BBMP building bylaws, setback rules, and utility connections, our team navigates local realities with confidence.
+              From soil conditions and water table analysis in Sarjapur, Whitefield, and North Bengaluru to BBMP building bylaws, setback compliance, and BESCOM/BWSSB utility connections, our team delivers seamless execution.
             </p>
             <div className="pt-2 flex items-center gap-2 text-xs text-brand-gold-light font-mono">
               <MapPin className="w-4 h-4 text-brand-blue" />
@@ -356,7 +356,7 @@ export default function AboutPage() {
           <div className="lg:col-span-5 relative z-10 bg-navy-900 border border-navy-700 p-5 rounded-2xl space-y-3">
             <h3 className="text-sm font-bold text-white">Consult Our Civil Engineers</h3>
             <p className="text-xs text-slate-300 leading-relaxed">
-              Schedule a visit to our office or request an initial site inspection in Bengaluru.
+              Schedule a visit to our studio or request an on-site feasibility inspection across Greater Bengaluru.
             </p>
             <a
               href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
