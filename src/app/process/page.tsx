@@ -39,11 +39,6 @@ export default function ProcessPage() {
           />
 
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-blue/20 border border-brand-blue/40 text-brand-blue text-xs font-bold uppercase tracking-widest">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Step-by-Step Execution Framework</span>
-            </div>
-
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
               A Clear, Predictable Roadmap for Construction & Valuation
             </h1>

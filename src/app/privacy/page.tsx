@@ -24,10 +24,6 @@ export default function PrivacyPage() {
           />
 
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/20 text-brand-blue text-xs font-semibold uppercase tracking-wider">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Data Protection & Privacy</span>
-            </div>
             <h1 className="text-3xl sm:text-4xl font-bold text-white">
               Privacy Policy
             </h1>

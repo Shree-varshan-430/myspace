@@ -27,6 +27,7 @@ import { processStages } from '@/data/process';
 import MaterialStrip from '@/components/sections/MaterialStrip';
 import ValuationProcessModule from '@/components/sections/ValuationProcessModule';
 import PracticeAreasCarousel from '@/components/sections/PracticeAreasCarousel';
+import TestimonialsCarousel from '@/components/sections/TestimonialsCarousel';
 import FaqAccordion from '@/components/faq/FaqAccordion';
 import EnquiryForm from '@/components/forms/EnquiryForm';
 import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/ScrollReveal';
@@ -55,10 +56,6 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full mb-8 sm:mb-12">
           <ScrollReveal direction="up" delay={0.1} duration={0.8} className="max-w-3xl">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-xs font-mono font-medium tracking-wider uppercase">
-                <span>Complete Building Solutions Under One Roof • Bengaluru</span>
-              </div>
-
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
                 You Dream It, We Design & Build It
               </h1>
@@ -732,75 +729,11 @@ export default function HomePage() {
       <ValuationProcessModule />
 
       {/* ============================================================
-          4.12 TRUST & ENGINEERING PRINCIPLES (SITE GOVERNANCE)
+          4.12 CLIENT TESTIMONIALS & GOOGLE REVIEWS
       ============================================================ */}
-      <section className="py-16 lg:py-24 bg-navy-950 text-white relative overflow-hidden">
-        <div className="absolute inset-0 blueprint-grid-dark opacity-30 pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <ScrollReveal direction="right" duration={0.7} className="lg:col-span-6 space-y-6">
-              <div className="flex items-center gap-2 text-sky-400 text-xs font-semibold uppercase tracking-wider">
-                <Home className="w-4 h-4 text-sky-400" />
-                <span>Construction Quality & Safety</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-snug">
-                Guaranteed Structural Strength & Quality Control
-              </h2>
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                We test every batch of concrete, verify steel grades on-site, and follow strict national engineering standards so your home stays safe and solid forever.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-xl bg-navy-900/90 border border-navy-800 space-y-1.5 hover:border-sky-500/40 transition-colors">
-                  <div className="font-mono text-[11px] text-sky-400 font-semibold tracking-wider">01 • SUBSTRUCTURE</div>
-                  <h3 className="font-sans font-bold text-sm text-white">Soil SBC Matched Footings</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    Foundation footing depth and raft design precisely calculated to local soil bearing capacity.
-                  </p>
-                </div>
-
-                <div className="p-4 rounded-xl bg-navy-900/90 border border-navy-800 space-y-1.5 hover:border-sky-500/40 transition-colors">
-                  <div className="font-mono text-[11px] text-sky-400 font-semibold tracking-wider">02 • SUPERSTRUCTURE</div>
-                  <h3 className="font-sans font-bold text-sm text-white">IS 456 Cube Testing</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    Concrete batch sampling with 7-day and 28-day compression crushing tests and Fe550D steel verification.
-                  </p>
-                </div>
-
-                <div className="p-4 rounded-xl bg-navy-900/90 border border-navy-800 space-y-1.5 hover:border-sky-500/40 transition-colors">
-                  <div className="font-mono text-[11px] text-sky-400 font-semibold tracking-wider">03 • MASONRY</div>
-                  <h3 className="font-sans font-bold text-sm text-white">Controlled Wet Curing</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    Rigorous multi-day curing schedules for solid blocks and joint mortar prior to plaster application.
-                  </p>
-                </div>
-
-                <div className="p-4 rounded-xl bg-navy-900/90 border border-navy-800 space-y-1.5 hover:border-sky-500/40 transition-colors">
-                  <div className="font-mono text-[11px] text-sky-400 font-semibold tracking-wider">04 • ENVELOPE</div>
-                  <h3 className="font-sans font-bold text-sm text-white">Monsoon Waterproofing</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    Multi-layer crystalline and elastomeric waterproofing across sunken slabs, sumps, and terrace parapets.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal direction="left" duration={0.7} delay={0.15} className="lg:col-span-6">
-              <div className="relative rounded-2xl overflow-hidden border border-navy-700 shadow-2xl">
-                <img
-                  src="/images/company/real-project-01.jpeg"
-                  alt="Site engineering supervision in Bangalore"
-                  className="w-full aspect-[4/3] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/20 to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 bg-navy-950/90 backdrop-blur-md rounded-xl border border-navy-700 text-xs text-slate-300">
-                  <strong className="text-white block font-sans font-bold text-sm mb-1">On-Site Structural Inspection</strong>
-                  Every column alignment, rebar bend radius, and cover block is verified against structural drawings prior to concrete pouring.
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
+      <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <TestimonialsCarousel />
         </div>
       </section>
 

@@ -24,10 +24,6 @@ export default function TermsPage() {
           />
 
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold-light text-xs font-semibold uppercase tracking-wider">
-              <ShieldAlert className="w-3.5 h-3.5" />
-              <span>Terms & Professional Disclaimers</span>
-            </div>
             <h1 className="text-3xl sm:text-4xl font-bold text-white">
               Terms of Service & Disclaimers
             </h1>

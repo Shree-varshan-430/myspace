@@ -149,11 +149,6 @@ export default function PackagesPage() {
           />
 
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-gold-light text-xs font-bold uppercase tracking-widest">
-              <FileSpreadsheet className="w-3.5 h-3.5" />
-              <span>BANGALORE CONSTRUCTION PACKAGES</span>
-            </div>
-
             <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
               House Construction Cost in Bangalore & Turnkey Packages
             </h1>

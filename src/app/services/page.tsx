@@ -33,11 +33,7 @@ export default function ServicesPage() {
             className="mb-6"
           />
 
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-blue/20 border border-brand-blue/40 text-brand-blue text-xs font-bold uppercase tracking-widest mb-4">
-              <Home className="w-3.5 h-3.5" />
-              <span>Bangalore Engineering Services</span>
-            </div>
+          <div className="max-w-3xl space-y-3">
             <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
               Construction, Design & Valuation Services in Bangalore
             </h1>

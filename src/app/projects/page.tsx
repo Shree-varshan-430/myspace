@@ -86,10 +86,6 @@ export default function ProjectsIndexPage() {
           />
 
           <div className="max-w-3xl space-y-3">
-            <div className="flex items-center gap-2 text-sky-400 text-xs font-semibold uppercase tracking-wider">
-              <Home className="w-4 h-4 text-sky-400" />
-              <span>CONSTRUCTION & ARCHITECTURE PORTFOLIO</span>
-            </div>
             <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
               Completed Construction Projects in Bangalore
             </h1>
