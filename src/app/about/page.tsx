@@ -55,14 +55,14 @@ export default function AboutPage() {
               Complete Building Solutions Under One Roof
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              We specialize in residential construction, 2D architectural planning, 3D elevation design, bespoke interior works, and comprehensive turnkey project execution. From initial site inspection and municipal guideline review to final key handover, we ensure exceptional structural strength, certified quality materials, transparent processes, and timely delivery for every project we undertake.
+              We specialize in residential turnkey construction, 2D/3D architecture, modular interiors, and certified valuation. Every project is delivered with certified materials, milestone transparency, and timely completion.
             </p>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              In conventional construction, clients are often forced to coordinate between independent architects, unaccountable sub-contractors, and separate interior carpenters—leading to miscommunication, budget overruns, and compromised quality. My Space unifies all disciplines under a single accountable engineering leadership with clear stage-by-stage milestones and zero hidden costs.
+              By unifying architectural design, structural engineering, and interior craftsmanship under a single accountable team, we eliminate middlemen markups and cost escalations.
             </p>
 
             <div className="p-4 rounded-xl bg-surface-mist border border-blue-100 text-xs text-navy-950 font-medium">
-              <strong>Our Commitment:</strong> Tailored 2D/3D planning, IS-standard structural engineering, certified branded materials, and on-time project completion.
+              <strong>Our Commitment:</strong> Custom 2D/3D design, IS-standard engineering, branded materials, and on-time delivery.
             </div>
           </div>
 

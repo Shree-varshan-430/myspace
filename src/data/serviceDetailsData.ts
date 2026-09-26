@@ -52,71 +52,71 @@ export interface DetailedServiceData {
 export const serviceDetailsLookup: Record<string, DetailedServiceData> = {
   'house-construction-bangalore': {
     typologiesTitle: "What We Build",
-    typologiesSubtitle: "We specialize in custom residential building typologies tailored to your plot dimensions and family requirements:",
+    typologiesSubtitle: "Custom residential building typologies tailored to your plot and lifestyle:",
     typologies: [
       {
         title: "Independent Houses",
-        desc: "Custom standalone independent house construction in Bangalore planned for family privacy, ground-floor parking, dedicated pooja rooms, functional utility areas, and future vertical expansion.",
+        desc: "Custom standalone homes planned for privacy, ground-floor parking, pooja rooms, and future vertical expansion.",
         iconType: "home"
       },
       {
         title: "Villas",
-        desc: "Spacious, high-specification villa construction in Bangalore featuring generous plot setbacks, landscaped garden sit-outs, modern front elevations, Italian marble flooring, and multi-car parking.",
+        desc: "Spacious luxury villas with generous setbacks, landscaped gardens, modern elevations, and multi-car parking.",
         iconType: "building"
       },
       {
         title: "Duplex Homes",
-        desc: "Connected multi-level duplex house construction in Bangalore with internal designer staircases, double-height living rooms, first-floor family lounges, and private master bedroom suites.",
+        desc: "Connected multi-level duplex layouts with designer staircases, double-height living, and private suites.",
         iconType: "layers"
       },
       {
         title: "G+1 / G+2 / G+3 Homes",
-        desc: "Multi-floor residential houses designed for self-use or rental income on 30x40, 30x50, and 40x60 Bangalore sites, complete with independent electrical sub-meters and separate access staircases.",
+        desc: "Multi-floor residential homes optimized for self-use or rental income with independent sub-meters and staircases.",
         iconType: "grid"
       }
     ],
     processTitle: "Our House Construction Process",
-    processSubtitle: "We execute every residential project through a disciplined 10-stage engineering workflow:",
+    processSubtitle: "Disciplined 10-stage engineering workflow from soil test to handover:",
     processStages: [
-      { stageNumber: "01", title: "Planning & Soil Testing", desc: "Site inspection, plot boundary survey, road orientation check, soil strata review, and budget consultation." },
-      { stageNumber: "02", title: "Floor Plan Drafting", desc: "Drafting custom 2D floor plan design with room dimensions, Vastu alignment, and municipal setback compliance." },
-      { stageNumber: "03", title: "Structural Engineering", desc: "Engineering column grids, beam dimensions, footing calculations, and realistic 3D floor plan design in Bangalore." },
-      { stageNumber: "04", title: "Foundation & Sump", desc: "Earthwork excavation, column footings, RCC plinth beam casting, anti-termite treatment, and underground water sump construction." },
-      { stageNumber: "05", title: "RCC Frame & Slabs", desc: "Erecting RCC columns, beam shuttering, Fe550D steel binding, and concrete slab casting with 21-day water curing." },
-      { stageNumber: "06", title: "Masonry & Brickwork", desc: "Solid concrete block or clay red brick masonry for outer 6\" walls and inner 4\" partition walls with door frame fixing." },
-      { stageNumber: "07", title: "Plumbing & Electrical", desc: "Concealed PVC/CPVC plumbing pipelines, sewage drainage lines, and concealed electrical conduit piping." },
-      { stageNumber: "08", title: "Plastering & Flooring", desc: "Cement plastering, multi-layer waterproofing, vitrified tiles or granite floor laying, and bathroom wall tiling." },
-      { stageNumber: "09", title: "Painting & Fixtures", desc: "Applying wall putty, primer coats, and premium 2-coat interior/exterior weather-shield emulsion paints." },
-      { stageNumber: "10", title: "Snag Check & Handover", desc: "Deep cleaning, complete snag rectifications, testing all water/electrical lines, and formal key handover with warranty certificates." }
+      { stageNumber: "01", title: "Planning & Soil Testing", desc: "Site inspection, boundary survey, soil strata review, and budget consultation." },
+      { stageNumber: "02", title: "Floor Plan Drafting", desc: "Custom 2D floor plans with room dimensions, Vastu alignment, and setback compliance." },
+      { stageNumber: "03", title: "Structural Engineering", desc: "Column grids, beam dimensions, footing calculations, and realistic 3D models." },
+      { stageNumber: "04", title: "Foundation & Sump", desc: "Excavation, column footings, RCC plinth beams, anti-termite treatment, and water sump." },
+      { stageNumber: "05", title: "RCC Frame & Slabs", desc: "RCC columns, beam shuttering, Fe550D steel binding, and concrete slabs with 21-day curing." },
+      { stageNumber: "06", title: "Masonry & Brickwork", desc: "Solid concrete blocks or red bricks for 6\" outer and 4\" inner walls with door frames." },
+      { stageNumber: "07", title: "Plumbing & Electrical", desc: "Concealed CPVC/PVC plumbing, sewage drainage lines, and electrical conduits." },
+      { stageNumber: "08", title: "Plastering & Flooring", desc: "Cement plastering, multi-layer waterproofing, and vitrified tile or granite flooring." },
+      { stageNumber: "09", title: "Painting & Fixtures", desc: "Wall putty, primer, and premium 2-coat weather-shield emulsion paints." },
+      { stageNumber: "10", title: "Snag Check & Handover", desc: "Deep cleaning, snag clearance, line testing, and formal key handover with warranty." }
     ],
     scopeTitle: "What Is Included In Our Home Construction Service?",
-    scopeSubtitle: "Our turnkey house construction in Bangalore covers everything required to build your home from bare land to a move-in ready residence:",
+    scopeSubtitle: "Turnkey coverage from bare land to a move-in ready residence:",
     detailedScope: [
-      { title: "Architectural & Structural Drawings", desc: "2D floor plans, 3D front elevations, structural column/beam details, and electrical/plumbing layout drawings." },
-      { title: "Civil Construction & Structural Build", desc: "Excavation, foundation footings, RCC frame casting, solid block/brick masonry, and internal/external double-coat plastering." },
-      { title: "Underground Sump & Overhead Tank", desc: "Reinforced concrete underground water storage sump with waterproofing, plus overhead Sintex/concrete water tank." },
-      { title: "Electrical & Plumbing Networks", desc: "Concealed ISI copper wiring (Finolex/Anchor), modular switches, CPVC water pipes (Astral/Supreme), and drainage lines." },
-      { title: "Flooring & Wall Tiling", desc: "Premium vitrified tile or granite flooring in living areas/bedrooms, anti-skid bathroom tiles, and kitchen counter granite." },
-      { title: "Doors, Windows & Painting", desc: "Teakwood main door frame, flush internal doors, 3-track UPVC windows with mosquito mesh, and complete Asian Paints emulsion coats." }
+      { title: "Architectural & Structural Drawings", desc: "2D floor plans, 3D front elevations, column/beam details, and MEP layout drawings." },
+      { title: "Civil Construction & Structural Build", desc: "Excavation, foundation footings, RCC frame casting, masonry, and double-coat plastering." },
+      { title: "Underground Sump & Overhead Tank", desc: "Reinforced concrete underground storage sump plus overhead water tank." },
+      { title: "Electrical & Plumbing Networks", desc: "Concealed ISI copper wiring, modular switches, CPVC water pipes, and drainage lines." },
+      { title: "Flooring & Wall Tiling", desc: "Vitrified tile or granite flooring, anti-skid bathroom tiles, and granite kitchen counter." },
+      { title: "Doors, Windows & Painting", desc: "Teakwood main door frame, flush internal doors, UPVC windows, and Asian Paints emulsion." }
     ],
     costTitle: "House Construction Cost in Bangalore",
-    costSubtitle: "Understanding what drives residential house construction in Bangalore helps you plan your budget without compromising on quality or safety:",
+    costSubtitle: "Key parameters that influence your residential construction budget:",
     costDrivers: [
-      { number: "1", title: "Soil Condition & Foundation Depth", desc: "Plots with hard rock require standard isolated footings, whereas loose soil or filled land requires deeper excavation, soil replacement, or raft foundations." },
-      { number: "2", title: "Number of Floors & Built-Up Area", desc: "Constructing G+1 vs G+2 or G+3 increases structural column dimensions, reinforcement steel quantities, and requires staircase headrooms or lift shafts." },
-      { number: "3", title: "Structural & Finishing Materials", desc: "Choices between solid concrete blocks vs wire-cut red bricks, standard tiles vs imported marble, and CP fittings influence total cost." },
-      { number: "4", title: "Plot Location & Site Accessibility", desc: "Narrow access roads in dense Bangalore layouts affect ready-mix concrete (RMC) trucks, tractor unloading, and raw material transport logistics." },
-      { number: "5", title: "Elevation & Architectural Features", desc: "Double-height glass facades, exterior stone cladding, wooden louvers, and cantilever balconies add custom value to your home." }
+      { number: "1", title: "Soil Condition & Foundation Depth", desc: "Standard isolated footings for hard rock vs deeper excavation and raft foundations for loose soil." },
+      { number: "2", title: "Number of Floors & Built-Up Area", desc: "Additional floors increase column sizing, steel tonnage, and lift/headroom requirements." },
+      { number: "3", title: "Structural & Finishing Materials", desc: "Choice between solid blocks vs wire-cut bricks, and vitrified tiles vs imported marble." },
+      { number: "4", title: "Plot Location & Site Accessibility", desc: "Road width affects transit mixer trucks, material unloading, and logistics." },
+      { number: "5", title: "Elevation & Architectural Features", desc: "Glass facades, exterior louvers, and cantilever balconies add custom aesthetic value." }
     ],
     timelineTitle: "How Long Does It Take to Build a House?",
-    timelineSubtitle: "A typical independent residential house (G+1 or G+2) in Bangalore takes approximately 10 to 12 months (nearly 1 year) to construct from initial excavation to final handover. Key project milestones are scheduled across the year:",
+    timelineSubtitle: "Typical timeline for an independent house (G+1 or G+2) is 10 to 12 months:",
     timelineSchedule: [
-      { durationBadge: "MONTHS 1–2", title: "Planning & Approvals", desc: "Soil testing, architectural floor plans, 3D elevations, structural engineering drawings, municipal setback verifications, and temporary utility setup." },
-      { durationBadge: "MONTHS 2–3", title: "Foundation & Sump", desc: "Site excavation, column footings, RCC plinth beam casting, anti-termite treatment, backfilling, and RCC underground water storage sump." },
-      { durationBadge: "MONTHS 4–6", title: "RCC Frame & Slabs", desc: "Raising RCC columns, beam shuttering, steel reinforcement binding, and sequential concrete slab casting with mandatory 21-day curing periods." },
-      { durationBadge: "MONTHS 6–8", title: "Masonry & MEP Lines", desc: "Solid concrete block or brick masonry, door frame fixing, concealed electrical conduit piping, plumbing supply/drain lines, and wall plastering." },
-      { durationBadge: "MONTHS 9–10", title: "Waterproofing & Finishes", desc: "Multi-layer terrace and wet area waterproofing, granite and vitrified tile flooring, bathroom wall dadoing, and false ceiling framing." },
-      { durationBadge: "MONTHS 11–12", title: "Painting & Handover", desc: "Wall putty, primer, two coats of premium interior/exterior emulsion painting, sanitary ware fitting, electrical fixture testing, snag clearance, and key handover." }
+      { durationBadge: "MONTHS 1–2", title: "Planning & Approvals", desc: "Soil testing, architectural plans, 3D elevations, and structural drawings." },
+      { durationBadge: "MONTHS 2–3", title: "Foundation & Sump", desc: "Site excavation, column footings, plinth beam casting, and underground water sump." },
+      { durationBadge: "MONTHS 4–6", title: "RCC Frame & Slabs", desc: "RCC column casting, beam shuttering, steel binding, and slabs with 21-day water curing." },
+      { durationBadge: "MONTHS 6–8", title: "Masonry & MEP Lines", desc: "Solid block masonry, door frame fixing, concealed electrical and plumbing conduits." },
+      { durationBadge: "MONTHS 9–10", title: "Waterproofing & Finishes", desc: "Terrace waterproofing, vitrified tile/granite flooring, and bathroom wall tiling." },
+      { durationBadge: "MONTHS 11–12", title: "Painting & Handover", desc: "Putty, primer, premium emulsion painting, fixture testing, snag clearance, and handover." }
     ]
   },
 

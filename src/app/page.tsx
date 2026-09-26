@@ -61,7 +61,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-sm sm:text-base text-slate-200 font-sans leading-relaxed max-w-2xl">
-                Turnkey residential construction, customized 2D/3D architectural planning, bespoke interior design, and certified valuation in Bangalore with fixed milestone pricing and direct execution.
+                Turnkey construction, 2D/3D architectural planning, modular interiors, and certified valuation in Bangalore with fixed milestone pricing.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -140,15 +140,11 @@ export default function HomePage() {
               </div>
 
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                Turnkey Construction, Architecture & Interiors in Bangalore
+                Turnkey Construction, Architecture & Interiors
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
-                Building your dream home should be an inspiring and worry-free experience. At My Space, we bring creative architectural design, solid structural engineering, custom interior fit-outs, and certified property valuation together under one accountable roof.
-              </p>
-
-              <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
-                From initial 2D space planning and 3D elevations to on-site civil execution and stage-by-stage quality checks, we work directly with you—eliminating middlemen commissions, hidden costs, and contractor friction.
+                We design and build modern homes with single-point accountability—integrating architectural planning, structural engineering, and interior execution with transparent pricing.
               </p>
 
               {/* Core Feature Points */}
@@ -267,11 +263,11 @@ export default function HomePage() {
               </div>
 
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-snug">
-                Get Your Customized Architectural Plan & Detailed BOQ Estimate
+                Get Your Architectural Plan & Detailed BOQ Estimate
               </h2>
 
               <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed max-w-2xl">
-                Schedule a consultation at our studio or on your plot. We analyze setback feasibility, spatial layout requirements, and provide a transparent, itemized Bill of Quantities before you commit.
+                Schedule a consultation to review plot setbacks, spatial layout options, and receive a clear, itemized Bill of Quantities.
               </p>
             </ScrollReveal>
 
@@ -342,7 +338,7 @@ export default function HomePage() {
               Experience, Trust & Complete Transparency in Every Square Foot
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-              We eliminate construction uncertainties through itemized quotations, stage-by-stage milestone payments, direct site execution, and stringent quality testing.
+              We ensure predictable delivery through itemized quotations, milestone-based billing, in-house execution, and quality audits.
             </p>
           </ScrollReveal>
 
@@ -367,7 +363,7 @@ export default function HomePage() {
                       Itemized BOQ & Zero Hidden Costs
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      Every material brand, specification, and finish grade is documented in a transparent line-item quotation with zero midway escalations.
+                      Transparent line-item specifications with zero midway cost escalations.
                     </p>
                   </div>
                 </div>
@@ -387,10 +383,10 @@ export default function HomePage() {
                       </div>
                     </div>
                     <h3 className="font-sans font-bold text-base sm:text-lg text-navy-950 group-hover:text-brand-blue transition-colors">
-                      Direct Execution & No Middlemen
+                      Direct Execution & In-House Team
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      Our in-house architects, civil engineers, and master craftsmen execute your project directly, ensuring total quality control and zero broker commissions.
+                      Executed directly by our engineers and craftsmen with zero broker commissions.
                     </p>
                   </div>
                 </div>
@@ -410,10 +406,10 @@ export default function HomePage() {
                       </div>
                     </div>
                     <h3 className="font-sans font-bold text-base sm:text-lg text-navy-950 group-hover:text-brand-blue transition-colors">
-                      Creative & Climate-Responsive Design
+                      Custom 2D/3D Architecture
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      Bespoke 2D layouts and photorealistic 3D elevations optimized for natural sunlight, cross-ventilation, and Vastu harmony.
+                      Bespoke layouts optimized for natural ventilation, sunlight, and modern aesthetics.
                     </p>
                   </div>
                 </div>
@@ -436,10 +432,10 @@ export default function HomePage() {
                       </div>
                     </div>
                     <h3 className="font-sans font-bold text-base sm:text-lg text-navy-950 group-hover:text-brand-blue transition-colors">
-                      Strict Structural Quality Control & Testing
+                      Strict Structural Quality Control
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
-                      Soil-matched foundation footings, lab-certified concrete compression tests, and IS-standard Fe550D TMT steel verification at every casting.
+                      Engineered foundations, concrete cube testing, and Fe550D steel verification at every stage.
                     </p>
                   </div>
                 </div>
@@ -462,7 +458,7 @@ export default function HomePage() {
                       Stage-by-Stage Milestone Payments
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
-                      Pay only as construction milestones are completed and verified on site, ensuring complete financial safety and peace of mind.
+                      Pay only as each construction milestone is completed and verified on site.
                     </p>
                   </div>
                 </div>
@@ -755,7 +751,7 @@ export default function HomePage() {
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
-                Everything you need to know about construction costs, approval processes, timelines, and valuation in Bengaluru.
+                Key questions about construction costs, approval processes, timelines, and valuation in Bengaluru.
               </p>
 
               <div className="pt-2">
@@ -798,7 +794,7 @@ export default function HomePage() {
                 Start Your Project Conversation With Us
               </h2>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Share your plot dimensions, ideas, or budget with our team. We provide honest engineering guidance, customized 2D/3D plans, and transparent milestone estimates with zero obligation.
+                Connect with our engineering team for honest guidance, customized 2D/3D layouts, and a transparent BOQ estimate.
               </p>
 
               <div className="pt-4 space-y-4">
