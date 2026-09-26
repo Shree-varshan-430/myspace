@@ -10,7 +10,6 @@ import {
   MapPin,
   Clock,
   MessageSquare,
-  Building2,
   ShieldCheck
 } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
@@ -148,10 +147,6 @@ function EnquiryFormInner({
         <div className="lg:col-span-5 bg-white text-navy-950 p-6 sm:p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-slate-200 flex flex-col justify-between space-y-8 relative">
           <div className="space-y-6">
             <div className="space-y-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-brand-blue font-mono text-[11px] font-bold uppercase tracking-wider border border-blue-200">
-                <Building2 className="w-3.5 h-3.5" />
-                <span>Direct Engineering Desk</span>
-              </span>
               <h4 className="text-xl sm:text-2xl font-bold text-navy-950 tracking-tight leading-snug">
                 MY SPACE Civil Engineers & Valuers
               </h4>
