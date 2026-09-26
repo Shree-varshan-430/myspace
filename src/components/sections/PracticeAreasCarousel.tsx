@@ -8,7 +8,6 @@ interface PracticeArea {
   id: string;
   tag: string;
   title: string;
-  intent: string;
   description: string;
   image: string;
   href: string;
@@ -18,63 +17,57 @@ interface PracticeArea {
 const practiceAreas: PracticeArea[] = [
   {
     id: 'house-construction',
-    tag: 'Residential Execution',
-    title: 'Turnkey House Construction',
-    intent: 'Looking to build a new home or villa in Bengaluru?',
-    description: 'Complete end-to-end home construction from architectural planning and approvals to final handover with Grade-A materials.',
+    tag: 'Residential',
+    title: 'Turnkey Construction',
+    description: 'Complete home construction from planning to handover.',
     image: '/images/company/turnkey-house-hero.jpeg',
     href: '/services/house-construction-bangalore',
-    ctaText: 'Explore House Construction',
+    ctaText: 'Explore Construction',
   },
   {
     id: 'commercial-construction',
-    tag: 'Commercial & Retail',
+    tag: 'Commercial',
     title: 'Commercial Construction',
-    intent: 'Planning an office, retail store, or commercial space?',
-    description: 'Durable multi-storey commercial building construction, office interiors, and retail fit-outs delivered on schedule.',
+    description: 'Offices, retail spaces, and commercial buildings.',
     image: '/images/company/showroom-2.jpeg',
     href: '/services/commercial-construction-bangalore',
-    ctaText: 'Explore Commercial Works',
+    ctaText: 'Explore Commercial',
   },
   {
     id: 'bespoke-interiors',
-    tag: 'Interior Execution',
-    title: 'Bespoke Interiors & Joinery',
-    intent: 'Need modern modular kitchens, wardrobes & woodwork?',
-    description: 'Custom factory-finished modular interiors, designer wardrobes, false ceilings, and precision wood joinery for homes.',
+    tag: 'Interiors',
+    title: 'Bespoke Interiors',
+    description: 'Custom modular kitchens, wardrobes, and wood joinery.',
     image: '/images/company/interior-design-hero.jpeg',
     href: '/services/interior-design-bangalore',
-    ctaText: 'Explore Interior Design',
+    ctaText: 'Explore Interiors',
   },
   {
     id: 'elevation-design',
-    tag: 'Architectural Design',
-    title: '3D Elevation & Floor Plans',
-    intent: "Want to see your home's 3D look before construction?",
-    description: 'Photorealistic 3D exterior elevations, vastu-aligned architectural floor plans, and working structural drawings.',
+    tag: 'Architecture',
+    title: '3D Elevation & Plans',
+    description: 'Photorealistic 3D elevations and vastu-aligned floor layouts.',
     image: '/images/company/front-elevation-hero.jpeg',
     href: '/services/elevation-design-bangalore',
-    ctaText: 'Explore 3D Elevation',
+    ctaText: 'Explore 3D Design',
   },
   {
     id: 'civil-contracting',
-    tag: 'Civil Contracting',
-    title: 'Structural Civil Contracting',
-    intent: 'Need expert foundation & RCC concrete structure work?',
-    description: 'High-precision earthwork, column footings, RCC framing, and waterproofed slab casting following strict engineering standards.',
+    tag: 'Engineering',
+    title: 'Civil Contracting',
+    description: 'Precision earthwork, RCC framing, and structural build.',
     image: '/images/company/real-project-18.jpeg',
     href: '/services/civil-construction-bangalore',
-    ctaText: 'Explore Civil Contracting',
+    ctaText: 'Explore Civil Works',
   },
   {
     id: 'property-valuation',
-    tag: 'Accredited Valuation',
-    title: 'Property Valuation & Advisory',
-    intent: 'Need certified property valuation for loans or legal checks?',
-    description: 'Government-registered property valuation reports for bank home loans, visa applications, and title verification across Bengaluru.',
+    tag: 'Valuation',
+    title: 'Property Valuation',
+    description: 'Certified appraisal reports for banks, visas, and legal records.',
     image: '/images/company/real-project-75.jpeg',
     href: '/services/property-valuation-bangalore',
-    ctaText: 'Explore Property Valuation',
+    ctaText: 'Explore Valuation',
   },
 ];
 
@@ -138,10 +131,10 @@ export default function PracticeAreasCarousel() {
               <span>Turnkey Services</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-              Construction, Design & Valuation Services in Bangalore
+              Construction, Design & Valuation
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-              Explore turnkey house construction, custom modular interiors, 3D elevation designs, and accredited property valuation in Bengaluru.
+            <p className="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
+              Turnkey residential construction, modular interiors, 3D elevations, and property valuation.
             </p>
           </div>
 
@@ -204,10 +197,7 @@ export default function PracticeAreasCarousel() {
                     <h3 className="text-xl font-bold text-navy-950 group-hover:text-brand-blue transition-colors">
                       {area.title}
                     </h3>
-                    <p className="text-xs font-medium text-brand-steel mt-1.5 leading-snug">
-                      {area.intent}
-                    </p>
-                    <p className="text-xs text-slate-600 mt-2.5 leading-relaxed">
+                    <p className="text-xs text-slate-600 mt-2 leading-relaxed">
                       {area.description}
                     </p>
                   </div>

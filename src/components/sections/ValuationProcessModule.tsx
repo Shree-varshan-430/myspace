@@ -29,82 +29,82 @@ const valuationPipeline: ValuationStageData[] = [
   {
     step: '01',
     tabLabel: 'Purpose & Scoping',
-    tag: 'Stage 01 • Institutional Scoping',
-    title: 'Define Legal Framework & Valuation Purpose',
-    turnaround: 'Day 1 • Instant Scoping',
-    summary: 'Clarify whether the valuation dossier is required for bank mortgage collateral, capital gains tax computation (Sec 54/54EC), property transaction due diligence, or visa asset verification.',
+    tag: 'Stage 01 • Scoping',
+    title: 'Define Appraisal Objective',
+    turnaround: 'Day 1',
+    summary: 'Identify valuation requirement for bank loan, capital gains tax, visa, or sale.',
     checklist: [
-      'Mortgage collateral for nationalized & private banking institutions',
-      'Capital gains tax indexation with CPWD depreciated structural values',
-      'Civil litigation, partition deeds & asset division records',
-      'Embassy visa net worth certification with CA cross-verification'
+      'Bank mortgage collateral',
+      'Capital gains tax (Sec 54)',
+      'Legal partition & probate',
+      'Visa net worth certification'
     ],
-    deliverable: 'Scope Matrix & Document Prerequisite Checklist',
+    deliverable: 'Scope Matrix & Prerequisite Checklist',
     methodology: 'Statutory Purpose Mapping'
   },
   {
     step: '02',
-    tabLabel: 'Document Verification',
-    tag: 'Stage 02 • Revenue & Title Audit',
-    title: 'Verify Revenue Records & Approved Sanction Plans',
-    turnaround: 'Day 1–2 • Revenue Audit',
-    summary: 'Detailed verification of registered title deeds, BBMP/BDA sanctioned building plans, Form 15 Encumbrance Certificates, and e-Khata to verify ownership and statutory deviations prior to inspection.',
+    tabLabel: 'Document Review',
+    tag: 'Stage 02 • Audit',
+    title: 'Verify Title & Sanctions',
+    turnaround: 'Day 1–2',
+    summary: 'Review title deeds, sanctioned building plans, e-Khata, and EC records.',
     checklist: [
-      'Registered Sale Deed & mother deed chain verification',
-      'BBMP e-Khata extract and latest Property Tax paid receipt',
-      'Approved building sanction plan & FAR setback deviation check',
-      'Nil-Encumbrance Certificate (EC) audit for 15–30 continuous years'
+      'Sale Deed & mother deed chain',
+      'BBMP e-Khata & tax receipts',
+      'Sanctioned plan & setback check',
+      '15–30 year Encumbrance Certificate'
     ],
-    deliverable: 'Title Legitimacy & Sanction Compliance Summary',
+    deliverable: 'Sanction & Title Summary',
     methodology: 'Revenue Title Verification'
   },
   {
     step: '03',
-    tabLabel: 'On-Site Inspection',
-    tag: 'Stage 03 • Site Engineering Survey',
-    title: 'Physical Site Measurements & Structural Survey',
-    turnaround: 'Day 2–3 • Field Survey',
-    summary: 'Field inspection conducted by certified civil engineers using laser distance meters. We measure actual plot boundaries, approach road width, building age, RCC soundness, and neighborhood infrastructure.',
+    tabLabel: 'Site Inspection',
+    tag: 'Stage 03 • Inspection',
+    title: 'Physical Site Survey',
+    turnaround: 'Day 2–3',
+    summary: 'Laser measurements of plot boundaries, built-up areas, and structural health.',
     checklist: [
-      'Laser measurement of carpet, plinth, and super built-up areas',
-      'Approach road width verification (mandatory for bank loan approval)',
-      'Structural health audit: RCC frame, settlement, and dampness checks',
-      'Neighborhood civic infrastructure & commercial frontage rating'
+      'Laser measurement of carpet area',
+      'Road width verification',
+      'RCC structural health audit',
+      'Civic infrastructure rating'
     ],
-    deliverable: 'Field Measurement Sheet & Geo-Tagged Photographic Evidence',
-    methodology: 'Laser Distance Meter (LDM) Survey'
+    deliverable: 'Field Sheet & Geo-Tagged Photos',
+    methodology: 'Laser Distance Meter Survey'
   },
   {
     step: '04',
-    tabLabel: 'CPWD Calculations',
-    tag: 'Stage 04 • Technical Computation',
-    title: 'Guideline Benchmark & Depreciated Replacement Cost',
-    turnaround: 'Day 3–4 • Engineering Computation',
-    summary: 'Dual valuation methodology: Guideline value benchmarking from the Department of Stamps & Registration, combined with CPWD plinth area replacement cost depreciated according to structure age and condition.',
+    tabLabel: 'Computations',
+    tag: 'Stage 04 • Analysis',
+    title: 'Guideline & Cost Computations',
+    turnaround: 'Day 3–4',
+    summary: 'Department guideline rates combined with CPWD depreciated building cost.',
     checklist: [
-      'Department of Stamps & Registration guideline rate benchmark',
-      'Prevailing real-market micro-market transaction rate analysis',
-      'CPWD structural replacement cost & age depreciation computation',
-      'Distress sale value & bank realizable value calculation'
+      'Sub-registrar guidance benchmark',
+      'Micro-market transaction rates',
+      'CPWD structural depreciation',
+      'Bank realizable value'
     ],
-    deliverable: 'Itemized Valuation Computation Ledger',
-    methodology: 'CPWD Plinth Depreciation & Guideline Norms'
+    deliverable: 'Itemized Computation Sheet',
+    methodology: 'CPWD Plinth & Guideline Norms'
   },
   {
     step: '05',
     tabLabel: 'Certified Report',
-    tag: 'Stage 05 • Stamped Dossier',
-    title: 'Comprehensive Government-Registered Valuation Dossier',
-    turnaround: 'Day 3–5 • Final Dossier',
-    summary: 'Issuance of formal, signed, and stamped valuation report by an approved Government-Registered Valuer (Wealth Tax Act / IBBI), formatted to compliance standards accepted across all financial institutions.',
+    tag: 'Stage 05 • Certification',
+    title: 'Government-Registered Report',
+    turnaround: 'Day 3–5',
+    summary: 'Certified valuation dossier signed by an approved Government-Registered Valuer.',
     checklist: [
-      'Form A / IBBI compliant official valuation reporting format',
-      'Signed & stamped by Government Registered Valuer',
-      'High-resolution on-site photographs and boundary sketch overlays',
-      'Accepted by SBI, HDFC, ICICI, Canara Bank, and all major NBFCs'
+      'IBBI / Form A compliant format',
+      'Registered Valuer stamp & seal',
+      'Site photographs & drawings',
+      'Bank & authority acceptance'
     ],
-    deliverable: 'Certified, Signed & Stamped Valuation Dossier',
-    methodology: 'IBBI / Wealth Tax Act Form A Standards'
+    deliverable: 'Signed & Sealed Valuation Dossier',
+    methodology: 'IBBI / Wealth Tax Standards'
   }
 ];
 
@@ -121,10 +121,10 @@ export default function ValuationProcessModule() {
             <span>Approved Property Valuers</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-            Government Approved Property Valuation in Bangalore
+            Government Approved Property Valuation
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-            Certified property and commercial asset valuation reports prepared by registered valuers for bank loans, capital gains tax, and visas.
+          <p className="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
+            Certified property and asset valuation reports for bank loans, capital gains, and visas.
           </p>
 
           <div className="flex flex-wrap items-center gap-2.5 pt-4">

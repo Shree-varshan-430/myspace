@@ -38,13 +38,13 @@ export default function ProcessPage() {
             className="mb-5"
           />
 
-          <div className="max-w-3xl space-y-4">
+          <div className="max-w-3xl space-y-3">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
-              A Clear, Predictable Roadmap for Construction & Valuation
+              Our Construction & Valuation Process
             </h1>
 
             <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed max-w-2xl">
-              Understand our milestone-driven workflows with defined deliverables, transparent timelines, and engineering governance across Bengaluru.
+              Milestone-driven workflows with clear deliverables, transparent timelines, and engineering supervision.
             </p>
           </div>
 

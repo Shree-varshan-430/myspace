@@ -16,42 +16,42 @@ const materials: MaterialItem[] = [
   {
     name: 'Exposed Wire-Cut Brick',
     category: 'Masonry & Façade',
-    headline: 'Natural wire-cut clay bricks for thermal insulation and earthen warmth.',
+    headline: 'Thermal insulation and earthen warmth.',
     image: '/images/company/real-project-39.jpeg',
     tag: 'myspacebangalore.com'
   },
   {
     name: 'Form-Finish Concrete',
     category: 'Structural Envelope',
-    headline: 'Monolithic concrete and exposed ceilings with enduring structural purity.',
+    headline: 'Monolithic concrete with structural purity.',
     image: '/images/company/real-project-85.jpeg',
     tag: 'myspacebangalore.com'
   },
   {
     name: 'Sadahalli & Flamed Granite',
     category: 'Hardscaping & Steps',
-    headline: 'Locally quarried natural granites for slip-resistant stairways and counters.',
+    headline: 'Locally quarried slip-resistant granites.',
     image: '/images/company/showroom-1.jpeg',
     tag: 'myspacebangalore.com'
   },
   {
     name: 'Seasoned Teak & Oak Veneer',
     category: 'Joinery & Interiors',
-    headline: 'FSC-certified hardwoods for acoustic fluted paneling and bespoke millwork.',
+    headline: 'FSC-certified hardwoods for custom millwork.',
     image: '/images/company/real-project-01.jpeg',
     tag: 'myspacebangalore.com'
   },
   {
-    name: 'Powder-Coated Aluminium & Louvers',
+    name: 'Aluminium Louvers & Facades',
     category: 'Fenestration & Louvers',
-    headline: 'Precision window systems and privacy louvers built for the Bangalore monsoon.',
+    headline: 'Precision systems built for Bangalore climate.',
     image: '/images/company/showroom-2.jpeg',
     tag: 'myspacebangalore.com'
   },
   {
     name: 'Low-E Acoustic Glazing',
     category: 'Façade & Windows',
-    headline: 'High-performance double glazing cutting noise while preserving natural light.',
+    headline: 'High-performance double glazing for light & quiet.',
     image: '/images/company/real-project-28.jpeg',
     tag: 'myspacebangalore.com'
   }
@@ -93,11 +93,11 @@ export default function MaterialStrip() {
               <span>Quality Materials</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.15]">
-              Built with materials that last for generations.
+              Materials that endure.
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-slate-300 max-w-md leading-relaxed font-sans">
-            We handpick tested cement, certified steel, genuine hardwoods, and weather-proof fittings suited for Bengaluru’s climate.
+            Tested cement, certified Fe550D steel, and seasoned hardwoods.
           </p>
         </ScrollReveal>
 

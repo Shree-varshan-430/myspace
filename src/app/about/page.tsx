@@ -54,15 +54,12 @@ export default function AboutPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-navy-950 tracking-tight">
               Complete Building Solutions Under One Roof
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              We specialize in residential turnkey construction, 2D/3D architecture, modular interiors, and certified valuation. Every project is delivered with certified materials, milestone transparency, and timely completion.
-            </p>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              By unifying architectural design, structural engineering, and interior craftsmanship under a single accountable team, we eliminate middlemen markups and cost escalations.
+            <p className="text-sm text-slate-600 leading-relaxed">
+              We specialize in residential turnkey construction, 2D/3D architecture, modular interiors, and certified valuation in Bangalore—delivered with single-point accountability and fixed milestone pricing.
             </p>
 
             <div className="p-4 rounded-xl bg-surface-mist border border-blue-100 text-xs text-navy-950 font-medium">
-              <strong>Our Commitment:</strong> Custom 2D/3D design, IS-standard engineering, branded materials, and on-time delivery.
+              <strong>Our Commitment:</strong> Custom design, IS-standard engineering, branded materials, and on-time delivery.
             </div>
           </div>
 

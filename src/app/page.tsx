@@ -332,14 +332,11 @@ export default function HomePage() {
           <ScrollReveal direction="up" className="max-w-3xl mb-12">
             <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-3">
               <Home className="w-4 h-4 text-brand-blue" />
-              <span>Why Choose My Space</span>
+              <span>Why Choose Us</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-              Experience, Trust & Complete Transparency in Every Square Foot
+              Built with precision, transparency & trust
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-              We ensure predictable delivery through itemized quotations, milestone-based billing, in-house execution, and quality audits.
-            </p>
           </ScrollReveal>
 
           {/* Brickwork Masonry Bond Layout (3 Bricks Top Row + 2 Bricks Bottom Row) */}
@@ -363,7 +360,7 @@ export default function HomePage() {
                       Itemized BOQ & Zero Hidden Costs
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      Transparent line-item specifications with zero midway cost escalations.
+                      Line-item specifications with zero midway cost escalations.
                     </p>
                   </div>
                 </div>
@@ -383,10 +380,10 @@ export default function HomePage() {
                       </div>
                     </div>
                     <h3 className="font-sans font-bold text-base sm:text-lg text-navy-950 group-hover:text-brand-blue transition-colors">
-                      Direct Execution & In-House Team
+                      In-House Direct Execution
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      Executed directly by our engineers and craftsmen with zero broker commissions.
+                      Executed directly by our engineers with zero broker markups.
                     </p>
                   </div>
                 </div>
@@ -409,7 +406,7 @@ export default function HomePage() {
                       Custom 2D/3D Architecture
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      Bespoke layouts optimized for natural ventilation, sunlight, and modern aesthetics.
+                      Bespoke layouts optimized for natural light and ventilation.
                     </p>
                   </div>
                 </div>
@@ -432,10 +429,10 @@ export default function HomePage() {
                       </div>
                     </div>
                     <h3 className="font-sans font-bold text-base sm:text-lg text-navy-950 group-hover:text-brand-blue transition-colors">
-                      Strict Structural Quality Control
+                      Structural Quality Control
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
-                      Engineered foundations, concrete cube testing, and Fe550D steel verification at every stage.
+                      Engineered footings, cube testing, and Fe550D steel verification.
                     </p>
                   </div>
                 </div>
@@ -455,10 +452,10 @@ export default function HomePage() {
                       </div>
                     </div>
                     <h3 className="font-sans font-bold text-base sm:text-lg text-navy-950 group-hover:text-brand-blue transition-colors">
-                      Stage-by-Stage Milestone Payments
+                      Stage Milestone Payments
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
-                      Pay only as each construction milestone is completed and verified on site.
+                      Pay only as each milestone is verified on site.
                     </p>
                   </div>
                 </div>
