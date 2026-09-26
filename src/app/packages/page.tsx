@@ -185,7 +185,7 @@ export default function PackagesPage() {
               }`}
             >
               {pkg.popular && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-blue text-white text-[11px] font-bold uppercase tracking-wider shadow-md">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-blue text-white text-[11px] font-bold uppercase tracking-wider shadow-md text-center whitespace-nowrap flex items-center justify-center">
                   Most Popular for Bengaluru Villas
                 </div>
               )}
@@ -219,31 +219,19 @@ export default function PackagesPage() {
                 <div
                   className={`p-4 rounded-2xl border ${
                     pkg.popular
-                      ? 'bg-navy-900/90 border-navy-800'
-                      : 'bg-surface-ice border-slate-200/80'
+                      ? 'bg-white border-white/90 text-navy-950 shadow-sm'
+                      : 'bg-surface-ice border-slate-200/80 text-navy-950'
                   }`}
                 >
                   <div className="flex items-baseline gap-1.5">
-                    <span
-                      className={`text-3xl sm:text-4xl font-extrabold tracking-tight ${
-                        pkg.popular ? 'text-white' : 'text-navy-950'
-                      }`}
-                    >
+                    <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-950">
                       {pkg.rate}
                     </span>
-                    <span
-                      className={`text-xs font-semibold ${
-                        pkg.popular ? 'text-slate-400' : 'text-slate-500'
-                      }`}
-                    >
+                    <span className="text-xs font-semibold text-slate-600">
                       {pkg.rateUnit}
                     </span>
                   </div>
-                  <span
-                    className={`text-[11px] mt-1 block ${
-                      pkg.popular ? 'text-slate-400' : 'text-slate-500'
-                    }`}
-                  >
+                  <span className="text-[11px] mt-1 block text-slate-600 font-medium">
                     Built-up area pricing • Includes material + skilled labour
                   </span>
                 </div>
