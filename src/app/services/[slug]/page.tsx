@@ -254,12 +254,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Left: Content */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center">
                 <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
                   01
-                </span>
-                <span className="px-3.5 py-1 rounded-full bg-blue-50 text-brand-blue font-bold text-xs uppercase tracking-wider border border-blue-200">
-                  Typologies & Solutions
                 </span>
               </div>
 
@@ -340,12 +337,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
 
             {/* Right: Content */}
             <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center">
                 <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
                   02
-                </span>
-                <span className="px-3.5 py-1 rounded-full bg-amber-50 text-amber-800 font-bold text-xs uppercase tracking-wider border border-amber-200">
-                  Engineering Workflow
                 </span>
               </div>
 
@@ -396,12 +390,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Left: Content */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center">
                 <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
                   03
-                </span>
-                <span className="px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-800 font-bold text-xs uppercase tracking-wider border border-emerald-200">
-                  Deliverables & Specifications
                 </span>
               </div>
 
@@ -479,12 +470,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
 
             {/* Right: Content */}
             <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center">
                 <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
                   04
-                </span>
-                <span className="px-3.5 py-1 rounded-full bg-purple-50 text-purple-800 font-bold text-xs uppercase tracking-wider border border-purple-200">
-                  Milestones & Schedule
                 </span>
               </div>
 
@@ -599,9 +587,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center">
-                <ShieldCheck className="w-5 h-5" />
+            <div className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3 text-center flex flex-col items-center">
+              <div className="w-14 h-14 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-1">
+                <ShieldCheck className="w-7 h-7" />
               </div>
               <h3 className="font-bold text-base text-navy-950">IS-Standard Compliance</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -609,9 +597,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center">
-                <Sliders className="w-5 h-5" />
+            <div className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3 text-center flex flex-col items-center">
+              <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center mb-1">
+                <Sliders className="w-7 h-7" />
               </div>
               <h3 className="font-bold text-base text-navy-950">Detailed Itemized BOQ</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -619,9 +607,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-600 flex items-center justify-center">
-                <Clock className="w-5 h-5" />
+            <div className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3 text-center flex flex-col items-center">
+              <div className="w-14 h-14 rounded-2xl bg-sky-500/10 text-sky-600 flex items-center justify-center mb-1">
+                <Clock className="w-7 h-7" />
               </div>
               <h3 className="font-bold text-base text-navy-950">Timely Delivery</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -629,9 +617,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
-                <FileCheck2 className="w-5 h-5" />
+            <div className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3 text-center flex flex-col items-center">
+              <div className="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center mb-1">
+                <FileCheck2 className="w-7 h-7" />
               </div>
               <h3 className="font-bold text-base text-navy-950">Certified Documentation</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -639,9 +627,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center">
-                <Building2 className="w-5 h-5" />
+            <div className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3 text-center flex flex-col items-center">
+              <div className="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-600 flex items-center justify-center mb-1">
+                <Building2 className="w-7 h-7" />
               </div>
               <h3 className="font-bold text-base text-navy-950">Local Zonal Insight</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -649,9 +637,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-red-500/10 text-brand-steel flex items-center justify-center">
-                <Award className="w-5 h-5" />
+            <div className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3 text-center flex flex-col items-center">
+              <div className="w-14 h-14 rounded-2xl bg-red-500/10 text-brand-steel flex items-center justify-center mb-1">
+                <Award className="w-7 h-7" />
               </div>
               <h3 className="font-bold text-base text-navy-950">Single Accountability</h3>
               <p className="text-xs text-slate-600 leading-relaxed">

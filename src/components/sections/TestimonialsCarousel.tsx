@@ -19,123 +19,195 @@ export interface GoogleReview {
 export const googleReviewsData: GoogleReview[] = [
   {
     id: "rev-1",
-    author: "Ramesh Kumar",
-    role: "Local Guide • 38 reviews",
+    author: "P.S Vaisshnav",
+    role: "1 review • 2 photos",
     rating: 5,
-    date: "3 months ago",
-    location: "Singasandra, Bengaluru",
-    projectType: "Turnkey Duplex Home Construction",
-    review: "Er. Saravanan and his team at MY SPACE Civil Engineers did a fantastic job on our duplex house construction in Singasandra. The 3D elevation design, structural quality, and on-time delivery were top-notch. Very transparent in budget and material specifications with zero hidden costs. Highly recommended for house construction in Bangalore!",
-    initials: "RK",
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Turnkey House Construction",
+    review: "Good design work, my house was built by myspace engineers team and handed over on time. High quality with cost effective. Complete space utilisation and nicely crafted. Thanks to Myspace",
+    initials: "PV",
     avatarBg: "bg-blue-600"
   },
   {
     id: "rev-2",
-    author: "Senthil Nathan",
-    role: "Verified Google Review",
+    author: "Hrithik. s",
+    role: "13 reviews • 5 photos",
     rating: 5,
-    date: "4 months ago",
-    location: "HSR Layout, Bengaluru",
-    projectType: "Structural Planning & Property Valuation",
-    review: "We approached MY SPACE for building plan approval, structural drawings, and bank property valuation. Er. Saravanan is extremely knowledgeable and courteous. Everything was delivered on time with clear legal documentation and high precision. Best civil engineers and valuers in Bangalore.",
-    initials: "SN",
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Custom House Planning & Execution",
+    review: "It was interesting and satisfactory to approach someone who has technical and wide knowledge on the project to be done with the budget ,design of the house according to the client's theme and was built with multiple necessary requirements",
+    initials: "HS",
     avatarBg: "bg-emerald-600"
   },
   {
     id: "rev-3",
-    author: "Karthik Sundaram",
-    role: "Local Guide • 19 reviews",
+    author: "sanavas shajahan",
+    role: "9 reviews",
     rating: 5,
-    date: "5 months ago",
-    location: "Electronic City, Bengaluru",
-    projectType: "2D/3D Architecture & Turnkey Execution",
-    review: "Excellent architectural design and turnkey construction services. Their 3D floor plans helped us visualize our home clearly before breaking ground. The quality of concrete, steel, and plumbing work was strictly monitored on site. Budget-friendly, honest, and reliable engineers.",
-    initials: "KS",
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "House Construction",
+    review: "MY SPACE Engineers was a wonderful experience. I am truly thankful I called for their services. They are not only professional at what they do but also reliable and dependable. I’ve built my house under there construction and they offered great support.",
+    initials: "SS",
     avatarBg: "bg-purple-600"
   },
   {
     id: "rev-4",
-    author: "Venkatesh Prasad",
-    role: "Verified Google Review",
+    author: "yogen s",
+    role: "5 reviews • 8 photos",
     rating: 5,
-    date: "6 months ago",
-    location: "Sarjapur Road, Bengaluru",
-    projectType: "Residential Villa Construction",
-    review: "Very reliable and trusted builders. Handled the complete construction of our residential villa near Sarjapur Road. Er. Saravanan visited the site regularly and gave weekly photo progress updates. The finish quality and structural strength are superb.",
-    initials: "VP",
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Engineering Consultancy",
+    review: "I have known him for more than four decades and one of the most truthworthy person that I come across.",
+    initials: "YS",
     avatarBg: "bg-amber-600"
   },
   {
     id: "rev-5",
-    author: "Anitha R.",
-    role: "Verified Google Review",
+    author: "King Kaliswaran",
+    role: "6 reviews",
     rating: 5,
-    date: "7 months ago",
-    location: "AECS Layout, Kudlu, Bengaluru",
-    projectType: "Modular Interiors & Kitchen Fitouts",
-    review: "Highly satisfied with the bespoke interior design and modular kitchen work done by MY SPACE. The carpentry finishes, wardrobe layouts, and false ceiling lighting exceeded our expectations. Very professional, responsive, and punctual team.",
-    initials: "AR",
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "3D Design & Elevation",
+    review: "He is well knowledged, good experience & qualified engineer. Personal and professionally know him very well. He shared his technical knowledge to all friends. For me he worked 3D design for me.. friendly, Updated, skilled engineer .. all the best Engg. Saravanan",
+    initials: "KK",
     avatarBg: "bg-rose-600"
   },
   {
     id: "rev-6",
-    author: "Praveen Kumar M.",
-    role: "Local Guide • 42 reviews",
+    author: "Ovium N",
+    role: "2 reviews",
     rating: 5,
-    date: "8 months ago",
-    location: "AECS B Block, Singasandra",
-    projectType: "Commercial Valuation & Structural Audit",
-    review: "Got my commercial building valuation and structural stability certificate done through MY SPACE Civil Engineers & Valuers in AECS Layout. Fast response, thorough on-site inspection, and institutional valuation report recognized by leading banks.",
-    initials: "PK",
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Civil Construction & Architecture",
+    review: "Reliable and accountable, his wast and in depth knowledge in construction and allied fields makes the work upto the mark and fulfill our desire towards comfy, sturdy and aesthetic dwellings at nominal cost",
+    initials: "ON",
     avatarBg: "bg-indigo-600"
   },
   {
     id: "rev-7",
-    author: "Rajeshwari S.",
-    role: "Verified Google Review",
+    author: "Sri Sabari Marketing services",
+    role: "3 reviews",
     rating: 5,
-    date: "9 months ago",
-    location: "Begur Road, Bengaluru",
-    projectType: "Vastu 2D Floor Plan & 3D Elevation",
-    review: "Er. Saravanan provided wonderful vastu-compliant floor plans for our 30x40 site. His patience in explaining every structural detail and accommodating our family needs made all the difference. Clean working drawings and prompt support!",
-    initials: "RS",
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "House Design & Planning",
+    review: "Excellent design given by myspace engineers for my house, Mr saravanan is very humble and patience in listening our views and ideas, good work, great, wishing him great success on further projects",
+    initials: "SS",
     avatarBg: "bg-teal-600"
   },
   {
     id: "rev-8",
-    author: "Girish Gowda",
-    role: "Verified Google Review",
+    author: "Balakrishna N",
+    role: "Local Guide • 96 reviews • 133 photos",
     rating: 5,
-    date: "10 months ago",
-    location: "Singasandra / Kudlu, Bengaluru",
-    projectType: "G+2 Residential Building Construction",
-    review: "Best construction company in Kudlu / Singasandra area. No hidden costs or middlemen markups. The contract had a clear itemized BOQ and stage-wise payment schedule. Completed our G+2 building on schedule with branded materials.",
-    initials: "GG",
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Civil & Valuation Services",
+    review: "Professional & reliable service at a reasonable charges.",
+    initials: "BN",
     avatarBg: "bg-cyan-600"
   },
   {
     id: "rev-9",
-    author: "Manjunath B.",
-    role: "Verified Google Review",
+    author: "v.janarthanan Vadivel",
+    role: "6 reviews • 4 photos",
     rating: 5,
-    date: "11 months ago",
-    location: "Bommanahalli, Bengaluru",
-    projectType: "Civil Contracting & RCC Framing",
-    review: "Professional civil engineering consultancy with deep technical knowledge of BBMP building bylaws and structural IS codes. Their site supervision team is dedicated, punctual, and very easy to work with throughout the foundation and framing stages.",
-    initials: "MB",
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Civil Construction",
+    review: "Best service in City....honouruble,Adjustable, dedicated .....",
+    initials: "JV",
     avatarBg: "bg-sky-600"
   },
   {
     id: "rev-10",
-    author: "Dr. Arvind Swaminathan",
-    role: "Local Guide • 27 reviews",
+    author: "Vaishri S",
+    role: "4 reviews • 1 photo",
     rating: 5,
-    date: "1 year ago",
-    location: "Electronic City Phase 1, Bengaluru",
-    projectType: "Turnkey Independent House Construction",
-    review: "I engaged MY SPACE for turnkey construction of our independent house in Electronic City. Right from soil excavation to final painting and deep cleaning, their execution was flawless. Er. Saravanan is a thorough gentleman and expert engineer who gives genuine advice.",
-    initials: "AS",
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Residential Construction",
+    review: "Excellent work ... Trust worthy people",
+    initials: "VS",
     avatarBg: "bg-blue-700"
+  },
+  {
+    id: "rev-11",
+    author: "ganesh r",
+    role: "4 reviews • 1 photo",
+    rating: 5,
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Project Execution",
+    review: "Excellent execution and good in time management 👍",
+    initials: "GR",
+    avatarBg: "bg-emerald-700"
+  },
+  {
+    id: "rev-12",
+    author: "sasekumar cs",
+    role: "1 review",
+    rating: 5,
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Advisory & Construction",
+    review: "Best advisor Excellent work",
+    initials: "SC",
+    avatarBg: "bg-amber-700"
+  },
+  {
+    id: "rev-13",
+    author: "Ramesh Duraisamy",
+    role: "3 reviews • 9 photos",
+    rating: 5,
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Civil Contracting",
+    review: "Super 👌",
+    initials: "RD",
+    avatarBg: "bg-purple-700"
+  },
+  {
+    id: "rev-14",
+    author: "Askrish RC",
+    role: "4 reviews",
+    rating: 5,
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Engineering Services",
+    review: "Great team.",
+    initials: "AR",
+    avatarBg: "bg-rose-700"
+  },
+  {
+    id: "rev-15",
+    author: "Yuvarajkarthikeyan Mani",
+    role: "3 reviews",
+    rating: 5,
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Civil & Design",
+    review: "Super service",
+    initials: "YM",
+    avatarBg: "bg-teal-700"
+  },
+  {
+    id: "rev-16",
+    author: "Selva Raj",
+    role: "3 reviews",
+    rating: 5,
+    date: "3 years ago",
+    location: "Bengaluru",
+    projectType: "Turnkey Construction",
+    review: "My Space Engineers, Er.Saravanan = Quality for Sure, Er. Saravanan = Simplicity in his approach",
+    initials: "SR",
+    avatarBg: "bg-blue-800"
   }
 ];
 
@@ -158,40 +230,41 @@ export default function TestimonialsCarousel() {
   };
 
   useEffect(() => {
-    checkScroll();
-    const current = scrollContainerRef.current;
-    if (current) {
-      current.addEventListener('scroll', checkScroll, { passive: true });
-      return () => current.removeEventListener('scroll', checkScroll);
+    const el = scrollContainerRef.current;
+    if (el) {
+      checkScroll();
+      el.addEventListener('scroll', checkScroll, { passive: true });
+      window.addEventListener('resize', checkScroll);
+      return () => {
+        el.removeEventListener('scroll', checkScroll);
+        window.removeEventListener('resize', checkScroll);
+      };
     }
   }, []);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const card = scrollContainerRef.current.firstElementChild as HTMLElement;
-      const cardWidth = card ? card.offsetWidth + 20 : 380;
-      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+      const itemWidth = scrollContainerRef.current.firstElementChild?.clientWidth || 360;
+      const scrollAmount = direction === 'left' ? -itemWidth - 20 : itemWidth + 20;
       scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
 
   const scrollToIndex = (index: number) => {
     if (scrollContainerRef.current) {
-      const card = scrollContainerRef.current.children[index] as HTMLElement;
-      if (card) {
-        card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-      }
+      const itemWidth = scrollContainerRef.current.firstElementChild?.clientWidth || 360;
+      scrollContainerRef.current.scrollTo({ left: index * (itemWidth + 20), behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="space-y-8 pt-6 border-t border-slate-200">
-      {/* Top Header Row with Google Business Profile Summary Badge */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+    <div className="space-y-8">
+      {/* Header with Google Rating Badge */}
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2 border-b border-slate-200/80">
         <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            {/* Google Logo Icon SVG */}
-            <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-2xs">
+            {/* Google Icon */}
+            <svg className="w-4 h-4" viewBox="0 0 24 24">
               <path
                 fill="#4285F4"
                 d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -222,7 +295,7 @@ export default function TestimonialsCarousel() {
           </p>
         </div>
 
-        {/* Google My Business Summary Box (Matching Google Maps card) */}
+        {/* Google My Business Summary Box */}
         <div className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm shrink-0">
           <div className="text-center pr-3 border-r border-slate-200">
             <div className="text-3xl font-black text-navy-950 leading-none font-mono">
@@ -256,7 +329,6 @@ export default function TestimonialsCarousel() {
 
       {/* Carousel Wrapper */}
       <div className="relative">
-        {/* Navigation Buttons (Top Right on Large Screens / Floating on Mobile) */}
         <div className="flex items-center justify-between mb-4">
           <div className="text-xs font-mono text-slate-500">
             Showing <strong className="text-navy-950 font-bold">{activeIndex + 1}</strong> of <strong className="text-navy-950 font-bold">{googleReviewsData.length}</strong> verified reviews
@@ -299,13 +371,12 @@ export default function TestimonialsCarousel() {
           className="flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-4 pt-1 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {googleReviewsData.map((item, idx) => (
+          {googleReviewsData.map((item) => (
             <div
               key={item.id}
               className="w-[300px] sm:w-[360px] lg:w-[400px] shrink-0 snap-start rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all p-6 sm:p-7 flex flex-col justify-between space-y-4 group"
             >
               <div className="space-y-3.5">
-                {/* Review Top Bar: Google G logo + Star Rating + Date */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-0.5 text-amber-400">
@@ -320,7 +391,6 @@ export default function TestimonialsCarousel() {
                   </div>
                 </div>
 
-                {/* Review Text with Quote */}
                 <div className="relative">
                   <Quote className="w-5 h-5 text-slate-200 mb-1 group-hover:text-brand-blue/30 transition-colors shrink-0" />
                   <p className="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed">
@@ -329,7 +399,6 @@ export default function TestimonialsCarousel() {
                 </div>
               </div>
 
-              {/* Review Bottom Card: Avatar + Author + Role & Location */}
               <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
                 <div className={`w-10 h-10 rounded-full ${item.avatarBg} text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-sm`}>
                   {item.initials}
@@ -340,7 +409,6 @@ export default function TestimonialsCarousel() {
                     <h3 className="text-xs sm:text-sm font-bold text-navy-950 font-sans truncate">
                       {item.author}
                     </h3>
-                    {/* Google G mini icon */}
                     <svg className="w-3 h-3 shrink-0" viewBox="0 0 24 24">
                       <path
                         fill="#4285F4"
