@@ -180,12 +180,12 @@ export default function PackagesPage() {
               key={pkg.id}
               className={`rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 relative ${
                 pkg.popular
-                  ? 'bg-white border-2 border-brand-blue shadow-[0_20px_50px_rgba(30,58,138,0.12)] -translate-y-1'
-                  : 'bg-white border border-slate-200 shadow-subtle hover:shadow-elevated'
+                  ? 'bg-navy-950 text-white border-2 border-brand-blue shadow-[0_20px_50px_rgba(15,23,42,0.35)] -translate-y-1'
+                  : 'bg-white text-navy-950 border border-slate-200 shadow-subtle hover:shadow-elevated'
               }`}
             >
               {pkg.popular && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-blue text-white text-[11px] font-bold uppercase tracking-wider shadow-sm">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-blue text-white text-[11px] font-bold uppercase tracking-wider shadow-md">
                   Most Popular for Bengaluru Villas
                 </div>
               )}
@@ -193,40 +193,83 @@ export default function PackagesPage() {
               <div className="space-y-6">
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-2xl font-bold text-navy-950">{pkg.name}</h3>
-                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold ${pkg.badgeColor}`}>
+                    <h3 className={`text-2xl font-bold ${pkg.popular ? 'text-white' : 'text-navy-950'}`}>
+                      {pkg.name}
+                    </h3>
+                    <span
+                      className={`px-2.5 py-0.5 rounded-full text-xs font-semibold ${
+                        pkg.popular
+                          ? 'bg-sky-500/20 text-sky-300 border border-sky-400/30'
+                          : pkg.badgeColor
+                      }`}
+                    >
                       {pkg.id.toUpperCase()}
                     </span>
                   </div>
-                  <p className="text-xs text-slate-600 leading-snug min-h-[36px]">
+                  <p
+                    className={`text-xs leading-snug min-h-[36px] ${
+                      pkg.popular ? 'text-slate-300' : 'text-slate-600'
+                    }`}
+                  >
                     {pkg.tagline}
                   </p>
                 </div>
 
                 {/* Price Display */}
-                <div className="p-4 rounded-2xl bg-surface-ice border border-slate-200/80">
+                <div
+                  className={`p-4 rounded-2xl border ${
+                    pkg.popular
+                      ? 'bg-navy-900/90 border-navy-800'
+                      : 'bg-surface-ice border-slate-200/80'
+                  }`}
+                >
                   <div className="flex items-baseline gap-1.5">
-                    <span className="text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight">
+                    <span
+                      className={`text-3xl sm:text-4xl font-extrabold tracking-tight ${
+                        pkg.popular ? 'text-white' : 'text-navy-950'
+                      }`}
+                    >
                       {pkg.rate}
                     </span>
-                    <span className="text-xs font-semibold text-slate-500">
+                    <span
+                      className={`text-xs font-semibold ${
+                        pkg.popular ? 'text-slate-400' : 'text-slate-500'
+                      }`}
+                    >
                       {pkg.rateUnit}
                     </span>
                   </div>
-                  <span className="text-[11px] text-slate-500 mt-1 block">
+                  <span
+                    className={`text-[11px] mt-1 block ${
+                      pkg.popular ? 'text-slate-400' : 'text-slate-500'
+                    }`}
+                  >
                     Built-up area pricing • Includes material + skilled labour
                   </span>
                 </div>
 
                 {/* Key Inclusions */}
                 <div className="space-y-3">
-                  <span className="text-xs font-bold text-navy-950 uppercase tracking-wider block">
+                  <span
+                    className={`text-xs font-bold uppercase tracking-wider block ${
+                      pkg.popular ? 'text-slate-200' : 'text-navy-950'
+                    }`}
+                  >
                     Key Specifications Included:
                   </span>
                   <ul className="space-y-2">
                     {pkg.highlights.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-700 leading-snug">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <li
+                        key={idx}
+                        className={`flex items-start gap-2.5 text-xs leading-snug ${
+                          pkg.popular ? 'text-slate-200' : 'text-slate-700'
+                        }`}
+                      >
+                        <CheckCircle2
+                          className={`w-4 h-4 shrink-0 mt-0.5 ${
+                            pkg.popular ? 'text-emerald-400' : 'text-emerald-600'
+                          }`}
+                        />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -234,12 +277,16 @@ export default function PackagesPage() {
                 </div>
               </div>
 
-              <div className="pt-8 mt-8 border-t border-slate-100">
+              <div
+                className={`pt-8 mt-8 border-t ${
+                  pkg.popular ? 'border-navy-800' : 'border-slate-100'
+                }`}
+              >
                 <Link
                   href={`/contact?intent=start-project&package=${pkg.id}`}
                   className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-semibold transition-all ${
                     pkg.popular
-                      ? 'bg-brand-blue text-white hover:bg-brand-steel shadow-blueprint'
+                      ? 'bg-brand-blue text-white hover:bg-sky-500 shadow-blueprint'
                       : 'bg-navy-950 text-white hover:bg-brand-blue shadow-sm'
                   }`}
                 >
