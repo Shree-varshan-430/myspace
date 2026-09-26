@@ -199,9 +199,9 @@ function EnquiryFormInner({
                 <div className="w-10 h-10 rounded-xl bg-slate-200/80 text-slate-700 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Mail className="w-5 h-5" />
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <span className="text-[10px] text-slate-500 uppercase font-semibold block">Email Enquiry</span>
-                  <span className="text-xs sm:text-sm font-bold text-navy-950 truncate block group-hover:text-brand-blue transition-colors">
+                  <span className="text-xs sm:text-sm font-bold text-navy-950 break-all block group-hover:text-brand-blue transition-colors">
                     {siteConfig.contact.email}
                   </span>
                 </div>
