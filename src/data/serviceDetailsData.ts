@@ -52,500 +52,614 @@ export interface DetailedServiceData {
 export const serviceDetailsLookup: Record<string, DetailedServiceData> = {
   'house-construction-bangalore': {
     typologiesTitle: "What We Build",
-    typologiesSubtitle: "Custom residential building typologies tailored to your plot and lifestyle:",
+    typologiesSubtitle: "Tailored residential typologies for your plot:",
     typologies: [
-      {
-        title: "Independent Houses",
-        desc: "Custom standalone homes planned for privacy, ground-floor parking, pooja rooms, and future vertical expansion.",
-        iconType: "home"
-      },
-      {
-        title: "Villas",
-        desc: "Spacious luxury villas with generous setbacks, landscaped gardens, modern elevations, and multi-car parking.",
-        iconType: "building"
-      },
-      {
-        title: "Duplex Homes",
-        desc: "Connected multi-level duplex layouts with designer staircases, double-height living, and private suites.",
-        iconType: "layers"
-      },
-      {
-        title: "G+1 / G+2 / G+3 Homes",
-        desc: "Multi-floor residential homes optimized for self-use or rental income with independent sub-meters and staircases.",
-        iconType: "grid"
-      }
+      { title: "Independent Houses", desc: "Private parking, pooja room, and custom layouts.", iconType: "home" },
+      { title: "Villas", desc: "Expansive layouts with landscaped sit-outs.", iconType: "building" },
+      { title: "Duplex Homes", desc: "Double-height living with private suites.", iconType: "layers" },
+      { title: "G+1 to G+4 Homes", desc: "Optimized for self-use and rental income.", iconType: "grid" }
     ],
-    processTitle: "Our House Construction Process",
-    processSubtitle: "Disciplined 10-stage engineering workflow from soil test to handover:",
+    processTitle: "Construction Process",
+    processSubtitle: "Disciplined engineering workflow from soil to handover:",
     processStages: [
-      { stageNumber: "01", title: "Planning & Soil Testing", desc: "Site inspection, boundary survey, soil strata review, and budget consultation." },
-      { stageNumber: "02", title: "Floor Plan Drafting", desc: "Custom 2D floor plans with room dimensions, Vastu alignment, and setback compliance." },
-      { stageNumber: "03", title: "Structural Engineering", desc: "Column grids, beam dimensions, footing calculations, and realistic 3D models." },
-      { stageNumber: "04", title: "Foundation & Sump", desc: "Excavation, column footings, RCC plinth beams, anti-termite treatment, and water sump." },
-      { stageNumber: "05", title: "RCC Frame & Slabs", desc: "RCC columns, beam shuttering, Fe550D steel binding, and concrete slabs with 21-day curing." },
-      { stageNumber: "06", title: "Masonry & Brickwork", desc: "Solid concrete blocks or red bricks for 6\" outer and 4\" inner walls with door frames." },
-      { stageNumber: "07", title: "Plumbing & Electrical", desc: "Concealed CPVC/PVC plumbing, sewage drainage lines, and electrical conduits." },
-      { stageNumber: "08", title: "Plastering & Flooring", desc: "Cement plastering, multi-layer waterproofing, and vitrified tile or granite flooring." },
-      { stageNumber: "09", title: "Painting & Fixtures", desc: "Wall putty, primer, and premium 2-coat weather-shield emulsion paints." },
-      { stageNumber: "10", title: "Snag Check & Handover", desc: "Deep cleaning, snag clearance, line testing, and formal key handover with warranty." }
+      { stageNumber: "01", title: "Soil & Feasibility", desc: "Site survey and soil testing." },
+      { stageNumber: "02", title: "2D Floor Plans", desc: "Vastu-compliant architectural layouts." },
+      { stageNumber: "03", title: "Structural Modeling", desc: "IS-compliant RCC column designs." },
+      { stageNumber: "04", title: "Foundation & Sump", desc: "Excavation, footings, and RCC sump." },
+      { stageNumber: "05", title: "RCC Framing & Slabs", desc: "Columns, beams, and 21-day curing." },
+      { stageNumber: "06", title: "Masonry & Plaster", desc: "Solid blocks and double plastering." },
+      { stageNumber: "07", title: "MEP Networks", desc: "Concealed electrical and plumbing lines." },
+      { stageNumber: "08", title: "Flooring & Finishes", desc: "Vitrified tiles, granite, and painting." }
     ],
-    scopeTitle: "What Is Included In Our Home Construction Service?",
-    scopeSubtitle: "Turnkey coverage from bare land to a move-in ready residence:",
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Turnkey delivery from bare plot to move-in readiness:",
     detailedScope: [
-      { title: "Architectural & Structural Drawings", desc: "2D floor plans, 3D front elevations, column/beam details, and MEP layout drawings." },
-      { title: "Civil Construction & Structural Build", desc: "Excavation, foundation footings, RCC frame casting, masonry, and double-coat plastering." },
-      { title: "Underground Sump & Overhead Tank", desc: "Reinforced concrete underground storage sump plus overhead water tank." },
-      { title: "Electrical & Plumbing Networks", desc: "Concealed ISI copper wiring, modular switches, CPVC water pipes, and drainage lines." },
-      { title: "Flooring & Wall Tiling", desc: "Vitrified tile or granite flooring, anti-skid bathroom tiles, and granite kitchen counter." },
-      { title: "Doors, Windows & Painting", desc: "Teakwood main door frame, flush internal doors, UPVC windows, and Asian Paints emulsion." }
+      { title: "Design & Structural Drawings", desc: "2D plans, 3D elevations, and structural blueprints." },
+      { title: "Civil Construction", desc: "Deep footings, RCC frame, and blockwork." },
+      { title: "Waterproofing & Sump", desc: "RCC sump with multi-stage damp proofing." },
+      { title: "Electrical & Plumbing", desc: "Concealed ISI copper wiring and CPVC piping." },
+      { title: "Flooring & Joinery", desc: "Vitrified tiles, granite stairs, and UPVC windows." },
+      { title: "Painting & Handover", desc: "Premium interior/exterior paints and snag clearance." }
     ],
-    costTitle: "House Construction Cost in Bangalore",
-    costSubtitle: "Key parameters that influence your residential construction budget:",
+    costTitle: "Cost Factors",
+    costSubtitle: "Key parameters that influence residential budgets:",
     costDrivers: [
-      { number: "1", title: "Soil Condition & Foundation Depth", desc: "Standard isolated footings for hard rock vs deeper excavation and raft foundations for loose soil." },
-      { number: "2", title: "Number of Floors & Built-Up Area", desc: "Additional floors increase column sizing, steel tonnage, and lift/headroom requirements." },
-      { number: "3", title: "Structural & Finishing Materials", desc: "Choice between solid blocks vs wire-cut bricks, and vitrified tiles vs imported marble." },
-      { number: "4", title: "Plot Location & Site Accessibility", desc: "Road width affects transit mixer trucks, material unloading, and logistics." },
-      { number: "5", title: "Elevation & Architectural Features", desc: "Glass facades, exterior louvers, and cantilever balconies add custom aesthetic value." }
+      { number: "1", title: "Soil & Foundation Depth", desc: "Isolated footings vs deep raft excavation." },
+      { number: "2", title: "Built-Up Area & Storeys", desc: "Higher floors increase structural framing sizing." },
+      { number: "3", title: "Finishing Material Tier", desc: "Standard tiles vs imported marble finishes." },
+      { number: "4", title: "Plot Location & Access", desc: "Road width impacts material transit logistics." }
     ],
-    timelineTitle: "How Long Does It Take to Build a House?",
-    timelineSubtitle: "Typical timeline for an independent house (G+1 or G+2) is 10 to 12 months:",
+    timelineTitle: "Project Timeline",
+    timelineSubtitle: "Average timeline is 10 to 12 months from start to handover:",
     timelineSchedule: [
-      { durationBadge: "MONTHS 1–2", title: "Planning & Approvals", desc: "Soil testing, architectural plans, 3D elevations, and structural drawings." },
-      { durationBadge: "MONTHS 2–3", title: "Foundation & Sump", desc: "Site excavation, column footings, plinth beam casting, and underground water sump." },
-      { durationBadge: "MONTHS 4–6", title: "RCC Frame & Slabs", desc: "RCC column casting, beam shuttering, steel binding, and slabs with 21-day water curing." },
-      { durationBadge: "MONTHS 6–8", title: "Masonry & MEP Lines", desc: "Solid block masonry, door frame fixing, concealed electrical and plumbing conduits." },
-      { durationBadge: "MONTHS 9–10", title: "Waterproofing & Finishes", desc: "Terrace waterproofing, vitrified tile/granite flooring, and bathroom wall tiling." },
-      { durationBadge: "MONTHS 11–12", title: "Painting & Handover", desc: "Putty, primer, premium emulsion painting, fixture testing, snag clearance, and handover." }
+      { durationBadge: "MONTHS 1–2", title: "Planning & Design", desc: "Soil test, 2D/3D design, and structural plans." },
+      { durationBadge: "MONTHS 2–3", title: "Foundation & Sump", desc: "Excavation, footings, and plinth casting." },
+      { durationBadge: "MONTHS 4–6", title: "RCC Frame & Slabs", desc: "Columns, beams, and slab curing." },
+      { durationBadge: "MONTHS 7–9", title: "Masonry & MEP", desc: "Block masonry and concealed conduits." },
+      { durationBadge: "MONTHS 10–12", title: "Finishing & Handover", desc: "Flooring, painting, testing, and handover." }
     ]
   },
 
   'commercial-construction-bangalore': {
-    typologiesTitle: "Commercial Building Typologies",
-    typologiesSubtitle: "Engineered for maximum usable floor area, heavy footfall, and high rental yields across Bengaluru commercial hubs:",
+    typologiesTitle: "Commercial Typologies",
+    typologiesSubtitle: "Engineered for maximum usable area and high rental yields:",
     typologies: [
-      { title: "Corporate Offices & IT Parks", desc: "Open floor plate layouts with dedicated server rooms, VRV HVAC zones, DG backup integration, and acoustic partitions.", iconType: "building" },
-      { title: "Retail Showrooms & Plazas", desc: "High-visibility street-facing frontage, structural glass elevations, heavy-traffic flooring, and dedicated customer parking.", iconType: "grid" },
-      { title: "Healthcare & Diagnostic Clinics", desc: "Specialized clinical layouts with radiation shielding conduits, sterile air flow paths, and patient accessibility ramps.", iconType: "shield" },
-      { title: "Commercial Mixed-Use Complexes", desc: "Multi-tier structures accommodating ground-floor retail and upper-floor corporate office suites with separate access cores.", iconType: "layers" }
+      { title: "Corporate Offices", desc: "Open floor plates with HVAC and DG integration.", iconType: "building" },
+      { title: "Retail Showrooms", desc: "High-visibility frontage and customer parking.", iconType: "grid" },
+      { title: "Diagnostic Clinics", desc: "Specialized clinical layouts and access ramps.", iconType: "shield" },
+      { title: "Mixed-Use Complexes", desc: "Ground retail with upper corporate office suites.", iconType: "layers" }
     ],
-    processTitle: "Commercial Construction Process",
-    processSubtitle: "Critical-path project management ensuring phased delivery and zero operational downtime:",
+    processTitle: "Commercial Process",
+    processSubtitle: "Phased project management ensuring on-time delivery:",
     processStages: [
-      { stageNumber: "01", title: "Zoning & FAR Feasibility", desc: "Floor Area Ratio optimization, municipal setback review, and traffic circulation planning." },
-      { stageNumber: "02", title: "Heavy Structural Design", desc: "IS 875 commercial live load engineering, column-free grids, and post-tensioned slab options." },
-      { stageNumber: "03", title: "Integrated MEP Schematics", desc: "3-Phase electrical distribution, centralized HVAC ducting, and fire sprinkler network modeling." },
-      { stageNumber: "04", title: "Basement & Sub-Structure", desc: "Deep basement retention walls, dewatering systems, sump tanks, and commercial vehicle parking bays." },
-      { stageNumber: "05", title: "Superstructure RCC Casting", desc: "Rapid casting cycles with high-grade ready-mix concrete and certified commercial formwork systems." },
-      { stageNumber: "06", title: "Façade & Structural Glazing", desc: "High-performance acoustic double-glazed curtain walls, ACP cladding, and weatherproof entrance canopies." },
-      { stageNumber: "07", title: "Fire Safety & Lift Installation", desc: "Fire stairwell pressurization, fire hydrant piping, and commercial passenger/service elevator setups." },
-      { stageNumber: "08", title: "Handover for Fit-Outs", desc: "Warm shell or turnkey interior fit-out completion with compliance test certificates." }
+      { stageNumber: "01", title: "FAR & Zoning Feasibility", desc: "Setback checks and floor-plate optimization." },
+      { stageNumber: "02", title: "Heavy Structural Design", desc: "Commercial live load and column-free grids." },
+      { stageNumber: "03", title: "MEP Schematics", desc: "3-Phase power, HVAC ducting, and fire lines." },
+      { stageNumber: "04", title: "Basement & Sump", desc: "Retaining walls, sumps, and parking bays." },
+      { stageNumber: "05", title: "Superstructure RCC", desc: "High-grade RMC casting and fast formwork." },
+      { stageNumber: "06", title: "Façade & Glazing", desc: "DGU acoustic curtain walls and ACP cladding." },
+      { stageNumber: "07", title: "Fire Safety & Lifts", desc: "Hydrants, sprinklers, and passenger elevators." },
+      { stageNumber: "08", title: "Fit-Out Handover", desc: "Warm shell delivery with compliance certificates." }
     ],
-    scopeTitle: "What Is Included In Commercial Construction?",
-    scopeSubtitle: "Turnkey structural and MEP build packages designed for business tenants and property investors:",
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Turnkey structural and MEP build packages:",
     detailedScope: [
-      { title: "Commercial Grade RCC Superstructure", desc: "Heavy column grids engineered for commercial live loads, vibration damping, and long spans." },
-      { title: "Complete Façade & Curtain Glazing", desc: "DGU structural glazing, ACP paneling, entrance canopies, and architectural exterior lighting." },
-      { title: "High-Capacity MEP Infrastructure", desc: "Dedicated electrical transformers, busduct risers, earthing grids, and main distribution panels." },
-      { title: "Fire Detection & Suppression Systems", desc: "Fire hydrant rings, smoke detection arrays, emergency sprinkler grids, and fire-rated escape doors." },
-      { title: "Heavy-Traffic Commercial Finishes", desc: "High-gloss vitrified tiles, granite lift lobbies, anti-skid stair treads, and durable exterior paving." },
-      { title: "Basement Parking & Drainage", desc: "Epoxy/VDF basement flooring, ramp heating/grooving, stormwater sump pumps, and oil separators." }
+      { title: "Heavy RCC Superstructure", desc: "Heavy column grids engineered for live loads." },
+      { title: "Façade & Curtain Glazing", desc: "DGU structural glazing and ACP paneling." },
+      { title: "High-Capacity MEP Systems", desc: "Transformers, busducts, and distribution panels." },
+      { title: "Fire Detection & Suppression", desc: "Hydrant rings, smoke detectors, and sprinklers." },
+      { title: "Commercial Finishes & Lobbies", desc: "Granite lobbies and anti-skid stairways." },
+      { title: "Basement Parking & Drainage", desc: "Epoxy/VDF flooring and stormwater pumps." }
     ],
-    costTitle: "Commercial Construction Cost Factors",
-    costSubtitle: "Key parameters that influence commercial development expenditure in Bangalore:",
+    costTitle: "Cost Factors",
+    costSubtitle: "Parameters influencing commercial project investments:",
     costDrivers: [
-      { number: "1", title: "Column Grid Span & Live Load Capacity", desc: "Longer column-free spans require heavier PT slabs and steel tonnage compared to standard residential framing." },
-      { number: "2", title: "Façade Glazing & Acoustic Specifications", desc: "Energy-efficient low-E glass and acoustic double glazing protect against traffic noise and reduce air conditioning loads." },
-      { number: "3", title: "Connected Electrical Load & DG Backup", desc: "High-kVA industrial power lines, transformer installations, and 100% DG redundancy represent significant capital investment." },
-      { number: "4", title: "Fire Compliance & Lift Capacity", desc: "High-rise commercial regulations mandate dedicated fire tanks, booster pumps, and multi-passenger high-speed elevators." },
-      { number: "5", title: "Basement Depth & Retention Works", desc: "Multi-level basement parking in urban Bangalore plots requires contiguous piling and specialized soil anchoring." }
+      { number: "1", title: "Column Grid Span & Load", desc: "Long spans require heavier PT slabs." },
+      { number: "2", title: "Façade Glazing Tier", desc: "Low-E DGU glass reduces cooling energy costs." },
+      { number: "3", title: "Connected Power & DG", desc: "Transformer setup and 100% DG backup." },
+      { number: "4", title: "Basement Retention Depth", desc: "Multi-level parking requires contiguous piling." }
     ],
-    timelineTitle: "Commercial Project Timeline",
-    timelineSubtitle: "Structured critical-path delivery timeline for a typical commercial complex:",
+    timelineTitle: "Project Timeline",
+    timelineSubtitle: "Structured critical-path delivery schedule:",
     timelineSchedule: [
-      { durationBadge: "MONTHS 1–3", title: "Planning, Sanctions & Soil Works", desc: "Architectural drawings, structural engineering, statutory municipal sanctions, and site excavation." },
-      { durationBadge: "MONTHS 3–6", title: "Basement & Sub-Structure", desc: "Basement retaining walls, deep footings, sump casting, and ground floor transfer slab." },
-      { durationBadge: "MONTHS 6–10", title: "Multi-Floor RCC Superstructure", desc: "Floor-by-floor column and slab casting with accelerated curing and formwork cycling." },
-      { durationBadge: "MONTHS 10–13", title: "Façade Glazing & MEP Rough-in", desc: "Structural glass curtain walls, heavy electrical risers, plumbing shafts, and HVAC ducting." },
-      { durationBadge: "MONTHS 13–15", title: "Lobbies, Elevators & Handover", desc: "Granite lobby finishes, passenger lift commissioning, fire safety testing, and tenant handover." }
+      { durationBadge: "MONTHS 1–3", title: "Planning & Earthwork", desc: "Sanctions, structural design, and excavation." },
+      { durationBadge: "MONTHS 3–6", title: "Basement & Sump", desc: "Retaining walls, footings, and ground slab." },
+      { durationBadge: "MONTHS 6–10", title: "RCC Superstructure", desc: "Floor-by-floor column and slab casting." },
+      { durationBadge: "MONTHS 10–13", title: "Façade & MEP Works", desc: "Glass curtain walls, risers, and ducting." },
+      { durationBadge: "MONTHS 13–15", title: "Finishes & Handover", desc: "Lobby finishes, lift testing, and handover." }
     ]
   },
 
   'industrial-construction-bangalore': {
-    typologiesTitle: "Industrial Infrastructure Typologies",
-    typologiesSubtitle: "Heavy-duty industrial facilities built for high operational loads and machinery longevity:",
+    typologiesTitle: "Industrial Typologies",
+    typologiesSubtitle: "Heavy-duty facilities built for operational loads:",
     typologies: [
-      { title: "Pre-Engineered Buildings (PEB)", desc: "High-clearance steel portal frames, insulated sandwich panel roofing, and ridge ventilators for manufacturing.", iconType: "hammer" },
-      { title: "Logistics & Warehouses", desc: "Automated distribution centers with high-bay clearance, dock levelers, and heavy truck loading bays.", iconType: "building" },
-      { title: "Heavy Manufacturing Plants", desc: "Reinforced civil structures with overhead crane girders, vibration-damped machine foundations, and ETP pits.", iconType: "layers" },
-      { title: "Industrial Sheds & Workshops", desc: "Cost-effective, expandable steel truss sheds with heavy VDF industrial flooring and secure compound perimeters.", iconType: "grid" }
+      { title: "Pre-Engineered Buildings", desc: "High-clearance steel frames with insulated roofing.", iconType: "hammer" },
+      { title: "Logistics Warehouses", desc: "High-bay clearance and truck dock levelers.", iconType: "building" },
+      { title: "Manufacturing Plants", desc: "Crane girders and vibration-damped machine pads.", iconType: "layers" },
+      { title: "Industrial Sheds", desc: "Cost-effective steel truss sheds with VDF floors.", iconType: "grid" }
     ],
-    processTitle: "Industrial Construction Process",
-    processSubtitle: "Precision execution tailored to industrial machinery, loading cycles, and safety standards:",
+    processTitle: "Industrial Process",
+    processSubtitle: "Precision execution tailored to machinery and loading cycles:",
     processStages: [
-      { stageNumber: "01", title: "Industrial Layout & Crane Clearance", desc: "Hook height calculations, machine placement zoning, and heavy forklift turning radii." },
-      { stageNumber: "02", title: "Geotechnical & Soil Bearing Audit", desc: "Soil load testing to determine deep machine pad requirements and ground compaction standards." },
-      { stageNumber: "03", title: "Heavy Civil Foundations", desc: "Isolated and raft foundations engineered to absorb dynamic equipment vibrations." },
-      { stageNumber: "04", title: "PEB Steel Erection", desc: "Precision factory-fabricated steel portal frames, rafters, purlins, and crane runways." },
-      { stageNumber: "05", title: "Industrial VDF Tremix Flooring", desc: "Laser-leveled vacuum dewatered concrete flooring with metallic hardeners for heavy wheel loads." },
-      { stageNumber: "06", title: "Insulated Sheeting & Utilities", desc: "Galvalume roofing, skylight polycarbonate panels, industrial high-bay lighting, and fire loops." },
-      { stageNumber: "07", title: "Loading Docks & Yards", desc: "Heavy-duty concrete aprons, container truck maneuver yards, and secure security gates." },
-      { stageNumber: "08", title: "Inspection & Final Handover", desc: "Load testing, structural stability certification, and factory handover." }
+      { stageNumber: "01", title: "Layout & Crane Clearance", desc: "Hook heights and machinery placement zoning." },
+      { stageNumber: "02", title: "Soil Bearing Capacity", desc: "Soil testing to determine machine pad depths." },
+      { stageNumber: "03", title: "Heavy Foundations", desc: "Isolated footings absorbing dynamic vibrations." },
+      { stageNumber: "04", title: "PEB Steel Erection", desc: "Factory portal frames, rafters, and crane runways." },
+      { stageNumber: "05", title: "VDF Industrial Flooring", desc: "Vacuum dewatered flooring with metallic hardeners." },
+      { stageNumber: "06", title: "Insulated Roof Sheeting", desc: "Galvalume roofing, skylights, and high-bay lighting." },
+      { stageNumber: "07", title: "Loading Docks & Yards", desc: "Concrete aprons and truck maneuver areas." },
+      { stageNumber: "08", title: "Testing & Handover", desc: "Load tests, stability certificate, and handover." }
     ],
-    scopeTitle: "What Is Included In Industrial Construction?",
-    scopeSubtitle: "Turnkey industrial civil, structural steel, and flooring infrastructure:",
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Turnkey industrial civil, steel, and flooring infrastructure:",
     detailedScope: [
-      { title: "Custom PEB Structural Steelwork", desc: "Engineered portal frames, crane girders, rafters, and thermal insulated roof sheeting." },
-      { title: "Vibration-Damped Machine Pads", desc: "Specialized concrete foundations for heavy presses, CNC machines, and industrial generators." },
-      { title: "Laser-Leveled VDF Concrete Flooring", desc: "Vacuum Dewatered Tremix flooring with ironite floor hardener (5 to 10 MT/sq.m load capacity)." },
-      { title: "Heavy Utility & Drainage Networks", desc: "Dedicated transformer yards, industrial storm drains, ETP/STP civil works, and water sumps." },
-      { title: "Loading Bays & Truck Docks", desc: "Integrated dock leveler pits, industrial rolling shutters, and heavy vehicle approach ramps." },
-      { title: "Perimeter Security & Infrastructure", desc: "High compound boundary walls, security cabin, staff amenities, and street lighting." }
+      { title: "PEB Structural Steelwork", desc: "Portal frames, crane girders, and insulated sheeting." },
+      { title: "Machine Foundations", desc: "Heavy machine pads for CNCs and generators." },
+      { title: "VDF Concrete Flooring", desc: "Laser-leveled Tremix flooring (5–10 MT/sq.m load)." },
+      { title: "Utility & Drainage Networks", desc: "Transformers, storm drains, and water sumps." },
+      { title: "Loading Bays & Docks", desc: "Dock levelers, rolling shutters, and ramps." },
+      { title: "Perimeter Infrastructure", desc: "Compound boundary wall, security cabin, and gates." }
     ],
-    costTitle: "Industrial Construction Cost Factors",
-    costSubtitle: "Key parameters influencing industrial building estimates in Bengaluru industrial corridors:",
+    costTitle: "Cost Factors",
+    costSubtitle: "Parameters influencing industrial facility investments:",
     costDrivers: [
-      { number: "1", title: "Clear Height & Crane Capacity", desc: "Heights exceeding 9 meters and crane capacities (5T, 10T, 20T) increase steel column and rafter sizing." },
-      { number: "2", title: "Floor Load Bearing Requirement", desc: "Heavy machinery and multi-tier racking demand thicker reinforced slabs (200mm–300mm) and metallic hardeners." },
-      { number: "3", title: "Roof Insulation & Ventilation", desc: "Thermal glasswool/rockwool insulated sandwich panels maintain controlled factory temperatures." },
-      { number: "4", title: "Machinery Foundation Complexity", desc: "Deep isolated equipment pits and vibration dampening require specialized civil excavation." },
-      { number: "5", title: "Suburban Industrial Logistics", desc: "Proximity to industrial corridors (Peenya, Bommasandra, Hoskote, Bidadi) affects heavy material logistics." }
+      { number: "1", title: "Clear Height & Crane Load", desc: "Heights >9m and 10T cranes increase steel sizing." },
+      { number: "2", title: "Floor Load Capacity", desc: "Heavy machinery demands thicker reinforced slabs." },
+      { number: "3", title: "Roof Insulation & Skylights", desc: "Sandwich panels maintain indoor temperatures." },
+      { number: "4", title: "Equipment Foundation Depth", desc: "Isolated pits require specialized excavation." }
     ],
-    timelineTitle: "Industrial Project Schedule",
-    timelineSubtitle: "Rapid PEB fabrication and staged on-site civil delivery timeline:",
+    timelineTitle: "Project Timeline",
+    timelineSubtitle: "Rapid PEB fabrication and staged civil delivery:",
     timelineSchedule: [
-      { durationBadge: "MONTH 1", title: "Design & Steel Fabrication", desc: "Structural PEB modeling, factory steel fabrication, and site earthwork excavation." },
-      { durationBadge: "MONTHS 2–3", title: "Civil Foundations & Pedestals", desc: "Reinforced concrete footing casting, anchor bolt fixing, and machine foundation casting." },
-      { durationBadge: "MONTHS 3–4", title: "PEB Steel Frame Erection", desc: "Crane erection of main portal frames, rafters, purlins, and wall girts." },
-      { durationBadge: "MONTHS 4–5", title: "VDF Tremix Flooring & Sheeting", desc: "Laser leveling, vacuum dewatering concrete flooring, and insulated roof panel installation." },
-      { durationBadge: "MONTH 6", title: "Utilities & Handover", desc: "Industrial electrical wiring, fire sprinkler network, loading bays, and formal project handover." }
+      { durationBadge: "MONTH 1", title: "Design & Steel Fabrication", desc: "PEB modeling and off-site steel fabrication." },
+      { durationBadge: "MONTHS 2–3", title: "Civil Foundations", desc: "Reinforced footings and machine pads." },
+      { durationBadge: "MONTHS 3–4", title: "PEB Steel Erection", desc: "Crane erection of main frames and rafters." },
+      { durationBadge: "MONTHS 4–5", title: "VDF Flooring & Sheeting", desc: "Laser leveling and roof panel installation." },
+      { durationBadge: "MONTH 6", title: "Utilities & Handover", desc: "Electricals, loading bays, and final handover." }
+    ]
+  },
+
+  'civil-construction-bangalore': {
+    typologiesTitle: "Civil Engineering Typologies",
+    typologiesSubtitle: "Structural civil contracting engineered to IS standards:",
+    typologies: [
+      { title: "Sub-Structure & Footings", desc: "Soil-matched excavation, footings, and sumps.", iconType: "hammer" },
+      { title: "RCC Superstructures", desc: "IS 456 columns, beams, and high-grade slabs.", iconType: "building" },
+      { title: "Precision Masonry", desc: "Solid blocks and joint-reinforced plastering.", iconType: "grid" },
+      { title: "Advanced Waterproofing", desc: "Elastomeric membranes and crystalline coatings.", iconType: "shield" }
+    ],
+    processTitle: "Civil Workflow",
+    processSubtitle: "Disciplined engineering from soil excavation to cured slabs:",
+    processStages: [
+      { stageNumber: "01", title: "Soil SBC & Setting Out", desc: "Boundary survey and centerline grid marking." },
+      { stageNumber: "02", title: "Earthwork & PCC", desc: "Excavation, anti-termite, and PCC sub-base." },
+      { stageNumber: "03", title: "Rebar Tying & Footings", desc: "550D TMT reinforcement and footing casting." },
+      { stageNumber: "04", title: "Plinth & Sump Casting", desc: "Plinth tie beams and waterproof RCC sump." },
+      { stageNumber: "05", title: "Columns & Slab Formwork", desc: "Steel shuttering, cover blocks, and RMC pour." },
+      { stageNumber: "06", title: "Water Curing Cycles", desc: "Enforced 21-day ponding and curing protocols." },
+      { stageNumber: "07", title: "Masonry & Plaster", desc: "Solid block walls and chicken mesh plaster." },
+      { stageNumber: "08", title: "Testing & Handover", desc: "Cube test verification and structural sign-off." }
+    ],
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Certified civil engineering and structural build scope:",
+    detailedScope: [
+      { title: "Earthwork & Foundation Casting", desc: "Excavation, compaction, and footing casting." },
+      { title: "Certified 550D Rebar Detailing", desc: "IS-compliant bar bending and lap lengths." },
+      { title: "Batch-Controlled Concrete", desc: "M20/M25/M30 grade concrete with cube testing." },
+      { title: "Masonry & Plastering", desc: "Crack-resistant blockwork with wire mesh." },
+      { title: "Multi-Tier Waterproofing", desc: "Polymer membrane coating for sumps and slabs." },
+      { title: "Structural Handover Dossier", desc: "As-built drawings and test certificates." }
+    ],
+    costTitle: "Cost Factors",
+    costSubtitle: "Parameters defining civil construction budgets:",
+    costDrivers: [
+      { number: "1", title: "Soil Bearing Capacity (SBC)", desc: "Low SBC requires deeper raft/pile footings." },
+      { number: "2", title: "Concrete Grade & Steel Brand", desc: "M25/M30 grades and primary steel brands." },
+      { number: "3", title: "Waterproofing Specifications", desc: "Crystalline admixtures vs multi-layer coatings." },
+      { number: "4", title: "Site Transit & Logistics", desc: "Transit mixer access in dense urban lanes." }
+    ],
+    timelineTitle: "Civil Timeline",
+    timelineSubtitle: "Milestone-driven structural execution schedule:",
+    timelineSchedule: [
+      { durationBadge: "MONTHS 1–2", title: "Sub-Structure", desc: "Excavation, footings, and plinth casting." },
+      { durationBadge: "MONTHS 3–5", title: "RCC Superstructure", desc: "Columns, beams, and slab curing." },
+      { durationBadge: "MONTHS 6–7", title: "Masonry & Plaster", desc: "Blockwork, conduits, and double plastering." },
+      { durationBadge: "MONTH 8", title: "Waterproofing & Sign-off", desc: "Terrace coatings and quality sign-off." }
     ]
   },
 
   'interior-design-bangalore': {
-    typologiesTitle: "Interior Design & Fit-Out Typologies",
-    typologiesSubtitle: "Bespoke interior architecture planned for ergonomic daily living and refined aesthetics:",
+    typologiesTitle: "Interior Typologies",
+    typologiesSubtitle: "Bespoke interior architecture for modern living:",
     typologies: [
-      { title: "Turnkey Residential Interiors", desc: "Full-home interior design for independent villas and apartments with modular joinery, false ceilings, and lighting.", iconType: "home" },
-      { title: "Modular Kitchens & Pantries", desc: "Ergonomic work triangles with boiling waterproof (BWP) ply, quartz countertops, and German soft-close fittings.", iconType: "layers" },
-      { title: "Custom Wardrobes & Joinery", desc: "Floor-to-ceiling wardrobes with integrated profile lighting, concealed dressing vanities, and study consoles.", iconType: "grid" },
-      { title: "Commercial & Office Fit-Outs", desc: "Reception desks, acoustic conference rooms, collaborative workstations, and executive cabins.", iconType: "building" }
+      { title: "Turnkey Interiors", desc: "Full-home modular woodwork, ceilings, and lighting.", iconType: "home" },
+      { title: "Modular Kitchens", desc: "Ergonomic BWP ply with quartz countertops.", iconType: "layers" },
+      { title: "Custom Wardrobes", desc: "Floor-to-ceiling wardrobes with profile lighting.", iconType: "grid" },
+      { title: "Commercial Fit-Outs", desc: "Reception desks, cabins, and workstations.", iconType: "building" }
     ],
-    processTitle: "Our Interior Design Workflow",
-    processSubtitle: "From initial concept sketches to factory pressing and final snag-free installation:",
+    processTitle: "Interior Process",
+    processSubtitle: "From 3D renders to factory pressing and installation:",
     processStages: [
-      { stageNumber: "01", title: "Lifestyle & Space Assessment", desc: "Detailed room measurement, family storage requirement mapping, and budget alignment." },
-      { stageNumber: "02", title: "2D Spatial Layouts", desc: "Circulation corridors, furniture positioning, and appliance power point mapping." },
-      { stageNumber: "03", title: "3D Photorealistic Views", desc: "High-definition renders exploring colors, textures, veneers, laminates, and lighting." },
-      { stageNumber: "04", title: "Material & Hardware Selection", desc: "Selecting IS 710 marine ply, branded hardware (Hafele/Blum), and quartz stones." },
-      { stageNumber: "05", title: "Factory Machine Fabrication", desc: "Precision CNC cutting and edge-banding in automated manufacturing facilities." },
-      { stageNumber: "06", title: "On-Site Civil & Electrical Prep", desc: "False ceiling gypsum framing, electrical conduit shifts, and wall paint primer." },
-      { stageNumber: "07", title: "Modular Installation & Fitment", desc: "On-site assembly, stone countertop installation, and hardware calibration." },
-      { stageNumber: "08", title: "Deep Cleaning & Handover", desc: "Snag clearance, soft-close tuning, protective wrap removal, and client walkthrough." }
+      { stageNumber: "01", title: "Space Assessment", desc: "Room measurements and storage mapping." },
+      { stageNumber: "02", title: "2D Layouts", desc: "Circulation paths and appliance points." },
+      { stageNumber: "03", title: "3D Photorealistic Views", desc: "Color palettes, textures, and lighting renders." },
+      { stageNumber: "04", title: "Material Selection", desc: "IS 710 marine ply and branded hardware." },
+      { stageNumber: "05", title: "Factory Machine Fabrication", desc: "CNC precision board cutting and edge banding." },
+      { stageNumber: "06", title: "On-Site Prep & Ceilings", desc: "False ceilings and electrical conduit routing." },
+      { stageNumber: "07", title: "Modular Fitting", desc: "Carcass assembly and quartz countertop fitting." },
+      { stageNumber: "08", title: "Cleaning & Handover", desc: "Snag clearance, hardware tuning, and walkthrough." }
     ],
-    scopeTitle: "What Is Included In Interior Design?",
-    scopeSubtitle: "Comprehensive material, modular woodwork, lighting, and finish scope:",
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Modular woodwork, false ceilings, lighting, and finishes:",
     detailedScope: [
-      { title: "Factory-Pressed Modular Woodwork", desc: "IS 710 BWP plywood carcasses with 1mm anti-scratch edge-banded laminates or acrylics." },
-      { title: "Certified Hardware & Channels", desc: "Soft-close hinges, heavy-duty tandem drawer boxes, and lift-up mechanisms (Hafele, Hettich, Blum)." },
-      { title: "False Ceiling & Architectural Lighting", desc: "Saint-Gobain gypsum boards with concealed warm LED strip channels and magnetic track lights." },
-      { title: "Custom Media & Storage Units", desc: "TV consoles with hidden cable channels, fluted panel dividers, and foyer shoe credenzas." },
-      { title: "Kitchen Countertops & Sinks", desc: "Precision stone cutting for quartz/granite countertops with undermount sink fitments." },
-      { title: "Premium Surface Paints & Polishes", desc: "Royale luxury emulsion wall paints and PU/Melamine wood polish on veneer surfaces." }
+      { title: "Factory-Pressed Modular Units", desc: "IS 710 BWP plywood with anti-scratch laminates." },
+      { title: "Certified Hardware & Channels", desc: "Soft-close hinges and tandem boxes (Hafele/Blum)." },
+      { title: "False Ceiling & Lighting", desc: "Gypsum boards with concealed warm LED channels." },
+      { title: "Custom TV & Storage Units", desc: "Media consoles with hidden cable channels." },
+      { title: "Kitchen Quartz Counters", desc: "Precision stone cutting with undermount sinks." },
+      { title: "Wall Paints & Polishes", desc: "Royale luxury emulsion and PU veneer polish." }
     ],
-    costTitle: "Interior Design Cost Drivers in Bangalore",
-    costSubtitle: "Key parameters that define your interior budget and material choices:",
+    costTitle: "Cost Factors",
+    costSubtitle: "Key parameters that define interior budgets:",
     costDrivers: [
-      { number: "1", title: "Core Woodwork Material (BWP vs Commercial)", desc: "Boiling Waterproof (BWP IS 710) marine ply in wet zones costs more than commercial ply but prevents moisture swelling." },
-      { number: "2", title: "Surface Finishes (Laminate vs Acrylic vs Veneer)", desc: "Matte laminates offer high value, high-gloss acrylics provide mirror finish, and natural veneers require PU polish." },
-      { number: "3", title: "Hardware Mechanism Tier", desc: "Standard soft-close channels vs premium push-to-open and electronic lift systems impact cost per module." },
-      { number: "4", title: "Ceiling & Lighting Complexity", desc: "Peripheral cove ceilings vs full-room false ceilings with magnetic track lighting channels." },
-      { number: "5", title: "Civil & Electrical Modifications", desc: "Shifting plumbing lines, wall modifications, and additional switchboard conduits." }
+      { number: "1", title: "Core Material (BWP vs Commercial)", desc: "Marine ply in wet zones prevents swelling." },
+      { number: "2", title: "Surface Finishes (Laminate vs Acrylic)", desc: "Matte laminates vs high-gloss acrylics/veneers." },
+      { number: "3", title: "Hardware Mechanism Tier", desc: "Standard soft-close vs push-to-open systems." },
+      { number: "4", title: "Ceiling & Lighting Complexity", desc: "Cove lighting vs magnetic track channels." }
     ],
-    timelineTitle: "Interior Execution Timeline",
-    timelineSubtitle: "Typical project milestones from 3D approval to move-in readiness:",
+    timelineTitle: "Execution Timeline",
+    timelineSubtitle: "Standard turnaround is 6 to 8 weeks from 3D sign-off:",
     timelineSchedule: [
-      { durationBadge: "WEEKS 1–2", title: "Design & 3D Visualization", desc: "Detailed room measurements, 3D render iterations, and final BOQ sign-off." },
-      { durationBadge: "WEEKS 3–4", title: "Civil & Ceiling Works", desc: "Electrical conduit routing, switch box additions, and false ceiling gypsum installation." },
-      { durationBadge: "WEEKS 3–5", title: "Factory Machine Fabrication", desc: "CNC precision board cutting, edge banding, and modular carcass preparation in factory." },
-      { durationBadge: "WEEKS 5–7", title: "On-Site Assembly & Fitting", desc: "Modular carcass installation, quartz counter fitting, and wardrobe door hanging." },
-      { durationBadge: "WEEK 8", title: "Painting, Cleaning & Handover", desc: "Final coat of Royale paint, profile light testing, deep cleaning, and key handover." }
+      { durationBadge: "WEEKS 1–2", title: "Design & 3D Views", desc: "Measurements, 3D iterations, and BOQ sign-off." },
+      { durationBadge: "WEEKS 3–4", title: "Civil & Ceilings", desc: "Conduit routing and false ceiling framing." },
+      { durationBadge: "WEEKS 3–5", title: "Factory Fabrication", desc: "Precision CNC cutting and edge-banding." },
+      { durationBadge: "WEEKS 5–7", title: "On-Site Fitting", desc: "Carcass assembly and quartz fitting." },
+      { durationBadge: "WEEK 8", title: "Finishing & Handover", desc: "Final painting, cleaning, and key handover." }
     ]
   },
 
   '2d-design-bangalore': {
-    typologiesTitle: "2D Architectural Design Typologies",
-    typologiesSubtitle: "Precision technical drafting and regulatory blueprints for seamless site execution:",
+    typologiesTitle: "2D Drafting Typologies",
+    typologiesSubtitle: "Precision technical drafting and sanction blueprints:",
     typologies: [
-      { title: "Architectural Floor Layouts", desc: "Dimensioned room plans, circulation corridors, door/window schedules, and Vastu orientation.", iconType: "compass" },
-      { title: "Municipal Sanction Drawings", desc: "BBMP/BDA compliant sanction plans conforming to Floor Area Ratio (FAR) and setback rules.", iconType: "file" },
-      { title: "Working Civil Blueprints", desc: "Centerline column grids, wall sectional elevations, and staircase geometry for site contractors.", iconType: "hammer" },
-      { title: "MEP Conduit Schematics", desc: "Switchboard locations, plumbing drops, sanitary slopes, and AC core-cut markings.", iconType: "grid" }
+      { title: "Architectural Floor Plans", desc: "Dimensioned room plans and Vastu orientation.", iconType: "compass" },
+      { title: "Municipal Sanction Drawings", desc: "BBMP/BDA compliant plans with FAR calculations.", iconType: "file" },
+      { title: "Working Civil Blueprints", desc: "Column centerline grids and staircase geometry.", iconType: "hammer" },
+      { title: "MEP Conduit Schematics", desc: "Electrical switchboards and plumbing drops.", iconType: "grid" }
     ],
-    processTitle: "2D Architectural Design Process",
-    processSubtitle: "A structured process to eliminate spatial errors before breaking ground:",
+    processTitle: "2D Drafting Process",
+    processSubtitle: "Structured drafting to eliminate site layout errors:",
     processStages: [
-      { stageNumber: "01", title: "Plot Survey & Orientation", desc: "Checking boundary dimensions, road width, cardinal orientation, and adjacent plot setbacks." },
-      { stageNumber: "02", title: "Spatial Requirement Mapping", desc: "Listing family or commercial room requirements, parking needs, and privacy zoning." },
-      { stageNumber: "03", title: "Conceptual Floor Plans", desc: "Exploring multiple layout options to optimize room proportions and natural daylight." },
-      { stageNumber: "04", title: "Bylaw & Setback Verification", desc: "Validating setbacks, ground coverage, and FAR against local Bengaluru municipal rules." },
-      { stageNumber: "05", title: "Detailed Working Drawings", desc: "Dimensioning every wall, door, window opening, and staircase riser/tread." },
-      { stageNumber: "06", title: "MEP & Conduit Integration", desc: "Overlaying plumbing lines, wastewater conduits, and electrical switchboard placements." },
-      { stageNumber: "07", title: "Final Blueprint Delivery", desc: "High-resolution PDF sets and laminated site working sheets for civil contractors." }
+      { stageNumber: "01", title: "Site Survey & Orientation", desc: "Boundary check, road width, and setbacks." },
+      { stageNumber: "02", title: "Requirement Mapping", desc: "Room inventory, parking, and privacy zoning." },
+      { stageNumber: "03", title: "Concept Layouts", desc: "Multiple floor plan options for daylight & flow." },
+      { stageNumber: "04", title: "Bylaw Verification", desc: "Validating setbacks and FAR against BBMP rules." },
+      { stageNumber: "05", title: "Working Drawings", desc: "Dimensioning walls, doors, windows, and stairs." },
+      { stageNumber: "06", title: "MEP Integration", desc: "Overlaying plumbing lines and electrical conduits." },
+      { stageNumber: "07", title: "Blueprint Delivery", desc: "High-resolution PDF sets and site drawing sheets." }
     ],
-    scopeTitle: "What Is Included In 2D Architectural Design?",
-    scopeSubtitle: "Complete technical drawing sets ready for construction and approvals:",
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Complete technical drawing sets ready for construction:",
     detailedScope: [
-      { title: "Dimensioned Floor Plans (All Levels)", desc: "Clear room-by-room internal dimensions, wall thicknesses, and hallway widths." },
-      { title: "Column Centerline Grid Layout", desc: "Accurate excavation grid coordinates for site civil masons and engineers." },
-      { title: "Sectional & Cross-Section Drawings", desc: "Floor-to-floor heights, plinth levels, lintel heights, and staircase sectional geometry." },
-      { title: "Door & Window Schedule", desc: "Opening dimensions, sill heights, recommended shutter types, and hardware specifications." },
-      { title: "Electrical & Plumbing Schematics", desc: "Concealed conduit routing, distribution board positions, and drainage drop shafts." },
-      { title: "Municipal Plan Sanction Set", desc: "Standard format drawings formatted for BBMP/local urban authority submissions." }
+      { title: "Dimensioned Floor Plans", desc: "Room dimensions, wall widths, and circulation." },
+      { title: "Column Centerline Grid", desc: "Accurate excavation coordinates for site engineers." },
+      { title: "Cross-Section Drawings", desc: "Floor heights, plinth levels, and stair sections." },
+      { title: "Door & Window Schedule", desc: "Opening sizes, sill heights, and shutter specs." },
+      { title: "MEP Schematics", desc: "Conduit routing and drainage drop shafts." },
+      { title: "Sanction Plan Set", desc: "Formatted drawings for local authority approval." }
     ],
-    costTitle: "2D Design Cost Factors",
-    costSubtitle: "Parameters that determine architectural drafting and sanction drawing fees:",
+    costTitle: "Cost Factors",
+    costSubtitle: "Parameters influencing architectural drafting fees:",
     costDrivers: [
-      { number: "1", title: "Total Built-Up Area (BUA)", desc: "Larger multi-storey structures require more floor levels, cross-sections, and detailed drawing sheets." },
-      { number: "2", title: "Scope Inclusions (Architectural vs Full MEP)", desc: "Combining architectural layouts with detailed electrical and plumbing conduit drawings." },
-      { number: "3", title: "Municipal Sanction Formatting", desc: "Custom municipal sanction drawing sets formatted strictly to local town planning bylaws." },
-      { number: "4", title: "Site Constraints & Irregular Plots", desc: "Triangular or skewed boundary sites require customized geometrical calculations." }
+      { number: "1", title: "Total Built-Up Area (BUA)", desc: "Multi-storey homes require more drawing sheets." },
+      { number: "2", title: "Full MEP Inclusions", desc: "Adding electrical and plumbing conduit drawings." },
+      { number: "3", title: "Municipal Sanction Set", desc: "Formatting strictly to town planning bylaws." },
+      { number: "4", title: "Irregular Plot Boundaries", desc: "Skewed plots require custom geometry math." }
     ],
-    timelineTitle: "2D Plan Delivery Timeline",
-    timelineSubtitle: "Fast, accurate turnaround from initial consultation to final drawing handover:",
+    timelineTitle: "Drafting Timeline",
+    timelineSubtitle: "Turnaround from consultation to drawing delivery:",
     timelineSchedule: [
-      { durationBadge: "DAYS 1–2", title: "Site Survey & Requirement Brief", desc: "Plot verification, setback calculation, and family requirement mapping." },
-      { durationBadge: "DAYS 3–5", title: "Concept Layout Presentation", desc: "Initial floor plan layout options presented with room dimensions and Vastu notes." },
-      { durationBadge: "DAYS 6–7", title: "Revisions & Refinement", desc: "Fine-tuning room sizes, door swings, and window placements based on feedback." },
-      { durationBadge: "DAYS 8–10", title: "Working Drawings & MEP Delivery", desc: "Final dimensioned sheets, column centerline grid, door/window schedules, and PDF package." }
+      { durationBadge: "DAYS 1–2", title: "Site Survey & Brief", desc: "Plot verification and requirement mapping." },
+      { durationBadge: "DAYS 3–5", title: "Concept Layouts", desc: "Initial options with Vastu alignment." },
+      { durationBadge: "DAYS 6–7", title: "Revisions", desc: "Fine-tuning room sizes and openings." },
+      { durationBadge: "DAYS 8–10", title: "Final Delivery", desc: "Dimensioned sheets, centerline grid, and PDF." }
     ]
   },
 
   '3d-design-bangalore': {
-    typologiesTitle: "3D Architectural Visualization Typologies",
-    typologiesSubtitle: "Photorealistic 3D elevations and spatial models to see your project before building:",
+    typologiesTitle: "3D Visualization Typologies",
+    typologiesSubtitle: "Photorealistic 3D models to see your project before building:",
     typologies: [
-      { title: "Contemporary Exterior Elevations", desc: "Modern architectural façades featuring terracotta louvers, glass balustrades, and texture finishes.", iconType: "building" },
-      { title: "Daylight & Night Lighting Studies", desc: "Realistic solar shadow casting and evening façade accent illumination modeling.", iconType: "compass" },
-      { title: "Furnished 3D Isometric Plans", desc: "Bird's-eye furnished perspective showing room proportions and walkway flow.", iconType: "grid" },
-      { title: "Virtual Walkthrough Animations", desc: "Cinematic 3D video tours through the exterior and interior spaces for complete spatial clarity.", iconType: "layers" }
+      { title: "Contemporary Elevations", desc: "Modern facades with louvers and glass railings.", iconType: "building" },
+      { title: "Lighting Studies", desc: "Solar shadow casting and evening accent lighting.", iconType: "compass" },
+      { title: "Furnished Isometric Plans", desc: "Top-down perspective showing walkway flow.", iconType: "grid" },
+      { title: "Virtual 3D Walkthroughs", desc: "Cinematic video tours for spatial clarity.", iconType: "layers" }
     ],
     processTitle: "3D Design Workflow",
-    processSubtitle: "Transforming 2D architectural lines into vivid photorealistic 3D visual studies:",
+    processSubtitle: "Transforming 2D lines into photorealistic visual models:",
     processStages: [
-      { stageNumber: "01", title: "2D CAD Import & Base Modeling", desc: "Importing approved 2D floor plans and building the 3D massing geometry." },
-      { stageNumber: "02", title: "Architectural Styling", desc: "Adding cantilever balconies, roof parapets, window box projections, and pergola features." },
-      { stageNumber: "03", title: "Material & Texture Mapping", desc: "Applying realistic Bangalore materials: terracotta tiles, exposed concrete, HPL, and stone." },
-      { stageNumber: "04", title: "Lighting & Solar Simulation", desc: "Setting realistic sunlight angles based on cardinal orientation and evening wall washers." },
-      { stageNumber: "05", title: "High-Resolution Rendering", desc: "Ultra HD perspective rendering with photorealistic reflections and landscape elements." },
-      { stageNumber: "06", title: "Client Review & Refinement", desc: "Fine-tuning color palettes, texture combinations, and railing designs." },
-      { stageNumber: "07", title: "Dimensioned Fabrication Sheets", desc: "Translating 3D visual renders into 2D dimensioned callouts for on-site execution." }
+      { stageNumber: "01", title: "CAD Import & Massing", desc: "Building 3D geometry from approved 2D plans." },
+      { stageNumber: "02", title: "Architectural Styling", desc: "Adding cantilever balconies and pergolas." },
+      { stageNumber: "03", title: "Materials & Textures", desc: "Applying terracotta, concrete, stone, and glass." },
+      { stageNumber: "04", title: "Lighting Simulation", desc: "Sunlight angles and evening wall washers." },
+      { stageNumber: "05", title: "HD Rendering", desc: "Ultra HD renders with reflections and landscapes." },
+      { stageNumber: "06", title: "Color Refinement", desc: "Fine-tuning palettes and material textures." },
+      { stageNumber: "07", title: "Fabrication Sheets", desc: "Dimensioned projection callouts for site teams." }
     ],
-    scopeTitle: "What Is Included In 3D Design?",
-    scopeSubtitle: "Complete visualization deliverables for homeowners and builders:",
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Complete visualization deliverables for your project:",
     detailedScope: [
-      { title: "High-Resolution 3D Exterior Views", desc: "Daytime and evening illumination perspectives in ultra high definition." },
-      { title: "Material & Color Code Callout Sheet", desc: "Specific paint shades (Asian Paints codes), tile dimensions, and cladding material specifications." },
-      { title: "3D Isometric Furnished Views", desc: "Top-down floor-by-floor furnished perspective showing bed, sofa, and kitchen placement." },
-      { title: "Façade Detail Dimensions", desc: "Dimensioned projection drawings for site masons, fabricators, and glass railing vendors." }
+      { title: "High-Res 3D Exterior Views", desc: "Daytime and evening illumination perspectives." },
+      { title: "Material & Color Code Sheet", desc: "Paint codes, tile sizes, and cladding specs." },
+      { title: "3D Isometric Floor Views", desc: "Furnished perspective showing furniture layouts." },
+      { title: "Façade Projection Drawings", desc: "Dimensioned drawings for masons and fabricators." }
     ],
-    costTitle: "3D Visualization Cost Factors",
-    costSubtitle: "Parameters influencing 3D elevation and modeling investment:",
+    costTitle: "Cost Factors",
+    costSubtitle: "Parameters influencing 3D elevation investment:",
     costDrivers: [
-      { number: "1", title: "Building Scale & Number of Floors", desc: "Single villa vs multi-storey commercial complex with multiple viewing angles." },
-      { number: "2", title: "Façade Detail Complexity", desc: "Intricate CNC jali work, curved surfaces, and multi-texture cladding require more 3D modeling time." },
-      { number: "3", title: "Number of Render Angles & Lighting Views", desc: "Front perspective, corner perspective, daytime sunlight view, and evening illumination renders." },
-      { number: "4", title: "Virtual Video Walkthrough", desc: "Full cinematic 3D video animation requires dedicated rendering compute." }
+      { number: "1", title: "Building Scale & Storeys", desc: "Single villa vs multi-storey commercial complex." },
+      { number: "2", title: "Façade Complexity", desc: "CNC jali and curved cladding require more modeling." },
+      { number: "3", title: "Number of Render Angles", desc: "Front view, corner view, and evening renders." },
+      { number: "4", title: "Cinematic Walkthroughs", desc: "3D video animation requires dedicated compute." }
     ],
-    timelineTitle: "3D Visualization Timeline",
-    timelineSubtitle: "Fast, photorealistic turnaround for architectural designs:",
+    timelineTitle: "Visualization Timeline",
+    timelineSubtitle: "Fast turnaround from 2D plans to high-res renders:",
     timelineSchedule: [
-      { durationBadge: "DAYS 1–2", title: "3D Geometry & Massing", desc: "Building 3D structural model from 2D architectural drawings." },
-      { durationBadge: "DAYS 3–4", title: "Materials, Textures & Lighting", desc: "Applying realistic finishes, window glass, and sunlight illumination." },
-      { durationBadge: "DAYS 5–6", title: "Draft Review & Color Selection", desc: "Presenting concept renders for client color and material refinement." },
-      { durationBadge: "DAYS 7–8", title: "Final High-Res Delivery", desc: "Delivering Ultra-HD print-ready renders and execution material callout sheets." }
+      { durationBadge: "DAYS 1–2", title: "3D Massing", desc: "Building 3D model from 2D drawings." },
+      { durationBadge: "DAYS 3–4", title: "Materials & Lighting", desc: "Applying realistic textures and sunlight." },
+      { durationBadge: "DAYS 5–6", title: "Color Review", desc: "Client review and finish refinement." },
+      { durationBadge: "DAYS 7–8", title: "Final HD Delivery", desc: "Ultra-HD renders and material callouts." }
+    ]
+  },
+
+  'elevation-design-bangalore': {
+    typologiesTitle: "Façade Typologies",
+    typologiesSubtitle: "Architectural elevation styles tailored to your plot:",
+    typologies: [
+      { title: "Contemporary Minimalist", desc: "Clean lines, box frames, and wooden louvers.", iconType: "building" },
+      { title: "Tropical Modern", desc: "Terracotta jali, planters, and wide overhangs.", iconType: "layers" },
+      { title: "Commercial Frontage", desc: "Glass curtain walls and branded ACP bands.", iconType: "grid" },
+      { title: "Modern Villa Elevation", desc: "Double-height glazing and stone cladding.", iconType: "home" }
+    ],
+    processTitle: "Elevation Process",
+    processSubtitle: "Iterative 3D styling and fabrication blueprinting:",
+    processStages: [
+      { stageNumber: "01", title: "2D Plan Review", desc: "Studying floor heights and window openings." },
+      { stageNumber: "02", title: "Style Exploration", desc: "Proposing contemporary and tropical concepts." },
+      { stageNumber: "03", title: "Material Mapping", desc: "Applying realistic tiles, jali, and paint shades." },
+      { stageNumber: "04", title: "Day & Night Renders", desc: "Generating daytime sunlight and dusk lighting views." },
+      { stageNumber: "05", title: "Client Refinement", desc: "Fine-tuning colors, textures, and railings." },
+      { stageNumber: "06", title: "Working Blueprints", desc: "Sectional dimensions for on-site fabricators." }
+    ],
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Complete elevation visualization package:",
+    detailedScope: [
+      { title: "Day & Night 3D Perspectives", desc: "Photorealistic daytime and evening renders." },
+      { title: "Material & Shade Specs", desc: "Exact paint codes, cladding types, and tile sizes." },
+      { title: "Dimensioned Façade Blueprints", desc: "Millimeter measurements for balcony and box frames." },
+      { title: "Lighting Placement Details", desc: "Positions for wall washers, profile LEDs, and lights." }
+    ],
+    costTitle: "Cost Factors",
+    costSubtitle: "Parameters defining 3D elevation design fees:",
+    costDrivers: [
+      { number: "1", title: "Plot Width & Frontage", desc: "Corner plots require multi-angle 3D modeling." },
+      { number: "2", title: "Cladding Complexity", desc: "CNC metal screens and curved concrete elements." },
+      { number: "3", title: "Number of View Perspectives", desc: "Front view vs dual-road corner perspective." },
+      { number: "4", title: "Working Drawing Details", desc: "Adding comprehensive fabrication blueprints." }
+    ],
+    timelineTitle: "Design Timeline",
+    timelineSubtitle: "Turnaround from 2D input to final 3D deliverables:",
+    timelineSchedule: [
+      { durationBadge: "DAYS 1–2", title: "3D Massing & Style", desc: "Developing initial façade concept." },
+      { durationBadge: "DAYS 3–4", title: "Textures & Lighting", desc: "Applying materials and sunlight simulation." },
+      { durationBadge: "DAYS 5–6", title: "Refinement & Details", desc: "Client review and color fine-tuning." },
+      { durationBadge: "DAY 7", title: "Final Delivery", desc: "High-resolution renders and fabrication sheets." }
+    ]
+  },
+
+  '3d-floor-plan-design-bangalore': {
+    typologiesTitle: "3D Floor Plan Typologies",
+    typologiesSubtitle: "Furnished isometric perspectives for spatial clarity:",
+    typologies: [
+      { title: "Residential Isometric Views", desc: "Furnished room layouts showing walking clearance.", iconType: "home" },
+      { title: "Duplex Cutaway Views", desc: "Visualizing stairwells, voids, and family lounges.", iconType: "layers" },
+      { title: "Commercial Space Plans", desc: "Cabins, workstations, and reception flow.", iconType: "building" },
+      { title: "Vastu Flow Layouts", desc: "Balancing traditional flow with modern ergonomics.", iconType: "compass" }
+    ],
+    processTitle: "3D Planning Process",
+    processSubtitle: "Converting 2D CAD drawings into furnished 3D models:",
+    processStages: [
+      { stageNumber: "01", title: "CAD Import", desc: "Importing 2D plan and setting wall heights." },
+      { stageNumber: "02", title: "Scale Furniture Placement", desc: "Adding true-to-scale beds, sofas, and counters." },
+      { stageNumber: "03", title: "Door & Passage Check", desc: "Verifying clearances and door swing paths." },
+      { stageNumber: "04", title: "Lighting & Materials", desc: "Applying flooring textures and natural daylight." },
+      { stageNumber: "05", title: "Isometric Rendering", desc: "Generating high-res top-down cutaway views." }
+    ],
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Deliverables provided in the 3D floor plan package:",
+    detailedScope: [
+      { title: "Furnished 3D Isometric View", desc: "High-resolution top-down perspective per floor." },
+      { title: "True-to-Scale Furniture Layout", desc: "Standard Indian/international furniture dimensions." },
+      { title: "Walkway Clearance Verification", desc: "Ensuring 3-foot minimum unobstructed corridors." },
+      { title: "High-Resolution PDF Package", desc: "Formatted for easy viewing on mobile and tablet." }
+    ],
+    costTitle: "Cost Factors",
+    costSubtitle: "Parameters influencing 3D floor plan pricing:",
+    costDrivers: [
+      { number: "1", title: "Number of Floor Levels", desc: "Single-floor layout vs G+3 multi-storey residence." },
+      { number: "2", title: "Duplex Void Complexity", desc: "Double-height cutaways and floating staircases." },
+      { number: "3", title: "Commercial Furnishing Density", desc: "Detailed workstations and conference layouts." },
+      { number: "4", title: "Turnaround Priority", desc: "Standard delivery vs 24-hour express turnaround." }
+    ],
+    timelineTitle: "Delivery Timeline",
+    timelineSubtitle: "Fast turnaround from 2D drawings to furnished 3D:",
+    timelineSchedule: [
+      { durationBadge: "DAY 1", title: "CAD Import & Modeling", desc: "Building 3D walls and openings." },
+      { durationBadge: "DAY 2", title: "Furniture & Materials", desc: "Placing furniture and applying textures." },
+      { durationBadge: "DAY 3", title: "Rendering & Delivery", desc: "High-resolution isometric PDF delivery." }
     ]
   },
 
   'structural-design-bangalore': {
-    typologiesTitle: "Structural Engineering Services",
-    typologiesSubtitle: "Certified RCC and steel framework engineering compliant with Indian Standard codes:",
+    typologiesTitle: "Structural Services",
+    typologiesSubtitle: "Certified RCC and steel framework engineering:",
     typologies: [
-      { title: "Foundation & Footing Design", desc: "Soil-matched isolated, combined, and raft foundation sizing to prevent differential settlement.", iconType: "hammer" },
-      { title: "RCC Frame Detailing", desc: "Column, beam, and slab reinforcement calculations conforming to IS 456:2000.", iconType: "building" },
-      { title: "Bar Bending Schedules (BBS)", desc: "Precise rebar cutting and bending schedules to eliminate steel site wastage.", iconType: "file" },
-      { title: "Structural Stability Certification", desc: "Engineering verification for additional floor additions and structural load audits.", iconType: "shield" }
+      { title: "Foundation & Footings", desc: "Soil-matched foundation sizing.", iconType: "hammer" },
+      { title: "RCC Frame Detailing", desc: "Column, beam, and slab calculations (IS 456).", iconType: "building" },
+      { title: "Bar Bending Schedules (BBS)", desc: "Precise rebar cutting schedules to reduce waste.", iconType: "file" },
+      { title: "Structural Certification", desc: "Load audits and stability certificates.", iconType: "shield" }
     ],
-    processTitle: "Structural Engineering Workflow",
-    processSubtitle: "Rigorous mathematical load analysis and engineering verification:",
+    processTitle: "Structural Workflow",
+    processSubtitle: "Mathematical load analysis and engineering verification:",
     processStages: [
-      { stageNumber: "01", title: "Soil Report & Load Assessment", desc: "Reviewing soil bearing capacity (SBC) and calculating dead, live, and wind loads." },
-      { stageNumber: "02", title: "Seismic Analysis (IS 1893)", desc: "Earthquake resistant structural modeling conforming to Bengaluru seismic zone criteria." },
-      { stageNumber: "03", title: "Column Grid & Framing Layout", desc: "Optimizing column placements to avoid obstructing architectural room layouts." },
-      { stageNumber: "04", title: "Foundation Sizing & Design", desc: "Calculating footing depths, rebar mesh, and plinth beam ties." },
-      { stageNumber: "05", title: "Beam & Slab Reinforcement", desc: "Designing steel bar diameters, stirrup spacing, and cantilever reinforcements." },
-      { stageNumber: "06", title: "Bar Bending Schedule (BBS)", desc: "Generating exact steel tonnage requirements and bar cutting lengths." },
-      { stageNumber: "07", title: "Chartered Engineer Certification", desc: "Signing and sealing structural drawings for municipal and banking approvals." }
+      { stageNumber: "01", title: "Soil Report & Loads", desc: "Soil SBC, dead, live, and seismic load inputs." },
+      { stageNumber: "02", title: "Seismic Modeling (IS 1893)", desc: "Earthquake resistant frame analysis." },
+      { stageNumber: "03", title: "Column Grid Optimization", desc: "Framing layout avoiding room obstruction." },
+      { stageNumber: "04", title: "Foundation Sizing", desc: "Footing depths, rebar mesh, and plinth ties." },
+      { stageNumber: "05", title: "Beam & Slab Detailing", desc: "Steel diameters, stirrups, and cantilevers." },
+      { stageNumber: "06", title: "Bar Bending Schedule (BBS)", desc: "Steel tonnage and rebar cutting lengths." },
+      { stageNumber: "07", title: "Engineer Certification", desc: "Signed drawings for municipal sanctions." }
     ],
-    scopeTitle: "What Is Included In Structural Design?",
-    scopeSubtitle: "Complete certified structural drawing package for contractors and sanctions:",
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Complete certified structural drawing package:",
     detailedScope: [
-      { title: "Foundation & Footing Layout", desc: "Dimensioned footing sizes, reinforcement mesh details, and excavation depths." },
-      { title: "Column Schedule & Tie Details", desc: "Column rebar diameters, longitudinal bar counts, and lateral tie spacing." },
-      { title: "Plinth & Floor Beam Detailing", desc: "Beam cross-sections, top/bottom reinforcement bars, and shear stirrup spacing." },
-      { title: "Slab Reinforcement Layout", desc: "One-way/two-way slab rebar spacing, crank bars, and cover block callouts." },
-      { title: "Staircase & Sump Structural Details", desc: "Waist slab reinforcement, water pressure calculations, and cantilever details." },
-      { title: "Certified Structural Stability Report", desc: "Official design calculation dossier signed by Registered Structural Engineer." }
+      { title: "Foundation & Footing Layout", desc: "Footing dimensions and reinforcement mesh." },
+      { title: "Column Schedule & Ties", desc: "Rebar diameters and lateral tie spacing." },
+      { title: "Plinth & Floor Beam Details", desc: "Cross-sections and shear stirrup spacing." },
+      { title: "Slab Reinforcement Layout", desc: "One-way/two-way rebar spacing and cover." },
+      { title: "Staircase & Sump Details", desc: "Waist slab rebar and water pressure design." },
+      { title: "Structural Stability Report", desc: "Official calculations signed by Chartered Engineer." }
     ],
-    costTitle: "Structural Design Cost Factors",
-    costSubtitle: "Parameters that influence structural engineering calculation fees:",
+    costTitle: "Cost Factors",
+    costSubtitle: "Parameters that influence structural calculation fees:",
     costDrivers: [
-      { number: "1", title: "Total Built-Up Area & Floor Count", desc: "Higher storeys (G+3, G+4, G+5) require multi-stage wind and seismic load computations." },
-      { number: "2", title: "Soil Stratum Complexity", desc: "Challenging clay soils or filled land require specialized raft or pile foundation engineering." },
-      { number: "3", title: "Architectural Cantilevers & Long Spans", desc: "Large column-free living halls or deep cantilever balconies require heavier reinforcement design." },
-      { number: "4", title: "Physical Site Inspection & Rebar Audit", desc: "Adding on-site civil checks during column rebar tying and slab casting." }
+      { number: "1", title: "Built-Up Area & Floors", desc: "Higher storeys require multi-stage seismic math." },
+      { number: "2", title: "Soil Stratum Complexity", desc: "Loose soil requires raft or pile engineering." },
+      { number: "3", title: "Long Spans & Cantilevers", desc: "Column-free halls require heavier design." },
+      { number: "4", title: "On-Site Rebar Audits", desc: "Civil checks during rebar tying." }
     ],
-    timelineTitle: "Structural Design Timeline",
-    timelineSubtitle: "Turnaround schedule from architectural drawings to certified structural blueprints:",
+    timelineTitle: "Engineering Timeline",
+    timelineSubtitle: "Turnaround from architectural plans to certified blueprints:",
     timelineSchedule: [
-      { durationBadge: "DAYS 1–2", title: "Architectural Review & Load Input", desc: "Reviewing 2D floor plans, soil test SBC, and structural grid mapping." },
-      { durationBadge: "DAYS 3–5", title: "Foundation & Column Modeling", desc: "Mathematical load calculation and footing sizing in structural software." },
-      { durationBadge: "DAYS 6–8", title: "Beam, Slab & BBS Detailing", desc: "Drafting reinforcement drawings and bar bending schedules." },
-      { durationBadge: "DAYS 9–10", title: "Final Certification & Blueprint Handover", desc: "Registered engineer seal, stability certificate, and contractor drawing set." }
+      { durationBadge: "DAYS 1–2", title: "Review & Load Input", desc: "2D plans, soil SBC, and grid mapping." },
+      { durationBadge: "DAYS 3–5", title: "Foundation Modeling", desc: "Load calculations and footing sizing." },
+      { durationBadge: "DAYS 6–8", title: "Beam, Slab & BBS", desc: "Reinforcement drafting and cutting lists." },
+      { durationBadge: "DAYS 9–10", title: "Final Certification", desc: "Engineer seal and contractor drawing set." }
     ]
   },
 
   'property-valuation-bangalore': {
-    typologiesTitle: "Property Valuation Services",
-    typologiesSubtitle: "Certified asset appraisal and valuation reports for banks, transactions, and tax records:",
+    typologiesTitle: "Valuation Services",
+    typologiesSubtitle: "Certified asset appraisal and valuation reports:",
     typologies: [
-      { title: "Bank Home Loan & Mortgage Valuation", desc: "Fair market value and realizable value appraisal compliant with nationalized and private bank criteria.", iconType: "calculator" },
-      { title: "Capital Gains Tax Valuation (Sec 54)", desc: "Certified indexed cost of acquisition valuation reports for Income Tax department compliance.", iconType: "file" },
-      { title: "Visa & Immigration Asset Certificates", desc: "Net-worth and real estate valuation certificates required for international visa processing.", iconType: "shield" },
-      { title: "Family Settlement & Probate Records", desc: "Independent property valuation for ancestral partition, wills, and legal court documentation.", iconType: "home" }
+      { title: "Bank Mortgage Valuation", desc: "Fair market value appraisal for home loans.", iconType: "calculator" },
+      { title: "Capital Gains Tax (Sec 54)", desc: "Indexed acquisition cost reports for Income Tax.", iconType: "file" },
+      { title: "Visa & Immigration Assets", desc: "Net-worth valuation for visa processing.", iconType: "shield" },
+      { title: "Family Partition & Probate", desc: "Independent appraisal for legal documentation.", iconType: "home" }
     ],
-    processTitle: "Our Property Valuation Process",
-    processSubtitle: "A disciplined 4-step appraisal methodology conforming to professional valuation standards:",
+    processTitle: "Valuation Process",
+    processSubtitle: "4-step appraisal conforming to professional standards:",
     processStages: [
-      { stageNumber: "01", title: "Document Review & Screening", desc: "Examining Sale Deed, mother deeds, e-Khata extract, tax paid receipts, and sanctioned building plans." },
-      { stageNumber: "02", title: "On-Site Physical Inspection", desc: "Inspecting plot boundaries, approach road width, building age, construction quality, and physical condition." },
-      { stageNumber: "03", title: "Comparative & Depreciated Cost Method", desc: "Benchmarking guideline values, micro-market sale trends, and CPWD building depreciation." },
-      { stageNumber: "04", title: "Certified Valuation Dossier", desc: "Issuing formal stamped valuation documentation signed by Government-Registered Valuer." }
+      { stageNumber: "01", title: "Document Review", desc: "Examining deeds, e-Khata, tax receipts, and plans." },
+      { stageNumber: "02", title: "Physical Site Inspection", desc: "Inspecting boundaries, road width, and structure age." },
+      { stageNumber: "03", title: "Cost & Market Computation", desc: "Guideline rates and CPWD building depreciation." },
+      { stageNumber: "04", title: "Certified Report Handover", desc: "Issuing signed dossier by Registered Valuer." }
     ],
-    scopeTitle: "What Is Included In Property Valuation?",
-    scopeSubtitle: "Complete appraisal documentation accepted by financial institutions and courts:",
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Appraisal documentation accepted by banks and courts:",
     detailedScope: [
-      { title: "Physical Site Inspection & Measurements", desc: "Verification of site dimensions, built-up area measurements, and boundary road width." },
-      { title: "Guideline Value vs Market Value Breakdown", desc: "Itemized calculation showing sub-registrar guidance value and realistic fair market value." },
-      { title: "Building Replacement & Depreciation Assessment", desc: "CPWD/PWD replacement cost formula calculation based on construction age and maintenance." },
-      { title: "Distress / Realizable Value Estimation", desc: "Bank-standard realizable value computation for loan security margin calculations." },
-      { title: "Site Photographs & Boundary Audit", desc: "Geo-tagged photo documentation of the property, approach road, and neighborhood infrastructure." },
-      { title: "Registered Valuer Stamp & Certification", desc: "Official valuation certificate compliant with Wealth Tax Act & IBBI regulations." }
+      { title: "Site Inspection & Dimensions", desc: "On-site measurements and road width check." },
+      { title: "Guideline vs Market Value", desc: "Sub-registrar rate and fair market value." },
+      { title: "CPWD Building Depreciation", desc: "Replacement cost formula based on building age." },
+      { title: "Distress / Realizable Value", desc: "Bank-standard loan security margin calculation." },
+      { title: "Geo-Tagged Photos", desc: "Photographic record of property and road frontage." },
+      { title: "Registered Valuer Seal", desc: "Certificate compliant with IBBI regulations." }
     ],
-    costTitle: "Property Valuation Cost Drivers",
-    costSubtitle: "Parameters influencing professional valuation fees in Bengaluru:",
+    costTitle: "Cost Factors",
+    costSubtitle: "Parameters influencing professional valuation fees:",
     costDrivers: [
-      { number: "1", title: "Property Type & Asset Scale", desc: "Vacant residential plot vs multi-floor commercial building with multiple tenancy units." },
-      { number: "2", title: "Statutory Purpose of Valuation", desc: "Standard banking mortgage appraisal vs complex Capital Gains / Court litigation documentation." },
-      { number: "3", title: "Site Inspection Location in Bengaluru", desc: "Central BBMP zones vs outlying rural Bangalore / BMRDA peripheral areas." },
-      { number: "4", title: "Turnaround Urgency", desc: "Express 24–48 hour delivery for urgent bank loan closing or visa interview appointments." }
+      { number: "1", title: "Property Type & Scale", desc: "Vacant plot vs multi-floor commercial building." },
+      { number: "2", title: "Appraisal Purpose", desc: "Standard loan vs Capital Gains / Court litigation." },
+      { number: "3", title: "Inspection Location", desc: "Central BBMP zones vs rural BMRDA outskirts." },
+      { number: "4", title: "Turnaround Urgency", desc: "Express 24–48 hour delivery for bank deadlines." }
     ],
-    timelineTitle: "Valuation Delivery Timeline",
-    timelineSubtitle: "Fast, certified turnaround for property valuation reports:",
+    timelineTitle: "Valuation Timeline",
+    timelineSubtitle: "Turnaround from inspection to signed report:",
     timelineSchedule: [
-      { durationBadge: "DAY 1", title: "Document Submission & Review", desc: "Sharing title deed copy, e-Khata, tax receipts, and sanctioned drawings via WhatsApp/Email." },
-      { durationBadge: "DAYS 1–2", title: "Physical Site Inspection", desc: "Valuer conducts on-site measurement, photography, and structural quality assessment." },
-      { durationBadge: "DAYS 2–3", title: "Market Research & Computation", desc: "Guideline rate benchmarking, sales comparison, and CPWD depreciation calculation." },
-      { durationBadge: "DAYS 3–4", title: "Report Handover & Stamping", desc: "Delivering signed and sealed original valuation report along with digital PDF copy." }
+      { durationBadge: "DAY 1", title: "Document Review", desc: "Reviewing title deeds, e-Khata, and tax receipts." },
+      { durationBadge: "DAYS 1–2", title: "Site Inspection", desc: "On-site measurement and condition assessment." },
+      { durationBadge: "DAYS 2–3", title: "Computations", desc: "Guideline benchmarking and depreciation math." },
+      { durationBadge: "DAYS 3–4", title: "Report Handover", desc: "Signed and sealed original valuation report." }
     ]
   },
 
   'land-valuation-bangalore': {
-    typologiesTitle: "Land & Plot Valuation Services",
-    typologiesSubtitle: "Certified land valuation and boundary appraisal across Bengaluru urban and rural districts:",
+    typologiesTitle: "Land Typologies",
+    typologiesSubtitle: "Certified land valuation and boundary appraisal:",
     typologies: [
-      { title: "Residential Layout Plots", desc: "BDA, BMRDA, and DC-converted residential sites in gated layouts and independent revenue lands.", iconType: "grid" },
-      { title: "Commercial Frontage Land", desc: "High-value commercial main road plots with road width multipliers and commercial FAR potential.", iconType: "building" },
-      { title: "Industrial Estate Land", desc: "KIADB and industrial corridor land plots in Peenya, Bommasandra, Bidadi, and Hoskote.", iconType: "hammer" },
-      { title: "Agricultural & Farm Land", desc: "Green belt, agricultural land parcels, and farmhouse plots on Bangalore outskirts.", iconType: "compass" }
+      { title: "Residential Layout Plots", desc: "BDA, BMRDA, and DC-converted sites.", iconType: "grid" },
+      { title: "Commercial Frontage Land", desc: "Main road plots with commercial FAR potential.", iconType: "building" },
+      { title: "Industrial Estate Land", desc: "KIADB plots in Peenya, Bommasandra, and Bidadi.", iconType: "hammer" },
+      { title: "Agricultural & Farm Land", desc: "Green belt parcels on Bangalore outskirts.", iconType: "compass" }
     ],
-    processTitle: "Our Land Valuation Process",
-    processSubtitle: "Thorough revenue document verification and physical boundary inspection:",
+    processTitle: "Land Valuation Process",
+    processSubtitle: "Revenue document verification and boundary inspection:",
     processStages: [
-      { stageNumber: "01", title: "Revenue Document Audit", desc: "Checking RTC/Pahani, survey sketch, village map, mother deed chain, and e-Khata status." },
-      { stageNumber: "02", title: "Physical Boundary Survey", desc: "Verifying physical boundary markers, approach road width, and electricity/water infrastructure." },
-      { stageNumber: "03", title: "Guideline & Transaction Analysis", desc: "Cross-referencing sub-registrar guidance value against recent micro-market registered transactions." },
-      { stageNumber: "04", title: "Certified Land Dossier", desc: "Issuing formal stamped land appraisal dossier accepted by national banks and tax authorities." }
+      { stageNumber: "01", title: "Revenue Document Audit", desc: "Checking RTC/Pahani, survey sketch, and deeds." },
+      { stageNumber: "02", title: "Physical Boundary Survey", desc: "Verifying physical markers and road access." },
+      { stageNumber: "03", title: "Guideline Rate Analysis", desc: "Sub-registrar guidance vs registered transactions." },
+      { stageNumber: "04", title: "Certified Land Dossier", desc: "Issuing formal stamped land appraisal dossier." }
     ],
-    scopeTitle: "What Is Included In Land Valuation?",
-    scopeSubtitle: "Complete land appraisal documentation for loans, sales, and statutory filings:",
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Complete land appraisal documentation:",
     detailedScope: [
-      { title: "Plot Boundary & Dimension Verification", desc: "On-site verification of actual plot dimensions against title deed and survey sketch." },
-      { title: "Sub-Registrar Guideline Value Benchmark", desc: "Latest government guidance rate assessment factoring in road width additions." },
-      { title: "Fair Market Value Computation", desc: "Analysis of prevailing buyer-seller open market rates in the immediate locality." },
-      { title: "Encumbrance & Road Accessibility Audit", desc: "Assessment of legal access, municipal roads, and high-tension line clearances." },
-      { title: "Geo-Tagged Photo Documentation", desc: "Clear photographic record of plot frontage, access roads, and surroundings." },
-      { title: "Government-Registered Valuer Seal", desc: "Signed valuation certificate compliant with Wealth Tax and Banking standards." }
+      { title: "Plot Boundary Verification", desc: "Dimensions checked against deed and survey sketch." },
+      { title: "Guideline Value Benchmark", desc: "Government guidance rates factoring road width." },
+      { title: "Fair Market Value Analysis", desc: "Prevailing open market rates in locality." },
+      { title: "Road & Accessibility Audit", desc: "Assessment of legal access and municipal roads." },
+      { title: "Geo-Tagged Photos", desc: "Clear photographic record of plot frontage." },
+      { title: "Registered Valuer Stamp", desc: "Certificate compliant with Wealth Tax standards." }
     ],
-    costTitle: "Land Valuation Cost Factors",
-    costSubtitle: "Parameters determining land appraisal fees in Bengaluru:",
+    costTitle: "Cost Factors",
+    costSubtitle: "Parameters determining land appraisal fees:",
     costDrivers: [
-      { number: "1", title: "Plot Area & Scale", desc: "Standard 30x40/40x60 residential plots vs multi-acre land parcels." },
-      { number: "2", title: "Zoning & Land Use Category", desc: "Residential vs Commercial vs Industrial KIADB land valuation." },
-      { number: "3", title: "Jurisdiction & Location", desc: "BBMP central zone vs BDA layout vs rural BMRDA outskirts." },
-      { number: "4", title: "Report Certification Purpose", desc: "Bank loan mortgage vs Section 54 Capital Gains Tax audit." }
+      { number: "1", title: "Plot Area & Scale", desc: "Standard 30x40 plots vs multi-acre parcels." },
+      { number: "2", title: "Zoning & Land Use", desc: "Residential vs Commercial vs KIADB land." },
+      { number: "3", title: "Location & Distance", desc: "BBMP central zone vs rural BMRDA outskirts." },
+      { number: "4", title: "Appraisal Purpose", desc: "Bank mortgage vs Capital Gains Tax audit." }
     ],
-    timelineTitle: "Land Valuation Timeline",
-    timelineSubtitle: "Fast, accurate turnaround from inspection to certified report:",
+    timelineTitle: "Valuation Timeline",
+    timelineSubtitle: "Fast turnaround from inspection to certified report:",
     timelineSchedule: [
-      { durationBadge: "DAY 1", title: "Document Review", desc: "Sharing survey sketch, deed, and tax receipt copies." },
-      { durationBadge: "DAY 2", title: "On-Site Boundary Inspection", desc: "Physical inspection of plot boundaries and road width." },
-      { durationBadge: "DAY 3", title: "Market Rate & Guideline Analysis", desc: "Local sub-registrar and market transaction calculations." },
-      { durationBadge: "DAY 4", title: "Report Handover", desc: "Signed & stamped original land valuation dossier delivery." }
+      { durationBadge: "DAY 1", title: "Document Review", desc: "Survey sketch, title deed, and tax receipts." },
+      { durationBadge: "DAY 2", title: "Boundary Survey", desc: "Physical inspection of plot boundaries." },
+      { durationBadge: "DAY 3", title: "Rate Analysis", desc: "Guideline and market transaction calculations." },
+      { durationBadge: "DAY 4", title: "Report Handover", desc: "Signed and stamped land valuation dossier." }
     ]
   },
 
   'business-valuation-bangalore': {
-    typologiesTitle: "Business & Asset Valuation Typologies",
-    typologiesSubtitle: "Certified commercial asset, plant machinery, and enterprise valuation:",
+    typologiesTitle: "Asset & Enterprise Typologies",
+    typologiesSubtitle: "Certified commercial asset and machinery appraisal:",
     typologies: [
-      { title: "Plant & Machinery Valuation", desc: "Depreciated replacement value (DRV) of industrial machines, assembly lines, and factory equipment.", iconType: "hammer" },
-      { title: "Commercial Fixed Asset Valuation", desc: "Appraisal of corporate office buildings, commercial showrooms, warehouses, and leasehold fixtures.", iconType: "building" },
-      { title: "Merger & Acquisition (M&A) Dossiers", desc: "Discounted cash flow (DCF) and net asset value (NAV) valuation for equity transactions and partnership buyouts.", iconType: "calculator" },
-      { title: "Statutory Financial Audit Compliance", desc: "Certified fixed asset registers and impairment testing for balance sheet reporting.", iconType: "file" }
+      { title: "Plant & Machinery", desc: "Depreciated replacement value of equipment.", iconType: "hammer" },
+      { title: "Commercial Fixed Assets", desc: "Appraisal of corporate offices and showrooms.", iconType: "building" },
+      { title: "M&A Dossiers", desc: "DCF and NAV valuation for equity transactions.", iconType: "calculator" },
+      { title: "Statutory Financial Audits", desc: "Fixed asset registers and impairment testing.", iconType: "file" }
     ],
     processTitle: "Business Valuation Process",
-    processSubtitle: "Rigorous financial due diligence and physical asset verification methodology:",
+    processSubtitle: "Due diligence and physical asset verification methodology:",
     processStages: [
-      { stageNumber: "01", title: "Financial & Asset Screening", desc: "Reviewing audited balance sheets, fixed asset registers, and machinery procurement invoices." },
-      { stageNumber: "02", title: "Physical Plant & Machinery Inspection", desc: "Verifying physical existence, operational capacity, maintenance logs, and technological obsolescence." },
-      { stageNumber: "03", title: "Valuation Methodology Execution", desc: "Applying Asset Approach, Income Approach (DCF), and Market Approach." },
-      { stageNumber: "04", title: "Certified IBBI Valuation Report", desc: "Issuing formal stamped business valuation dossier compliant with statutory standards." }
+      { stageNumber: "01", title: "Financial Screening", desc: "Audited balance sheets and procurement invoices." },
+      { stageNumber: "02", title: "Plant & Machinery Inspection", desc: "Operational capacity and maintenance logs." },
+      { stageNumber: "03", title: "Methodology Execution", desc: "Asset Approach, DCF, and Market Approach." },
+      { stageNumber: "04", title: "Certified Report", desc: "Formal stamped dossier signed by IBBI Valuer." }
     ],
-    scopeTitle: "What Is Included In Business Valuation?",
-    scopeSubtitle: "Comprehensive appraisal dossiers recognized by scheduled commercial banks and audit authorities:",
+    scopeTitle: "What Is Included",
+    scopeSubtitle: "Appraisal dossiers recognized by banks and audit authorities:",
     detailedScope: [
-      { title: "Physical Equipment & Asset Audit", desc: "Detailed inspection of plant machinery, commercial vehicles, and office infrastructure." },
-      { title: "Depreciated Replacement Cost (DRC) Formula", desc: "CPWD/Income Tax depreciation calculations reflecting actual machine lifespan." },
-      { title: "Discounted Cash Flow (DCF) Financial Model", desc: "Projection modeling of future cash flows, WACC, and terminal business value." },
-      { title: "Net Tangible Asset Breakdown", desc: "Clear itemized summary of tangible and intangible business asset values." },
-      { title: "IBBI / Wealth Tax Registered Valuer Seal", desc: "Official statutory certification recognized across India." }
+      { title: "Physical Equipment Audit", desc: "Inspection of machinery and infrastructure." },
+      { title: "Depreciated Cost (DRC)", desc: "Calculations reflecting actual machine lifespan." },
+      { title: "Discounted Cash Flow (DCF)", desc: "Modeling future cash flows and terminal value." },
+      { title: "Tangible Asset Breakdown", desc: "Itemized summary of tangible business assets." },
+      { title: "IBBI Registered Valuer Seal", desc: "Statutory certification recognized across India." }
     ],
-    costTitle: "Business Valuation Cost Factors",
-    costSubtitle: "Parameters that influence commercial enterprise valuation fees:",
+    costTitle: "Cost Factors",
+    costSubtitle: "Parameters influencing enterprise valuation fees:",
     costDrivers: [
-      { number: "1", title: "Scale of Fixed Asset Register", desc: "Number of plant equipment lines and commercial facilities to physically inspect." },
-      { number: "2", title: "Valuation Methodology Complexity", desc: "Pure tangible asset valuation vs full DCF financial modeling." },
-      { number: "3", title: "Statutory Regulatory Purpose", desc: "Bank credit security vs NCLT / M&A legal compliance." },
-      { number: "4", title: "Multi-Location Inspection Needs", desc: "Single Bengaluru plant vs multiple warehouse/branch locations." }
+      { number: "1", title: "Scale of Fixed Asset Register", desc: "Number of equipment lines to physically inspect." },
+      { number: "2", title: "Methodology Complexity", desc: "Tangible asset valuation vs full DCF modeling." },
+      { number: "3", title: "Statutory Purpose", desc: "Bank credit security vs NCLT / M&A legal audit." },
+      { number: "4", title: "Location Count", desc: "Single plant vs multiple branch facilities." }
     ],
-    timelineTitle: "Business Valuation Schedule",
-    timelineSubtitle: "Structured turnaround for commercial and industrial appraisals:",
+    timelineTitle: "Valuation Timeline",
+    timelineSubtitle: "Turnaround for commercial and industrial appraisals:",
     timelineSchedule: [
-      { durationBadge: "DAYS 1–2", title: "Data Room & Financial Review", desc: "Analyzing balance sheets, P&L, and fixed asset lists." },
-      { durationBadge: "DAYS 3–4", title: "On-Site Plant & Machinery Inspection", desc: "Physical equipment verification and maintenance checks." },
-      { durationBadge: "DAYS 5–6", title: "Financial Modeling & DRC Calculation", desc: "Executing DCF cash flow and depreciation calculations." },
-      { durationBadge: "DAYS 7–8", title: "Final Dossier Delivery & Certification", desc: "Delivering signed and stamped IBBI-compliant valuation dossier." }
+      { durationBadge: "DAYS 1–2", title: "Financial Review", desc: "Analyzing balance sheets and asset lists." },
+      { durationBadge: "DAYS 3–4", title: "Site Inspection", desc: "Physical equipment and maintenance audit." },
+      { durationBadge: "DAYS 5–6", title: "DCF & DRC Modeling", desc: "Executing cash flow and depreciation math." },
+      { durationBadge: "DAYS 7–8", title: "Final Handover", desc: "Signed and stamped IBBI-compliant dossier." }
     ]
   }
 };

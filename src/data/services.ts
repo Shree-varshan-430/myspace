@@ -35,115 +35,99 @@ export const servicesData: ServiceItem[] = [
     slug: "house-construction-bangalore",
     title: "Residential Construction",
     category: "Build",
-    h1: "Building a home should feel clearer from the start.",
+    h1: "House Construction in Bangalore",
     primaryKeyword: "house construction company in Bangalore",
     metaTitle: "House Construction Company in Bangalore | My Space",
     metaDescription: "Plan and build your home in Bangalore with a clearer process for scope, design coordination, construction stages, and handover. Discuss your home project with My Space.",
-    tagline: "Turnkey & Custom Residential Construction for Independent Plots & Villas",
+    tagline: "Turnkey & Custom Residential Construction for Plots & Villas",
     heroImage: "/images/company/turnkey-house-hero.jpeg",
     galleryImages: [
       {
         url: "/images/company/turnkey-house-hero.jpeg",
         title: "Contemporary Villa Execution",
-        caption: "Turnkey multi-storey residential villa with contemporary elevation in Bengaluru."
+        caption: "Turnkey multi-storey villa execution."
       },
       {
         url: "/images/company/real-project-05.jpeg",
         title: "RCC Framing & Column Casting",
-        caption: "Precision rebar reinforcement tying and high-grade concrete casting conforming to IS standards."
+        caption: "IS-standard rebar tying and casting."
       },
       {
         url: "/images/company/real-project-09.jpeg",
         title: "Exterior Plastering & Joinery",
-        caption: "Double-coat weather-resistant plastering and structural window framing."
+        caption: "Double-coat weather-resistant plastering."
       },
       {
         url: "/images/company/showroom-1.jpeg",
         title: "Architectural Handover & Finishes",
-        caption: "Premium flooring, ceiling lighting, and quality-controlled snag clearance."
+        caption: "Premium flooring and snag clearance."
       }
     ],
     eyebrow: "RESIDENTIAL CONSTRUCTION IN BENGALURU",
     primaryCta: "Discuss Your Home Project",
-    summary: "Whether you have just purchased a plot, have an architectural sketch, or are evaluating how to build on family land in Bengaluru, My Space coordinates architectural planning, structural engineering, civil execution, and quality-controlled handover into one transparent workflow.",
+    summary: "Architectural planning, structural engineering, civil execution, and quality-controlled handover under single-point accountability.",
     whoIsThisFor: [
       "Plot owners planning a new independent house or duplex",
-      "Families building a custom villa on own or gated-community plots",
-      "Homeowners planning multi-storey residential units for personal use and rental",
-      "Clients seeking a single accountable team for structural execution and finishes",
-      "Home builders tired of ambiguous contractor quotations and hidden stage costs"
+      "Families building custom luxury villas",
+      "Homeowners building multi-storey units for rental income"
     ],
     whatWeHelpWith: [
       {
         title: "Site & Soil Assessment",
-        desc: "Evaluating site levels, approach road access, soil characteristics, and municipal setback constraints before finalizing foundations."
+        desc: "Evaluating soil bearing capacity and municipal setback rules."
       },
       {
-        title: "Integrated Architectural & Structural Design",
-        desc: "Coordinating 2D floor plans, 3D elevations, structural steel calculations, and plumbing/electrical conduits so nothing clashes on site."
+        title: "Integrated Design & BOQ",
+        desc: "Coordinating 2D layouts, 3D elevations, and itemized material rates."
       },
       {
-        title: "Detailed Bill of Quantities (BOQ)",
-        desc: "Transparent specification of cement grades, TMT steel, brickwork, waterproofing membranes, flooring, and joinery with clear unit rates."
+        title: "Staged Civil Execution",
+        desc: "Milestone-driven casting, 21-day curing, and structured inspections."
       },
       {
-        title: "Staged Civil Execution & Quality Checks",
-        desc: "Systematic stage-wise milestone execution from foundation, plinth beam, RCC column casting, slab curing, masonry, plastering, to finishing."
-      },
-      {
-        title: "Transparent Handover & Documentation",
-        desc: "As-built drawings, electrical/plumbing routing maps, warranty certificates for waterproofing, and systematic snag rectifications."
+        title: "Quality Handover",
+        desc: "As-built drawings, warranties, and systematic snag rectifications."
       }
     ],
     whatToPrepare: [
-      "Plot dimensions (e.g. 30x40, 30x50, 40x60) and site location in Bengaluru",
-      "Intended family requirements (e.g., 3BHK + study, parking count, duplex layout, rental floors)",
-      "Site photos or survey sketches if available",
-      "Estimated timeline for beginning site preparation",
-      "Known site constraints (narrow approach lane, low-lying area, existing structure to demolish)"
+      "Plot dimensions and site location in Bengaluru",
+      "Family room requirements and parking count",
+      "Target timeline to start site work"
     ],
     scopeInclusions: [
-      "Site clearing, layout marking, excavation, and anti-termite treatment",
-      "RCC framed structure design & execution conforming to IS codes",
-      "Masonry walls (wire-cut red bricks or solid concrete blocks as specified)",
-      "Internal and external double-coat plastering with water curing cycles",
-      "Complete concealed plumbing (CPVC/PVC) and electrical conduit works",
-      "Flooring, wall tiling, joinery (main door, internal doors, UPVC/aluminium windows)",
-      "Internal and external weather-resistant emulsion painting",
-      "Multi-stage waterproofing for terrace, balconies, and wet areas"
+      "Site excavation, foundation, and anti-termite treatment",
+      "RCC framed structure conforming strictly to IS codes",
+      "Solid block masonry and double-coat plastering",
+      "Concealed electrical and plumbing installations",
+      "Flooring, joinery, and weather-proof exterior painting"
     ],
     scopeExclusions: [
-      "Statutory municipal plan sanction fees and government utility deposit charges (BESCOM/BWSSB)",
-      "Borewell drilling, submersible pump installation, and solar water heater units unless specified",
-      "Loose furniture, decorative soft furnishings, and movable electronic appliances",
-      "Compound wall and exterior landscaping beyond contract perimeter"
+      "Statutory municipal plan sanction government fees",
+      "Borewell drilling and utility connection deposits",
+      "Movable furniture and decorative appliances"
     ],
-    disclaimer: "All construction timelines and stage payments are aligned directly with physical stage completion milestones verified on-site. Educational estimates are illustrative and subject to final site-specific structural design and BOQ confirmation.",
+    disclaimer: "Timelines and stage payments are directly linked to on-site physical milestones verified by engineers.",
     relatedServiceSlugs: ["elevation-design-bangalore", "3d-floor-plan-design-bangalore", "interior-design-bangalore", "civil-construction-bangalore"],
     faqs: [
       {
         question: "How do you calculate residential construction costs in Bangalore?",
-        answer: "Construction cost is derived from total built-up area (BUA), structural requirements (soil bearing capacity, basement needs), specification packages (Standard, Premium, Luxury finishes), and site logistical factors (road width, material unloading access). We provide an itemized BOQ so every rupee is clearly accounted for."
+        answer: "Costs depend on built-up area, foundation depth, and material finish package (Standard, Premium, Luxury). We provide an itemized BOQ with fixed unit rates."
       },
       {
         question: "Can I bring my own architect's drawings to My Space?",
-        answer: "Yes. If you already have approved architectural drawings, our civil and structural engineering team will review the structural feasibility, create the execution BOQ, and manage the turnkey construction with complete engineering accountability."
+        answer: "Yes. We review external drawings for structural feasibility, prepare execution BOQs, and handle turnkey civil construction."
       },
       {
         question: "How do you ensure quality control during concrete casting and curing?",
-        answer: "We perform slump tests and cube test sampling for concrete batches, ensure strictly measured water-cement ratios, verify steel rebar spacing and cover blocks prior to casting, and enforce minimum 14-21 day water curing protocols."
+        answer: "We perform slump and cube tests per batch, verify rebar spacing and cover blocks, and enforce 21-day water curing protocols."
       },
       {
         question: "What happens if I want to make changes during construction?",
-        answer: "We follow a formal change-management process. Before any structural or material change is initiated, we provide a written variance note outlining timeline and cost implications so there are never unapproved surprises on your bill."
+        answer: "We issue a written variance note detailing cost and schedule impacts before any modification is executed on site."
       },
       {
-        question: "What is the typical construction timeline for a G+2 or G+3 house in Bangalore?",
-        answer: "A standard 3,000 to 4,500 sq.ft residential house typically takes 9 to 14 months from foundation excavation to final painting and snag-clearance handover, subject to monsoon intervals and stage payment confirmations."
-      },
-      {
-        question: "Do you assist with BBMP plan sanctions and utility connections?",
-        answer: "We prepare complete municipal sanction drawing sets conforming to BBMP/BDA bylaws, setbacks, and FAR limits, and coordinate technical documentation required for BESCOM and BWSSB connections."
+        question: "What is the typical construction timeline for a house in Bangalore?",
+        answer: "A standard 3,000 to 4,500 sq.ft home takes 10 to 12 months from foundation excavation to final painting and handover."
       }
     ]
   },
@@ -152,102 +136,97 @@ export const servicesData: ServiceItem[] = [
     slug: "commercial-construction-bangalore",
     title: "Commercial Construction",
     category: "Build",
-    h1: "Build a commercial space around how your business works.",
+    h1: "Commercial Construction in Bangalore",
     primaryKeyword: "commercial construction company in Bangalore",
     metaTitle: "Commercial Construction Company in Bangalore | My Space",
     metaDescription: "Plan a commercial building, office, retail, clinic, or fit-out project in Bangalore with clearer scope, coordination, execution, and handover support from My Space.",
-    tagline: "Commercial Buildings, Corporate Offices, Retail Spaces & Healthcare Facilities",
+    tagline: "Commercial Complexes, Offices, Retail Spaces & Clinics",
     heroImage: "/images/company/showroom-2.jpeg",
     galleryImages: [
       {
         url: "/images/company/showroom-2.jpeg",
         title: "Multi-Storey Commercial Facade",
-        caption: "Contemporary commercial showroom building with structural glazing and signage bands."
+        caption: "Contemporary commercial building with structural glazing."
       },
       {
         url: "/images/company/Car_Showroom_View_1.jpeg",
         title: "Open Span Commercial Interior",
-        caption: "Spacious column-free commercial floor plate engineered for high customer footfall."
+        caption: "Column-free floor plate for high footfall."
       },
       {
         url: "/images/company/real-project-18.jpeg",
         title: "Heavy Civil Frame Execution",
-        caption: "High live-load RCC framing designed for commercial equipment and heavy occupancy."
+        caption: "High live-load RCC commercial framing."
       },
       {
         url: "/images/company/showroom-4.jpeg",
         title: "Commercial Glazing & Canopy",
-        caption: "Integrated entrance canopy, commercial lighting, and architectural ACP cladding."
+        caption: "Entrance canopy with ACP cladding."
       }
     ],
     eyebrow: "COMMERCIAL CONSTRUCTION & FIT-OUTS IN BENGALURU",
     primaryCta: "Discuss a Commercial Project",
-    summary: "Commercial spaces demand strict timeline adherence, heavy service coordination (HVAC, fire, electrical, IT networking), structural durability, and high spatial efficiency. My Space builds commercial properties engineered for business operations and return on investment.",
+    summary: "Commercial complexes, offices, and retail spaces engineered for maximum usable carpet area, structural durability, and high rental yield.",
     whoIsThisFor: [
-      "Property owners developing multi-storey commercial complexes for lease or own business",
-      "Corporate clients and growing companies establishing bespoke office headquarters",
-      "Retail brands and showroom operators needing robust shell-and-core or interior fit-outs",
-      "Healthcare practitioners, dental clinics, and diagnostic centres with specialized service requirements",
-      "Industrialists and warehouse operators planning durable logistics hubs"
+      "Property owners developing commercial rental complexes",
+      "Corporate enterprises establishing bespoke office spaces",
+      "Retail brands needing durable shell-and-core fit-outs"
     ],
     whatWeHelpWith: [
       {
-        title: "Spatial Efficiency & Floor Plate Optimization",
-        desc: "Designing column grids and core circulation (elevators, staircases, restrooms) to maximize usable carpet area and rental yields."
+        title: "Floor Plate Optimization",
+        desc: "Maximizing column-free usable carpet area and rental yields."
       },
       {
-        title: "MEP (Mechanical, Electrical & Plumbing) Integration",
-        desc: "Coordinating heavy 3-phase power, DG backup lines, central VRV/HVAC ducting routes, fire sprinkler grids, and data cabling."
+        title: "MEP & Fire Integration",
+        desc: "Coordinating 3-phase power, HVAC ducting, and sprinkler loops."
       },
       {
-        title: "Commercial Grade Façade & Glazing",
-        desc: "High-performance structural glazing, ACP cladding, acoustic louvers, and weather-sealed commercial entrance canopies."
+        title: "Façade & Curtain Glazing",
+        desc: "High-performance DGU glazing and weather-sealed canopies."
       },
       {
-        title: "Timeline & Phased Handover Management",
-        desc: "Critical-path scheduling to enable early access for tenant fit-out teams or phased operational launches without business disruption."
+        title: "Phased Handover",
+        desc: "Critical-path scheduling enabling early tenant fit-out access."
       }
     ],
     whatToPrepare: [
-      "Commercial plot or building floor plate dimensions",
-      "Intended commercial occupancy type (IT office, retail showroom, clinic, co-working)",
-      "Target go-live operational date and key regulatory deadlines",
-      "Specialized service loads (connected power in kVA, air-conditioning tonnage, server room cooling)",
-      "Parking and logistics loading/unloading requirements"
+      "Commercial plot dimensions and zoning clearances",
+      "Occupancy type (office, retail, clinic, co-working)",
+      "Target go-live operational date"
     ],
     scopeInclusions: [
-      "Heavy RCC structural framing designed for commercial live loads (IS 875 Part 2)",
-      "High-traffic vitrified/granite flooring and acoustic partitions",
-      "Commercial grade fire stairwells with fire-rated door assemblies",
-      "Concealed high-capacity electrical risers, distribution panels, and earthing pits",
-      "Basement waterproofing, sump tanks, and commercial drainage systems"
+      "Heavy RCC structural framing designed for commercial live loads",
+      "High-traffic flooring, lobby finishes, and fire stairwells",
+      "Electrical risers, distribution panels, and earthing pits",
+      "Basement waterproofing, sump tanks, and stormwater drainage"
     ],
     scopeExclusions: [
-      "Specialized tenant IT server racks and custom software systems",
-      "Branded retail display fixtures unless contracted under turnkey fit-out scope",
-      "Trade license and commercial business operating certificates"
+      "Tenant IT server racks and custom software systems",
+      "Branded retail display fixtures unless specified in fit-out",
+      "Trade license statutory application fees"
     ],
     relatedServiceSlugs: ["civil-construction-bangalore", "interior-design-bangalore", "property-valuation-bangalore"],
     faqs: [
       {
-        question: "Can My Space handle commercial projects in busy Bengaluru commercial corridors?",
-        answer: "Yes. We manage urban site logistics, nocturnal material transport where daytime traffic restrictions apply, noise mitigation barriers, and strict worker safety standards across central and suburban Bengaluru."
+        question: "Can My Space handle commercial projects in busy Bengaluru corridors?",
+        answer: "Yes. We manage urban logistics, nocturnal material transport, noise barriers, and safety compliance across Bengaluru."
       },
       {
         question: "Do you build shell-and-core or turnkey commercial fit-outs?",
-        answer: "We execute both: pure shell-and-core structural builds ready for tenant leasing, as well as comprehensive turnkey design-and-build fit-outs including MEP, glass partitions, ceilings, and workstations."
+        answer: "We deliver both bare shell-and-core structural builds and complete turnkey interior fit-outs with MEP integration."
       },
       {
-        question: "How do you optimize commercial floor plates for maximum rental yield?",
-        answer: "We engineer wide structural column grids (6m to 9m spans) and consolidate vertical service cores (elevators, staircases, AHU rooms, restrooms) against property edges, maximizing contiguous, open-plan usable carpet area."
+        question: "How do you optimize commercial floor plates for rental yield?",
+        answer: "We design wide column grids and consolidate service cores along building edges to maximize open, contiguous usable space."
       },
       {
-        question: "What MEP and fire safety systems are integrated into commercial builds?",
-        answer: "We coordinate dedicated 3-phase electrical risers, transformer yard foundations, DG back-up synchronisation, VRV/VRF air conditioning sleeves, fire hydrant loops, smoke dampers, and emergency illumination networks."
+        question: "What MEP and fire safety systems are integrated?",
+        answer: "We integrate 3-phase power risers, transformer yards, DG backups, HVAC sleeves, hydrants, and emergency lighting."
       },
       {
         question: "How do you ensure strict commercial handover deadlines?",
-        answer: "We employ critical-path project management (CPM/PERT) with parallel trade scheduling—allowing civil, electrical conduits, and facade framing to proceed concurrently across multiple floor levels."
+        answer: "We use critical-path scheduling with parallel civil, electrical, and glazing trades across multiple floor levels."
       }
     ]
   },
@@ -256,7 +235,7 @@ export const servicesData: ServiceItem[] = [
     slug: "industrial-construction-bangalore",
     title: "Industrial Construction",
     category: "Build",
-    h1: "Heavy-duty industrial infrastructure built for operational longevity.",
+    h1: "Industrial Construction in Bangalore",
     primaryKeyword: "industrial construction company in Bangalore",
     metaTitle: "Industrial Construction Company in Bangalore | Warehouses & Factories | My Space",
     metaDescription: "Turnkey industrial construction in Bangalore. Heavy PEB structures, manufacturing plants, logistics warehouses, and industrial civil flooring.",
@@ -266,84 +245,86 @@ export const servicesData: ServiceItem[] = [
       {
         url: "/images/company/real-project-18.jpeg",
         title: "Industrial PEB Steel Structure",
-        caption: "High-clearance portal frames and heavy structural steel framing for manufacturing."
+        caption: "High-clearance portal frames for manufacturing."
       },
       {
         url: "/images/company/real-project-25.jpeg",
         title: "Heavy Machine Foundations",
-        caption: "Vibration-damped civil footings and reinforced concrete pads for industrial plant equipment."
+        caption: "Vibration-damped civil footings for plant equipment."
       },
       {
         url: "/images/company/real-project-34.jpeg",
         title: "Tremix VDF Industrial Flooring",
-        caption: "Laser-leveled Vacuum Dewatered Flooring with metallic hardeners for forklift traffic."
+        caption: "Laser-leveled flooring with metallic hardeners."
       },
       {
         url: "/images/company/showroom-2.jpeg",
         title: "Industrial Logistics & Warehouse Hub",
-        caption: "Turnkey warehouse infrastructure with loading docks and high-bay lighting."
+        caption: "Turnkey warehouse infrastructure with loading docks."
       }
     ],
     eyebrow: "INDUSTRIAL CIVIL & PEB INFRASTRUCTURE",
     primaryCta: "Discuss an Industrial Project",
-    summary: "From heavy manufacturing sheds and Pre-Engineered Steel Buildings (PEB) to logistics hubs and cleanrooms, My Space delivers turnkey industrial construction engineered for heavy floor loads, high equipment vibration, and rapid project delivery.",
+    summary: "Pre-Engineered steel buildings, factory sheds, and logistics hubs engineered for heavy floor loads, crane equipment, and rapid delivery.",
     whoIsThisFor: [
-      "Factory and manufacturing plant owners needing expandable industrial sheds",
-      "Logistics and e-commerce operators planning automated warehouse hubs",
-      "Industrial estate plot owners developing custom rental units in Peenya, Bommasandra, or Hoskote",
-      "Enterprises requiring heavy-duty industrial VDF (Vacuum Dewatered) concrete flooring"
+      "Factory and manufacturing plant owners needing industrial sheds",
+      "Logistics and e-commerce operators planning warehouse hubs",
+      "Industrial plot owners developing rental units in KIADB zones"
     ],
     whatWeHelpWith: [
       {
-        title: "PEB & Heavy Structural Steel Fabrication",
-        desc: "High-clearance portal frames, crane girders, thermal insulated sandwich panel roofing, and turbo ventilators."
+        title: "PEB Steel Fabrication",
+        desc: "Clear-span portal frames, crane runways, and insulated roofing."
       },
       {
-        title: "Heavy Load-Bearing Foundations & VDF Flooring",
-        desc: "Laser-leveled Vacuum Dewatered Flooring (VDF/Tremix) with metallic hardeners capable of supporting high-tonnage forklifts."
+        title: "VDF Industrial Flooring",
+        desc: "Laser-leveled Tremix concrete flooring supporting high-tonnage forklifts."
       },
       {
-        title: "Industrial Utilities & Safety Compliance",
-        desc: "Dedicated transformer yard foundations, fire sprinkler loops, ETP/STP plant civil works, and stormwater retention."
+        title: "Heavy Machine Foundations",
+        desc: "Vibration-isolated deep concrete pads for presses and generators."
+      },
+      {
+        title: "Industrial Utilities",
+        desc: "Transformer yards, fire sprinkler loops, and loading docks."
       }
     ],
     whatToPrepare: [
-      "Industrial plot boundaries and KIADB/BMRDA zoning approvals",
-      "Clear height requirement under the hook and crane capacity (e.g. 5T, 10T)",
-      "Floor load bearing requirements (e.g., 5 to 10 MT/sq.m)",
-      "Target industrial machinery installation schedule"
+      "Plot boundaries and KIADB/BMRDA zoning approvals",
+      "Clear height requirement and crane capacity (e.g. 5T, 10T)",
+      "Target floor load capacity (MT/sq.m)"
     ],
     scopeInclusions: [
-      "Heavy civil excavation, soil compaction, and machine foundation casting",
-      "Factory fabricated structural steel trusses, purlins, and galvanized sheeting",
-      "High-durability industrial Tremix flooring with expansion joints",
-      "Perimeter security walls, security gatehouses, and high-clearance truck loading bays"
+      "Earthwork, compaction, and machine foundation casting",
+      "Factory-fabricated steel portal frames and galvanized sheeting",
+      "Heavy-duty Tremix VDF concrete flooring with expansion joints",
+      "Perimeter boundary walls, truck bays, and security cabins"
     ],
     scopeExclusions: [
-      "Industrial manufacturing process machinery and plant assembly",
-      "Pollution control board (KSPCB) statutory operating clearances"
+      "Manufacturing process machinery procurement",
+      "Statutory pollution control board operating clearances"
     ],
     relatedServiceSlugs: ["commercial-construction-bangalore", "civil-construction-bangalore"],
     faqs: [
       {
-        question: "What industrial areas in Bengaluru do you cover?",
-        answer: "We execute industrial projects across Peenya, Bommasandra, Electronic City, Bidadi, Dabaspet, Hoskote, and surrounding industrial corridors in Karnataka."
+        question: "What industrial corridors in Bengaluru do you cover?",
+        answer: "We build across Peenya, Bommasandra, Electronic City, Bidadi, Dabaspet, Hoskote, and surrounding Karnataka industrial zones."
       },
       {
-        question: "What is the difference between PEB structures and conventional civil construction?",
-        answer: "Pre-Engineered Buildings (PEBs) use factory-fabricated high-strength steel portal frames that are bolted on-site, offering 40% faster erection, clear spans up to 60 meters without internal columns, and easy future modular expansion."
+        question: "What is the advantage of PEB structures over conventional civil buildings?",
+        answer: "PEB structures use factory-engineered steel bolted on site, offering 40% faster erection and column-free spans up to 60 meters."
       },
       {
-        question: "How is industrial Tremix VDF flooring constructed for forklift traffic?",
-        answer: "We cast high-grade concrete (M25/M30) with double-layer wire mesh, apply vacuum dewatering to extract excess water, and power-float non-metallic or metallic mineral hardeners into the surface to create an abrasion-resistant, dust-free floor."
+        question: "How is industrial Tremix VDF flooring constructed?",
+        answer: "We cast high-grade concrete, apply vacuum dewatering to remove excess moisture, and power-float metallic hardeners for abrasion resistance."
       },
       {
-        question: "Can you build vibration-isolated foundations for heavy machinery?",
-        answer: "Yes. For CNC machines, power presses, and heavy generators, we design isolated deep concrete mass blocks separated from the surrounding slab by high-density elastomeric dampening cork sheets to eliminate vibration transmission."
+        question: "Can you build vibration-isolated foundations for heavy equipment?",
+        answer: "Yes. We design isolated mass concrete pads separated by elastomeric dampening cork sheets to prevent vibration transfer."
       },
       {
         question: "What clear heights and crane capacities can be accommodated?",
-        answer: "We engineer industrial sheds with eave heights ranging from 6m to 14m, with crane brackets and runway girders supporting EOT overhead travelling cranes from 3-ton to 25-ton capacities."
+        answer: "We engineer eave heights from 6m to 14m with crane runway girders supporting 3-ton to 25-ton EOT cranes."
       }
     ]
   },
@@ -352,7 +333,7 @@ export const servicesData: ServiceItem[] = [
     slug: "civil-construction-bangalore",
     title: "Civil & Structural Construction",
     category: "Build",
-    h1: "Civil construction planned for strength, function, and clarity.",
+    h1: "Civil Construction in Bangalore",
     primaryKeyword: "civil contractors in Bangalore",
     metaTitle: "Civil Contractors in Bangalore | Structural Construction | My Space",
     metaDescription: "Dependable civil and structural engineering execution in Bangalore. Foundation engineering, RCC framing, masonry, and structural retrofitting with strict quality control.",
@@ -362,88 +343,86 @@ export const servicesData: ServiceItem[] = [
       {
         url: "/images/company/real-project-18.jpeg",
         title: "Foundation & Sub-Structure Engineering",
-        caption: "Deep excavation, soil compaction, and RCC footing casting."
+        caption: "Deep excavation and RCC footing casting."
       },
       {
         url: "/images/company/real-project-05.jpeg",
         title: "Certified Rebar Fabrication",
-        caption: "550D TMT steel rebar spacing and cover block placement conforming to IS 456."
+        caption: "550D TMT steel rebar spacing conforming to IS 456."
       },
       {
         url: "/images/company/real-project-39.jpeg",
         title: "Reinforced Masonry & Plastering",
-        caption: "High-density blockwork with chicken mesh joint reinforcement at concrete junctions."
+        caption: "Solid blockwork with joint mesh reinforcement."
       },
       {
         url: "/images/company/real-project-56.jpeg",
         title: "Advanced Terrace Waterproofing",
-        caption: "Multi-layer elastomeric coating and screed protection for long-term damp prevention."
+        caption: "Multi-layer elastomeric membrane coating."
       }
     ],
     eyebrow: "CIVIL & STRUCTURAL ENGINEERING CONTRACTORS",
     primaryCta: "Discuss Civil Construction",
-    summary: "The longevity of any building lies in what cannot be seen: soil-matched footings, precise rebar tying, vibration-compacted concrete, and structural load pathways. My Space provides engineering-governed civil contracting for new projects and structural expansions.",
+    summary: "Engineering-governed civil contracting: soil-matched foundations, certified rebar placement, compacted concrete, and multi-tier waterproofing.",
     whoIsThisFor: [
-      "Builders and developers needing a specialized civil contracting team",
-      "Homeowners adding additional floors, rooftop structures, or cantilever extensions",
-      "Clients requiring deep basement excavation, retaining walls, and waterproofing in water-logged soils",
-      "Commercial entities undertaking heavy civil foundation works and equipment pads"
+      "Builders needing specialized structural civil execution",
+      "Homeowners adding extra floors or cantilever extensions",
+      "Clients requiring deep basement retaining walls in water-logged soils"
     ],
     whatWeHelpWith: [
       {
-        title: "Foundation & Sub-structure Engineering",
-        desc: "Isolated footings, combined footings, raft foundations, and pile caps engineered according to soil strata and groundwater depth."
+        title: "Foundation Engineering",
+        desc: "Isolated footings, rafts, and pile caps matched to soil strata."
       },
       {
-        title: "RCC Superstructure Casting",
-        desc: "High-grade concrete column, beam, and slab casting using steel formwork, precise cover blocks, and mechanical vibrators."
+        title: "RCC Superstructure",
+        desc: "Column, beam, and slab casting using steel formwork and RMC concrete."
       },
       {
-        title: "Advanced Waterproofing & Damp Proofing",
-        desc: "Integral crystalline waterproofing, elastomeric membrane coatings, and injection grouting for basements, sumps, and wet zones."
+        title: "Multi-Tier Waterproofing",
+        desc: "Crystalline admixtures and elastomeric membrane coatings for wet zones."
       },
       {
-        title: "Structural Masonry & Wall Systems",
-        desc: "Precision solid block, AAC block, or wire-cut red brick masonry with reinforced lintels and bond beams to prevent settlement cracks."
+        title: "Structural Masonry",
+        desc: "Solid concrete block masonry with reinforced lintels and mesh."
       }
     ],
     whatToPrepare: [
-      "Soil test report / Geotechnical investigation data if available",
-      "Structural engineering drawings or architectural floor layouts",
-      "Site access conditions and neighbouring structure clearances",
-      "Specific concrete grade (e.g. M20, M25, M30) requirements"
+      "Soil test investigation report if available",
+      "Structural engineering drawings or floor plans",
+      "Site access conditions and neighbouring plot setbacks"
     ],
     scopeInclusions: [
-      "Excavation, earthwork, backfilling, and compaction",
-      "PCC sub-base, shuttering, de-shuttering, and structural rebar fabrication",
-      "Ready-Mix Concrete (RMC) or batch-controlled machine site mixing",
-      "Structural masonry, lintels, chajjas, and parapet walls"
+      "Earthwork, backfilling, PCC sub-base, and compaction",
+      "550D TMT steel fabrication and shuttering works",
+      "Machine batch-mixed or RMC concrete casting with cube testing",
+      "Solid block masonry, lintels, chajjas, and parapet walls"
     ],
     scopeExclusions: [
-      "Architectural interior woodwork and surface polishes",
-      "Non-structural soft finishes unless requested under combined package"
+      "Loose interior woodwork and soft furnishings",
+      "Architectural fit-out accessories unless in combined scope"
     ],
     relatedServiceSlugs: ["house-construction-bangalore", "commercial-construction-bangalore", "property-valuation-bangalore"],
     faqs: [
       {
         question: "How do you prevent cracks in masonry and plaster?",
-        answer: "We install chicken mesh (GI wire mesh) at all RCC-to-brickwork junctions, use crack-filler polymers in plaster mixes, enforce strict wet-curing cycles, and maintain expansion joints where required."
+        answer: "We install GI wire chicken mesh at all RCC-to-blockwork joints, use polymer crack fillers, and enforce full wet-curing cycles."
       },
       {
-        question: "Do you supply the materials or work on labour-only contracts?",
-        answer: "We primarily execute on a Material + Labour turnkey basis to guarantee structural material quality (certified 550D TMT steel, 53-grade OPC/PPC cement), but also evaluate structured project-management civil contracts."
+        question: "Do you supply materials or work on labour-only contracts?",
+        answer: "We primarily execute on a turnkey material + labour basis using certified 550D steel and 53-grade cement."
       },
       {
         question: "What concrete grades and TMT steel specifications do you use?",
-        answer: "We use minimum M20 to M30 grade concrete for structural elements with test cubes taken per batch, and primary branded Fe550D TMT rebars (Tata Tiscon, JSW Neosteel, or SAIL) ensuring high ductility and seismic resistance."
+        answer: "We use M20 to M30 concrete with batch cube testing, and branded Fe550D TMT bars (Tata Tiscon, JSW, SAIL)."
       },
       {
-        question: "How do you handle foundation challenges in clay or low-bearing Bangalore soils?",
-        answer: "We perform soil-bearing capacity (SBC) calculations and design deep raft foundations, under-reamed piles, or rubble masonry footing cushions to eliminate differential settlement and foundation sinking."
+        question: "How do you handle low-bearing Bangalore clay soils?",
+        answer: "We design deep raft foundations or under-reamed piles to eliminate differential settlement and foundation sinking."
       },
       {
-        question: "What multi-stage waterproofing systems are implemented?",
-        answer: "We install integral crystalline admixtures in concrete, applied 2-coat elastomeric polymer membranes for sunken slabs and terraces, fiber-mesh reinforcement in corners, and pressure injection grouting for sumps and basements."
+        question: "What waterproofing systems are implemented?",
+        answer: "We apply crystalline concrete admixtures, 2-coat elastomeric membranes, fiber-mesh corners, and pressure grouting."
       }
     ]
   },
@@ -452,7 +431,7 @@ export const servicesData: ServiceItem[] = [
     slug: "interior-design-bangalore",
     title: "Interior Design & Execution",
     category: "Design",
-    h1: "Make the inside of your space work better.",
+    h1: "Interior Design & Execution in Bangalore",
     primaryKeyword: "interior design company in Bangalore",
     metaTitle: "Interior Design Company in Bangalore | Space Planning & Execution | My Space",
     metaDescription: "Tailored residential and commercial interior design in Bangalore. Space planning, modular joinery, custom woodwork, lighting design, and execution support.",
@@ -462,89 +441,86 @@ export const servicesData: ServiceItem[] = [
       {
         url: "/images/company/showroom-3.jpeg",
         title: "Living & Lounge Space Planning",
-        caption: "Bespoke media units with concealed cabling and warm architectural profile lighting."
+        caption: "Bespoke media units with concealed cabling."
       },
       {
         url: "/images/company/interior-design-hero.jpeg",
         title: "Custom Modular Kitchen",
-        caption: "BWP marine plywood cabinetry, quartz countertop, and soft-close German hardware."
+        caption: "BWP marine plywood cabinetry with quartz counters."
       },
       {
         url: "/images/company/real-project-44.jpeg",
         title: "Floor-to-Ceiling Wardrobes",
-        caption: "Anti-scratch acrylic and laminate finishes with integrated internal LED illumination."
+        caption: "Acrylic finish joinery with internal lighting."
       },
       {
         url: "/images/company/real-project-51.jpeg",
         title: "False Ceiling & Ambient Lighting",
-        caption: "Layered ambient, task, and accent lighting with gypsum false ceilings and magnetic track lights."
+        caption: "Gypsum false ceilings with magnetic track lights."
       }
     ],
     eyebrow: "INTERIOR ARCHITECTURE & FIT-OUT EXECUTION",
     primaryCta: "Plan Your Interiors",
-    summary: "Interior design at My Space is not about superficial trends or catalog copy-pastes. We design for daily movement, natural ventilation, durable materials, concealed cable routing, and built-in storage tailored to how you cook, rest, and work.",
+    summary: "Bespoke modular woodwork, ergonomic kitchens, false ceilings, and ambient lighting executed with factory precision and durable marine ply.",
     whoIsThisFor: [
-      "Homeowners moving into newly constructed independent houses, villas, or apartments",
-      "Families renovating dated kitchens, wardrobes, and living areas for modern ergonomics",
-      "Commercial brands needing branded, welcoming, and high-durability reception and workspaces",
-      "Clients who want 3D visual clarity followed by precise factory and on-site carpentry execution"
+      "Homeowners moving into newly constructed houses or apartments",
+      "Families renovating kitchens, wardrobes, and living rooms",
+      "Commercial offices requiring functional workstations and cabins"
     ],
     whatWeHelpWith: [
       {
-        title: "Modular Kitchen & Storage Ergonomics",
-        desc: "Bespoke kitchen work triangles, boiling waterproof (BWP) marine ply cabinetry, soft-close German hardware, and anti-scratch acrylic/laminate finishes."
+        title: "Modular Kitchens & Storage",
+        desc: "BWP marine ply, soft-close German hardware, and quartz counters."
       },
       {
-        title: "Custom Wardrobes & Space Saving Joinery",
-        desc: "Floor-to-ceiling wardrobes with integrated profile lighting, concealed vanity units, study desks, and multifunctional storage benches."
+        title: "Wardrobes & Joinery",
+        desc: "Floor-to-ceiling wardrobes with integrated profile illumination."
       },
       {
-        title: "False Ceiling & Architectural Lighting",
-        desc: "Layered ambient, task, and accent lighting with gypsum false ceilings, magnetic track lights, and warm LED cove channels."
+        title: "Ceilings & Lighting",
+        desc: "Gypsum false ceilings with magnetic track lights and warm LED coves."
       },
       {
-        title: "Living & Dining Spatial Zoning",
-        desc: "TV media consoles with hidden wiring conduits, fluted panel dividers, stone-topped dining tables, and bespoke foyer credenzas."
+        title: "Living & Media Units",
+        desc: "Consoles with concealed cabling conduits and fluted wall paneling."
       }
     ],
     whatToPrepare: [
-      "Floor plan with room dimensions or current handover status",
-      "Family lifestyle requirements (number of occupants, cooking habits, work-from-home needs)",
-      "Preferred material preferences (natural veneer, matte laminate, quartz, fluted glass)",
-      "Target move-in timeline"
+      "Floor plan with room dimensions",
+      "Family lifestyle requirements and storage needs",
+      "Target move-in schedule"
     ],
     scopeInclusions: [
-      "3D interior visualization views and 2D carpentry fabrication drawings",
-      "Factory-pressed BWP / BWR plywood carcasses with 1mm edge-banded laminates",
-      "Branded hardware (Hafele, Hettich, Blum or equivalent as approved)",
-      "False ceiling framing, wiring, LED fixtures, and premium interior paint finishes",
-      "On-site installation, stone countertop fitting, and deep pre-handover cleaning"
+      "3D interior visualization views and 2D fabrication drawings",
+      "Factory-pressed BWP marine plywood with 1mm edge-banded laminates",
+      "Branded soft-close hardware (Hafele, Hettich, Blum)",
+      "False ceiling framing, wiring, LED fixtures, and luxury paint finishes"
     ],
     scopeExclusions: [
-      "Loose soft furnishings (curtains, loose rugs, wall art) unless specified in package",
-      "Personal kitchen appliances (refrigerator, oven, hob) unless coordinated in order"
+      "Loose soft furnishings (curtains, loose rugs) unless specified",
+      "Movable electronics and kitchen appliances"
     ],
     relatedServiceSlugs: ["house-construction-bangalore", "3d-floor-plan-design-bangalore", "elevation-design-bangalore"],
     faqs: [
       {
-        question: "What core materials do you use for wet areas like kitchens and bathrooms?",
-        answer: "We strictly use IS 710 certified Boiling Waterproof (BWP) marine plywood with calibrated thickness and zero core gaps, paired with anti-fungal silicones and waterproof laminates or acrylics."
+        question: "What core materials do you use for kitchens and wet zones?",
+        answer: "We strictly use IS 710 certified Boiling Waterproof (BWP) marine plywood with calibrated thickness and waterproof laminates."
       },
       {
-        question: "Can you coordinate interior civil modifications like moving a door or electrical points?",
-        answer: "Yes. Because we have in-house civil and electrical teams, we handle wall shifts, plumbing rerouting, and switchboard additions directly without relying on outside sub-contractors."
+        question: "Can you handle civil modifications like shifting walls or electrical points?",
+        answer: "Yes. Our in-house civil and electrical teams handle wall adjustments, plumbing shifts, and switchboard relocations directly."
       },
       {
-        question: "What is the typical timeline for turnkey residential interior execution?",
-        answer: "A complete 3BHK interior project typically takes 45 to 60 days from 3D design freeze and factory fabrication to on-site assembly, painting, and deep cleaning."
+        question: "What is the typical timeline for turnkey residential interiors?",
+        answer: "A complete 3BHK interior project takes 45 to 60 days from 3D design freeze to on-site assembly and deep cleaning."
       },
       {
-        question: "Do you manufacture cabinetry in a factory setup or build on-site?",
-        answer: "All modular carcasses and shutters are precision CNC cut and edge-banded in our partner factory facility using hot-melt polyurethane glue, with only final assembly and customized filler scribing executed on-site."
+        question: "Do you manufacture cabinetry in a factory or on site?",
+        answer: "All carcasses and shutters are CNC cut and edge-banded in our partner factory facility, with final assembly on site."
       },
       {
-        question: "What hardware brands and warranties do you provide?",
-        answer: "We fit genuine German hardware (Hettich, Hafele, Blum) with manufacturer warranties up to 10 years on soft-close hinges, drawer channels, and lift-up mechanisms."
+        question: "What hardware brands and warranties are included?",
+        answer: "We use authentic German hardware (Hettich, Hafele, Blum) with up to 10-year manufacturer warranties."
       }
     ]
   },
@@ -553,7 +529,7 @@ export const servicesData: ServiceItem[] = [
     slug: "2d-design-bangalore",
     title: "2D Architectural Design",
     category: "Design",
-    h1: "Precision 2D architectural drawings and municipal sanction plans.",
+    h1: "2D Architectural Design & Blueprints",
     primaryKeyword: "2D architectural design Bangalore",
     metaTitle: "2D Architectural Design & Floor Plans Bangalore | My Space",
     metaDescription: "Detailed 2D architectural plans, BBMP/BDA sanction drawings, working fabrication details, and electrical/plumbing conduit layouts.",
@@ -563,75 +539,84 @@ export const servicesData: ServiceItem[] = [
       {
         url: "/images/company/real-project-01.jpeg",
         title: "Dimensional Floor Plans",
-        caption: "Precise 2D architectural drafting with room dimensions conforming to BBMP bylaws."
+        caption: "Precise 2D layouts conforming to BBMP bylaws."
       },
       {
         url: "/images/company/real-project-21.jpeg",
         title: "Structural Centerline Grid",
-        caption: "Accurate column centerlines and excavation drawings for site civil masons."
+        caption: "Column centerline coordinates for civil masons."
       },
       {
         url: "/images/company/real-project-38.jpeg",
         title: "MEP Conduit & Plumbing Plans",
-        caption: "Concealed electrical conduit layouts, drainage drop shafts, and plumbing schematics."
+        caption: "Concealed electrical and plumbing routing schematics."
       },
       {
         url: "/images/company/front-elevation-hero.jpeg",
         title: "Sectional Elevation Details",
-        caption: "Door, window schedules, stair risers, and structural cross-section details."
+        caption: "Door, window, and stair sectional drawings."
       }
     ],
     eyebrow: "ARCHITECTURAL SPATIAL PLANNING & WORKING DRAWINGS",
     primaryCta: "Request 2D Plan Review",
-    summary: "A successful build depends on uncompromising precision in 2D technical working drawings. We craft dimensioned floor plans, door/window schedules, structural grids, and sanction drawings that ensure seamless site execution without ambiguity.",
+    summary: "Dimensioned floor plans, column centerline grids, door/window schedules, and sanction blueprints drafted for error-free site construction.",
     whoIsThisFor: [
-      "Plot owners requiring custom 2D floor plans optimized for light and Vastu",
-      "Builders needing comprehensive working drawing sets for site masonry and carpenters",
-      "Homeowners submitting architectural plans for BBMP or local authority sanction"
+      "Plot owners requiring custom 2D floor plans with Vastu alignment",
+      "Builders needing comprehensive working drawing sets for site teams",
+      "Homeowners submitting architectural plans for BBMP municipal sanction"
     ],
     whatWeHelpWith: [
       {
         title: "Dimensional Spatial Layouts",
-        desc: "Clear room-by-room dimensions, wall thicknesses, door swing arcs, and stair riser/tread geometry."
+        desc: "Room dimensions, wall thicknesses, and stair geometry."
       },
       {
-        title: "MEP & Electrical Working Conduits",
-        desc: "Precise switchboard positions, plumbing drop shafts, wastewater line slope angles, and AC core-cut locations."
+        title: "MEP Conduit Schematics",
+        desc: "Switchboard positions, plumbing shafts, and AC core-cut locations."
+      },
+      {
+        title: "Centerline Grids",
+        desc: "Accurate excavation and column coordinates for site engineers."
+      },
+      {
+        title: "Municipal Sanction Sets",
+        desc: "Drafted strictly to BBMP/BDA setback and FAR bylaws."
       }
     ],
     whatToPrepare: [
-      "Plot survey drawing and dimensions",
-      "Specific family or commercial spatial requirements"
+      "Plot survey sketch and boundary dimensions",
+      "Family room inventory and parking requirements",
+      "Orientation and cardinal directions"
     ],
     scopeInclusions: [
-      "Architectural conceptual floor plans",
-      "Detailed working drawings and sectional elevations",
+      "Architectural conceptual floor plans and revision rounds",
+      "Detailed working drawings, centerline grids, and sectional elevations",
       "Door and window schedules with hardware specifications"
     ],
     scopeExclusions: [
-      "Government plan sanction fee deposits"
+      "Statutory municipal sanction fee deposits"
     ],
     relatedServiceSlugs: ["3d-floor-plan-design-bangalore", "elevation-design-bangalore", "house-construction-bangalore"],
     faqs: [
       {
         question: "Do your 2D plans conform to Bengaluru building bylaws?",
-        answer: "Yes, all our plans strictly consider BBMP/BDA setback rules, Floor Area Ratio (FAR), road width criteria, and light/ventilation requirements."
+        answer: "Yes, all plans comply with BBMP/BDA setback rules, Floor Area Ratio (FAR), road width criteria, and ventilation norms."
       },
       {
-        question: "What technical working drawings are included in the complete 2D set?",
-        answer: "A complete set includes dimensioned floor layouts, column center-line grids, door/window schedules, stair sectional elevations, toilet plumbing schematics, and electrical conduit routing diagrams."
+        question: "What working drawings are included in the 2D set?",
+        answer: "A complete set includes floor layouts, column centerlines, door/window schedules, stair sections, and MEP conduit diagrams."
       },
       {
-        question: "How do you balance Vastu Shastra with modern spatial efficiency?",
-        answer: "We incorporate core Vastu alignments (master bedroom in Southwest, kitchen in Southeast, main entrance orientation) while ensuring optimal natural cross-ventilation, daylighting, and zero dead hallway space."
+        question: "How do you balance Vastu Shastra with spatial efficiency?",
+        answer: "We incorporate core Vastu alignments (kitchen in SE, master bedroom in SW) while ensuring cross-ventilation and zero wasted space."
       },
       {
-        question: "Can I order standalone 2D floor plans without construction contracting?",
-        answer: "Yes. You can engage My Space solely for architectural 2D concept design and working drawing sets for your own independent civil contractor."
+        question: "Can I order standalone 2D floor plans without construction?",
+        answer: "Yes. You can engage My Space solely for architectural 2D concept design and working drawing sets for your contractor."
       },
       {
-        question: "How many design revisions are included during 2D planning?",
-        answer: "We provide iterative design rounds until you are 100% satisfied with the room dimensions, furniture layout, and circulation flow before freezing final working drawings."
+        question: "How many design revisions are included?",
+        answer: "We provide iterative design rounds until you are completely satisfied with the room dimensions and circulation flow."
       }
     ]
   },
@@ -640,7 +625,7 @@ export const servicesData: ServiceItem[] = [
     slug: "3d-design-bangalore",
     title: "3D Design & Visualization",
     category: "Design",
-    h1: "Photorealistic 3D architectural models, elevations, and walkthroughs.",
+    h1: "3D Design & Architectural Visualization",
     primaryKeyword: "3D design services Bangalore",
     metaTitle: "3D Design & Façade Visualization Bangalore | My Space",
     metaDescription: "High-definition 3D elevations, spatial visualizations, and realistic exterior/interior 3D modeling for residential and commercial spaces.",
@@ -650,74 +635,82 @@ export const servicesData: ServiceItem[] = [
       {
         url: "/images/company/front-elevation-hero.jpeg",
         title: "Photorealistic 3D Exterior Elevation",
-        caption: "Contemporary façade styling with textured terracotta louvers and concrete accents."
+        caption: "Contemporary façade with terracotta louvers."
       },
       {
         url: "/images/company/showroom-4.jpeg",
-        title: "Daylight Sunlight & Shadow Simulation",
-        caption: "Accurate solar orientation and shadow casting for Bangalore weather conditions."
+        title: "Sunlight & Shadow Simulation",
+        caption: "Solar orientation study for Bangalore climate."
       },
       {
         url: "/images/company/real-project-54.jpeg",
         title: "Evening Lighting & Atmosphere",
-        caption: "Warm architectural up-down wall washers and balcony lighting visual study."
+        caption: "Warm architectural exterior lighting study."
       },
       {
         url: "/images/company/showroom-1.jpeg",
         title: "Furnished 3D Isometric View",
-        caption: "Top-down furnished perspective demonstrating seamless spatial circulation."
+        caption: "Top-down perspective showing walkway circulation."
       }
     ],
     eyebrow: "3D ARCHITECTURAL VISUALIZATION & ELEVATIONS",
     primaryCta: "Get 3D Design Quote",
-    summary: "Experience every architectural nuance before construction starts. Our 3D design services transform blueprints into vivid exterior façades, furnished isometric spatial layouts, and daylight/nighttime illumination models.",
+    summary: "Photorealistic 3D elevations, furnished isometric layouts, and sunlight/dusk lighting simulations to experience your space before building.",
     whoIsThisFor: [
-      "Homeowners looking to approve exterior finishes, textures, and lighting before building",
-      "Architects and developers seeking photorealistic marketing renders for clients",
-      "Commercial entities seeking distinctive street-facing brand identity"
+      "Homeowners approving exterior finishes and textures before building",
+      "Architects and developers seeking photorealistic marketing renders",
+      "Commercial businesses creating distinctive street frontage"
     ],
     whatWeHelpWith: [
       {
         title: "3D Exterior Façade Design",
-        desc: "Terracotta louvers, cantilevered balconies, micro-cement textures, and architectural up-down wall lighting."
+        desc: "Louvers, cantilever balconies, textures, and architectural lighting."
       },
       {
-        title: "Furnished 3D Spatial Models",
-        desc: "Isometric top-down views showing furniture proportions and circulation paths."
+        title: "Furnished Isometric Models",
+        desc: "Isometric top-down perspectives showing furniture proportions."
+      },
+      {
+        title: "Sunlight & Dusk Studies",
+        desc: "Simulating daylight shadows and evening wall washer illumination."
+      },
+      {
+        title: "Fabrication Callouts",
+        desc: "Dimensioned projection sheets for site masons and fabricators."
       }
     ],
     whatToPrepare: [
       "2D floor layout with dimensions",
-      "Preferred architectural style references"
+      "Preferred architectural style references and color tastes"
     ],
     scopeInclusions: [
       "High-resolution 3D perspective renders (Day and Dusk views)",
       "Material callout sheets for contractor site execution"
     ],
     scopeExclusions: [
-      "Physical structural modifications without civil approval"
+      "Physical structural load alterations without civil approval"
     ],
     relatedServiceSlugs: ["elevation-design-bangalore", "interior-design-bangalore", "2d-design-bangalore"],
     faqs: [
       {
         question: "How long does a 3D elevation design take?",
-        answer: "Initial 3D design concepts are presented within 3 to 5 working days following 2D layout confirmation."
+        answer: "Initial 3D concepts are presented within 3 to 5 working days following 2D layout freeze."
       },
       {
-        question: "What inputs are required to start a 3D architectural visualization?",
-        answer: "We require your approved 2D floor plans with floor-to-floor heights, cardinal site orientation (for sunlight studies), and any exterior reference images you like."
+        question: "What inputs are required to start 3D visualization?",
+        answer: "We require approved 2D floor plans with floor heights, cardinal orientation, and exterior reference images."
       },
       {
         question: "Do you provide both daytime and evening illumination renders?",
-        answer: "Yes, our standard 3D package includes high-resolution daylight sun-study views as well as warm evening dusk renders showing exterior up-down wall washers, step lights, and landscape illumination."
+        answer: "Yes, our package includes daylight sun-study renders and warm evening dusk views with lighting placement."
       },
       {
-        question: "Will the 3D renders reflect materials that are locally available in Bangalore?",
-        answer: "Yes. We texture our 3D models using real-world materials readily available in Bengaluru—including wire-cut terracotta jali, Sadarahalli granite, exterior HPL sheets, and Asian Paints exterior texture shades."
+        question: "Will the 3D renders reflect locally available materials?",
+        answer: "Yes. We texture models using real materials available in Bengaluru (terracotta jali, granite, HPL, Asian Paints shades)."
       },
       {
-        question: "Can you provide 3D isometric floor plan cutaways and walkthrough animations?",
-        answer: "Yes. In addition to exterior elevations, we generate furnished 3D isometric floor cutaways and high-definition cinematic video walkthroughs upon request."
+        question: "Can you provide furnished 3D floor plan cutaways?",
+        answer: "Yes. We generate furnished 3D isometric floor cutaways and cinematic video walkthroughs upon request."
       }
     ]
   },
@@ -726,7 +719,7 @@ export const servicesData: ServiceItem[] = [
     slug: "structural-design-bangalore",
     title: "Structural Design",
     category: "Design",
-    h1: "Certified structural engineering and RCC framework design.",
+    h1: "Certified Structural Design & Engineering",
     primaryKeyword: "structural engineers in Bangalore",
     metaTitle: "Structural Design & Engineering Services Bangalore | My Space",
     metaDescription: "Certified structural engineering, RCC detailing, bar bending schedules, foundation design, and seismic analysis in Bangalore conforming to IS codes.",
@@ -736,75 +729,83 @@ export const servicesData: ServiceItem[] = [
       {
         url: "/images/company/real-project-18.jpeg",
         title: "RCC Frame & Column Design",
-        caption: "IS 456 compliant reinforced concrete framing calculations for seismic stability."
+        caption: "IS 456 compliant reinforced concrete calculations."
       },
       {
         url: "/images/company/real-project-05.jpeg",
         title: "Bar Bending Schedules (BBS)",
-        caption: "Precise reinforcement cut and bend schedules preventing steel site wastage."
+        caption: "Rebar cut and bend schedules reducing steel waste."
       },
       {
         url: "/images/company/real-project-25.jpeg",
         title: "Soil-Matched Footing Design",
-        caption: "Foundation engineering tailored to soil-bearing capacity across Bangalore zones."
+        caption: "Foundations tailored to Bangalore soil strata."
       },
       {
         url: "/images/company/real-project-39.jpeg",
         title: "Structural Inspection & Checking",
-        caption: "Site verification of rebar placement, cover blocks, and concrete slump."
+        caption: "Site checking of rebar placement and cover blocks."
       }
     ],
     eyebrow: "CERTIFIED STRUCTURAL ENGINEERING & RCC DESIGN",
     primaryCta: "Consult Structural Engineers",
-    summary: "Every safe building starts with rigorous structural engineering. We perform soil-bearing analysis, seismic load computations (IS 1893), frame design (IS 456), and bar bending schedules (BBS) to deliver strong, cost-effective structural drawings.",
+    summary: "Certified structural load analysis, IS 456 RCC frame design, seismic engineering (IS 1893), and Bar Bending Schedules for safe construction.",
     whoIsThisFor: [
-      "Homeowners seeking certified structural drawings for new house construction",
-      "Developers adding extra floors requiring structural stability verification",
-      "Builders needing optimized steel reinforcement detailing to prevent over-design"
+      "Homeowners needing certified structural drawings for new builds",
+      "Developers adding extra floors requiring load feasibility verification",
+      "Builders optimizing steel detailing to prevent costly over-design"
     ],
     whatWeHelpWith: [
       {
-        title: "Footing & Raft Foundation Calculations",
-        desc: "Soil-matched foundation sizing to prevent differential settlement in challenging Bangalore clay soils."
+        title: "Foundation & Raft Sizing",
+        desc: "Soil-matched foundation sizing to prevent differential settlement."
       },
       {
-        title: "RCC Frame & Steel Detailing",
-        desc: "Column, beam, and slab reinforcement drawings with bar-bending schedules for site contractors."
+        title: "RCC Frame & BBS Detailing",
+        desc: "Column, beam, and slab reinforcement drawings with cutting schedules."
+      },
+      {
+        title: "Seismic Load Modeling",
+        desc: "IS 1893 compliant earthquake resistant framework calculations."
+      },
+      {
+        title: "Engineer Certification",
+        desc: "Official calculation reports signed by Chartered Engineers."
       }
     ],
     whatToPrepare: [
-      "Soil investigation report",
-      "Architectural floor plans and floor-to-floor heights"
+      "Soil geotechnical investigation report",
+      "Architectural 2D floor plans and floor heights"
     ],
     scopeInclusions: [
       "Structural calculation report and framing layouts",
-      "Column center-line and footing detail drawings",
-      "Structural engineer certification"
+      "Column centerline, footing details, and bar bending schedules",
+      "Chartered Structural Engineer signed drawings"
     ],
     scopeExclusions: [
-      "Geotechnical soil borehole drilling equipment"
+      "On-site geotechnical soil borehole drilling machinery"
     ],
     relatedServiceSlugs: ["civil-construction-bangalore", "house-construction-bangalore"],
     faqs: [
       {
         question: "Are your structural designs compliant with Indian Standards?",
-        answer: "Yes, all designs strictly conform to IS 456:2000 (Plain and Reinforced Concrete), IS 1893 (Earthquake Resistant Design), and IS 875 (Design Loads)."
+        answer: "Yes, all designs strictly conform to IS 456:2000 (Concrete), IS 1893 (Seismic), and IS 875 (Design Loads)."
       },
       {
-        question: "Why is a geotechnical soil investigation test essential before structural design?",
-        answer: "A soil test determines the exact Safe Bearing Capacity (SBC) and water table depth. Designing foundations without a soil test risks either dangerous structural settlement or expensive over-design of concrete footings."
+        question: "Why is a geotechnical soil investigation test essential?",
+        answer: "A soil test determines Safe Bearing Capacity (SBC), preventing unsafe foundation sinking or costly over-design."
       },
       {
-        question: "What are Bar Bending Schedules (BBS) and how do they prevent steel wastage?",
-        answer: "A BBS provides the site rebar cutting and bending lengths, hook angles, and bar diameters for every structural element, minimizing steel off-cut scrap and ensuring exact alignment with engineering drawings."
+        question: "What are Bar Bending Schedules (BBS)?",
+        answer: "A BBS provides exact cutting and bending lengths for every structural element, minimizing steel off-cut waste on site."
       },
       {
-        question: "Can you certify structural stability for vertical expansion (adding extra floors)?",
-        answer: "Yes. We perform non-destructive concrete testing (Rebound Hammer / UPV), review original drawings, calculate additional dead/live loads, and provide certified structural feasibility reports with retrofitting details if required."
+        question: "Can you certify structural stability for adding extra floors?",
+        answer: "Yes. We perform non-destructive tests (Rebound Hammer), review drawings, and issue certified feasibility reports."
       },
       {
-        question: "Do your structural engineers visit the site during reinforcement tying and casting?",
-        answer: "Yes. Our engineers conduct critical pre-pour inspections to verify rebar sizes, spacing, lap lengths, chair bars, and concrete cover blocks before issuing the casting clearance certificate."
+        question: "Do your structural engineers visit the site before casting?",
+        answer: "Yes. Our engineers inspect rebar spacing, laps, and cover blocks before issuing concrete pour clearance."
       }
     ]
   },
@@ -813,7 +814,7 @@ export const servicesData: ServiceItem[] = [
     slug: "elevation-design-bangalore",
     title: "3D Elevation Design",
     category: "Design",
-    h1: "See the character of your building before it is built.",
+    h1: "3D Elevation & Façade Design",
     primaryKeyword: "3D elevation design Bangalore",
     metaTitle: "3D Elevation Design Bangalore | Façade Architecture | My Space",
     metaDescription: "Visualise the exterior character of your Bangalore building before construction. Modern, contemporary, and tropical elevation designs with realistic lighting and materials.",
@@ -823,89 +824,85 @@ export const servicesData: ServiceItem[] = [
       {
         url: "/images/company/showroom-4.jpeg",
         title: "Contemporary Exterior Façade",
-        caption: "Sleek architectural exterior with warm wooden rafters and glass balustrades."
+        caption: "Architectural exterior with wooden louvers and glass."
       },
       {
         url: "/images/company/front-elevation-hero.jpeg",
         title: "Material Harmony & Textures",
-        caption: "Terracotta jali, exposed concrete, and stone cladding texture mapping."
+        caption: "Terracotta jali, concrete, and stone cladding."
       },
       {
         url: "/images/company/real-project-54.jpeg",
         title: "Façade Accent Night Illumination",
-        caption: "Day and evening lighting studies showing exterior light placement."
+        caption: "Day and evening lighting placement studies."
       },
       {
         url: "/images/company/showroom-1.jpeg",
         title: "Fabrication Working Drawings",
-        caption: "Dimensioned elevation blueprints for on-site fabrication teams."
+        caption: "Dimensioned blueprints for on-site fabrication."
       }
     ],
     eyebrow: "ARCHITECTURAL FAÇADE & ELEVATION DESIGN",
     primaryCta: "Request a Design Consultation",
-    summary: "An elevation is the architectural identity of your property. Our elevation design service blends sunlight angles, window placement, terracotta louvers, exposed concrete textures, wooden rafters, and landscape elements into photorealistic 3D studies.",
+    summary: "Bespoke 3D exterior styling blending terracotta louvers, exposed concrete textures, glass balustrades, and night accent lighting.",
     whoIsThisFor: [
-      "Plot owners who have a 2D floor plan but want to visualize how the exterior will look in 3D",
-      "Existing building owners seeking a modern exterior facelift or vertical expansion design",
-      "Commercial property owners needing attractive frontage design for street appeal and footfall",
-      "Builders looking for high-resolution 3D renders to showcase to prospective buyers"
+      "Plot owners visualizing exterior styling from existing 2D floor plans",
+      "Building owners seeking modern exterior facelifts or vertical expansion",
+      "Commercial properties needing striking street frontage"
     ],
     whatWeHelpWith: [
       {
-        title: "Multiple Architectural Styles",
-        desc: "Exploring Contemporary Minimalist, Tropical Modern, Brutalist Exposed Concrete, Traditional Vernacular, or Neo-Classical façades."
+        title: "Multiple Façade Styles",
+        desc: "Contemporary Minimalist, Tropical Modern, and Neo-Classical concepts."
       },
       {
-        title: "Real-World Material Mapping",
-        desc: "Selecting achievable local Bangalore materials: wire-cut terracotta jali, HPL cladding, stone cladding, fluted panels, and powder-coated MS/Aluminium louvers."
+        title: "Achievable Materials",
+        desc: "Terracotta jali, HPL cladding, stone textures, and powder-coated louvers."
       },
       {
-        title: "Lighting & Night Elevation Studies",
-        desc: "Designing façade accent lighting, warm up-down wall washers, step lights, and landscape illumination for stunning evening aesthetics."
+        title: "Night Lighting Studies",
+        desc: "Designing warm up-down wall washers and profile LED accents."
       },
       {
-        title: "Execution-Ready Façade Drawings",
-        desc: "Translating 3D visual renders into 2D dimensioned elevation drawings for site masons, fabricators, and cladding vendors."
+        title: "Working Blueprints",
+        desc: "Dimensioned 2D drawings for on-site masons and fabricators."
       }
     ],
     whatToPrepare: [
-      "Approved or draft 2D floor plans with floor-to-floor heights",
-      "Plot orientation and cardinal direction (North, East, West, South sunlight exposure)",
-      "Photographs of surrounding context and neighbouring plots",
-      "Façade styles or reference images you appreciate"
+      "2D floor plans with floor-to-floor heights",
+      "Plot orientation and cardinal directions for sunlight",
+      "Façade style reference photos"
     ],
     scopeInclusions: [
-      "Initial concept exploration based on your floor plan",
-      "High-resolution 3D photorealistic perspective renders (Day view & Evening lighting view)",
-      "Detailed material callout specifications (paint codes, tile sizes, wood finishes)",
+      "High-resolution 3D daytime and evening perspective renders",
+      "Detailed material callout specifications and paint codes",
       "2D sectional dimensions for architectural fabrication"
     ],
     scopeExclusions: [
-      "Physical structural load alterations without civil engineering clearance",
-      "Statutory municipal sanction approvals unless enrolled in full architectural scope"
+      "Structural load changes without civil engineering clearance"
     ],
-    disclaimer: "Visualizations communicate design intent and spatial aesthetics. Final construction detailing depends on structural verification and local municipal setback guidelines.",
+    disclaimer: "Visualizations communicate design intent and spatial aesthetics. Detailing aligns with local municipal setback rules.",
     relatedServiceSlugs: ["3d-floor-plan-design-bangalore", "house-construction-bangalore", "interior-design-bangalore"],
     faqs: [
       {
         question: "How many revisions are included in the elevation design?",
-        answer: "We include 2 rounds of design refinement after the initial concept presentation, allowing you to fine-tune material choices, colour schemes, and window proportions."
+        answer: "We include 2 rounds of design refinement after the concept presentation to fine-tune materials and colors."
       },
       {
-        question: "Can you provide the elevation design if My Space is not doing the construction?",
-        answer: "Yes. You can engage My Space solely for 3D Elevation Design and dimensioned fabrication drawings for your own contractor to execute."
+        question: "Can you provide elevation design if My Space is not doing construction?",
+        answer: "Yes. You can engage My Space solely for 3D Elevation Design and dimensioned fabrication drawings."
       },
       {
-        question: "How do you select exterior cladding materials like terracotta jali, HPL, and natural stone?",
-        answer: "We recommend materials based on orientation and weather exposure. For example, UV-resistant exterior HPL or terracotta jali provides thermal shading on West-facing façades without long-term paint fading."
+        question: "How do you select exterior cladding materials?",
+        answer: "We recommend materials based on weather orientation (e.g. UV-resistant HPL or terracotta jali for West sun exposure)."
       },
       {
-        question: "Do you provide 2D dimensioned fabrication drawings for the elevation elements?",
-        answer: "Yes. We deliver sectional drawings with exact millimeter measurements for balcony railings, box projections, CNC metal louvers, and pergola structures so site teams can build accurately."
+        question: "Do you provide dimensioned fabrication drawings for site teams?",
+        answer: "Yes. We deliver sectional drawings with exact millimeter measurements for balcony railings, CNC louvers, and box frames."
       },
       {
-        question: "Can you redesign the elevation for an existing old house without demolishing the structure?",
-        answer: "Yes. We specialize in exterior modernization and facelifts—incorporating lightweight framing, modern exterior textures, composite panel cladding, and contemporary window replacements onto existing civil frames."
+        question: "Can you redesign the elevation of an existing old house?",
+        answer: "Yes. We specialize in exterior modernization—incorporating light framing, composite cladding, and modern textures onto existing frames."
       }
     ]
   },
@@ -914,7 +911,7 @@ export const servicesData: ServiceItem[] = [
     slug: "3d-floor-plan-design-bangalore",
     title: "3D Floor Plan Design",
     category: "Design",
-    h1: "Understand the space before you build it.",
+    h1: "3D Floor Plan Design & Spatial Flow",
     primaryKeyword: "3D floor plan design Bangalore",
     metaTitle: "3D Floor Plan Design Bangalore | Spatial Planning & 3D Views | My Space",
     metaDescription: "Understand room relationships, proportions, furniture layouts, and light flow with 3D floor plan design in Bangalore. Plan with complete visual clarity.",
@@ -924,88 +921,86 @@ export const servicesData: ServiceItem[] = [
       {
         url: "/images/company/real-project-01.jpeg",
         title: "Isometric Top-Down Layout",
-        caption: "Bird's-eye furnished layout demonstrating spatial flow and room clearances."
+        caption: "Furnished layout showing spatial room clearances."
       },
       {
         url: "/images/company/showroom-3.jpeg",
         title: "Proportional Furniture Placement",
-        caption: "Verifying bedroom and living room furniture corridors without obstruction."
+        caption: "Verifying bedroom and living room walkways."
       },
       {
         url: "/images/company/interior-design-hero.jpeg",
         title: "Sunlight & Ventilation Study",
-        caption: "Optimizing window placements for natural cross-breeze across rooms."
+        caption: "Optimizing window placements for natural breeze."
       },
       {
         url: "/images/company/real-project-44.jpeg",
         title: "Multi-Level Spatial Connectivity",
-        caption: "Clear visualization of stairwells, duplex voids, and private family lounges."
+        caption: "Visualization of stairwells and duplex lounges."
       }
     ],
     eyebrow: "SPATIAL 3D FLOOR PLANNING & LAYOUT CLARITY",
     primaryCta: "Request a Design Consultation",
-    summary: "2D blue lines on paper often fail to communicate how big a room really feels, whether a king-sized bed will block the balcony door, or how natural light enters the living room. Our 3D floor plans turn technical diagrams into intuitive, furnished spaces.",
+    summary: "Furnished 3D isometric perspectives and cutaways that clarify room dimensions, furniture clearances, and natural daylight flow before construction.",
     whoIsThisFor: [
-      "First-time home builders struggling to visualize room dimensions from 2D architectural drawings",
-      "Clients optimizing compact Bangalore plots (30x40, 20x30) to ensure zero wasted hallway space",
-      "Joint families deciding room allocations and privacy zoning across duplex floors",
-      "Commercial clients laying out reception, cabins, meeting rooms, and pantry flow"
+      "First-time home builders visualizing room proportions beyond 2D lines",
+      "Owners optimizing compact plots (30x40, 20x30) to eliminate wasted hallway space",
+      "Families planning duplex voids, open staircases, and private zones"
     ],
     whatWeHelpWith: [
       {
         title: "Proportional Furniture Placement",
-        desc: "Modeling true-to-scale beds, sofas, dining tables, and kitchen islands to verify clearance corridors and door swing paths."
+        desc: "Modeling true-to-scale beds, sofas, and islands to verify walking clearance."
       },
       {
-        title: "Sunlight & Cross-Ventilation Analysis",
-        desc: "Checking window positions against room depths to ensure breezy, well-lit spaces aligned with Bengaluru's climate."
+        title: "Daylight & Cross-Breeze",
+        desc: "Checking window depths for breezy, well-lit spaces."
       },
       {
-        title: "Multi-Level Spatial Connectivity",
-        desc: "Visualizing double-height living rooms, staircase cutouts, mezzanine studies, and skylight illumination."
+        title: "Duplex & Void Connectivity",
+        desc: "Visualizing double-height living rooms, stairwells, and skylights."
       },
       {
-        title: "Vastu & Functional Harmony",
-        desc: "Aligning practical functional layouts with traditional orientation preferences without compromising modern usability."
+        title: "Vastu & Ergonomic Flow",
+        desc: "Harmonizing practical spatial usage with orientation preferences."
       }
     ],
     whatToPrepare: [
       "Plot dimensions and boundary orientation",
-      "Number of bedrooms, bathrooms, family lounge, and study requirements",
-      "Special preferences (pooja room location, open vs closed kitchen, utility balcony)",
-      "Vehicular parking requirements (e.g. 1 SUV + 2 two-wheelers)"
+      "Number of bedrooms, bathrooms, family lounge, and study",
+      "Vehicle parking requirements"
     ],
     scopeInclusions: [
       "2D conceptual architectural floor layout with dimensional grid",
       "3D bird's-eye isometric view of each floor level with furnished layout",
       "Door and window schedule with recommended opening clearances",
-      "Digital high-resolution PDF and image package for site use"
+      "Digital high-resolution PDF package for mobile and site use"
     ],
     scopeExclusions: [
-      "Detailed structural bar-bending schedules (provided in Civil package)",
-      "Plumbing and electrical conduit drawings unless part of Full MEP bundle"
+      "Detailed civil bar-bending schedules (provided in Civil package)",
+      "Plumbing and electrical conduit drawings unless part of MEP bundle"
     ],
     relatedServiceSlugs: ["elevation-design-bangalore", "house-construction-bangalore", "interior-design-bangalore"],
     faqs: [
       {
-        question: "Why should I get a 3D floor plan before starting construction?",
-        answer: "A 3D floor plan prevents expensive on-site alterations. It reveals cramped passages, inconvenient bathroom entries, and inadequate wardrobe space before you cast a single column or lay a brick."
+        question: "Why should I get a 3D floor plan before construction?",
+        answer: "A 3D floor plan prevents expensive changes by revealing tight passages, awkward entries, and small rooms before casting begins."
       },
       {
-        question: "How do 3D floor plans assist with furniture planning and walkway clearances?",
-        answer: "We render standard-sized Indian and international furniture items to scale (e.g. 6x6.5 ft king beds, 6-seater dining sets) ensuring minimum 3-foot unobstructed walking corridors throughout every room."
+        question: "How do 3D floor plans assist with furniture planning?",
+        answer: "We render standard furniture to scale (king beds, dining sets), ensuring minimum 3-foot unobstructed walking corridors."
       },
       {
-        question: "Can 3D floor plans depict duplex voids and double-height living spaces?",
-        answer: "Yes. Our isometric multi-level cutaway views show internal open-to-sky courtyards, floating staircases, mezzanine study balconies, and skylight cutouts with complete spatial depth."
+        question: "Can 3D floor plans depict duplex voids and double-height spaces?",
+        answer: "Yes. Isometric cutaway views show open courtyards, floating staircases, and skylight voids with complete spatial depth."
       },
       {
-        question: "How quickly can you convert an existing 2D CAD or PDF plan into 3D?",
-        answer: "Once you share your 2D CAD file or dimensioned PDF, our team delivers high-resolution furnished 3D isometric views within 2 to 4 working days."
+        question: "How quickly can you convert a 2D CAD drawing into 3D?",
+        answer: "Once you share your 2D CAD or PDF plan, we deliver high-resolution furnished 3D views within 2 to 4 working days."
       },
       {
-        question: "Can I share the 3D plans with my family or builder digitally?",
-        answer: "Yes, we export high-resolution PDFs and JPEG packages formatted for easy sharing on mobile WhatsApp, email, or high-definition tablets for site carpenters and contractors."
+        question: "Can I share the 3D plans with my family digitally?",
+        answer: "Yes, we export high-resolution PDFs and JPEG packages formatted for easy sharing on mobile WhatsApp and tablets."
       }
     ]
   },
@@ -1014,7 +1009,7 @@ export const servicesData: ServiceItem[] = [
     slug: "land-valuation-bangalore",
     title: "Land Valuation",
     category: "Assess",
-    h1: "Accurate land and plot valuation for bank loans, transactions, and tax.",
+    h1: "Land & Plot Valuation in Bangalore",
     primaryKeyword: "land valuation in Bangalore",
     metaTitle: "Land Valuation Services in Bangalore | Plot Appraisal | My Space",
     metaDescription: "Certified land and plot valuation in Bangalore. Guidance value benchmarking, physical boundary survey, and bank-compliant land appraisal reports.",
@@ -1024,76 +1019,84 @@ export const servicesData: ServiceItem[] = [
       {
         url: "/images/company/real-project-75.jpeg",
         title: "Physical Land Boundary Audit",
-        caption: "On-site physical inspection of plot boundaries, approach road width, and layout."
+        caption: "On-site inspection of plot boundaries and road access."
       },
       {
         url: "/images/company/real-project-62.jpeg",
         title: "e-Khata & Revenue Records Review",
-        caption: "Guideline rate benchmarking and sub-registrar transaction cross-referencing."
+        caption: "Guideline rate benchmarking and sub-registrar checks."
       },
       {
         url: "/images/company/real-project-83.jpeg",
         title: "Micro-Market Real Estate Analytics",
-        caption: "Analysis of actual sales trends across Bengaluru suburban and central zones."
+        caption: "Analysis of actual sales trends across Bengaluru zones."
       },
       {
         url: "/images/company/real-project-86.jpeg",
         title: "Certified Valuation Dossier",
-        caption: "Government registered valuer stamped report accepted by leading banks and authorities."
+        caption: "Registered valuer report accepted by banks and courts."
       }
     ],
     eyebrow: "CERTIFIED LAND & PLOT VALUATION",
     primaryCta: "Request Land Valuation",
-    summary: "Accurate land valuation requires deep understanding of local revenue records, sub-registrar guideline rates, road width multiplier factors, and active market transactions across Bengaluru. My Space delivers certified land appraisal reports within 3–5 days.",
+    summary: "Certified land and plot appraisals based on physical boundary surveys, sub-registrar guideline rates, and prevailing micro-market transactions.",
     whoIsThisFor: [
-      "Plot buyers and sellers needing an independent fair market value appraisal",
+      "Plot buyers and sellers seeking fair market value appraisal",
       "Landowners applying for bank mortgage loans against vacant sites",
-      "Property owners assessing Capital Gains Tax (Section 54/54EC) on plot sales",
-      "Families dividing ancestral land parcels or completing legal probate records"
+      "Property owners filing Capital Gains Tax (Section 54/54EC)"
     ],
     whatWeHelpWith: [
       {
-        title: "Physical Boundary & Approach Road Audit",
-        desc: "On-site verification of survey boundaries, approach road width, commercial frontage, and infrastructure."
+        title: "Boundary & Road Audit",
+        desc: "On-site verification of survey boundaries, road width, and frontage."
       },
       {
-        title: "Guideline vs Fair Market Value Analysis",
-        desc: "Benchmarking government guidance rates against actual micro-market transaction values."
+        title: "Guideline vs Market Analysis",
+        desc: "Benchmarking government guidance rates against active market sales."
+      },
+      {
+        title: "Revenue Document Review",
+        desc: "Auditing e-Khata, tax receipts, and Encumbrance Certificates."
+      },
+      {
+        title: "Certified Valuation Dossier",
+        desc: "Signed and sealed report by IBBI / Wealth Tax registered valuers."
       }
     ],
     whatToPrepare: [
       "Land title deed and mother deed chain",
-      "Latest e-Khata extract and Tax paid receipt",
-      "Survey sketch / Village map extract"
+      "Latest e-Khata extract and tax paid receipt",
+      "Survey sketch or layout map"
     ],
     scopeInclusions: [
-      "Physical land inspection and dimensional survey",
-      "Valuation report stamped by Government-Registered Valuer"
+      "Physical land inspection and boundary verification in Bengaluru",
+      "Fair market value and realizable distress value breakdown",
+      "Certified valuation report stamped by Government-Registered Valuer"
     ],
     scopeExclusions: [
-      "Litigation dispute legal arguments"
+      "Litigation dispute advocacy in court"
     ],
     relatedServiceSlugs: ["property-valuation-bangalore", "business-valuation-bangalore"],
     faqs: [
       {
         question: "How is vacant land valued for bank loans?",
-        answer: "Banks evaluate the lesser of the guideline value and the assessed fair market value, factoring in road accessibility, legal title clarity, and locality infrastructure."
+        answer: "Banks assess the lower of guideline value and market value, factoring in road access, legal title clarity, and locality infrastructure."
       },
       {
-        question: "What documents are required for an independent land valuation in Bangalore?",
-        answer: "We require the registered Sale Deed / Title Deed, Mother Deed chain, latest e-Khata (A-Khata) certificate and extract, recent property tax paid receipt, Encumbrance Certificate (EC), and survey layout sketch."
+        question: "What documents are required for land valuation?",
+        answer: "We require the registered Sale Deed, Mother Deed chain, latest e-Khata extract, tax paid receipt, and survey layout sketch."
       },
       {
-        question: "How does the Sub-Registrar Guideline Value differ from prevailing Market Value?",
-        answer: "Guideline Value is the statutory minimum threshold set by the Karnataka Department of Stamps and Registration for stamp duty calculation. Market Value is the actual transactional price determined by locality demand, road width, corner plot advantages, and infrastructure development."
+        question: "How does Guideline Value differ from Market Value?",
+        answer: "Guideline Value is the statutory minimum rate set by the government for stamp duty. Market Value is the actual price driven by locality demand."
       },
       {
-        question: "How quickly can the land valuation report be issued?",
-        answer: "Following on-site boundary inspection and verification of revenue documents, the comprehensive certified valuation dossier is issued within 2 to 4 business days."
+        question: "How quickly is the valuation report issued?",
+        answer: "Following site boundary inspection and document review, the certified dossier is issued within 2 to 4 business days."
       },
       {
-        question: "Are your land valuation reports accepted for Capital Gains Tax (54EC) and visa asset proof?",
-        answer: "Yes, our reports are prepared by registered valuers under Section 34AB of the Wealth Tax Act and IBBI, making them legally valid for income tax filings, capital gains computation, and visa financial proof."
+        question: "Are your valuation reports accepted for Capital Gains Tax (54EC) and visas?",
+        answer: "Yes, reports are prepared by registered valuers under Section 34AB of Wealth Tax Act and IBBI, making them valid for tax and visa proof."
       }
     ]
   },
@@ -1102,7 +1105,7 @@ export const servicesData: ServiceItem[] = [
     slug: "property-valuation-bangalore",
     title: "Property Valuation",
     category: "Assess",
-    h1: "Need a property valuation for a bank, decision, or record?",
+    h1: "Property Valuation in Bangalore",
     primaryKeyword: "property valuation in Bangalore",
     metaTitle: "Property Valuation in Bangalore | Bank, Property & Asset Enquiries | My Space",
     metaDescription: "Property valuation enquiries in Bangalore for banking, property decisions, capital gains, visa, and asset records. Clear document guidance, inspection, and assessment.",
@@ -1112,90 +1115,86 @@ export const servicesData: ServiceItem[] = [
       {
         url: "/images/company/real-project-75.jpeg",
         title: "Physical Property Inspection",
-        caption: "Comprehensive on-site inspection of building age, structural quality, and amenities."
+        caption: "On-site inspection of building age, quality, and amenities."
       },
       {
         url: "/images/company/real-project-70.jpeg",
         title: "Structural Depreciation Assessment",
-        caption: "CPWD replacement cost depreciation calculation based on age and maintenance."
+        caption: "CPWD replacement cost depreciation calculation."
       },
       {
         url: "/images/company/real-project-81.jpeg",
         title: "Fair Market Value Computation",
-        caption: "Combining land market value with depreciated building replacement cost."
+        caption: "Combining land value with depreciated building cost."
       },
       {
         url: "/images/company/real-project-85.jpeg",
         title: "Bank & Statutory Valuation Report",
-        caption: "Signed and sealed professional documentation recognized by national banks and NBFCs."
+        caption: "Professional documentation recognized by banks and NBFCs."
       }
     ],
     eyebrow: "PROPERTY VALUATION & ASSET ASSESSMENT ENQUIRIES",
     primaryCta: "Request a Valuation Consultation",
-    summary: "Whether you need a property valuation for bank mortgage requirements, sale/purchase decision-making, capital gains tax computation, visa asset proof, or partition records, My Space provides structured valuation guidance, thorough physical inspection, and documented assessment.",
+    summary: "Government-registered property appraisals for bank loans, capital gains tax, visa financial proof, and family partition settlements.",
     whoIsThisFor: [
-      "Home loan and mortgage applicants requiring verified property assessment reports",
-      "Property buyers and sellers wanting an independent fair market value evaluation",
-      "Individuals requiring asset valuation certificates for visa/immigration proof",
-      "Families and legal heirs evaluating property distribution, probate, or capital gains tax records"
+      "Home loan and mortgage applicants requiring verified collateral reports",
+      "Property buyers and sellers seeking fair market value assessment",
+      "Individuals requiring asset certificates for visa and immigration records"
     ],
     whatWeHelpWith: [
       {
-        title: "Step 1: Purpose Identification & Document Check",
-        desc: "Clarifying the specific purpose (bank, tax, sale, record) and outlining the exact title documents, sanctioned plans, and tax receipts required."
+        title: "Physical Inspection",
+        desc: "Checking building age, construction quality, specifications, and boundaries."
       },
       {
-        title: "Step 2: Physical Site & Building Inspection",
-        desc: "On-site verification of plot boundaries, road width, age of structure, construction quality, specifications, and physical condition."
+        title: "Depreciated Cost Math",
+        desc: "Applying CPWD schedule of rates and age-based structural depreciation."
       },
       {
-        title: "Step 3: Comparative & Depreciated Cost Assessment",
-        desc: "Applying land guideline rates, prevailing market trends, and CPWD/PWD replacement cost depreciation principles."
+        title: "Guideline & Market Rates",
+        desc: "Cross-referencing Sub-Registrar guideline values with prevailing locality sales."
       },
       {
-        title: "Step 4: Comprehensive Valuation Report",
-        desc: "Clear documentation summarizing land value, building replacement value, physical depreciation, and final assessed fair market value."
+        title: "Signed Dossier",
+        desc: "Official valuation documentation signed and sealed by Registered Valuers."
       }
     ],
     whatToPrepare: [
       "Property Sale Deed / Title deed copy",
-      "Khata certificate & latest Khata extract (A Khata / e-Khata)",
-      "Latest property tax paid receipts",
-      "Approved building plan / Sanction drawing (if building is constructed)",
-      "Encumbrance Certificate (EC) for the relevant period"
+      "e-Khata certificate and latest tax paid receipts",
+      "Approved building sanction drawing if available"
     ],
     scopeInclusions: [
-      "Document checklist review and preliminary enquiry screening",
-      "Physical site inspection and dimensional verification in Bengaluru",
-      "Fair market value and realizable value calculation breakdown",
-      "Professional valuation documentation signed and sealed per applicable scope"
+      "Document checklist verification and physical on-site inspection",
+      "Land market value, building replacement cost, and depreciation calculations",
+      "Certified valuation dossier signed by Government-Registered Valuer"
     ],
     scopeExclusions: [
-      "Guaranteed loan sanction (loan approval is the sole discretion of the lending financial institution)",
-      "Title dispute litigation legal opinions (handled by property advocates)"
+      "Guaranteed loan approval (sole discretion of the lending bank)",
+      "Title dispute litigation advocacy"
     ],
-    disclaimer: "A property valuation does not guarantee loan approval or bank sanction. The final valuation report depends on verified property documents, physical inspection findings, and applicable professional and statutory standards.",
+    disclaimer: "A property valuation does not guarantee loan approval. Reports reflect verified property documents and physical inspection findings.",
     relatedServiceSlugs: ["house-construction-bangalore", "commercial-construction-bangalore", "civil-construction-bangalore"],
     faqs: [
       {
-        question: "How long does a property valuation process take in Bangalore?",
-        answer: "Once complete documents are shared and site inspection is completed, the structured valuation assessment report is typically prepared within 2 to 4 working days."
+        question: "How long does a property valuation take in Bangalore?",
+        answer: "Once documents are shared and site inspection is completed, the structured valuation report is prepared within 2 to 4 working days."
       },
       {
         question: "What is the difference between Guideline Value and Fair Market Value?",
-        answer: "Guideline Value (Sub-Registrar rate) is the minimum government benchmark value for property registration and stamp duty in Karnataka. Fair Market Value is the realistic price a willing buyer would pay a willing seller in the open market based on locality demand, road width, and construction specifications."
+        answer: "Guideline Value is the government minimum rate for stamp duty. Fair Market Value is the realistic price paid in the open market."
       },
       {
         question: "Does a valuation report guarantee my bank loan approval?",
-        answer: "No. The valuation report assesses the physical asset's collateral value. Final loan approval depends on the lender's credit appraisal, applicant income eligibility, and legal title clearance."
+        answer: "No. The valuation certifies asset collateral worth. Final loan approval depends on applicant credit eligibility and legal title clearance."
       },
       {
-        question: "What types of built properties do you inspect and value across Bangalore?",
-        answer: "We assess independent houses, residential villas, multi-storey apartment flats, commercial complexes, industrial factories, and school/institutional buildings."
+        question: "What types of built properties do you value across Bangalore?",
+        answer: "We assess independent houses, residential villas, apartment flats, commercial complexes, and industrial factories."
       },
       {
-        question: "How is building depreciation calculated in the valuation assessment?",
-        answer: "We calculate building replacement value using current CPWD/state PWD schedule of rates and apply straight-line or constant-percentage depreciation based on the building's structural age, maintenance condition, and remaining economic life."
+        question: "How is building depreciation calculated in the valuation?",
+        answer: "We calculate building replacement cost using CPWD rates and apply straight-line depreciation based on structural age and condition."
       }
     ]
   },
@@ -1204,7 +1203,7 @@ export const servicesData: ServiceItem[] = [
     slug: "business-valuation-bangalore",
     title: "Business Valuation",
     category: "Assess",
-    h1: "Certified business, commercial asset, and enterprise valuation.",
+    h1: "Business & Asset Valuation in Bangalore",
     primaryKeyword: "business valuation in Bangalore",
     metaTitle: "Business Valuation Services Bangalore | Commercial Enterprise Valuation | My Space",
     metaDescription: "Comprehensive business asset valuation, commercial plant/machinery appraisal, and enterprise net-worth certification in Bangalore by registered valuers.",
@@ -1214,76 +1213,84 @@ export const servicesData: ServiceItem[] = [
       {
         url: "/images/company/showroom-2.jpeg",
         title: "Commercial Plant & Facility Appraisal",
-        caption: "Tangible commercial asset inspection, building valuation, and leasehold appraisals."
+        caption: "Tangible commercial asset inspection and building valuation."
       },
       {
         url: "/images/company/Car_Showroom_View_2.jpeg",
         title: "Enterprise Machinery & Equipment",
-        caption: "Depreciated replacement value of plant equipment and operational infrastructure."
+        caption: "Depreciated replacement value of plant equipment."
       },
       {
         url: "/images/company/real-project-65.jpeg",
         title: "Asset & Financial Due Diligence",
-        caption: "Discounted cash flow modeling and net tangible asset calculations."
+        caption: "Discounted cash flow modeling and net asset calculations."
       },
       {
         url: "/images/company/showroom-5.jpeg",
-        title: "IBBI & Wealth Tax Valuation Dossier",
-        caption: "Certified statutory documentation for business acquisitions, audits, and bank credit."
+        title: "IBBI Valuation Dossier",
+        caption: "Certified statutory documentation for business audits and credit."
       }
     ],
     eyebrow: "BUSINESS & COMMERCIAL ASSET VALUATION",
     primaryCta: "Request Business Valuation",
-    summary: "Whether evaluating an enterprise for merger/acquisition, partnership dissolution, bank credit facilities, or financial audit compliance, My Space provides rigorous asset-based and discounted cash flow business valuation dossiers recognized by financial institutions.",
+    summary: "Certified plant & machinery, commercial asset, and enterprise valuations using Discounted Cash Flow (DCF) and Net Asset Value (NAV) methodologies.",
     whoIsThisFor: [
-      "Companies seeking credit sanction against commercial business assets",
+      "Companies seeking credit facilities against commercial business assets",
       "Business owners preparing for partnership buyouts or equity restructuring",
-      "Enterprises requiring plant and machinery asset registers with CPWD depreciation",
-      "Firms conducting balance sheet compliance audits and statutory reporting"
+      "Enterprises requiring plant and machinery registers with CPWD depreciation"
     ],
     whatWeHelpWith: [
       {
-        title: "Tangible Fixed Asset Valuation",
-        desc: "Physical inspection and depreciated replacement value of commercial buildings, plant setups, and fixtures."
+        title: "Fixed Asset Valuation",
+        desc: "Physical audit and depreciated replacement value of plant, machinery, and facilities."
       },
       {
-        title: "Statutory Valuation Dossier",
-        desc: "Certified valuation documentation stamped by IBBI / Wealth Tax Act registered valuers."
+        title: "DCF & NAV Modeling",
+        desc: "Discounted cash flow and net tangible asset calculations for enterprise worth."
+      },
+      {
+        title: "Statutory Dossier",
+        desc: "Certified valuation documentation stamped by IBBI registered valuers."
+      },
+      {
+        title: "Confidential Due Diligence",
+        desc: "Complete NDA protection for proprietary financial and asset records."
       }
     ],
     whatToPrepare: [
-      "Financial statements and audited balance sheets for past 3 years",
-      "Fixed asset register and physical plant equipment list",
-      "Specific statutory purpose of the valuation"
+      "Audited balance sheets and P&L statements for past 3 years",
+      "Fixed asset register and plant machinery equipment list",
+      "Statutory purpose of the valuation"
     ],
     scopeInclusions: [
-      "Site physical inspection of commercial/industrial assets",
-      "Comprehensive valuation report compliant with IBBI standards"
+      "Physical site inspection of commercial/industrial assets",
+      "Comprehensive valuation dossier compliant with IBBI standards",
+      "Signed and sealed certification for bank credit or statutory audit"
     ],
     scopeExclusions: [
-      "Tax filing and audit certifications (undertaken by Chartered Accountants)"
+      "Income tax filing (undertaken by Chartered Accountants)"
     ],
     relatedServiceSlugs: ["property-valuation-bangalore", "land-valuation-bangalore", "commercial-construction-bangalore"],
     faqs: [
       {
         question: "Are your valuation reports accepted by nationalized banks?",
-        answer: "Yes, our reports are prepared by registered valuers under the Wealth Tax Act and IBBI, accepted by all major scheduled commercial banks and NBFCs."
+        answer: "Yes, reports are prepared by registered valuers under the Wealth Tax Act and IBBI, accepted by all scheduled banks and NBFCs."
       },
       {
         question: "What methodologies are used for commercial enterprise valuation?",
-        answer: "We apply the Asset-Based Approach (Net Asset Value of tangible land, buildings, plant & machinery), the Income Approach (Discounted Cash Flow / Capitalization of Earnings), and Market Multiples depending on the entity's sector."
+        answer: "We apply the Asset-Based Approach (Net Asset Value), Income Approach (Discounted Cash Flow), and Market Multiples."
       },
       {
-        question: "What financial and operational documents are needed to initiate a business valuation?",
-        answer: "We require audited balance sheets and P&L statements for the last 3-5 years, the fixed asset register with purchase invoices, existing lease agreements, and debt/collateral obligation statements."
+        question: "What financial documents are needed to initiate business valuation?",
+        answer: "We require audited balance sheets (last 3-5 years), fixed asset registers with purchase invoices, and existing lease agreements."
       },
       {
-        question: "Can you perform plant and machinery valuation with physical inspection in Karnataka?",
-        answer: "Yes, our technical team inspects machine make, installation year, rated capacity, maintenance logs, and physical operational condition to calculate accurate Depreciated Replacement Cost (DRC)."
+        question: "Can you perform plant and machinery valuation across Karnataka?",
+        answer: "Yes, our technical team inspects machine make, installation year, rated capacity, and maintenance condition on site."
       },
       {
-        question: "How do you ensure strict client confidentiality during business valuation due diligence?",
-        answer: "We execute strict Non-Disclosure Agreements (NDAs) prior to data intake, ensuring all proprietary financial statements, asset registers, and commercial strategies remain entirely confidential."
+        question: "How do you ensure client data confidentiality?",
+        answer: "We execute Non-Disclosure Agreements (NDAs) prior to data intake, ensuring all financial statements and records remain strictly private."
       }
     ]
   }

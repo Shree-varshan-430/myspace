@@ -594,7 +594,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               Why Bengaluru Chooses My Space
             </h2>
             <p className="text-xs sm:text-sm text-slate-600">
-              Built on engineering principles, certified material standards, and transparent accountability.
+              Built on engineering principles, certified materials, and transparent accountability.
             </p>
           </div>
 
@@ -605,7 +605,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </div>
               <h3 className="font-bold text-base text-navy-950">IS-Standard Compliance</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                All structural casting, steel reinforcement, and concrete grades strictly adhere to Indian Standard codes.
+                Structural casting and rebar conforming strictly to Indian Standards.
               </p>
             </div>
 
@@ -615,7 +615,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </div>
               <h3 className="font-bold text-base text-navy-950">Detailed Itemized BOQ</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Zero hidden costs with transparent unit rates, brand specifications, and clear payment milestones.
+                Zero hidden costs with locked per-sq.ft rates and brand specs.
               </p>
             </div>
 
@@ -623,9 +623,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               <div className="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-600 flex items-center justify-center">
                 <Clock className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-base text-navy-950">Timely Stage Delivery</h3>
+              <h3 className="font-bold text-base text-navy-950">Timely Delivery</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Critical-path project scheduling ensures every stage is completed and inspected according to contract timeline.
+                Critical-path scheduling with milestone-by-milestone inspections.
               </p>
             </div>
 
@@ -635,7 +635,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </div>
               <h3 className="font-bold text-base text-navy-950">Certified Documentation</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Complete as-built drawings, structural calculations, and statutory valuation dossiers signed by registered professionals.
+                Complete as-built drawings, structural calculations, and warranties.
               </p>
             </div>
 
@@ -643,9 +643,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center">
                 <Building2 className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-base text-navy-950">Bangalore Micro-Market Insight</h3>
+              <h3 className="font-bold text-base text-navy-950">Local Zonal Insight</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Deep expertise in local soil conditions, municipal sanction bylaws, and zonal real estate valuations.
+                Deep expertise in Bengaluru soil, BBMP bylaws, and valuations.
               </p>
             </div>
 
@@ -653,9 +653,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               <div className="w-10 h-10 rounded-xl bg-red-500/10 text-brand-steel flex items-center justify-center">
                 <Award className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-base text-navy-950">Direct Single Accountability</h3>
+              <h3 className="font-bold text-base text-navy-950">Single Accountability</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Single dedicated point of contact coordinating architecture, engineering, civil masons, and handovers.
+                Single dedicated team coordinating design, engineering, and handover.
               </p>
             </div>
           </div>
