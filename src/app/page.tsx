@@ -779,56 +779,9 @@ export default function HomePage() {
       {/* ============================================================
           4.14 FINAL CTA & LEAD ENQUIRY FORM
       ============================================================ */}
-      <section className="py-16 lg:py-24 bg-white border-t border-slate-200">
+      <section className="py-16 lg:py-24 bg-white border-t border-slate-200" id="enquiry">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <ScrollReveal direction="right" duration={0.7} className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-              <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider">
-                <Home className="w-4 h-4 text-brand-blue" />
-                <span>Let's Build Your Dream Space</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                Start Your Project Conversation With Us
-              </h2>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Connect with our engineering team for honest guidance, customized 2D/3D layouts, and a transparent BOQ estimate.
-              </p>
-
-              <div className="pt-4 space-y-4">
-                <a
-                  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-surface-ice border border-slate-200 hover:border-brand-blue text-navy-950 hover:bg-white transition-all group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-brand-blue/10 text-brand-blue flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                    <Phone className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs text-slate-500 block">Direct Engineering Consultation</span>
-                    <span className="text-sm font-bold text-navy-950">{siteConfig.contact.phoneDisplay}</span>
-                  </div>
-                </a>
-
-                <a
-                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent('Hello My Space, I would like to discuss a property project in Bangalore.')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 hover:border-emerald-400 text-navy-950 hover:bg-emerald-100/60 transition-all group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-brand-green-success text-white flex items-center justify-center font-bold text-sm shrink-0 group-hover:scale-110 transition-transform">
-                    W
-                  </div>
-                  <div>
-                    <span className="text-xs text-emerald-800 block">WhatsApp Chat</span>
-                    <span className="text-sm font-bold text-emerald-950">Quick Message with Site Details</span>
-                  </div>
-                </a>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal direction="left" duration={0.7} delay={0.15} className="lg:col-span-7">
-              <EnquiryForm />
-            </ScrollReveal>
-          </div>
+          <EnquiryForm />
         </div>
       </section>
     </div>
