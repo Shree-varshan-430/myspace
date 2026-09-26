@@ -1,19 +1,11 @@
 'use client';
 
-import React, { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import React, { useState, Suspense } from 'react';
 import {
   Send,
   CheckCircle2,
   AlertCircle,
-  Building,
-  Home,
-  Layers,
-  Compass,
-  FileSearch,
-  Sparkles,
-  Phone,
-  ArrowRight
+  Phone
 } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 
@@ -34,15 +26,6 @@ interface EnquiryFormProps {
   darkTheme?: boolean;
 }
 
-const serviceOptions: { id: ServiceType; label: string; icon: any }[] = [
-  { id: 'residential', label: 'House Construction', icon: Home },
-  { id: 'commercial', label: 'Commercial Space', icon: Building },
-  { id: 'civil', label: 'Civil Works', icon: Layers },
-  { id: 'interiors', label: 'Interior Design', icon: Sparkles },
-  { id: 'elevation-3d', label: '3D Elevation & Plans', icon: Compass },
-  { id: 'valuation', label: 'Property Valuation', icon: FileSearch },
-];
-
 function EnquiryFormInner({
   initialService = 'residential',
   title = 'Get in Touch with Our Engineers',
@@ -50,8 +33,6 @@ function EnquiryFormInner({
   className = '',
   darkTheme = false,
 }: EnquiryFormProps) {
-  const searchParams = useSearchParams();
-  const [selectedService, setSelectedService] = useState<ServiceType>(initialService);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -64,14 +45,7 @@ function EnquiryFormInner({
     message: '',
   });
 
-  useEffect(() => {
-    const serviceParam = searchParams?.get('service') as ServiceType;
-    if (serviceParam && ['residential', 'commercial', 'civil', 'interiors', 'elevation-3d', 'valuation', 'not-sure'].includes(serviceParam)) {
-      setSelectedService(serviceParam);
-    }
-  }, [searchParams]);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -97,7 +71,7 @@ function EnquiryFormInner({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          service: selectedService,
+          service: initialService,
           submittedAt: new Date().toISOString(),
         }),
       });
@@ -123,10 +97,7 @@ function EnquiryFormInner({
         <div className="space-y-2 max-w-md mx-auto">
           <h3 className="text-2xl font-bold">Thank You, {formData.name}!</h3>
           <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            We have received your enquiry for <strong className="capitalize text-brand-blue">{selectedService.replace('-', ' ')}</strong>.
-          </p>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
-            Our engineering team will review your requirement and call you back shortly.
+            We have received your enquiry and our engineering team will review your requirement and call you back shortly.
           </p>
         </div>
 
@@ -172,36 +143,6 @@ function EnquiryFormInner({
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
-        {/* Service Selection */}
-        <div>
-          <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">
-            Select Service
-          </label>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            {serviceOptions.map((srv) => {
-              const Icon = srv.icon;
-              const isSelected = selectedService === srv.id;
-              return (
-                <button
-                  key={srv.id}
-                  type="button"
-                  onClick={() => setSelectedService(srv.id)}
-                  className={`flex items-center gap-2 p-3 rounded-xl text-left border text-xs font-medium transition-all ${
-                    isSelected
-                      ? 'border-brand-blue bg-brand-blue/10 text-brand-blue font-bold ring-1 ring-brand-blue shadow-xs'
-                      : darkTheme
-                      ? 'border-navy-700 bg-navy-950/60 text-slate-300 hover:border-slate-500'
-                      : 'border-slate-200 bg-surface-ice text-slate-700 hover:border-slate-300 hover:bg-white'
-                  }`}
-                >
-                  <Icon className={`w-4 h-4 shrink-0 ${isSelected ? 'text-brand-blue' : 'text-slate-400'}`} />
-                  <span className="truncate">{srv.label}</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
         {/* Contact Fields */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
