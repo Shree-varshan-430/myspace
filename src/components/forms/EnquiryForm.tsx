@@ -143,21 +143,19 @@ function EnquiryFormInner({
     >
       <div className="grid grid-cols-1 lg:grid-cols-12">
         {/* ============================================================
-            LEFT SIDE: CONTACT DETAILS PANEL
+            LEFT SIDE: CONTACT DETAILS PANEL (SIMPLE WHITE BACKGROUND)
         ============================================================ */}
-        <div className="lg:col-span-5 bg-navy-950 text-white p-6 sm:p-8 lg:p-10 flex flex-col justify-between space-y-8 relative overflow-hidden">
-          <div className="absolute inset-0 blueprint-grid-dark opacity-30 pointer-events-none" />
-
-          <div className="relative z-10 space-y-6">
+        <div className="lg:col-span-5 bg-white text-navy-950 p-6 sm:p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-slate-200 flex flex-col justify-between space-y-8 relative">
+          <div className="space-y-6">
             <div className="space-y-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-blue/20 text-sky-400 font-mono text-[11px] font-bold uppercase tracking-wider border border-brand-blue/30">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-brand-blue font-mono text-[11px] font-bold uppercase tracking-wider border border-blue-200">
                 <Building2 className="w-3.5 h-3.5" />
                 <span>Direct Engineering Desk</span>
               </span>
-              <h4 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug">
+              <h4 className="text-xl sm:text-2xl font-bold text-navy-950 tracking-tight leading-snug">
                 MY SPACE Civil Engineers & Valuers
               </h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-slate-600 leading-relaxed">
                 Connect directly with our senior civil engineering and valuation practice in Bengaluru.
               </p>
             </div>
@@ -166,14 +164,14 @@ function EnquiryFormInner({
             <div className="space-y-3 pt-2">
               <a
                 href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
-                className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-navy-900/90 border border-navy-800 hover:border-brand-blue transition-all group"
+                className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-surface-ice border border-slate-200 hover:border-brand-blue hover:bg-blue-50/50 transition-all group"
               >
-                <div className="w-10 h-10 rounded-xl bg-brand-blue/20 text-sky-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-blue-100/70 text-brand-blue flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
-                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Phone Consultation</span>
-                  <span className="text-xs sm:text-sm font-bold text-white group-hover:text-sky-400 transition-colors">
+                  <span className="text-[10px] text-slate-500 uppercase font-semibold block">Phone Consultation</span>
+                  <span className="text-xs sm:text-sm font-bold text-navy-950 group-hover:text-brand-blue transition-colors">
                     {siteConfig.contact.phoneDisplay}
                   </span>
                 </div>
@@ -183,14 +181,14 @@ function EnquiryFormInner({
                 href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent('Hello My Space, I would like to enquire about a construction project in Bangalore.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-emerald-950/40 border border-emerald-900/60 hover:border-emerald-500 transition-all group"
+                className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-emerald-50/60 border border-emerald-200 hover:border-emerald-400 hover:bg-emerald-50 transition-all group"
               >
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <MessageSquare className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
-                  <span className="text-[10px] text-emerald-400 uppercase font-semibold block">WhatsApp Desk</span>
-                  <span className="text-xs sm:text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                  <span className="text-[10px] text-emerald-700 uppercase font-semibold block">WhatsApp Desk</span>
+                  <span className="text-xs sm:text-sm font-bold text-emerald-950 group-hover:text-emerald-800 transition-colors">
                     Instant Chat & Plan Sharing
                   </span>
                 </div>
@@ -198,14 +196,14 @@ function EnquiryFormInner({
 
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-navy-900/90 border border-navy-800 hover:border-brand-blue transition-all group"
+                className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-surface-ice border border-slate-200 hover:border-brand-blue hover:bg-blue-50/50 transition-all group"
               >
-                <div className="w-10 h-10 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-slate-200/80 text-slate-700 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
-                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Email Enquiry</span>
-                  <span className="text-xs sm:text-sm font-bold text-white truncate block">
+                  <span className="text-[10px] text-slate-500 uppercase font-semibold block">Email Enquiry</span>
+                  <span className="text-xs sm:text-sm font-bold text-navy-950 truncate block group-hover:text-brand-blue transition-colors">
                     {siteConfig.contact.email}
                   </span>
                 </div>
@@ -213,20 +211,20 @@ function EnquiryFormInner({
             </div>
 
             {/* Address & Hours */}
-            <div className="space-y-2 pt-2 text-xs text-slate-300 border-t border-navy-800">
+            <div className="space-y-2.5 pt-3 text-xs text-slate-600 border-t border-slate-200">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
-                <span>{siteConfig.address.street}, {siteConfig.address.city} - {siteConfig.address.postalCode}</span>
+                <MapPin className="w-4 h-4 text-brand-blue shrink-0 mt-0.5" />
+                <span className="leading-snug">{siteConfig.address.street}, {siteConfig.address.city} - {siteConfig.address.postalCode}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Clock className="w-4 h-4 text-sky-400 shrink-0" />
+                <Clock className="w-4 h-4 text-brand-blue shrink-0" />
                 <span>{siteConfig.contact.hours}</span>
               </div>
             </div>
           </div>
 
-          <div className="relative z-10 pt-4 border-t border-navy-800 flex items-center gap-2 text-[11px] text-slate-400">
-            <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+          <div className="pt-4 border-t border-slate-200 flex items-center gap-2 text-[11px] text-slate-600 font-medium">
+            <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
             <span>IS-Standard Compliance • Fixed BOQ • Single Accountability</span>
           </div>
         </div>
