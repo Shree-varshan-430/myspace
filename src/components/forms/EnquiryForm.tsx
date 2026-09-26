@@ -148,7 +148,10 @@ function EnquiryFormInner({
           <div className="space-y-6">
             <div className="space-y-2">
               <h4 className="text-xl sm:text-2xl font-bold text-navy-950 tracking-tight leading-snug">
-                MY SPACE Civil Engineers & Valuers
+                MY SPACE
+                <span className="block font-semibold text-lg sm:text-xl text-slate-800">
+                  Civil Engineers & Valuers
+                </span>
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Connect directly with our senior civil engineering and valuation practice in Bengaluru.
