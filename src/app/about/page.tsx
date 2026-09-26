@@ -309,7 +309,7 @@ export default function AboutPage() {
         {/* ============================================================
             SECTION 5: ENQUIRY CONSULTATION FORM
         ============================================================ */}
-        <section id="enquiry" className="max-w-4xl mx-auto pt-6">
+        <section id="enquiry" className="max-w-7xl mx-auto pt-6">
           <EnquiryForm
             title="Start Your Project with My Space"
             subtitle="Tell us about your plot location or requirements. Our engineers will get back to you with structured advice."

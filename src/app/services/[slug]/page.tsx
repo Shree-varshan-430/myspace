@@ -705,7 +705,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
           CONTEXTUAL LEAD FORM
       ============================================================ */}
       <section id="enquiry" className="py-16 lg:py-20 bg-surface-ice">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <EnquiryForm
             initialService={currentFormService}
             title={`Discuss Your ${service.title} Project`}

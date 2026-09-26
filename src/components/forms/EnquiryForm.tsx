@@ -5,7 +5,13 @@ import {
   Send,
   CheckCircle2,
   AlertCircle,
-  Phone
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  MessageSquare,
+  Building2,
+  ShieldCheck
 } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 
@@ -28,8 +34,8 @@ interface EnquiryFormProps {
 
 function EnquiryFormInner({
   initialService = 'residential',
-  title = 'Get in Touch with Our Engineers',
-  subtitle = 'Share your plot location, dimensions, or requirements. Our engineering team will get back to you with structured advice.',
+  title = 'Discuss Your Project with Us',
+  subtitle = 'Share your plot location, dimensions, or space requirements. Our senior engineering team will provide a structured consultation.',
   className = '',
   darkTheme = false,
 }: EnquiryFormProps) {
@@ -87,24 +93,24 @@ function EnquiryFormInner({
   if (isSuccess) {
     return (
       <div
-        className={`p-8 sm:p-10 rounded-3xl border ${
+        className={`p-8 sm:p-12 rounded-3xl border ${
           darkTheme ? 'bg-navy-900 border-navy-700 text-white' : 'bg-white border-slate-200 text-navy-950'
-        } shadow-elevated text-center space-y-4 animate-in fade-in zoom-in-95 duration-300 ${className}`}
+        } shadow-elevated text-center space-y-5 animate-in fade-in zoom-in-95 duration-300 ${className}`}
       >
-        <div className="w-14 h-14 rounded-full bg-emerald-500/15 text-emerald-600 flex items-center justify-center mx-auto">
-          <CheckCircle2 className="w-7 h-7" />
+        <div className="w-16 h-16 rounded-full bg-emerald-500/15 text-emerald-600 flex items-center justify-center mx-auto">
+          <CheckCircle2 className="w-8 h-8" />
         </div>
         <div className="space-y-2 max-w-md mx-auto">
-          <h3 className="text-2xl font-bold">Thank You, {formData.name}!</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold">Thank You, {formData.name}!</h3>
           <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            We have received your enquiry and our engineering team will review your requirement and call you back shortly.
+            We have received your enquiry. Er. Saravanan and our engineering desk will review your requirements and reach out shortly.
           </p>
         </div>
 
         <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
             href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-navy-950 text-white text-xs font-bold hover:bg-navy-900 transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-navy-950 text-white text-xs font-bold hover:bg-navy-900 transition-colors"
           >
             <Phone className="w-4 h-4 text-brand-blue" />
             <span>Call Directly: {siteConfig.contact.phoneDisplay}</span>
@@ -122,7 +128,7 @@ function EnquiryFormInner({
                 message: '',
               });
             }}
-            className="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-slate-300 dark:border-navy-700 text-xs font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-navy-800 transition-colors"
+            className="w-full sm:w-auto px-5 py-3 rounded-xl border border-slate-300 dark:border-navy-700 text-xs font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-navy-800 transition-colors"
           >
             Send Another Enquiry
           </button>
@@ -133,116 +139,215 @@ function EnquiryFormInner({
 
   return (
     <div
-      className={`rounded-3xl border p-6 sm:p-8 lg:p-10 shadow-elevated ${
-        darkTheme ? 'bg-navy-900 border-navy-700 text-white' : 'bg-white border-slate-200 text-navy-950'
-      } ${className}`}
+      className={`rounded-3xl border border-slate-200/90 shadow-elevated overflow-hidden bg-white ${className}`}
     >
-      <div className="mb-6 space-y-1">
-        <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">{title}</h3>
-        <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-300 leading-relaxed">{subtitle}</p>
+      <div className="grid grid-cols-1 lg:grid-cols-12">
+        {/* ============================================================
+            LEFT SIDE: CONTACT DETAILS PANEL
+        ============================================================ */}
+        <div className="lg:col-span-5 bg-navy-950 text-white p-6 sm:p-8 lg:p-10 flex flex-col justify-between space-y-8 relative overflow-hidden">
+          <div className="absolute inset-0 blueprint-grid-dark opacity-30 pointer-events-none" />
+
+          <div className="relative z-10 space-y-6">
+            <div className="space-y-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-blue/20 text-sky-400 font-mono text-[11px] font-bold uppercase tracking-wider border border-brand-blue/30">
+                <Building2 className="w-3.5 h-3.5" />
+                <span>Direct Engineering Desk</span>
+              </span>
+              <h4 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug">
+                MY SPACE Civil Engineers & Valuers
+              </h4>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Connect directly with our senior civil engineering and valuation practice in Bengaluru.
+              </p>
+            </div>
+
+            {/* Direct Channels */}
+            <div className="space-y-3 pt-2">
+              <a
+                href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-navy-900/90 border border-navy-800 hover:border-brand-blue transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-brand-blue/20 text-sky-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Phone Consultation</span>
+                  <span className="text-xs sm:text-sm font-bold text-white group-hover:text-sky-400 transition-colors">
+                    {siteConfig.contact.phoneDisplay}
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent('Hello My Space, I would like to enquire about a construction project in Bangalore.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-emerald-950/40 border border-emerald-900/60 hover:border-emerald-500 transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <MessageSquare className="w-5 h-5" />
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[10px] text-emerald-400 uppercase font-semibold block">WhatsApp Desk</span>
+                  <span className="text-xs sm:text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                    Instant Chat & Plan Sharing
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href={`mailto:${siteConfig.contact.email}`}
+                className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-navy-900/90 border border-navy-800 hover:border-brand-blue transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[10px] text-slate-400 uppercase font-semibold block">Email Enquiry</span>
+                  <span className="text-xs sm:text-sm font-bold text-white truncate block">
+                    {siteConfig.contact.email}
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            {/* Address & Hours */}
+            <div className="space-y-2 pt-2 text-xs text-slate-300 border-t border-navy-800">
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                <span>{siteConfig.address.street}, {siteConfig.address.city} - {siteConfig.address.postalCode}</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Clock className="w-4 h-4 text-sky-400 shrink-0" />
+                <span>{siteConfig.contact.hours}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative z-10 pt-4 border-t border-navy-800 flex items-center gap-2 text-[11px] text-slate-400">
+            <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+            <span>IS-Standard Compliance • Fixed BOQ • Single Accountability</span>
+          </div>
+        </div>
+
+        {/* ============================================================
+            RIGHT SIDE: FORM INPUT FIELDS WITH LIGHT BLUE BACKGROUND
+        ============================================================ */}
+        <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 space-y-6 bg-white text-navy-950">
+          <div className="space-y-1.5">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-navy-950 tracking-tight">
+              {title}
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              {subtitle}
+            </p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Name & Phone */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-xs font-semibold text-slate-800 mb-1.5">
+                  Your Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="e.g. Suresh Gowda"
+                  className="w-full px-4 py-3 rounded-xl bg-blue-50/80 border border-blue-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-blue-100 outline-none transition-all"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-800 mb-1.5">
+                  Phone Number (WhatsApp) <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="e.g. 98450 12345"
+                  className="w-full px-4 py-3 rounded-xl bg-blue-50/80 border border-blue-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-blue-100 outline-none transition-all"
+                />
+              </div>
+            </div>
+
+            {/* Email & Location */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-xs font-semibold text-slate-800 mb-1.5">
+                  Email Address <span className="text-slate-400 font-normal">(Optional)</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="e.g. suresh@example.com"
+                  className="w-full px-4 py-3 rounded-xl bg-blue-50/80 border border-blue-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-blue-100 outline-none transition-all"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-800 mb-1.5">
+                  Project Location in Bengaluru
+                </label>
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  placeholder="e.g. HSR Layout, Sarjapur, Whitefield"
+                  className="w-full px-4 py-3 rounded-xl bg-blue-50/80 border border-blue-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-blue-100 outline-none transition-all"
+                />
+              </div>
+            </div>
+
+            {/* Message / Plot Details */}
+            <div>
+              <label className="block text-xs font-semibold text-slate-800 mb-1.5">
+                Requirement Details / Plot Size <span className="text-slate-400 font-normal">(Optional)</span>
+              </label>
+              <textarea
+                name="message"
+                rows={3}
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="e.g. 30x40 site, planning 3BHK duplex with G+1 structure..."
+                className="w-full px-4 py-3 rounded-xl bg-blue-50/80 border border-blue-200 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-blue-100 outline-none transition-all resize-none"
+              />
+            </div>
+
+            {errorMessage && (
+              <div className="flex items-center gap-2 p-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-xs">
+                <AlertCircle className="w-4 h-4 shrink-0" />
+                <span>{errorMessage}</span>
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full py-3.5 px-6 rounded-xl bg-brand-blue text-white text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-brand-steel transition-all shadow-blueprint hover:shadow-lg disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer"
+            >
+              {isSubmitting ? (
+                <span>Submitting...</span>
+              ) : (
+                <>
+                  <span>Send Consultation Request</span>
+                  <Send className="w-4 h-4" />
+                </>
+              )}
+            </button>
+          </form>
+        </div>
       </div>
-
-      <form onSubmit={handleSubmit} className="space-y-5">
-        {/* Contact Fields */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
-              Your Name <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              name="name"
-              required
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="e.g. Suresh Gowda"
-              className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-950 text-slate-900 dark:text-white text-xs sm:text-sm focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all"
-            />
-          </div>
-
-          <div>
-            <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
-              Phone Number (WhatsApp) <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="tel"
-              name="phone"
-              required
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="e.g. 98450 12345"
-              className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-950 text-slate-900 dark:text-white text-xs sm:text-sm focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all"
-            />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
-              Email Address <span className="text-slate-400 font-normal">(Optional)</span>
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="e.g. suresh@example.com"
-              className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-950 text-slate-900 dark:text-white text-xs sm:text-sm focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all"
-            />
-          </div>
-
-          <div>
-            <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
-              Project Location in Bengaluru
-            </label>
-            <input
-              type="text"
-              name="location"
-              value={formData.location}
-              onChange={handleChange}
-              placeholder="e.g. HSR Layout, Sarjapur, Whitefield"
-              className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-950 text-slate-900 dark:text-white text-xs sm:text-sm focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all"
-            />
-          </div>
-        </div>
-
-        {/* Message / Plot Details */}
-        <div>
-          <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
-            Requirement Details / Plot Size <span className="text-slate-400 font-normal">(Optional)</span>
-          </label>
-          <textarea
-            name="message"
-            rows={3}
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="e.g. 30x40 site, planning 3BHK duplex with G+1 structure..."
-            className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-navy-700 bg-white dark:bg-navy-950 text-slate-900 dark:text-white text-xs sm:text-sm focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all resize-none"
-          />
-        </div>
-
-        {errorMessage && (
-          <div className="flex items-center gap-2 p-3 rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900 text-red-600 dark:text-red-400 text-xs">
-            <AlertCircle className="w-4 h-4 shrink-0" />
-            <span>{errorMessage}</span>
-          </div>
-        )}
-
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full py-3.5 px-6 rounded-xl bg-brand-blue text-white text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-brand-steel transition-all shadow-blueprint hover:shadow-lg disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer"
-        >
-          {isSubmitting ? (
-            <span>Submitting...</span>
-          ) : (
-            <>
-              <span>Send Consultation Request</span>
-              <Send className="w-4 h-4" />
-            </>
-          )}
-        </button>
-      </form>
     </div>
   );
 }
