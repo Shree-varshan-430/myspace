@@ -160,20 +160,27 @@ function EnquiryFormInner({
 
             {/* Direct Channels */}
             <div className="space-y-3 pt-2">
-              <a
-                href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
-                className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-surface-ice border border-slate-200 hover:border-brand-blue hover:bg-blue-50/50 transition-all group"
-              >
-                <div className="w-10 h-10 rounded-xl bg-blue-100/70 text-brand-blue flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div className="min-w-0">
-                  <span className="text-[10px] text-slate-500 uppercase font-semibold block">Phone Consultation</span>
-                  <span className="text-xs sm:text-sm font-bold text-navy-950 group-hover:text-brand-blue transition-colors">
+              <div className="p-3.5 rounded-2xl bg-surface-ice border border-slate-200 space-y-2">
+                <span className="text-[10px] text-slate-500 uppercase font-semibold block flex items-center gap-1.5">
+                  <Phone className="w-3.5 h-3.5 text-brand-blue" />
+                  <span>Phone Consultations</span>
+                </span>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <a
+                    href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, '')}`}
+                    className="text-xs sm:text-sm font-bold text-navy-950 hover:text-brand-blue transition-colors"
+                  >
                     {siteConfig.contact.phoneDisplay}
-                  </span>
+                  </a>
+                  <span className="text-slate-300">/</span>
+                  <a
+                    href={`tel:${siteConfig.contact.phoneSecondary.replace(/[^0-9+]/g, '')}`}
+                    className="text-xs sm:text-sm font-bold text-navy-950 hover:text-brand-blue transition-colors"
+                  >
+                    {siteConfig.contact.phoneSecondaryDisplay}
+                  </a>
                 </div>
-              </a>
+              </div>
 
               <a
                 href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent('Hello My Space, I would like to enquire about a construction project in Bangalore.')}`}

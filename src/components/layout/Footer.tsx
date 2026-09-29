@@ -177,15 +177,37 @@ export default function Footer() {
             <h3 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">
               Start a Conversation
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               <a
-                href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
-                className="flex items-center gap-3 p-3 rounded-lg bg-navy-900 border border-navy-800 hover:border-brand-blue text-slate-200 hover:text-white transition-all group"
+                href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, '')}`}
+                className="flex items-center gap-3 p-2.5 rounded-lg bg-navy-900 border border-navy-800 hover:border-brand-blue text-slate-200 hover:text-white transition-all group"
               >
-                <Phone className="w-4 h-4 text-brand-blue group-hover:scale-110 transition-transform" />
-                <div className="text-xs">
-                  <span className="text-slate-400 block">Direct Consultation</span>
-                  <span className="font-semibold text-white">{siteConfig.contact.phoneDisplay}</span>
+                <Phone className="w-4 h-4 text-brand-blue group-hover:scale-110 transition-transform shrink-0" />
+                <div className="text-xs min-w-0">
+                  <span className="text-slate-400 block text-[10px]">Primary Consultation</span>
+                  <span className="font-semibold text-white truncate block">{siteConfig.contact.phoneDisplay}</span>
+                </div>
+              </a>
+
+              <a
+                href={`tel:${siteConfig.contact.phoneSecondary.replace(/[^0-9+]/g, '')}`}
+                className="flex items-center gap-3 p-2.5 rounded-lg bg-navy-900 border border-navy-800 hover:border-brand-blue text-slate-200 hover:text-white transition-all group"
+              >
+                <Phone className="w-4 h-4 text-sky-400 group-hover:scale-110 transition-transform shrink-0" />
+                <div className="text-xs min-w-0">
+                  <span className="text-slate-400 block text-[10px]">Alternate Desk</span>
+                  <span className="font-semibold text-white truncate block">{siteConfig.contact.phoneSecondaryDisplay}</span>
+                </div>
+              </a>
+
+              <a
+                href={`mailto:${siteConfig.contact.email}`}
+                className="flex items-center gap-3 p-2.5 rounded-lg bg-navy-900 border border-navy-800 hover:border-brand-blue text-slate-200 hover:text-white transition-all group"
+              >
+                <Mail className="w-4 h-4 text-brand-blue group-hover:scale-110 transition-transform shrink-0" />
+                <div className="text-xs min-w-0">
+                  <span className="text-slate-400 block text-[10px]">Direct Email</span>
+                  <span className="font-semibold text-white truncate block">{siteConfig.contact.email}</span>
                 </div>
               </a>
 
@@ -193,24 +215,16 @@ export default function Footer() {
                 href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent('Hello My Space, I am planning a project in Bangalore and would like to discuss.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-lg bg-brand-green-success/15 border border-brand-green-success/30 hover:border-brand-green-success text-slate-200 hover:text-white transition-all group"
+                className="flex items-center gap-3 p-2.5 rounded-lg bg-brand-green-success/15 border border-brand-green-success/30 hover:border-brand-green-success text-slate-200 hover:text-white transition-all group"
               >
-                <div className="w-4 h-4 rounded-full bg-brand-green-success flex items-center justify-center text-[10px] font-bold text-white">
+                <div className="w-4 h-4 rounded-full bg-brand-green-success flex items-center justify-center text-[10px] font-bold text-white shrink-0">
                   W
                 </div>
                 <div className="text-xs">
-                  <span className="text-emerald-300 block">WhatsApp Chat</span>
-                  <span className="font-semibold text-white">Message Our Team</span>
+                  <span className="text-emerald-300 block text-[10px]">WhatsApp Chat</span>
+                  <span className="font-semibold text-white">Instant Plan Sharing</span>
                 </div>
               </a>
-
-              <Link
-                href="/contact"
-                className="w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-xs font-semibold bg-brand-blue text-white hover:bg-brand-steel transition-colors shadow-blueprint"
-              >
-                <span>Tell Us What You Are Planning</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
             </div>
           </div>
         </div>

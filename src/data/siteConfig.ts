@@ -11,10 +11,12 @@ export const siteConfig = {
     country: "India",
   },
   contact: {
-    phone: "+91 98450 12345",
-    phoneDisplay: "+91 98450 12345",
-    whatsapp: "+919845012345",
-    email: "enquiry@myspacebangalore.com",
+    phone: "+91 96861 14330",
+    phoneDisplay: "+91 96861 14330",
+    phoneSecondary: "+91 90358 50191",
+    phoneSecondaryDisplay: "+91 90358 50191",
+    whatsapp: "+919686114330",
+    email: "myspacebgl95@gmail.com",
     hours: "Monday – Saturday: 9:00 AM – 7:00 PM IST",
   },
   meta: {
@@ -25,10 +27,10 @@ export const siteConfig = {
     ogImage: "/images/hero-banner.jpg",
   },
   navLinks: [
+    { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
     { name: "How It Works", href: "/process" },
-    { name: "About", href: "/about" },
     { name: "Insights", href: "/insights" },
     { name: "FAQs", href: "/faqs" },
     { name: "Contact", href: "/contact" },

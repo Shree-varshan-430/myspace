@@ -77,29 +77,38 @@ export default function Header() {
       {/* Top Utility Bar - White Background for Social Links & Contact */}
       <div className="bg-white border-b border-slate-200/80 text-slate-600 text-[11px] sm:text-xs font-sans">
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 py-1.5 flex items-center justify-between">
-          {/* Left: Contact Phone, Email & Working Hours */}
-          <div className="flex items-center gap-3 sm:gap-5">
+          {/* Left: Contact Phones, Email & Working Hours */}
+          <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
             <a
               href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, '')}`}
-              className="inline-flex items-center gap-1.5 text-slate-700 hover:text-brand-blue transition-colors font-medium"
+              className="inline-flex items-center gap-1.5 text-slate-700 hover:text-brand-blue transition-colors font-semibold"
             >
               <Phone className="w-3.5 h-3.5 text-brand-blue shrink-0" />
               <span>{siteConfig.contact.phoneDisplay}</span>
             </a>
 
-            <span className="hidden sm:inline text-slate-300">|</span>
+            <span className="text-slate-300">/</span>
+
+            <a
+              href={`tel:${siteConfig.contact.phoneSecondary.replace(/[^0-9+]/g, '')}`}
+              className="inline-flex items-center gap-1 text-slate-700 hover:text-brand-blue transition-colors font-semibold"
+            >
+              <span>{siteConfig.contact.phoneSecondaryDisplay}</span>
+            </a>
+
+            <span className="hidden md:inline text-slate-300">|</span>
 
             <a
               href={`mailto:${siteConfig.contact.email}`}
-              className="hidden sm:inline-flex items-center gap-1.5 text-slate-600 hover:text-brand-blue transition-colors"
+              className="hidden md:inline-flex items-center gap-1.5 text-slate-600 hover:text-brand-blue transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-brand-blue shrink-0" />
               <span>{siteConfig.contact.email}</span>
             </a>
 
-            <span className="hidden lg:inline text-slate-300">|</span>
+            <span className="hidden xl:inline text-slate-300">|</span>
 
-            <span className="hidden lg:inline-flex items-center gap-1.5 text-slate-500">
+            <span className="hidden xl:inline-flex items-center gap-1.5 text-slate-500">
               <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
               <span>{siteConfig.contact.hours}</span>
             </span>
@@ -212,6 +221,18 @@ export default function Header() {
                 Home
               </Link>
 
+              {/* About - Right next to Home */}
+              <Link
+                href="/about"
+                className={`whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-all ${
+                  pathname === '/about'
+                    ? 'text-brand-blue font-semibold bg-brand-blue/[0.08]'
+                    : 'text-slate-600 hover:text-navy-950 hover:bg-slate-100/70'
+                }`}
+              >
+                About
+              </Link>
+
               {/* Construction Dropdown */}
               <div
                 className="relative"
@@ -284,7 +305,7 @@ export default function Header() {
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
-                            <span>Industrial construction</span>
+                            <span>Industrial Construction</span>
                             <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
                           <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
@@ -292,6 +313,26 @@ export default function Header() {
                           </p>
                         </div>
                       </Link>
+
+                      <div className="pt-1 border-t border-slate-100">
+                        <Link
+                          href="/packages"
+                          className="group flex items-start gap-3 p-2.5 rounded-xl bg-blue-50/50 hover:bg-blue-50 border border-blue-100 transition-colors"
+                        >
+                          <div className="w-8 h-8 rounded-lg bg-brand-blue text-white flex items-center justify-center shrink-0 mt-0.5">
+                            <Layers className="w-4 h-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
+                              <span className="font-bold text-brand-blue">Packages & Pricing</span>
+                              <ArrowRight className="w-3 h-3 text-brand-blue" />
+                            </div>
+                            <p className="text-[11px] text-slate-600 mt-0.5 leading-snug">
+                              Turnkey packages from ₹1,850/sq.ft with BOQ.
+                            </p>
+                          </div>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -497,18 +538,6 @@ export default function Header() {
                 Projects
               </Link>
 
-              {/* About */}
-              <Link
-                href="/about"
-                className={`whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-all ${
-                  pathname === '/about'
-                    ? 'text-brand-blue font-semibold bg-brand-blue/[0.08]'
-                    : 'text-slate-600 hover:text-navy-950 hover:bg-slate-100/70'
-                }`}
-              >
-                About
-              </Link>
-
               {/* Insights */}
               <Link
                 href="/insights"
@@ -519,18 +548,6 @@ export default function Header() {
                 }`}
               >
                 Insights
-              </Link>
-
-              {/* Packages (Replaces FAQs) */}
-              <Link
-                href="/packages"
-                className={`whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-all ${
-                  pathname === '/packages'
-                    ? 'text-brand-blue font-semibold bg-brand-blue/[0.08]'
-                    : 'text-slate-600 hover:text-navy-950 hover:bg-slate-100/70'
-                }`}
-              >
-                Packages
               </Link>
 
               {/* Contact */}
@@ -593,13 +610,19 @@ export default function Header() {
               <ArrowRight className="w-4 h-4" />
             </Link>
 
-            {/* Home link */}
-            <div className="pt-2">
+            {/* Home and About links */}
+            <div className="pt-2 space-y-1">
               <Link
                 href="/"
                 className="block px-3 py-2 rounded-lg text-base font-semibold text-slate-800 hover:text-brand-blue hover:bg-slate-50"
               >
                 Home
+              </Link>
+              <Link
+                href="/about"
+                className="block px-3 py-2 rounded-lg text-base font-semibold text-slate-800 hover:text-brand-blue hover:bg-slate-50"
+              >
+                About Us
               </Link>
             </div>
 
@@ -625,7 +648,13 @@ export default function Header() {
                   href="/services/industrial-construction-bangalore"
                   className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
                 >
-                  Industrial construction
+                  Industrial Construction
+                </Link>
+                <Link
+                  href="/packages"
+                  className="block px-3 py-1.5 rounded-lg text-sm font-semibold text-brand-blue hover:bg-blue-50"
+                >
+                  Packages & Pricing (From ₹1,850/sq.ft)
                 </Link>
               </div>
             </div>
@@ -640,7 +669,7 @@ export default function Header() {
                   href="/services/interior-design-bangalore"
                   className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
                 >
-                  Interior design
+                  Interior design & Packages
                 </Link>
                 <Link
                   href="/services/2d-design-bangalore"
@@ -699,22 +728,16 @@ export default function Header() {
                 Projects
               </Link>
               <Link
-                href="/about"
+                href="/process"
                 className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
               >
-                About
+                How It Works
               </Link>
               <Link
                 href="/insights"
                 className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
               >
                 Insights
-              </Link>
-              <Link
-                href="/packages"
-                className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:text-navy-950 hover:bg-slate-50"
-              >
-                Packages & Pricing
               </Link>
               <Link
                 href="/contact"
@@ -730,9 +753,19 @@ export default function Header() {
                 <strong className="text-navy-950">Office:</strong> {siteConfig.address.street}, {siteConfig.address.city}
               </p>
               <p>
-                <strong className="text-navy-950">Direct Phone:</strong>{' '}
+                <strong className="text-navy-950">Direct Phones:</strong>{' '}
                 <a href={`tel:${siteConfig.contact.phone}`} className="text-brand-blue font-semibold">
                   {siteConfig.contact.phoneDisplay}
+                </a>
+                {' / '}
+                <a href={`tel:${siteConfig.contact.phoneSecondary}`} className="text-brand-blue font-semibold">
+                  {siteConfig.contact.phoneSecondaryDisplay}
+                </a>
+              </p>
+              <p>
+                <strong className="text-navy-950">Email:</strong>{' '}
+                <a href={`mailto:${siteConfig.contact.email}`} className="text-brand-blue">
+                  {siteConfig.contact.email}
                 </a>
               </p>
             </div>
