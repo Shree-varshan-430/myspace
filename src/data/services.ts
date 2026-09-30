@@ -525,6 +525,105 @@ export const servicesData: ServiceItem[] = [
     ]
   },
   {
+    id: "architectural-drawing",
+    slug: "architectural-drawing-bangalore",
+    title: "Architectural Drawing",
+    category: "Design",
+    h1: "Architectural Drawing & 2D/3D Design in Bangalore",
+    primaryKeyword: "architectural drawings Bangalore",
+    metaTitle: "Architectural Drawing & 2D/3D Design Bangalore | My Space",
+    metaDescription: "Comprehensive architectural drawings, Vastu 2D floor plans, BBMP sanction blueprints, 3D elevations, and furnished isometric layouts in Bangalore.",
+    tagline: "2D Working Blueprints, Municipal Sanctions, 3D Elevations & Spatial Layouts",
+    heroImage: "/images/company/front-elevation-hero.jpeg",
+    galleryImages: [
+      {
+        url: "/images/company/front-elevation-hero.jpeg",
+        title: "Photorealistic 3D Exterior Elevation",
+        caption: "Contemporary façade with terracotta louvers and lighting."
+      },
+      {
+        url: "/images/company/real-project-01.jpeg",
+        title: "2D Dimensional Floor Plans & Vastu Grid",
+        caption: "Precise working layouts conforming to BBMP setback bylaws."
+      },
+      {
+        url: "/images/company/showroom-3.jpeg",
+        title: "Furnished 3D Isometric Spatial View",
+        caption: "Top-down perspective showing walkway flow and furniture clearances."
+      },
+      {
+        url: "/images/company/real-project-21.jpeg",
+        title: "Structural Column Centerline & MEP Layouts",
+        caption: "Exact excavation grids and conduit routing for site engineers."
+      }
+    ],
+    eyebrow: "ARCHITECTURAL DRAWING, 2D BLUEPRINTS & 3D VISUALIZATION",
+    primaryCta: "Request Architectural Drawings",
+    summary: "Complete architectural drafting and visualization: dimensioned 2D floor plans, BBMP sanction blueprints, photorealistic 3D exterior elevations, and furnished isometric layouts.",
+    whoIsThisFor: [
+      "Plot owners requiring custom 2D floor plans, Vastu compliance, and 3D visual clarity before building",
+      "Homeowners submitting architectural plans for BBMP/BDA municipal sanction approvals",
+      "Builders seeking comprehensive 2D working drawings and dimensioned 3D fabrication callouts"
+    ],
+    whatWeHelpWith: [
+      {
+        title: "2D Vastu Floor Plans & Spatial Flow",
+        desc: "Dimensioned room plans, wall thicknesses, stair geometry, and cross-ventilation."
+      },
+      {
+        title: "Photorealistic 3D Elevations",
+        desc: "Façade styling, terracotta/HPL textures, cantilever balconies, and dusk lighting."
+      },
+      {
+        title: "Municipal Sanction Blueprint Sets",
+        desc: "Drafted strictly conforming to BBMP/BDA setbacks, road widths, and FAR bylaws."
+      },
+      {
+        title: "Working Civil & MEP Schematics",
+        desc: "Column centerline grids, door/window schedules, and electrical/plumbing drops."
+      }
+    ],
+    whatToPrepare: [
+      "Plot survey sketch, boundary dimensions, and road width",
+      "Family room inventory, vehicle parking, and Vastu preferences",
+      "Architectural style references and preferred exterior finishes"
+    ],
+    scopeInclusions: [
+      "2D conceptual architectural floor layout with dimensional grid and revision rounds",
+      "High-resolution 3D daytime and evening perspective renders",
+      "Detailed working drawings, column centerlines, and door/window schedules",
+      "Furnished 3D isometric cutaways showing true-to-scale furniture clearances",
+      "Digital high-resolution PDF package for mobile and on-site mason use"
+    ],
+    scopeExclusions: [
+      "Statutory municipal sanction government fee deposits"
+    ],
+    disclaimer: "Architectural drawings and 3D visualizations communicate design intent and spatial aesthetics. Detailing aligns with local municipal setback rules.",
+    relatedServiceSlugs: ["house-construction-bangalore", "interior-design-bangalore", "structural-design-bangalore", "civil-construction-bangalore"],
+    faqs: [
+      {
+        question: "What is included in the Architectural Drawing package?",
+        answer: "The package includes dimensioned 2D floor layouts, BBMP sanction drawings, column centerline grids, door/window schedules, photorealistic 3D elevations, and furnished isometric layouts."
+      },
+      {
+        question: "Do your architectural plans conform to Bengaluru building bylaws?",
+        answer: "Yes, all plans comply strictly with BBMP/BDA setback rules, Floor Area Ratio (FAR), road width criteria, and light/ventilation norms."
+      },
+      {
+        question: "How do you balance Vastu Shastra with modern spatial efficiency?",
+        answer: "We align key zones according to Vastu (kitchen in South-East, master suite in South-West) while optimizing modern ergonomics, natural daylight, and circulation flow."
+      },
+      {
+        question: "Can I get architectural drawings without giving construction to My Space?",
+        answer: "Yes. You can engage My Space solely for architectural drawings, 2D working blueprints, and 3D design for your contractor to execute."
+      },
+      {
+        question: "How long does it take to prepare complete architectural drawings and 3D elevations?",
+        answer: "Conceptual 2D floor plans are delivered in 3 to 5 working days, followed by 3D elevations and final working drawings within 7 to 10 working days."
+      }
+    ]
+  },
+  {
     id: "2d-design",
     slug: "2d-design-bangalore",
     title: "2D Architectural Design",

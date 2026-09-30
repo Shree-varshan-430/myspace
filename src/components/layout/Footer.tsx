@@ -115,26 +115,18 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
+                  href="/services/architectural-drawing-bangalore"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
+                  Architectural Drawing (2D & 3D)
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/services/interior-design-bangalore"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
                   Interior Design
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/2d-design-bangalore"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  2D Architectural Design
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/3d-design-bangalore"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  3D Façade & Design
                 </Link>
               </li>
               <li>

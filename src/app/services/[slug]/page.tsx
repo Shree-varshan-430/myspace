@@ -289,6 +289,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
   const isInteriorService = service.slug === 'interior-design-bangalore';
 
   const isPlanningService = [
+    'architectural-drawing-bangalore',
     'interior-design-bangalore',
     '2d-design-bangalore',
     '3d-design-bangalore',
@@ -343,6 +344,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
     'commercial-construction-bangalore': 'commercial',
     'industrial-construction-bangalore': 'commercial',
     'civil-construction-bangalore': 'civil',
+    'architectural-drawing-bangalore': 'elevation-3d',
     'interior-design-bangalore': 'interiors',
     '2d-design-bangalore': 'elevation-3d',
     '3d-design-bangalore': 'elevation-3d',

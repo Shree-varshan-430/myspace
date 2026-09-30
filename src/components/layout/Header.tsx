@@ -58,6 +58,7 @@ export default function Header() {
   ].includes(pathname);
 
   const isPlanningActive = [
+    '/services/architectural-drawing-bangalore',
     '/services/interior-design-bangalore',
     '/services/2d-design-bangalore',
     '/services/3d-design-bangalore',
@@ -366,6 +367,24 @@ export default function Header() {
                   <div className="absolute top-full left-0 pt-2 z-50">
                     <div className="w-80 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-2.5 animate-in fade-in slide-in-from-top-1 duration-150 space-y-1">
                       <Link
+                        href="/services/architectural-drawing-bangalore"
+                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                          <FileText className="w-4 h-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
+                            <span>Architectural Drawing</span>
+                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                            2D floor plans, BBMP sanctions & 3D elevations.
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link
                         href="/services/interior-design-bangalore"
                         className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                       >
@@ -379,42 +398,6 @@ export default function Header() {
                           </div>
                           <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
                             Turnkey interiors, modular kitchens & joinery.
-                          </p>
-                        </div>
-                      </Link>
-
-                      <Link
-                        href="/services/2d-design-bangalore"
-                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
-                      >
-                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
-                          <FileText className="w-4 h-4" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
-                            <span>2D design</span>
-                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                          </div>
-                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
-                            Vastu floor plans, sanction & working drawings.
-                          </p>
-                        </div>
-                      </Link>
-
-                      <Link
-                        href="/services/3d-design-bangalore"
-                        className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
-                      >
-                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-blue group-hover:text-white transition-colors">
-                          <Sparkles className="w-4 h-4" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-navy-950 font-semibold text-xs group-hover:text-brand-blue transition-colors flex items-center justify-between">
-                            <span>3D design</span>
-                            <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                          </div>
-                          <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
-                            Façade elevations, 3D views & walkthroughs.
                           </p>
                         </div>
                       </Link>
@@ -666,22 +649,16 @@ export default function Header() {
               </span>
               <div className="space-y-1">
                 <Link
+                  href="/services/architectural-drawing-bangalore"
+                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
+                >
+                  Architectural Drawing (2D & 3D)
+                </Link>
+                <Link
                   href="/services/interior-design-bangalore"
                   className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
                 >
                   Interior design & Packages
-                </Link>
-                <Link
-                  href="/services/2d-design-bangalore"
-                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
-                >
-                  2D design
-                </Link>
-                <Link
-                  href="/services/3d-design-bangalore"
-                  className="block px-3 py-1.5 rounded-lg text-sm text-slate-700 hover:text-navy-950 hover:bg-slate-50"
-                >
-                  3D design
                 </Link>
                 <Link
                   href="/services/structural-design-bangalore"

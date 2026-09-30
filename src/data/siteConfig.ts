@@ -49,9 +49,9 @@ export const siteConfig = {
       group: "Design & Visualize",
       description: "Spatial planning, 3D clarity, and custom finishes",
       items: [
+        { name: "Architectural Drawing (2D & 3D)", href: "/services/architectural-drawing-bangalore", desc: "Vastu 2D layouts, BBMP sanctions, and 3D elevations" },
         { name: "Interior Design & Execution", href: "/services/interior-design-bangalore", desc: "Space planning, storage, materials, and execution" },
-        { name: "3D Elevation Design", href: "/services/elevation-design-bangalore", desc: "Façade design, material palettes, and lighting studies" },
-        { name: "3D Floor Plan Design", href: "/services/3d-floor-plan-design-bangalore", desc: "Spatial flow, furniture layout, and dimensioned views" },
+        { name: "Structural Design", href: "/services/structural-design-bangalore", desc: "RCC detailing, footings & IS code design" },
       ]
     },
     {

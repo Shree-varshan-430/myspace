@@ -43,13 +43,13 @@ const practiceAreas: PracticeArea[] = [
     ctaText: 'Explore Interiors',
   },
   {
-    id: 'elevation-design',
+    id: 'architectural-drawing',
     tag: 'Architecture',
-    title: '3D Elevation & Plans',
-    description: 'Photorealistic 3D elevations and vastu-aligned floor layouts.',
+    title: 'Architectural Drawing',
+    description: '2D Vastu floor plans, BBMP sanctions & photorealistic 3D elevations.',
     image: '/images/company/front-elevation-hero.jpeg',
-    href: '/services/elevation-design-bangalore',
-    ctaText: 'Explore 3D Design',
+    href: '/services/architectural-drawing-bangalore',
+    ctaText: 'Explore Drawings',
   },
   {
     id: 'civil-contracting',
@@ -128,13 +128,13 @@ export default function PracticeAreasCarousel() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-3">
               <Home className="w-4 h-4 text-brand-blue" />
-              <span>Turnkey Services</span>
+              <span>Integrated Services</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-              Construction, Design & Valuation
+              One Team. From Plan to Completion.
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
-              Turnkey residential construction, modular interiors, 3D elevations, and property valuation.
+            <p className="text-sm sm:text-base text-slate-600 mt-2.5 leading-relaxed">
+              Instead of coordinating several people for design, structure, civil work and interiors, you can work with one engineering-led team.
             </p>
           </div>
 

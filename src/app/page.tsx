@@ -39,39 +39,34 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* ============================================================
-          4.2 HERO SECTION (Architectural Premium Hero)
+          4.2 HERO SECTION (Clean & Simple)
       ============================================================ */}
-      <section className="relative min-h-[92vh] flex flex-col justify-end pt-32 pb-14 sm:pb-16 lg:pb-20 overflow-hidden">
+      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-center pt-28 pb-16 overflow-hidden">
         {/* Real-World Architectural Background Image */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <img
             src="/images/company/real-project-62.jpeg"
             alt="My Space Real-World Contemporary House Architecture & Turnkey Execution"
-            className="w-full h-full object-cover object-center scale-105 animate-in fade-in zoom-in-105 duration-1000"
+            className="w-full h-full object-cover object-center scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950/95 via-navy-950/60 to-navy-950/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950/95 via-navy-950/70 to-navy-950/40" />
         </div>
 
         {/* Main Content Area */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full mb-6 sm:mb-10">
-          <ScrollReveal direction="up" delay={0.1} duration={0.8} className="max-w-3xl space-y-5">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sky-300 text-xs font-semibold tracking-wide">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Complete Building Solutions Under One Roof • Bengaluru</span>
-            </div>
-
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <ScrollReveal direction="up" delay={0.1} duration={0.8} className="max-w-3xl space-y-6">
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]">
-              Building Bengaluru With Engineering Rigor & Architectural Vision
+              You Have the Space. Let's Build Something That Feels Like Yours.
             </h1>
 
-            <p className="text-sm sm:text-base lg:text-lg text-slate-200 font-sans leading-relaxed max-w-2xl">
-              Turnkey residential construction, 2D/3D custom planning, bespoke modular interiors, and certified valuation with fixed milestone BOQ pricing.
+            <p className="text-base sm:text-lg lg:text-xl text-slate-200 font-sans leading-relaxed max-w-2xl">
+              Engineering, construction and design for homes, businesses and properties across Bengaluru.
             </p>
 
-            <div className="pt-2 flex flex-wrap items-center gap-3.5">
+            <div className="pt-4 flex flex-wrap items-center gap-4">
               <a
                 href="#enquiry"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-brand-blue text-white text-sm font-semibold hover:bg-sky-500 active:scale-[0.98] transition-all shadow-lg"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brand-blue text-white text-sm font-semibold hover:bg-sky-500 active:scale-[0.98] transition-all shadow-lg"
               >
                 <span>Start Project Consultation</span>
                 <ArrowRight className="w-4 h-4" />
@@ -79,81 +74,13 @@ export default function HomePage() {
 
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/15 hover:bg-white/25 text-white text-sm font-semibold backdrop-blur-md border border-white/30 active:scale-[0.98] transition-all"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/15 hover:bg-white/25 text-white text-sm font-semibold backdrop-blur-md border border-white/30 active:scale-[0.98] transition-all"
               >
-                <span>Explore Previous Projects</span>
+                <span>Explore Projects</span>
               </Link>
-            </div>
-
-            {/* Quick Contact Chips in Hero */}
-            <div className="pt-2 flex flex-wrap items-center gap-2.5 text-xs text-slate-300">
-              <span className="text-slate-400 font-medium">Direct Engineering Desks:</span>
-              <a
-                href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, '')}`}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-white font-semibold transition-colors"
-              >
-                <Phone className="w-3 h-3 text-sky-400" />
-                <span>{siteConfig.contact.phoneDisplay}</span>
-              </a>
-              <a
-                href={`tel:${siteConfig.contact.phoneSecondary.replace(/[^0-9+]/g, '')}`}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-white font-semibold transition-colors"
-              >
-                <Phone className="w-3 h-3 text-sky-400" />
-                <span>{siteConfig.contact.phoneSecondaryDisplay}</span>
-              </a>
             </div>
           </ScrollReveal>
         </div>
-
-        {/* Bottom Metrics Bar */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-6 border-t border-white/10">
-            <div className="p-3 rounded-xl bg-white/[0.05] backdrop-blur-sm border border-white/10">
-              <span className="text-xl sm:text-2xl font-bold text-white block">15+ Years</span>
-              <span className="text-[11px] text-slate-300">Senior Practice in Bangalore</span>
-            </div>
-            <div className="p-3 rounded-xl bg-white/[0.05] backdrop-blur-sm border border-white/10">
-              <span className="text-xl sm:text-2xl font-bold text-sky-400 block">100+ Built</span>
-              <span className="text-[11px] text-slate-300">Homes, Villas & Fitouts</span>
-            </div>
-            <div className="p-3 rounded-xl bg-white/[0.05] backdrop-blur-sm border border-white/10">
-              <span className="text-xl sm:text-2xl font-bold text-white block">Fixed BOQ</span>
-              <span className="text-[11px] text-slate-300">Zero Midway Cost Escalation</span>
-            </div>
-            <div className="p-3 rounded-xl bg-white/[0.05] backdrop-blur-sm border border-white/10">
-              <span className="text-xl sm:text-2xl font-bold text-emerald-400 block">IS Standards</span>
-              <span className="text-[11px] text-slate-300">Certified Structural Testing</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Right-Edge Floating Contact Action Bar */}
-        <aside className="fixed right-4 bottom-24 z-40 hidden md:flex flex-col gap-2.5" aria-label="Quick Contact Actions">
-          <a
-            href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, '')}`}
-            className="w-10 h-10 rounded-xl bg-brand-blue text-white flex items-center justify-center shadow-lg hover:bg-sky-500 hover:scale-110 active:scale-95 transition-all"
-            title={`Call: ${siteConfig.contact.phoneDisplay}`}
-          >
-            <Phone className="w-4 h-4" />
-          </a>
-          <a
-            href={`mailto:${siteConfig.contact.email}`}
-            className="w-10 h-10 rounded-xl bg-brand-blue text-white flex items-center justify-center shadow-lg hover:bg-sky-500 hover:scale-110 active:scale-95 transition-all"
-            title={`Email: ${siteConfig.contact.email}`}
-          >
-            <Mail className="w-4 h-4" />
-          </a>
-          <a
-            href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-10 h-10 rounded-xl bg-brand-green-success text-white flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all"
-            title="WhatsApp My Space"
-          >
-            <MessageSquare className="w-4 h-4" />
-          </a>
-        </aside>
       </section>
 
       {/* ============================================================
@@ -171,12 +98,23 @@ export default function HomePage() {
               </div>
 
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                Turnkey Construction, Architecture & Interiors
+                From an Empty Plot to a Finished Space
               </h2>
 
-              <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
-                We design and build modern homes with single-point accountability—integrating architectural planning, structural engineering, and interior execution with transparent pricing.
-              </p>
+              <div className="space-y-3.5 text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
+                <p className="font-semibold text-navy-950">
+                  A good building does not start with bricks and concrete.
+                </p>
+                <p>
+                  It starts with understanding the site, the way you want to use the space, your budget and what the building needs to do for you.
+                </p>
+                <p>
+                  Our team works through the process step by step — from site assessment and planning to design, construction, finishing and handover.
+                </p>
+                <p>
+                  You know what is being built, why it is being built and what happens next.
+                </p>
+              </div>
 
               {/* Core Feature Points */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
@@ -192,7 +130,7 @@ export default function HomePage() {
 
                 <div className="flex items-center gap-2.5 text-navy-950 font-sans font-semibold text-sm">
                   <CheckCircle2 className="w-4 h-4 text-brand-blue shrink-0" />
-                  <span>Creative 2D/3D Architecture</span>
+                  <span>Architectural 2D & 3D Drawing</span>
                 </div>
 
                 <div className="flex items-center gap-2.5 text-navy-950 font-sans font-semibold text-sm">
@@ -643,7 +581,7 @@ export default function HomePage() {
                 <span>Completed Projects</span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                Completed Homes & Commercial Projects in Bangalore
+                Projects That Show the Work
               </h2>
             </div>
             <Link

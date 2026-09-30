@@ -50,6 +50,54 @@ export interface DetailedServiceData {
 }
 
 export const serviceDetailsLookup: Record<string, DetailedServiceData> = {
+  'architectural-drawing-bangalore': {
+    typologiesTitle: "Architectural Drawing Typologies",
+    typologiesSubtitle: "Comprehensive 2D drafting and 3D visualization solutions for your plot:",
+    typologies: [
+      { title: "2D Architectural Plans", desc: "Dimensioned room layouts, stair geometry, and Vastu flow.", iconType: "compass" },
+      { title: "3D Elevations & Façades", desc: "Photorealistic daytime and evening exterior styling.", iconType: "building" },
+      { title: "Sanction Blueprints", desc: "BBMP/BDA compliant plans with FAR calculations.", iconType: "file" },
+      { title: "3D Isometric Floor Views", desc: "Furnished top-down cutaways showing room clearances.", iconType: "grid" }
+    ],
+    processTitle: "Architectural Drawing Workflow",
+    processSubtitle: "From site survey and Vastu concept to 3D elevation and final blueprint delivery:",
+    processStages: [
+      { stageNumber: "01", title: "Site Survey & Brief", desc: "Boundary check, setback rules, and requirement mapping." },
+      { stageNumber: "02", title: "2D Concept Layouts", desc: "Multiple floor plan options with Vastu alignment." },
+      { stageNumber: "03", title: "Bylaw Verification", desc: "Validating setbacks and FAR against BBMP rules." },
+      { stageNumber: "04", title: "3D Massing & Façade", desc: "Developing 3D elevations with materials and lighting." },
+      { stageNumber: "05", title: "Client Refinement", desc: "Iterative revisions for room sizes, colors, and textures." },
+      { stageNumber: "06", title: "Working Blueprints", desc: "Column centerline grid, sections, and door/window schedules." },
+      { stageNumber: "07", title: "Dossier Delivery", desc: "High-resolution PDF package and site drawing sheets." }
+    ],
+    scopeTitle: "What Is Included in Architectural Drawings",
+    scopeSubtitle: "Complete drafting and visualization package ready for site masons and sanctions:",
+    detailedScope: [
+      { title: "Dimensioned 2D Floor Plans", desc: "Room dimensions, wall thicknesses, and circulation paths." },
+      { title: "High-Res 3D Exterior Views", desc: "Daytime and evening illumination perspectives with textures." },
+      { title: "Column Centerline Grid", desc: "Accurate excavation coordinates for site engineers." },
+      { title: "Door & Window Schedule", desc: "Opening sizes, sill heights, and shutter specifications." },
+      { title: "3D Furnished Isometric Views", desc: "Furnished layouts verifying walking clearances." },
+      { title: "Municipal Sanction Set", desc: "Formatted drawings for BBMP/BDA authority approvals." }
+    ],
+    costTitle: "Architectural Drawing Cost in Bangalore",
+    costSubtitle: "Parameters that influence architectural design fees:",
+    costDrivers: [
+      { number: "1", title: "Total Built-Up Area (BUA)", desc: "Multi-storey homes require more drawing sheets and detailing." },
+      { number: "2", title: "3D Façade Complexity", desc: "Curved cladding, louvers, and complex massing." },
+      { number: "3", title: "Municipal Sanction Requirements", desc: "Formatting strictly to town planning bylaws and FAR math." },
+      { number: "4", title: "Plot Geometry & Setbacks", desc: "Irregular or corner plots require custom multi-view modeling." }
+    ],
+    timelineTitle: "Drawing Delivery Timeline",
+    timelineSubtitle: "Turnaround from initial consultation to final blueprint package:",
+    timelineSchedule: [
+      { durationBadge: "DAYS 1–2", title: "Survey & Brief", desc: "Plot verification and requirement mapping." },
+      { durationBadge: "DAYS 3–5", title: "2D Concepts", desc: "Vastu floor plan options and room sizing." },
+      { durationBadge: "DAYS 6–8", title: "3D Elevations", desc: "Façade styling, textures, and lighting renders." },
+      { durationBadge: "DAYS 9–10", title: "Working Blueprints", desc: "Centerlines, schedules, and final PDF package." }
+    ]
+  },
+
   'house-construction-bangalore': {
     typologiesTitle: "What We Build",
     typologiesSubtitle: "Tailored residential typologies for your plot:",
