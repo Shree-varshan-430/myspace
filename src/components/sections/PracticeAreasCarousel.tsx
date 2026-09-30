@@ -18,7 +18,7 @@ const practiceAreas: PracticeArea[] = [
   {
     id: 'house-construction',
     tag: 'Residential',
-    title: 'Turnkey Construction',
+    title: 'House Construction',
     description: 'Complete home construction from planning to handover.',
     image: '/images/company/turnkey-house-hero.jpeg',
     href: '/services/house-construction-bangalore',
@@ -36,7 +36,7 @@ const practiceAreas: PracticeArea[] = [
   {
     id: 'bespoke-interiors',
     tag: 'Interiors',
-    title: 'Bespoke Interiors',
+    title: 'Interior Design',
     description: 'Custom modular kitchens, wardrobes, and wood joinery.',
     image: '/images/company/interior-design-hero.jpeg',
     href: '/services/interior-design-bangalore',
