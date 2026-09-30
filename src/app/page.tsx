@@ -56,7 +56,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <ScrollReveal direction="up" delay={0.1} duration={0.8} className="max-w-3xl space-y-6">
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]">
-              You Have the Space. Let's Build Something That Feels Like Yours.
+              <span className="block">You Have the Space</span>
+              <span className="block mt-1">Let's Build Something Special</span>
             </h1>
 
             <p className="text-base sm:text-lg lg:text-xl text-slate-200 font-sans leading-relaxed max-w-2xl">
