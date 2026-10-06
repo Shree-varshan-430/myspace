@@ -113,18 +113,18 @@ export const valuationProcessStages: ProcessStage[] = [
     keyInputs: ["Built-up area measurements", "Standard replacement rates", "Age depreciation"],
     keyOutputs: ["Land component value", "Depreciated structure value", "Fair market valuation"],
     clientRole: "Review draft computation figures.",
-    mySpaceRole: "Apply IBBI/statutory algorithms and depreciation indices.",
+    mySpaceRole: "Apply standard valuation algorithms and depreciation indices.",
     image: "/images/company/showroom-3.jpeg"
   },
   {
     number: "05",
-    title: "Certified Report Handover",
-    tagline: "Govt / IBBI Approved Certificate",
-    description: "Legally certified Valuation Report signed by a Registered Government / IBBI Valuer.",
-    keyInputs: ["Draft sign-off", "Bank/consulate format"],
-    keyOutputs: ["Certified Valuation Report", "Registered Valuer seal", "Market value summary"],
-    clientRole: "Submit certified report to bank or authorities.",
-    mySpaceRole: "Hand over sealed dossier and address bank queries.",
+    title: "Final Valuation Report Handover",
+    tagline: "Comprehensive Valuation Dossier",
+    description: "Detailed property valuation report including physical audit notes, market analysis, and depreciation calculations.",
+    keyInputs: ["Draft sign-off", "Client usage requirements"],
+    keyOutputs: ["Comprehensive Valuation Report", "Property summary dossier", "Market value assessment"],
+    clientRole: "Receive final valuation documentation.",
+    mySpaceRole: "Hand over comprehensive dossier and assist with clarifications.",
     image: "/images/company/showroom-5.jpeg"
   }
 ];

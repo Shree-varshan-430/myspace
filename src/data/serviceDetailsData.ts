@@ -592,25 +592,25 @@ export const serviceDetailsLookup: Record<string, DetailedServiceData> = {
       { stageNumber: "01", title: "Document Review", desc: "Examining deeds, e-Khata, tax receipts, and plans." },
       { stageNumber: "02", title: "Physical Site Inspection", desc: "Inspecting boundaries, road width, and structure age." },
       { stageNumber: "03", title: "Cost & Market Computation", desc: "Guideline rates and CPWD building depreciation." },
-      { stageNumber: "04", title: "Certified Report Handover", desc: "Issuing signed dossier by Registered Valuer." }
+      { stageNumber: "04", title: "Valuation Report Handover", desc: "Issuing comprehensive property valuation dossier." }
     ],
     scopeTitle: "What Is Included",
-    scopeSubtitle: "Appraisal documentation accepted by banks and courts:",
+    scopeSubtitle: "Appraisal documentation for property assessment and records:",
     detailedScope: [
       { title: "Site Inspection & Dimensions", desc: "On-site measurements and road width check." },
       { title: "Guideline vs Market Value", desc: "Sub-registrar rate and fair market value." },
       { title: "CPWD Building Depreciation", desc: "Replacement cost formula based on building age." },
-      { title: "Distress / Realizable Value", desc: "Bank-standard loan security margin calculation." },
+      { title: "Distress / Realizable Value", desc: "Standard realizable property value calculation." },
       { title: "Geo-Tagged Photos", desc: "Photographic record of property and road frontage." },
-      { title: "Registered Valuer Seal", desc: "Certificate compliant with IBBI regulations." }
+      { title: "Detailed Valuation Summary", desc: "Itemized computation and market appraisal dossier." }
     ],
     costTitle: "Cost Factors",
     costSubtitle: "Parameters influencing professional valuation fees:",
     costDrivers: [
       { number: "1", title: "Property Type & Scale", desc: "Vacant plot vs multi-floor commercial building." },
-      { number: "2", title: "Appraisal Purpose", desc: "Standard loan vs Capital Gains / Court litigation." },
+      { number: "2", title: "Appraisal Purpose", desc: "Standard assessment vs asset documentation." },
       { number: "3", title: "Inspection Location", desc: "Central BBMP zones vs rural BMRDA outskirts." },
-      { number: "4", title: "Turnaround Urgency", desc: "Express 24–48 hour delivery for bank deadlines." }
+      { number: "4", title: "Turnaround Urgency", desc: "Express delivery options based on client timeline." }
     ],
     timelineTitle: "Valuation Timeline",
     timelineSubtitle: "Turnaround from inspection to signed report:",
@@ -618,13 +618,13 @@ export const serviceDetailsLookup: Record<string, DetailedServiceData> = {
       { durationBadge: "DAY 1", title: "Document Review", desc: "Reviewing title deeds, e-Khata, and tax receipts." },
       { durationBadge: "DAYS 1–2", title: "Site Inspection", desc: "On-site measurement and condition assessment." },
       { durationBadge: "DAYS 2–3", title: "Computations", desc: "Guideline benchmarking and depreciation math." },
-      { durationBadge: "DAYS 3–4", title: "Report Handover", desc: "Signed and sealed original valuation report." }
+      { durationBadge: "DAYS 3–4", title: "Report Handover", desc: "Complete original valuation report dossier." }
     ]
   },
 
   'land-valuation-bangalore': {
     typologiesTitle: "Land Typologies",
-    typologiesSubtitle: "Certified land valuation and boundary appraisal:",
+    typologiesSubtitle: "Land valuation and boundary appraisal:",
     typologies: [
       { title: "Residential Layout Plots", desc: "BDA, BMRDA, and DC-converted sites.", iconType: "grid" },
       { title: "Commercial Frontage Land", desc: "Main road plots with commercial FAR potential.", iconType: "building" },
@@ -637,7 +637,7 @@ export const serviceDetailsLookup: Record<string, DetailedServiceData> = {
       { stageNumber: "01", title: "Revenue Document Audit", desc: "Checking RTC/Pahani, survey sketch, and deeds." },
       { stageNumber: "02", title: "Physical Boundary Survey", desc: "Verifying physical markers and road access." },
       { stageNumber: "03", title: "Guideline Rate Analysis", desc: "Sub-registrar guidance vs registered transactions." },
-      { stageNumber: "04", title: "Certified Land Dossier", desc: "Issuing formal stamped land appraisal dossier." }
+      { stageNumber: "04", title: "Land Valuation Dossier", desc: "Issuing formal land appraisal dossier." }
     ],
     scopeTitle: "What Is Included",
     scopeSubtitle: "Complete land appraisal documentation:",
@@ -647,7 +647,7 @@ export const serviceDetailsLookup: Record<string, DetailedServiceData> = {
       { title: "Fair Market Value Analysis", desc: "Prevailing open market rates in locality." },
       { title: "Road & Accessibility Audit", desc: "Assessment of legal access and municipal roads." },
       { title: "Geo-Tagged Photos", desc: "Clear photographic record of plot frontage." },
-      { title: "Registered Valuer Stamp", desc: "Certificate compliant with Wealth Tax standards." }
+      { title: "Comprehensive Summary Sheet", desc: "Itemized land assessment and boundary notes." }
     ],
     costTitle: "Cost Factors",
     costSubtitle: "Parameters determining land appraisal fees:",
@@ -655,26 +655,26 @@ export const serviceDetailsLookup: Record<string, DetailedServiceData> = {
       { number: "1", title: "Plot Area & Scale", desc: "Standard 30x40 plots vs multi-acre parcels." },
       { number: "2", title: "Zoning & Land Use", desc: "Residential vs Commercial vs KIADB land." },
       { number: "3", title: "Location & Distance", desc: "BBMP central zone vs rural BMRDA outskirts." },
-      { number: "4", title: "Appraisal Purpose", desc: "Bank mortgage vs Capital Gains Tax audit." }
+      { number: "4", title: "Appraisal Purpose", desc: "Property sale vs asset documentation." }
     ],
     timelineTitle: "Valuation Timeline",
-    timelineSubtitle: "Fast turnaround from inspection to certified report:",
+    timelineSubtitle: "Turnaround from inspection to report handover:",
     timelineSchedule: [
       { durationBadge: "DAY 1", title: "Document Review", desc: "Survey sketch, title deed, and tax receipts." },
       { durationBadge: "DAY 2", title: "Boundary Survey", desc: "Physical inspection of plot boundaries." },
       { durationBadge: "DAY 3", title: "Rate Analysis", desc: "Guideline and market transaction calculations." },
-      { durationBadge: "DAY 4", title: "Report Handover", desc: "Signed and stamped land valuation dossier." }
+      { durationBadge: "DAY 4", title: "Report Handover", desc: "Structured land valuation dossier." }
     ]
   },
 
   'business-valuation-bangalore': {
     typologiesTitle: "Asset & Enterprise Typologies",
-    typologiesSubtitle: "Certified commercial asset and machinery appraisal:",
+    typologiesSubtitle: "Commercial asset and machinery appraisal:",
     typologies: [
       { title: "Plant & Machinery", desc: "Depreciated replacement value of equipment.", iconType: "hammer" },
       { title: "Commercial Fixed Assets", desc: "Appraisal of corporate offices and showrooms.", iconType: "building" },
       { title: "M&A Dossiers", desc: "DCF and NAV valuation for equity transactions.", iconType: "calculator" },
-      { title: "Statutory Financial Audits", desc: "Fixed asset registers and impairment testing.", iconType: "file" }
+      { title: "Financial Asset Tracking", desc: "Fixed asset registers and impairment testing.", iconType: "file" }
     ],
     processTitle: "Business Valuation Process",
     processSubtitle: "Due diligence and physical asset verification methodology:",
@@ -682,23 +682,23 @@ export const serviceDetailsLookup: Record<string, DetailedServiceData> = {
       { stageNumber: "01", title: "Financial Screening", desc: "Audited balance sheets and procurement invoices." },
       { stageNumber: "02", title: "Plant & Machinery Inspection", desc: "Operational capacity and maintenance logs." },
       { stageNumber: "03", title: "Methodology Execution", desc: "Asset Approach, DCF, and Market Approach." },
-      { stageNumber: "04", title: "Certified Report", desc: "Formal stamped dossier signed by IBBI Valuer." }
+      { stageNumber: "04", title: "Asset Dossier Handover", desc: "Formal dossier with complete asset registers." }
     ],
     scopeTitle: "What Is Included",
-    scopeSubtitle: "Appraisal dossiers recognized by banks and audit authorities:",
+    scopeSubtitle: "Appraisal dossiers for business planning and asset evaluation:",
     detailedScope: [
       { title: "Physical Equipment Audit", desc: "Inspection of machinery and infrastructure." },
       { title: "Depreciated Cost (DRC)", desc: "Calculations reflecting actual machine lifespan." },
       { title: "Discounted Cash Flow (DCF)", desc: "Modeling future cash flows and terminal value." },
       { title: "Tangible Asset Breakdown", desc: "Itemized summary of tangible business assets." },
-      { title: "IBBI Registered Valuer Seal", desc: "Statutory certification recognized across India." }
+      { title: "Asset Valuation Dossier", desc: "Structured documentation with full asset details." }
     ],
     costTitle: "Cost Factors",
     costSubtitle: "Parameters influencing enterprise valuation fees:",
     costDrivers: [
       { number: "1", title: "Scale of Fixed Asset Register", desc: "Number of equipment lines to physically inspect." },
       { number: "2", title: "Methodology Complexity", desc: "Tangible asset valuation vs full DCF modeling." },
-      { number: "3", title: "Statutory Purpose", desc: "Bank credit security vs NCLT / M&A legal audit." },
+      { number: "3", title: "Assessment Purpose", desc: "Commercial review vs asset tracking." },
       { number: "4", title: "Location Count", desc: "Single plant vs multiple branch facilities." }
     ],
     timelineTitle: "Valuation Timeline",
@@ -707,7 +707,7 @@ export const serviceDetailsLookup: Record<string, DetailedServiceData> = {
       { durationBadge: "DAYS 1–2", title: "Financial Review", desc: "Analyzing balance sheets and asset lists." },
       { durationBadge: "DAYS 3–4", title: "Site Inspection", desc: "Physical equipment and maintenance audit." },
       { durationBadge: "DAYS 5–6", title: "DCF & DRC Modeling", desc: "Executing cash flow and depreciation math." },
-      { durationBadge: "DAYS 7–8", title: "Final Handover", desc: "Signed and stamped IBBI-compliant dossier." }
+      { durationBadge: "DAYS 7–8", title: "Final Handover", desc: "Detailed business valuation dossier." }
     ]
   }
 };

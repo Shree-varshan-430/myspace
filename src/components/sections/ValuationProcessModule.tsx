@@ -92,19 +92,19 @@ const valuationPipeline: ValuationStageData[] = [
   },
   {
     step: '05',
-    tabLabel: 'Certified Report',
-    tag: 'Stage 05 • Certification',
-    title: 'Government-Registered Report',
+    tabLabel: 'Valuation Dossier',
+    tag: 'Stage 05 • Final Report',
+    title: 'Comprehensive Valuation Dossier',
     turnaround: 'Day 3–5',
-    summary: 'Certified valuation dossier signed by an approved Government-Registered Valuer.',
+    summary: 'Detailed valuation dossier including market analysis, cost depreciation, and physical audit observations.',
     checklist: [
-      'IBBI / Form A compliant format',
-      'Registered Valuer stamp & seal',
-      'Site photographs & drawings',
-      'Bank & authority acceptance'
+      'Standard valuation format',
+      'Detailed site observations & notes',
+      'Site photographs & layout maps',
+      'Market value summary'
     ],
-    deliverable: 'Signed & Sealed Valuation Dossier',
-    methodology: 'IBBI / Wealth Tax Standards'
+    deliverable: 'Complete Valuation Dossier',
+    methodology: 'Standard Valuation Norms'
   }
 ];
 
@@ -118,13 +118,13 @@ export default function ValuationProcessModule() {
         <ScrollReveal direction="up" className="max-w-3xl mb-10">
           <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-3">
             <Home className="w-4 h-4 text-brand-blue" />
-            <span>Approved Property Valuers</span>
+            <span>Property Valuation & Assessment</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-            Government Approved Property Valuation
+            Comprehensive Property Valuation
           </h2>
           <p className="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
-            Certified property and asset valuation reports for bank loans, capital gains, and visas.
+            Independent property and asset valuation reports based on physical audits, guideline values, and micro-market analysis.
           </p>
 
           <div className="flex flex-wrap items-center gap-2.5 pt-4">
@@ -134,7 +134,7 @@ export default function ValuationProcessModule() {
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-              <span>Bank Accepted & IBBI Registered</span>
+              <span>Engineering-Led Assessment</span>
             </span>
           </div>
         </ScrollReveal>

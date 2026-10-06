@@ -1158,8 +1158,8 @@ export const servicesData: ServiceItem[] = [
         desc: "Auditing e-Khata, tax receipts, and Encumbrance Certificates."
       },
       {
-        title: "Certified Valuation Dossier",
-        desc: "Signed and sealed report by IBBI / Wealth Tax registered valuers."
+        title: "Comprehensive Valuation Dossier",
+        desc: "Detailed valuation dossier with clear market data."
       }
     ],
     whatToPrepare: [
@@ -1170,7 +1170,7 @@ export const servicesData: ServiceItem[] = [
     scopeInclusions: [
       "Physical land inspection and boundary verification in Bengaluru",
       "Fair market value and realizable distress value breakdown",
-      "Certified valuation report stamped by Government-Registered Valuer"
+      "Comprehensive valuation dossier and market assessment report"
     ],
     scopeExclusions: [
       "Litigation dispute advocacy in court"
@@ -1178,8 +1178,8 @@ export const servicesData: ServiceItem[] = [
     relatedServiceSlugs: ["property-valuation-bangalore", "business-valuation-bangalore"],
     faqs: [
       {
-        question: "How is vacant land valued for bank loans?",
-        answer: "Banks assess the lower of guideline value and market value, factoring in road access, legal title clarity, and locality infrastructure."
+        question: "How is vacant land valued?",
+        answer: "Valuation takes into account guideline value and market value, factoring in road access, legal dimensions, and locality infrastructure."
       },
       {
         question: "What documents are required for land valuation?",
@@ -1191,11 +1191,11 @@ export const servicesData: ServiceItem[] = [
       },
       {
         question: "How quickly is the valuation report issued?",
-        answer: "Following site boundary inspection and document review, the certified dossier is issued within 2 to 4 business days."
+        answer: "Following site boundary inspection and document review, the report is issued within 2 to 4 business days."
       },
       {
-        question: "Are your valuation reports accepted for Capital Gains Tax (54EC) and visas?",
-        answer: "Yes, reports are prepared by registered valuers under Section 34AB of Wealth Tax Act and IBBI, making them valid for tax and visa proof."
+        question: "How is the market value of land assessed?",
+        answer: "Our reports follow structured Land & Building valuation methodologies and guideline rate benchmarks."
       }
     ]
   },
@@ -1234,11 +1234,11 @@ export const servicesData: ServiceItem[] = [
     ],
     eyebrow: "PROPERTY VALUATION & ASSET ASSESSMENT ENQUIRIES",
     primaryCta: "Request a Valuation Consultation",
-    summary: "Government-registered property appraisals for bank loans, capital gains tax, visa financial proof, and family partition settlements.",
+    summary: "Professional property appraisals for private transactions, sales, asset documentation, and internal planning.",
     whoIsThisFor: [
-      "Home loan and mortgage applicants requiring verified collateral reports",
       "Property buyers and sellers seeking fair market value assessment",
-      "Individuals requiring asset certificates for visa and immigration records"
+      "Property owners requiring asset assessment reports for record keeping",
+      "Families planning property division and inheritance planning"
     ],
     whatWeHelpWith: [
       {
@@ -1255,7 +1255,7 @@ export const servicesData: ServiceItem[] = [
       },
       {
         title: "Signed Dossier",
-        desc: "Official valuation documentation signed and sealed by Registered Valuers."
+        desc: "Official valuation documentation and detailed property dossier."
       }
     ],
     whatToPrepare: [
@@ -1266,7 +1266,7 @@ export const servicesData: ServiceItem[] = [
     scopeInclusions: [
       "Document checklist verification and physical on-site inspection",
       "Land market value, building replacement cost, and depreciation calculations",
-      "Certified valuation dossier signed by Government-Registered Valuer"
+      "Comprehensive property valuation dossier and market value calculations"
     ],
     scopeExclusions: [
       "Guaranteed loan approval (sole discretion of the lending bank)",
@@ -1285,7 +1285,7 @@ export const servicesData: ServiceItem[] = [
       },
       {
         question: "Does a valuation report guarantee my bank loan approval?",
-        answer: "No. The valuation certifies asset collateral worth. Final loan approval depends on applicant credit eligibility and legal title clearance."
+        answer: "No. The valuation provides asset collateral estimation. Final loan approval depends on applicant credit eligibility and legal title clearance."
       },
       {
         question: "What types of built properties do you value across Bangalore?",
@@ -1305,7 +1305,7 @@ export const servicesData: ServiceItem[] = [
     h1: "Business & Asset Valuation in Bangalore",
     primaryKeyword: "business valuation in Bangalore",
     metaTitle: "Business Valuation Services Bangalore | Commercial Enterprise Valuation | My Space",
-    metaDescription: "Comprehensive business asset valuation, commercial plant/machinery appraisal, and enterprise net-worth certification in Bangalore by registered valuers.",
+    metaDescription: "Comprehensive business asset valuation, commercial plant/machinery appraisal, and enterprise asset assessment in Bangalore.",
     tagline: "Enterprise Worth, Plant & Machinery Appraisal & Financial Due Diligence",
     heroImage: "/images/company/showroom-2.jpeg",
     galleryImages: [
@@ -1326,16 +1326,16 @@ export const servicesData: ServiceItem[] = [
       },
       {
         url: "/images/company/showroom-5.jpeg",
-        title: "IBBI Valuation Dossier",
-        caption: "Certified statutory documentation for business audits and credit."
+        title: "Comprehensive Asset Dossier",
+        caption: "Detailed documentation for asset tracking and business planning."
       }
     ],
     eyebrow: "BUSINESS & COMMERCIAL ASSET VALUATION",
     primaryCta: "Request Business Valuation",
-    summary: "Certified plant & machinery, commercial asset, and enterprise valuations using Discounted Cash Flow (DCF) and Net Asset Value (NAV) methodologies.",
+    summary: "Plant & machinery, commercial asset, and enterprise valuations using Discounted Cash Flow (DCF) and Net Asset Value (NAV) methodologies.",
     whoIsThisFor: [
-      "Companies seeking credit facilities against commercial business assets",
-      "Business owners preparing for partnership buyouts or equity restructuring",
+      "Companies seeking assessment of commercial business assets",
+      "Business owners preparing for partnership buyouts or internal restructuring",
       "Enterprises requiring plant and machinery registers with CPWD depreciation"
     ],
     whatWeHelpWith: [
@@ -1349,7 +1349,7 @@ export const servicesData: ServiceItem[] = [
       },
       {
         title: "Statutory Dossier",
-        desc: "Certified valuation documentation stamped by IBBI registered valuers."
+        desc: "Detailed valuation documentation with complete asset registers."
       },
       {
         title: "Confidential Due Diligence",
@@ -1359,12 +1359,12 @@ export const servicesData: ServiceItem[] = [
     whatToPrepare: [
       "Audited balance sheets and P&L statements for past 3 years",
       "Fixed asset register and plant machinery equipment list",
-      "Statutory purpose of the valuation"
+      "Purpose of the valuation"
     ],
     scopeInclusions: [
       "Physical site inspection of commercial/industrial assets",
-      "Comprehensive valuation dossier compliant with IBBI standards",
-      "Signed and sealed certification for bank credit or statutory audit"
+      "Comprehensive valuation dossier and asset register",
+      "Structured documentation for commercial asset assessment"
     ],
     scopeExclusions: [
       "Income tax filing (undertaken by Chartered Accountants)"
@@ -1372,8 +1372,8 @@ export const servicesData: ServiceItem[] = [
     relatedServiceSlugs: ["property-valuation-bangalore", "land-valuation-bangalore", "commercial-construction-bangalore"],
     faqs: [
       {
-        question: "Are your valuation reports accepted by nationalized banks?",
-        answer: "Yes, reports are prepared by registered valuers under the Wealth Tax Act and IBBI, accepted by all scheduled banks and NBFCs."
+        question: "What standards are followed for asset valuation?",
+        answer: "Our reports follow standard Net Asset Value (NAV) and Discounted Cash Flow (DCF) accounting principles."
       },
       {
         question: "What methodologies are used for commercial enterprise valuation?",

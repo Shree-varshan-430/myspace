@@ -26,6 +26,7 @@ import { faqsData } from '@/data/faqs';
 import { processStages } from '@/data/process';
 import MaterialStrip from '@/components/sections/MaterialStrip';
 import ValuationProcessModule from '@/components/sections/ValuationProcessModule';
+import ConstructionMethodology from '@/components/sections/ConstructionMethodology';
 import PracticeAreasCarousel from '@/components/sections/PracticeAreasCarousel';
 import TestimonialsCarousel from '@/components/sections/TestimonialsCarousel';
 import FaqAccordion from '@/components/faq/FaqAccordion';
@@ -41,7 +42,7 @@ export default function HomePage() {
       {/* ============================================================
           4.2 HERO SECTION (Clean & Simple)
       ============================================================ */}
-      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-center pt-28 pb-16 overflow-hidden">
+      <section className="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-center pt-32 pb-24 sm:pt-36 sm:pb-28 lg:pt-40 lg:pb-36 overflow-hidden">
         {/* Real-World Architectural Background Image */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <img
@@ -56,12 +57,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <ScrollReveal direction="up" delay={0.1} duration={0.8} className="max-w-3xl space-y-6">
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]">
-              <span className="block">You Have the Space</span>
-              <span className="block mt-1">Let's Build Something Special</span>
+              <span className="block">We Design, We Build,</span>
+              <span className="block mt-1">And We Value It</span>
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl text-slate-200 font-sans leading-relaxed max-w-2xl">
-              Engineering, construction and design for homes, businesses and properties across Bengaluru.
+            <p className="text-base sm:text-lg text-slate-200 font-sans leading-relaxed max-w-xl">
+              Architectural design, turnkey house construction, bespoke modular interiors, and property valuation under one roof across Bengaluru.
             </p>
 
             <div className="pt-4 flex flex-wrap items-center gap-4">
@@ -99,21 +100,18 @@ export default function HomePage() {
               </div>
 
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                From an Empty Plot to a Finished Space
+                Construction Company in Bangalore with End-to-End Interior & Valuation Solutions
               </h2>
 
               <div className="space-y-3.5 text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
                 <p className="font-semibold text-navy-950">
-                  A good building does not start with bricks and concrete.
+                  Plan, design, build, and value your space with one specialized team bringing over 10+ years of industry experience across Bengaluru.
                 </p>
                 <p>
-                  It starts with understanding the site, the way you want to use the space, your budget and what the building needs to do for you.
+                  As a trusted residential and commercial construction company in Bangalore, experienced interior designers, and professional property valuation experts, <strong className="text-navy-950">My Space</strong> turns your vision into reality with an unwavering focus on transparency, milestone-bound delivery, and consistent engineering quality standards.
                 </p>
                 <p>
-                  Our team works through the process step by step — from site assessment and planning to design, construction, finishing and handover.
-                </p>
-                <p>
-                  You know what is being built, why it is being built and what happens next.
+                  Every stage is managed with a clear, unified approach — ensuring your project stays perfectly aligned from soil testing and foundation to bespoke modular interior finishing and comprehensive property valuation. With one single team responsible throughout, you eliminate subcontractor confusion, budget escalations, and timeline delays.
                 </p>
               </div>
 
@@ -136,7 +134,7 @@ export default function HomePage() {
 
                 <div className="flex items-center gap-2.5 text-navy-950 font-sans font-semibold text-sm">
                   <CheckCircle2 className="w-4 h-4 text-brand-blue shrink-0" />
-                  <span>Certified Property Valuation</span>
+                  <span>Property Valuation & Assessment</span>
                 </div>
               </div>
 
@@ -295,18 +293,21 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          4.5 THE MY SPACE CERTAINTY ADVANTAGE (POSITIVE REFRAMING)
+          4.5 THE MY SPACE CERTAINTY ADVANTAGE (ONE TEAM. FROM PLAN TO COMPLETION)
       ============================================================ */}
       <section className="py-16 lg:py-24 bg-white border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal direction="up" className="max-w-3xl mb-12">
             <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-3">
               <Home className="w-4 h-4 text-brand-blue" />
-              <span>Why Choose Us</span>
+              <span>Turnkey House Construction Bangalore</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-              Built with precision, transparency & trust
+              One Team. From Plan to Completion.
             </h2>
+            <p className="text-sm sm:text-base text-slate-600 mt-2.5 leading-relaxed font-sans">
+              Instead of coordinating several people for design, structure, civil work and interiors, you can work with one engineering-led team.
+            </p>
           </ScrollReveal>
 
           {/* Brickwork Masonry Bond Layout (3 Bricks Top Row + 2 Bricks Bottom Row) */}
@@ -436,139 +437,9 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          4.6 SOLUTION PROCESS (5-STAGE ASCENDING ARCHITECTURAL STAIRCASE)
+          4.6 SOLUTION PROCESS (6-STAGE CONSTRUCTION METHODOLOGY)
       ============================================================ */}
-      <section className="pt-12 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-24 bg-[#F8FAFC] relative overflow-hidden border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Main Heading matching previous sections style */}
-          <ScrollReveal direction="up" className="flex flex-col md:flex-row md:items-center justify-between mb-8 lg:mb-10 gap-6">
-            <div>
-              <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-2">
-                <Home className="w-4 h-4 text-brand-blue" />
-                <span>Construction Methodology</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug max-w-4xl">
-                5-Stage House Construction Process
-              </h2>
-            </div>
-            <Link
-              href="/about#how-it-works"
-              className="inline-flex items-center gap-2 text-xs font-bold text-navy-950 hover:text-brand-blue uppercase tracking-wider transition-colors shrink-0 group"
-            >
-              <span>Explore Complete Process</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </ScrollReveal>
-
-          {/* 5 Stages Ascending Architectural Staircase (Matching Image 1) */}
-          <div className="pt-0 pb-2">
-            {/* Desktop True Stepped Staircase with Clean Gaps */}
-            <div className="hidden lg:flex items-start w-full gap-3.5 lg:gap-4">
-              {processStages.map((stage, idx) => {
-                const stepOffsets = [
-                  "mt-[80px]",
-                  "mt-[60px]",
-                  "mt-[40px]",
-                  "mt-[20px]",
-                  "mt-0"
-                ];
-
-                return (
-                  <div
-                    key={stage.number}
-                    className={`flex-1 bg-white rounded-xl border border-slate-200 border-l-[3px] border-l-brand-blue border-t-[3px] border-t-brand-blue p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 min-h-[210px] flex flex-col justify-between ${stepOffsets[idx]}`}
-                  >
-                    <div>
-                      {/* Top Header Row: STEP 0X + 5 Indicator Dots */}
-                      <div className="flex items-center justify-between">
-                        <span className="font-mono text-xs font-bold text-brand-blue uppercase tracking-wider">
-                          STEP 0{idx + 1}
-                        </span>
-                        <div className="flex items-center gap-1">
-                          {[0, 1, 2, 3, 4].map((dotIdx) => (
-                            <span
-                              key={dotIdx}
-                              className={`w-1.5 h-1.5 rounded-full ${
-                                dotIdx <= idx ? 'bg-amber-400' : 'bg-slate-200'
-                              }`}
-                            />
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Large Amber Step Number */}
-                      <div className="text-4xl sm:text-5xl font-black text-amber-500 tracking-tight my-2 font-mono select-none">
-                        0{idx + 1}
-                      </div>
-
-                      {/* Title */}
-                      <h3 className="text-base sm:text-lg font-bold text-navy-950 leading-snug">
-                        {stage.title}
-                      </h3>
-
-                      {/* Description */}
-                      <p className="text-xs text-slate-600 leading-relaxed mt-1.5">
-                        {stage.tagline}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Mobile / Tablet Stepped Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:hidden">
-              {processStages.map((stage, idx) => (
-                <div
-                  key={stage.number}
-                  className="bg-white rounded-xl border border-slate-200 border-l-[3px] border-l-brand-blue border-t-[3px] border-t-brand-blue p-5 shadow-sm"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-brand-blue uppercase tracking-wider">
-                      STEP 0{idx + 1}
-                    </span>
-                    <div className="flex items-center gap-1">
-                      {[0, 1, 2, 3, 4].map((dotIdx) => (
-                        <span
-                          key={dotIdx}
-                          className={`w-1.5 h-1.5 rounded-full ${
-                            dotIdx <= idx ? 'bg-amber-400' : 'bg-slate-200'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="text-4xl font-black text-amber-500 tracking-tight my-2 font-mono select-none">
-                    0{idx + 1}
-                  </div>
-
-                  <h3 className="text-base font-bold text-navy-950 leading-snug">
-                    {stage.title}
-                  </h3>
-
-                  <p className="text-xs text-slate-600 leading-relaxed mt-1.5">
-                    {stage.tagline}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Bottom Action Button */}
-          <ScrollReveal direction="up" delay={0.2} className="pt-6 sm:pt-8 flex justify-start">
-            <Link
-              href="/process"
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-navy-950 text-white hover:bg-brand-blue active:scale-[0.98] transition-all duration-150 shadow-md group"
-            >
-              <span className="text-xs sm:text-sm font-semibold">
-                Explore Complete 5-Stage Roadmap & Deliverables
-              </span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </ScrollReveal>
-        </div>
-      </section>
+      <ConstructionMethodology />
 
       {/* ============================================================
           4.8 OUR PORTFOLIO

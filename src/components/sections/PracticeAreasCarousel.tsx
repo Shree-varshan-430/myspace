@@ -64,7 +64,7 @@ const practiceAreas: PracticeArea[] = [
     id: 'property-valuation',
     tag: 'Valuation',
     title: 'Property Valuation',
-    description: 'Certified appraisal reports for banks, visas, and legal records.',
+    description: 'Comprehensive appraisal reports for property assessment, sales, and documentation.',
     image: '/images/company/real-project-75.jpeg',
     href: '/services/property-valuation-bangalore',
     ctaText: 'Explore Valuation',

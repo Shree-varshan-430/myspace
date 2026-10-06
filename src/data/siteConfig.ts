@@ -22,7 +22,7 @@ export const siteConfig = {
   meta: {
     defaultTitle: "My Space | Complete Building Solutions Under One Roof | Bangalore",
     titleTemplate: "%s | My Space Bangalore",
-    description: "Complete building solutions under one roof in Bangalore: Turnkey residential construction, 2D/3D architectural planning, modular interiors, and certified property valuation with fixed milestone pricing.",
+    description: "Complete building solutions under one roof in Bangalore: Turnkey residential construction, 2D/3D architectural planning, modular interiors, and professional property valuation with fixed milestone pricing.",
     url: "https://www.myspacebangalore.com",
     ogImage: "/images/hero-banner.jpg",
   },

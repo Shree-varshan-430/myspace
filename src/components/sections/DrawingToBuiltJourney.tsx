@@ -100,7 +100,7 @@ const comparisonProjects: ComparisonItem[] = [
     builtHighlights: [
       'Structural cantilevers cast to millimeter tolerances',
       'Precision wooden louver & weather-resistant exterior cladding',
-      'Certified BBMP occupancy compliance & bank valuation'
+      'BBMP occupancy guideline compliance & property valuation dossier'
     ],
     description: 'Multi-level floor plans engineered for family privacy, converted into a striking contemporary multi-storey home with integrated private decks.',
     floorPlanRooms: [
