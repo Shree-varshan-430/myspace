@@ -201,7 +201,7 @@ const interiorPackages = [
   }
 ];
 
-const constructionPreviousProjects = [
+const residentialPreviousProjects = [
   {
     title: "The Courtyard Residence",
     location: "HSR Layout Sector 2, Bengaluru",
@@ -211,6 +211,25 @@ const constructionPreviousProjects = [
     tag: "Residential Villa"
   },
   {
+    title: "The Multi-Deck Contemporary Villa",
+    location: "Sarjapur Road, Bengaluru",
+    area: "4,800 sq.ft (G+2 Duplex)",
+    desc: "An expansive modern residence designed with cantilevered terrace decks, double-height living spaces, and natural cross-ventilation.",
+    image: "/images/company/real-project-80.jpeg",
+    tag: "Custom Villa"
+  },
+  {
+    title: "The Canopy Residence",
+    location: "Whitefield, Bengaluru",
+    area: "3,600 sq.ft (G+2 Duplex)",
+    desc: "Engineered RCC framed luxury home with large cantilevered overhangs, open terrace gardens, and thermal-break UPVC glazing.",
+    image: "/images/company/real-project-69.jpeg",
+    tag: "Turnkey Residence"
+  }
+];
+
+const commercialPreviousProjects = [
+  {
     title: "Horizon Commercial Hub",
     location: "Whitefield, Bengaluru",
     area: "12,500 sq.ft (G+3 Commercial)",
@@ -219,12 +238,74 @@ const constructionPreviousProjects = [
     tag: "Commercial Space"
   },
   {
-    title: "The Canopy Villa",
-    location: "Sarjapur Road, Bengaluru",
-    area: "3,600 sq.ft (G+2 Residence)",
-    desc: "Engineered RCC framed luxury villa with large cantilevered overhangs, open terrace gardens, and thermal-break UPVC glazing.",
-    image: "/images/company/real-project-69.jpeg",
-    tag: "Turnkey Villa"
+    title: "Luxury Automotive Showroom & Experience Hub",
+    location: "Outer Ring Road, Bengaluru",
+    area: "18,000 sq.ft Commercial Complex",
+    desc: "State-of-the-art commercial showroom architecture featuring double-height frameless glass façade and heavy load-bearing structural slabs.",
+    image: "/images/company/showroom-1.jpeg",
+    tag: "Commercial Showroom"
+  },
+  {
+    title: "Corporate Retail & Office Center",
+    location: "Indiranagar, Bengaluru",
+    area: "9,200 sq.ft Commercial Complex",
+    desc: "Multi-storey commercial development with column-free floor plates, glass curtain wall façade, and dedicated customer parking.",
+    image: "/images/company/showroom-3.jpeg",
+    tag: "Retail & Office"
+  }
+];
+
+const civilIndustrialPreviousProjects = [
+  {
+    title: "JP Nagar Structural Execution & Raft Foundation",
+    location: "JP Nagar 7th Phase, Bengaluru",
+    area: "5,500 sq.ft Sub & Superstructure",
+    desc: "Heavy civil contracting including basement excavation, soil shoring, raft foundation casting, and multi-storey RCC frame construction.",
+    image: "/images/company/real-project-18.jpeg",
+    tag: "Civil Foundation"
+  },
+  {
+    title: "Hebbal RCC Superstructure & Civil Core",
+    location: "Hebbal, Bengaluru",
+    area: "8,500 sq.ft Civil Framework",
+    desc: "Heavy-duty reinforced concrete framed structure executing deep column footings, high-strength M30 mix design, and high-tolerance shuttering.",
+    image: "/images/company/real-project-85.jpeg",
+    tag: "RCC Superstructure"
+  },
+  {
+    title: "Yelahanka Foundation & Structural Civil",
+    location: "Yelahanka, Bengaluru",
+    area: "6,200 sq.ft Civil Foundation",
+    desc: "Comprehensive soil strata stabilization, deep raft excavation, and engineered structural foundation pour for high-durability residential apartments.",
+    image: "/images/company/real-project-01.jpeg",
+    tag: "Civil Engineering"
+  }
+];
+
+const interiorPreviousProjects = [
+  {
+    title: "Zenith Penthouse Interiors",
+    location: "Indiranagar, Bengaluru",
+    scope: "Turnkey 4BHK Penthouse",
+    desc: "Refined minimalist interior transformation featuring warm wood veneers, fluted paneling, and customized concealed storage.",
+    image: "/images/company/interior-design-hero.jpeg",
+    tag: "Penthouse Interiors"
+  },
+  {
+    title: "Bespoke Modular Living & Kitchen Suite",
+    location: "HSR Layout, Bengaluru",
+    scope: "Turnkey Modular Interiors",
+    desc: "Complete interior execution featuring acrylic modular kitchen, fluted wood paneling, hidden lighting, and custom joinery.",
+    image: "/images/company/real-project-50.jpeg",
+    tag: "Modular Kitchen"
+  },
+  {
+    title: "Luxury Master Suite & Joinery",
+    location: "Whitefield, Bengaluru",
+    scope: "Custom Wardrobes & Paneling",
+    desc: "Floor-to-ceiling tinted glass wardrobes, integrated warm LED cove lighting, and bespoke upholstered headboard wall.",
+    image: "/images/company/real-project-80.jpeg",
+    tag: "Master Suite"
   }
 ];
 
@@ -238,14 +319,6 @@ const planningDesignPreviousProjects = [
     tag: "3D Elevation"
   },
   {
-    title: "Bespoke Modular Living & Kitchen Suite",
-    location: "HSR Layout, Bengaluru",
-    scope: "Turnkey Modular Interiors",
-    desc: "Complete interior execution featuring acrylic modular kitchen, fluted wood paneling, hidden lighting, and custom joinery.",
-    image: "/images/company/interior-design-hero.jpeg",
-    tag: "Interior Design"
-  },
-  {
     title: "Vastu 2D & 3D Villa Layout Plan",
     location: "Sarjapur Road, Bengaluru",
     scope: "2D Architectural Sanction & 3D Layout",
@@ -254,12 +327,20 @@ const planningDesignPreviousProjects = [
     tag: "2D/3D Architecture"
   },
   {
-    title: "Industrial PEB & Structural Detailing",
-    location: "Peenya Industrial Area, Bengaluru",
-    scope: "Structural Engineering & RCC Design",
-    desc: "Structural footing, load-distribution column schedules, and PEB roofing design for heavy manufacturing warehouse.",
+    title: "Urban Minimalist Façade Study",
+    location: "Koramangala, Bengaluru",
+    scope: "Façade & Elevation Design",
+    desc: "A clean geometric 3D façade design utilizing floating concrete planes, timber louvers, and vertical decorative screens.",
     image: "/images/company/real-project-54.jpeg",
-    tag: "Structural Design"
+    tag: "Façade Design"
+  },
+  {
+    title: "Koramangala Modernist 3D Façade & Villa",
+    location: "Koramangala, Bengaluru",
+    scope: "Elevation & 3D Walkthrough",
+    desc: "Architectural 3D elevation modeling, solar shading louvers, and turnkey execution featuring contemporary wood-finish aluminium cladding.",
+    image: "/images/company/front-elevation-hero.jpeg",
+    tag: "3D Architecture"
   }
 ];
 
@@ -808,6 +889,53 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
     description: service.summary,
   };
 
+  // Service-specific previous portfolio projects
+  let showcaseData: {
+    title: string;
+    projects: Array<{
+      title: string;
+      location: string;
+      desc: string;
+      image: string;
+      tag: string;
+      area?: string;
+      scope?: string;
+    }>;
+    gridCols: string;
+  };
+
+  if (service.slug === 'house-construction-bangalore') {
+    showcaseData = {
+      title: 'Previous Residential Construction Projects in Bangalore',
+      projects: residentialPreviousProjects,
+      gridCols: 'grid-cols-1 md:grid-cols-3'
+    };
+  } else if (service.slug === 'commercial-construction-bangalore') {
+    showcaseData = {
+      title: 'Previous Commercial Construction Projects in Bangalore',
+      projects: commercialPreviousProjects,
+      gridCols: 'grid-cols-1 md:grid-cols-3'
+    };
+  } else if (service.slug === 'civil-construction-bangalore' || service.slug === 'industrial-construction-bangalore') {
+    showcaseData = {
+      title: 'Previous Civil & Structural Engineering Projects in Bangalore',
+      projects: civilIndustrialPreviousProjects,
+      gridCols: 'grid-cols-1 md:grid-cols-3'
+    };
+  } else if (service.slug === 'interior-design-bangalore') {
+    showcaseData = {
+      title: 'Previous Turnkey Interior Projects in Bangalore',
+      projects: interiorPreviousProjects,
+      gridCols: 'grid-cols-1 md:grid-cols-3'
+    };
+  } else {
+    showcaseData = {
+      title: 'Previous Planning, Design & Architecture Projects',
+      projects: planningDesignPreviousProjects,
+      gridCols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
+    };
+  }
+
   return (
     <div className="pt-20 bg-surface-ice text-slate-900">
       <script
@@ -1052,9 +1180,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 Portfolio Showcase
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight">
-                {isConstructionService
-                  ? 'Previous Construction Projects in Bangalore'
-                  : 'Previous Planning, Design & Architecture Projects'}
+                {showcaseData.title}
               </h2>
             </div>
 
@@ -1068,16 +1194,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
           </div>
 
           <div
-            className={`grid gap-6 sm:gap-8 ${
-              isConstructionService
-                ? 'grid-cols-1 md:grid-cols-3'
-                : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
-            }`}
+            className={`grid gap-6 sm:gap-8 ${showcaseData.gridCols}`}
           >
-            {(isConstructionService
-              ? constructionPreviousProjects
-              : planningDesignPreviousProjects
-            ).map((proj, idx) => (
+            {showcaseData.projects.map((proj, idx) => (
               <div
                 key={idx}
                 className="group rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-blue/60 transition-all duration-300 flex flex-col justify-between"
