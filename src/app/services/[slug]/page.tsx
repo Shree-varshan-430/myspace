@@ -896,17 +896,14 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                   {service.whatWeHelpWith.slice(0, 4).map((step, idx) => (
                     <div
                       key={idx}
-                      className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1"
+                      className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 shadow-xs"
                     >
-                      <span className="text-[10px] font-bold font-mono text-brand-blue uppercase tracking-wider block">
-                        Step 0{idx + 1}
+                      <span className="px-2 py-0.5 rounded-md bg-brand-blue/10 text-brand-blue text-[11px] font-bold font-mono shrink-0">
+                        0{idx + 1}
                       </span>
-                      <h4 className="text-xs sm:text-sm font-bold text-navy-950">
+                      <h4 className="text-xs sm:text-sm font-bold text-navy-950 leading-snug">
                         {step.title}
                       </h4>
-                      <p className="text-[11px] text-slate-600 leading-relaxed">
-                        {step.desc}
-                      </p>
                     </div>
                   ))}
                 </div>

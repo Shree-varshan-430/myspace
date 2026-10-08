@@ -269,9 +269,10 @@ export const servicesData: ServiceItem[] = [
     primaryCta: "Discuss an Industrial Project",
     summary: "Pre-Engineered steel buildings, factory sheds, and logistics hubs engineered for heavy floor loads, crane equipment, and rapid delivery.",
     whoIsThisFor: [
-      "Factory and manufacturing plant owners needing industrial sheds",
-      "Logistics and e-commerce operators planning warehouse hubs",
-      "Industrial plot owners developing rental units in KIADB zones"
+      "Pre-Engineered Steel Buildings (PEB)",
+      "Manufacturing Plants & Factory Sheds",
+      "Logistics Warehouses & Heavy Storage Hubs",
+      "Industrial Heavy-Duty Tremix VDF Flooring"
     ],
     whatWeHelpWith: [
       {
@@ -367,9 +368,10 @@ export const servicesData: ServiceItem[] = [
     primaryCta: "Discuss Civil Construction",
     summary: "Engineering-governed civil contracting: soil-matched foundations, certified rebar placement, compacted concrete, and multi-tier waterproofing.",
     whoIsThisFor: [
-      "Builders needing specialized structural civil execution",
-      "Homeowners adding extra floors or cantilever extensions",
-      "Clients requiring deep basement retaining walls in water-logged soils"
+      "RCC Framed Structure Construction",
+      "Deep Foundation & Raft Footing Casting",
+      "Solid Concrete Blockwork & Plastering",
+      "Basement Retaining Walls & Multi-Tier Waterproofing"
     ],
     whatWeHelpWith: [
       {
@@ -664,9 +666,10 @@ export const servicesData: ServiceItem[] = [
     primaryCta: "Request 2D Plan Review",
     summary: "Dimensioned floor plans, column centerline grids, door/window schedules, and sanction blueprints drafted for error-free site construction.",
     whoIsThisFor: [
-      "Plot owners requiring custom 2D floor plans with Vastu alignment",
-      "Builders needing comprehensive working drawing sets for site teams",
-      "Homeowners submitting architectural plans for BBMP municipal sanction"
+      "Vastu Residential 2D Floor Plans",
+      "BBMP & BDA Municipal Sanction Approvals",
+      "Column Centerline & Excavation Grids",
+      "Concealed Electrical & Plumbing Conduit Schematics"
     ],
     whatWeHelpWith: [
       {
@@ -760,9 +763,10 @@ export const servicesData: ServiceItem[] = [
     primaryCta: "Get 3D Design Quote",
     summary: "Photorealistic 3D elevations, furnished isometric layouts, and sunlight/dusk lighting simulations to experience your space before building.",
     whoIsThisFor: [
-      "Homeowners approving exterior finishes and textures before building",
-      "Architects and developers seeking photorealistic marketing renders",
-      "Commercial businesses creating distinctive street frontage"
+      "Photorealistic 3D Exterior Elevations",
+      "Furnished 3D Isometric Floor Cutaways",
+      "Daylight & Night Illumination Studies",
+      "Architectural Façade Visualization"
     ],
     whatWeHelpWith: [
       {
@@ -950,9 +954,10 @@ export const servicesData: ServiceItem[] = [
     primaryCta: "Request a Design Consultation",
     summary: "Bespoke 3D exterior styling blending terracotta louvers, exposed concrete textures, glass balustrades, and night accent lighting.",
     whoIsThisFor: [
-      "Plot owners visualizing exterior styling from existing 2D floor plans",
-      "Building owners seeking modern exterior facelifts or vertical expansion",
-      "Commercial properties needing striking street frontage"
+      "Contemporary & Modern Villa Elevations",
+      "Terracotta Jali & HPL Louvered Façades",
+      "Cantilever Balconies & Glass Railing Styling",
+      "Façade Texture Palettes & Exterior Lighting"
     ],
     whatWeHelpWith: [
       {
@@ -1047,9 +1052,10 @@ export const servicesData: ServiceItem[] = [
     primaryCta: "Request a Design Consultation",
     summary: "Furnished 3D isometric perspectives and cutaways that clarify room dimensions, furniture clearances, and natural daylight flow before construction.",
     whoIsThisFor: [
-      "First-time home builders visualizing room proportions beyond 2D lines",
-      "Owners optimizing compact plots (30x40, 20x30) to eliminate wasted hallway space",
-      "Families planning duplex voids, open staircases, and private zones"
+      "Furnished 3D Isometric Floor Plans",
+      "Duplex Courtyard & Double-Height Void Views",
+      "True-to-Scale Furniture Clearance Layouts",
+      "Natural Light & Cross-Ventilation Studies"
     ],
     whatWeHelpWith: [
       {
