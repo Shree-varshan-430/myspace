@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { siteConfig } from '@/data/siteConfig';
+import MySpaceLogoMark from '@/components/ui/MySpaceLogoMark';
 import {
   Menu,
   X,
@@ -185,13 +186,9 @@ export default function Header() {
       >
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center justify-between gap-4">
-            {/* Brand Logo: Circle Emblem + HTML/CSS Text (Prominent & Crisp) */}
+            {/* Brand Logo: Vector Circle Emblem + HTML/CSS Text (Prominent & Crisp) */}
             <Link href="/" className="flex items-center gap-3 sm:gap-3.5 group focus:outline-none shrink-0 py-1">
-              <img
-                src="/images/brand/logo-circle-clean.png"
-                alt="My Space Emblem"
-                className="w-12 h-12 sm:w-14 sm:h-14 lg:w-15 lg:h-15 object-contain shrink-0 transition-transform duration-200 group-hover:scale-105"
-              />
+              <MySpaceLogoMark className="w-12 h-12 sm:w-14 sm:h-14 lg:w-15 lg:h-15 transition-transform duration-200 group-hover:scale-105" />
               <div className="flex flex-col justify-center">
                 <span className="font-black text-2xl sm:text-[26px] lg:text-[28px] tracking-tight text-[#0a2540] group-hover:text-brand-blue transition-colors leading-none font-sans">
                   MY SPACE

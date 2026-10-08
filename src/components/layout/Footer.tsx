@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { siteConfig } from '@/data/siteConfig';
+import MySpaceLogoMark from '@/components/ui/MySpaceLogoMark';
 import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
 
 export default function Footer() {
@@ -15,11 +16,7 @@ export default function Footer() {
           {/* Col 1: Brand & Identity */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3.5 sm:gap-4.5 group">
-              <img
-                src="/images/brand/logo-circle-clean.png"
-                alt="My Space Emblem"
-                className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 transition-transform duration-200 group-hover:scale-105"
-              />
+              <MySpaceLogoMark className="w-16 h-16 sm:w-20 sm:h-20 transition-transform duration-200 group-hover:scale-105" />
               <div className="flex flex-col justify-center">
                 <span className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white group-hover:text-brand-blue transition-colors leading-none font-sans">
                   MY SPACE
