@@ -14,17 +14,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Col 1: Brand & Identity */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-3.5 sm:gap-4 group">
+            <Link href="/" className="inline-flex items-center gap-3.5 sm:gap-4.5 group">
               <img
-                src="/images/brand/logo-circle-transparent.png"
+                src="/images/brand/logo-circle-clean.png"
                 alt="My Space Emblem"
-                className="w-14 h-14 sm:w-16 sm:h-16 object-contain shrink-0 transition-transform duration-200 group-hover:scale-105"
+                className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 transition-transform duration-200 group-hover:scale-105"
               />
               <div className="flex flex-col justify-center">
-                <span className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white group-hover:text-brand-blue transition-colors leading-none font-sans">
+                <span className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white group-hover:text-brand-blue transition-colors leading-none font-sans">
                   MY SPACE
                 </span>
-                <span className="text-xs sm:text-sm font-semibold text-slate-300 tracking-tight leading-none mt-1.5 font-sans">
+                <span className="text-xs sm:text-sm lg:text-base font-semibold text-slate-300 tracking-tight leading-none mt-2 font-sans">
                   Engineers, Contractors &amp; Valuers
                 </span>
               </div>

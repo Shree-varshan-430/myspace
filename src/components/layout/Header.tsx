@@ -186,17 +186,17 @@ export default function Header() {
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center justify-between gap-4">
             {/* Brand Logo: Circle Emblem + HTML/CSS Text (Prominent & Crisp) */}
-            <Link href="/" className="flex items-center gap-2.5 sm:gap-3.5 group focus:outline-none shrink-0 py-0.5">
+            <Link href="/" className="flex items-center gap-3 sm:gap-3.5 group focus:outline-none shrink-0 py-1">
               <img
-                src="/images/brand/logo-circle-transparent.png"
+                src="/images/brand/logo-circle-clean.png"
                 alt="My Space Emblem"
-                className="w-11 h-11 sm:w-13 sm:h-13 object-contain shrink-0 transition-transform duration-200 group-hover:scale-105"
+                className="w-12 h-12 sm:w-14 sm:h-14 lg:w-15 lg:h-15 object-contain shrink-0 transition-transform duration-200 group-hover:scale-105"
               />
               <div className="flex flex-col justify-center">
-                <span className="font-black text-xl sm:text-2xl lg:text-[26px] tracking-tight text-[#0a2540] group-hover:text-brand-blue transition-colors leading-none font-sans">
+                <span className="font-black text-2xl sm:text-[26px] lg:text-[28px] tracking-tight text-[#0a2540] group-hover:text-brand-blue transition-colors leading-none font-sans">
                   MY SPACE
                 </span>
-                <span className="text-[10px] sm:text-[11.5px] font-semibold text-slate-500 group-hover:text-slate-700 tracking-tight leading-none mt-1 sm:mt-1.5 font-sans whitespace-nowrap">
+                <span className="text-[10px] sm:text-[11.5px] lg:text-xs font-bold text-slate-500 group-hover:text-slate-700 tracking-tight leading-none mt-1 sm:mt-1.5 font-sans whitespace-nowrap">
                   Engineers, Contractors &amp; Valuers
                 </span>
               </div>
