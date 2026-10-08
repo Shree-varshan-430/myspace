@@ -4,98 +4,18 @@ import {
   ArrowRight,
   CheckCircle2,
   Building2,
-  Home,
-  Compass,
-  FileCheck2,
-  Sparkles
+  Home
 } from 'lucide-react';
 import { projectsData } from '@/data/projects';
 import { faqsData } from '@/data/faqs';
 import FaqAccordion from '@/components/faq/FaqAccordion';
+import ServicesCarousel from '@/components/sections/ServicesCarousel';
 import TestimonialsCarousel from '@/components/sections/TestimonialsCarousel';
 import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/ScrollReveal';
 
 export default function HomePage() {
   const featuredProjects = projectsData.slice(0, 6);
   const homeFaqs = faqsData.filter((f) => f.featuredOnHome);
-
-  const coreServices = [
-    {
-      id: 'residential',
-      title: 'Turnkey Residential Construction',
-      slug: 'house-construction-bangalore',
-      category: 'Build',
-      icon: Home,
-      image: '/images/company/turnkey-house-hero.jpeg',
-      description: 'End-to-end house construction from foundation to finish with locked BOQ pricing, IS-standard civil quality, and zero cost escalations.',
-      deliverables: [
-        'Custom 2D/3D architectural plan & structural engineering',
-        'Turnkey civil execution with Tata/JSW steel & UltraTech cement',
-        'Daily digital site progress logs & stage-wise milestone billing',
-        'Complete plumbing, electrical, and flooring handover'
-      ]
-    },
-    {
-      id: 'commercial',
-      title: 'Commercial & Civil Construction',
-      slug: 'commercial-construction-bangalore',
-      category: 'Build',
-      icon: Building2,
-      image: '/images/company/showroom-2.jpeg',
-      description: 'Commercial office spaces, retail showrooms, industrial sheds, and civil contracting engineered for durability and compliance.',
-      deliverables: [
-        'Commercial structural design & BBMP setback compliance',
-        'Heavy-duty RCC framing & PEB roofing execution',
-        'Utility zoning, fire-safety conduits, and high-traffic flooring',
-        'Rigid timeline delivery with milestone inspection sign-offs'
-      ]
-    },
-    {
-      id: 'architectural',
-      title: 'Architectural Drawing & 3D Design',
-      slug: 'architectural-drawing-bangalore',
-      category: 'Design',
-      icon: Compass,
-      image: '/images/company/real-project-83.jpeg',
-      description: 'Vastu-compliant 2D floor plans, photorealistic 3D elevations, and complete structural working blueprints for modern spaces.',
-      deliverables: [
-        'Detailed 2D floor layouts optimized for light & ventilation',
-        'Photorealistic 3D day/night exterior façade rendering',
-        'Structural column, beam & rebar schedules (IS 456)',
-        'Municipal sanction approval drawings & documentation'
-      ]
-    },
-    {
-      id: 'interiors',
-      title: 'Bespoke Modular Interiors',
-      slug: 'interior-design-bangalore',
-      category: 'Design',
-      icon: Sparkles,
-      image: '/images/company/interior-design-hero.jpeg',
-      description: 'Custom modular kitchens, floor-to-ceiling wardrobes, designer false ceilings, and premium factory-finished joinery.',
-      deliverables: [
-        'BWP 710 marine ply & anti-fingerprint acrylic/matte finishes',
-        'Modular kitchens with Blum/Hafele soft-close hardware',
-        'Custom TV accent walls, pooja units & ambient COB lighting',
-        'Precision factory manufacturing & dust-free on-site assembly'
-      ]
-    },
-    {
-      id: 'valuation',
-      title: 'Property & Asset Valuation',
-      slug: 'property-valuation-bangalore',
-      category: 'Assess',
-      icon: FileCheck2,
-      image: '/images/company/real-project-75.jpeg',
-      description: 'Government-approved valuation reports for residential villas, vacant plots, commercial buildings, bank loans, visa, and capital gains.',
-      deliverables: [
-        'On-site physical boundary, building age & specification audit',
-        'Guideline value benchmarking with micro-market transaction data',
-        'CPWD structural depreciation math & net asset valuation',
-        'Bank-compliant, signed valuation dossiers in 2–4 working days'
-      ]
-    }
-  ];
 
   return (
     <div className="flex flex-col">
@@ -257,98 +177,11 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          3. DEDICATED SERVICES SECTION
+          3. OUR CORE SERVICES (CAROUSEL)
       ============================================================ */}
       <section id="services" className="py-16 sm:py-20 lg:py-24 bg-surface-ice border-y border-slate-200 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-            <div>
-              <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-3">
-                <Building2 className="w-4 h-4 text-brand-blue" />
-                <span>Our Core Services</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                Engineering, Design & Valuation Under One Roof
-              </h2>
-              <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl font-sans">
-                Everything you need to design, build, furnish, and assess your property in Bengaluru with single-point engineering accountability.
-              </p>
-            </div>
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-navy-950 text-white text-xs font-semibold hover:bg-brand-blue transition-colors shadow-sm shrink-0"
-            >
-              <span>View All Services</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {coreServices.map((service) => {
-              const ServiceIcon = service.icon;
-              return (
-                <div
-                  key={service.id}
-                  className="rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:border-brand-blue/60 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group"
-                >
-                  <div>
-                    {/* Card Top Image */}
-                    <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-navy-950/80 backdrop-blur-md text-white text-[10px] font-mono font-bold uppercase tracking-wider">
-                        {service.category}
-                      </div>
-                    </div>
-
-                    {/* Card Content */}
-                    <div className="p-6 sm:p-7 space-y-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition-colors">
-                          <ServiceIcon className="w-5 h-5" />
-                        </div>
-                        <h3 className="text-lg sm:text-xl font-bold text-navy-950 group-hover:text-brand-blue transition-colors">
-                          {service.title}
-                        </h3>
-                      </div>
-
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
-                        {service.description}
-                      </p>
-
-                      <div className="pt-2 border-t border-slate-100 space-y-2">
-                        <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
-                          Key Deliverables:
-                        </span>
-                        <ul className="space-y-1.5">
-                          {service.deliverables.map((item, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-xs text-slate-700 leading-snug">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Card Action */}
-                  <div className="p-6 sm:p-7 pt-0">
-                    <Link
-                      href={`/services/${service.slug}`}
-                      className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-surface-ice group-hover:bg-brand-blue group-hover:text-white text-navy-950 text-xs font-semibold border border-slate-200/80 group-hover:border-brand-blue transition-all"
-                    >
-                      <span>Explore {service.title}</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <ServicesCarousel />
         </div>
       </section>
 

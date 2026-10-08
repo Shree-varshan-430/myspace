@@ -4,13 +4,13 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import InnerPageHeroBackground from '@/components/ui/InnerPageHeroBackground';
-import EnquiryForm from '@/components/forms/EnquiryForm';
 import {
   constructionPackagesData,
   interiorPackagesData,
   constructionCostFactors,
   packagesFaqs
 } from '@/data/packages';
+import { siteConfig } from '@/data/siteConfig';
 import {
   Check,
   CheckCircle2,
@@ -31,7 +31,11 @@ import {
   ChevronUp,
   Info,
   PhoneCall,
-  Download
+  Download,
+  Phone,
+  MessageSquare,
+  MapPin,
+  Mail
 } from 'lucide-react';
 
 export default function PackagesPage() {
@@ -824,12 +828,69 @@ export default function PackagesPage() {
           </div>
         </div>
 
-        {/* Lead Form CTA */}
-        <section className="pt-6 border-t border-slate-200">
-          <EnquiryForm
-            title="Get a Custom Construction or Interior Design Quotation"
-            subtitle="Share your plot location, dimensions, and preferred specification package to receive a detailed cost breakdown within 24 hours."
-          />
+        {/* Direct Reach Card */}
+        <section className="rounded-3xl bg-navy-950 text-white p-8 sm:p-12 border border-navy-800 shadow-2xl relative overflow-hidden mt-8">
+          <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div className="md:col-span-7 space-y-4">
+              <span className="text-xs font-bold text-sky-400 uppercase tracking-widest block">
+                Direct Engineering Consultation
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
+                Get Your Itemized Package Estimate
+              </h2>
+              <p className="text-sm text-slate-300 font-sans leading-relaxed">
+                Connect directly with our civil engineers to review your plot dimensions, compare specifications, and lock your per-sq.ft BOQ rate with zero midway escalation.
+              </p>
+
+              <div className="pt-2 flex flex-wrap items-center gap-4">
+                <a
+                  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-blue text-white text-xs font-bold hover:bg-sky-500 transition-all shadow-md"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>Call {siteConfig.contact.phoneDisplay}</span>
+                </a>
+
+                <a
+                  href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md"
+                >
+                  <MessageSquare className="w-3.5 h-3.5" />
+                  <span>WhatsApp Desk</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="md:col-span-5 bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/15 space-y-3.5 text-xs text-slate-200">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-white block font-sans">Office Location:</strong>
+                  <span>{siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.state} - {siteConfig.address.postalCode}</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Clock className="w-4 h-4 text-sky-400 shrink-0" />
+                <div>
+                  <strong className="text-white block font-sans">Working Hours:</strong>
+                  <span>Mon - Sat: 9:30 AM – 7:00 PM</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-sky-400 shrink-0" />
+                <div>
+                  <strong className="text-white block font-sans">Email:</strong>
+                  <span>{siteConfig.contact.email}</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </section>
     </div>

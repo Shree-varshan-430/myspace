@@ -4,31 +4,24 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import InnerPageHeroBackground from '@/components/ui/InnerPageHeroBackground';
-import EnquiryForm from '@/components/forms/EnquiryForm';
 import TestimonialsCarousel from '@/components/sections/TestimonialsCarousel';
-import { constructionProcessStages, valuationProcessStages } from '@/data/process';
 import {
   ShieldCheck,
   Building2,
-  HardHat,
-  Landmark,
-  CheckCircle2,
+  Phone,
+  MessageSquare,
   MapPin,
-  Check,
+  Clock,
+  Mail,
   ArrowRight,
-  Home,
   Eye,
   Target,
-  HeartHandshake,
-  Award
+  HeartHandshake
 } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 
 export default function AboutPage() {
   const [activeTab, setActiveTab] = useState<'vision' | 'mission' | 'values'>('vision');
-  const [activeProcess, setActiveProcess] = useState<'construction' | 'valuation'>('construction');
-
-  const currentStages = activeProcess === 'construction' ? constructionProcessStages : valuationProcessStages;
 
   return (
     <div className="pt-20 bg-surface-ice">
@@ -50,7 +43,7 @@ export default function AboutPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 space-y-20">
         {/* ============================================================
-            SECTION 1: ABOUT US (First Section)
+            SECTION 1: WHO WE ARE
         ============================================================ */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 space-y-5">
@@ -60,10 +53,10 @@ export default function AboutPage() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-tight">
               Engineering-Led Construction & Valuation in Bengaluru
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
               Founded and led by <strong>Er. Saravanan</strong>, <strong>MY SPACE Civil Engineers & Valuers</strong> is a premier property engineering consultancy based in Bengaluru. We specialize in residential turnkey construction, commercial buildings, architectural 2D/3D design, bespoke interiors, and government-approved property valuation.
             </p>
-            <p className="text-sm text-slate-600 leading-relaxed">
+            <p className="text-sm text-slate-600 leading-relaxed font-sans">
               We eliminate the stress and ambiguity often associated with contractors by offering single-point accountability, transparent itemized BOQs, and strict compliance with Indian Standards (IS codes).
             </p>
 
@@ -100,17 +93,16 @@ export default function AboutPage() {
         </section>
 
         {/* ============================================================
-            SECTION 2: OUR VISION • OUR MISSION • OUR VALUES (Screenshot 4 Reference)
+            SECTION 2: OUR VISION • OUR MISSION • OUR VALUES
         ============================================================ */}
         <section className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm space-y-8">
-          {/* Tab Navigation matching Screenshot 4 */}
           <div className="flex items-center justify-center gap-3 sm:gap-6 text-base sm:text-xl font-bold flex-wrap border-b border-slate-100 pb-6">
             <button
               type="button"
               onClick={() => setActiveTab('vision')}
               className={`transition-colors cursor-pointer ${
                 activeTab === 'vision'
-                  ? 'text-orange-600 font-bold border-b-2 border-orange-600 pb-1'
+                  ? 'text-brand-blue font-bold border-b-2 border-brand-blue pb-1'
                   : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -122,7 +114,7 @@ export default function AboutPage() {
               onClick={() => setActiveTab('mission')}
               className={`transition-colors cursor-pointer ${
                 activeTab === 'mission'
-                  ? 'text-orange-600 font-bold border-b-2 border-orange-600 pb-1'
+                  ? 'text-brand-blue font-bold border-b-2 border-brand-blue pb-1'
                   : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -134,7 +126,7 @@ export default function AboutPage() {
               onClick={() => setActiveTab('values')}
               className={`transition-colors cursor-pointer ${
                 activeTab === 'values'
-                  ? 'text-orange-600 font-bold border-b-2 border-orange-600 pb-1'
+                  ? 'text-brand-blue font-bold border-b-2 border-brand-blue pb-1'
                   : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -142,15 +134,14 @@ export default function AboutPage() {
             </button>
           </div>
 
-          {/* Tab Content Display */}
           <div className="max-w-4xl mx-auto">
             {activeTab === 'vision' && (
               <div className="text-center space-y-4 animate-in fade-in duration-300">
-                <div className="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center mx-auto mb-2">
+                <div className="w-14 h-14 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center mx-auto mb-2">
                   <Eye className="w-7 h-7" />
                 </div>
                 <h3 className="text-2xl font-bold text-navy-950">Our Vision</h3>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto font-sans">
                   To be Bengaluru's most trusted engineering, construction, and valuation firm, transforming our clients' aspirations into structurally resilient, aesthetically inspiring, and cost-effective living spaces.
                 </p>
               </div>
@@ -158,11 +149,11 @@ export default function AboutPage() {
 
             {activeTab === 'mission' && (
               <div className="text-center space-y-4 animate-in fade-in duration-300">
-                <div className="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center mx-auto mb-2">
+                <div className="w-14 h-14 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center mx-auto mb-2">
                   <Target className="w-7 h-7" />
                 </div>
                 <h3 className="text-2xl font-bold text-navy-950">Our Mission</h3>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto font-sans">
                   To deliver turnkey building solutions with absolute budget transparency, uncompromised structural integrity, innovative 3D visualization, and punctual milestone delivery under single-point engineering ownership.
                 </p>
               </div>
@@ -171,7 +162,7 @@ export default function AboutPage() {
             {activeTab === 'values' && (
               <div className="space-y-6 animate-in fade-in duration-300">
                 <div className="text-center space-y-2 mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center mx-auto mb-2">
+                  <div className="w-14 h-14 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center mx-auto mb-2">
                     <HeartHandshake className="w-7 h-7" />
                   </div>
                   <h3 className="text-2xl font-bold text-navy-950">Our Core Values</h3>
@@ -180,28 +171,28 @@ export default function AboutPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="p-5 rounded-2xl bg-surface-ice border border-slate-200 space-y-1.5">
                     <h4 className="font-bold text-navy-950 text-sm sm:text-base">1. Integrity & Transparency</h4>
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-slate-600 leading-relaxed font-sans">
                       Fixed itemized BOQ contracts with locked per-sq.ft rates and zero hidden charges.
                     </p>
                   </div>
 
                   <div className="p-5 rounded-2xl bg-surface-ice border border-slate-200 space-y-1.5">
                     <h4 className="font-bold text-navy-950 text-sm sm:text-base">2. Engineering Excellence</h4>
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-slate-600 leading-relaxed font-sans">
                       IS-standard rebar reinforcement, batch-tested concrete, and 21-day curing cycles.
                     </p>
                   </div>
 
                   <div className="p-5 rounded-2xl bg-surface-ice border border-slate-200 space-y-1.5">
                     <h4 className="font-bold text-navy-950 text-sm sm:text-base">3. Client-Centric Approach</h4>
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-slate-600 leading-relaxed font-sans">
                       Patiently listening to family and business needs to craft tailored spatial solutions.
                     </p>
                   </div>
 
                   <div className="p-5 rounded-2xl bg-surface-ice border border-slate-200 space-y-1.5">
                     <h4 className="font-bold text-navy-950 text-sm sm:text-base">4. Single Accountability</h4>
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-slate-600 leading-relaxed font-sans">
                       One dedicated engineering team coordinating architecture, civil execution, and handover.
                     </p>
                   </div>
@@ -212,108 +203,75 @@ export default function AboutPage() {
         </section>
 
         {/* ============================================================
-            SECTION 3: 5-STAGE WORKFLOW
-        ============================================================ */}
-        <section id="how-it-works" className="scroll-mt-28 space-y-8">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-bold text-brand-blue uppercase tracking-widest block">
-              Systematic Workflow
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-navy-950 tracking-tight">
-              5-Stage Engineering Execution
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Structured milestone stages for turnkey construction and certified property valuation:
-            </p>
-          </div>
-
-          <div className="flex justify-center">
-            <div className="inline-flex p-1.5 rounded-2xl bg-white border border-slate-200/90 shadow-sm gap-2">
-              <button
-                type="button"
-                onClick={() => setActiveProcess('construction')}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                  activeProcess === 'construction'
-                    ? 'bg-navy-950 text-white shadow-sm'
-                    : 'text-slate-600 hover:text-navy-950'
-                }`}
-              >
-                <HardHat className="w-4 h-4 text-brand-gold" />
-                <span>Construction Process</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setActiveProcess('valuation')}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                  activeProcess === 'valuation'
-                    ? 'bg-navy-950 text-white shadow-sm'
-                    : 'text-slate-600 hover:text-navy-950'
-                }`}
-              >
-                <Landmark className="w-4 h-4 text-brand-blue" />
-                <span>Valuation Process</span>
-              </button>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {currentStages.map((stage) => (
-              <div
-                key={stage.number}
-                className="bg-white rounded-2xl p-5 border border-slate-200 shadow-2xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-3"
-              >
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="w-7 h-7 rounded-lg bg-navy-950 text-white flex items-center justify-center font-mono font-bold text-xs">
-                      {stage.number}
-                    </span>
-                    <span className="text-[10px] font-mono text-brand-blue font-bold uppercase">
-                      Stage {stage.number}
-                    </span>
-                  </div>
-
-                  <h3 className="font-bold text-sm text-navy-950 leading-snug">
-                    {stage.title}
-                  </h3>
-
-                  <p className="text-[11px] text-slate-600 leading-relaxed">
-                    {stage.description}
-                  </p>
-                </div>
-
-                <div className="pt-2 border-t border-slate-100 text-[11px] text-emerald-700 font-medium flex items-center gap-1.5">
-                  <Check className="w-3 h-3 shrink-0" />
-                  <span className="truncate">{stage.keyOutputs[0]}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center pt-2">
-            <Link
-              href="/process"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-blue hover:text-navy-950 transition-colors"
-            >
-              <span>Explore Detailed Process & Checklist Guide</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-        </section>
-
-        {/* ============================================================
-            SECTION 4: CLIENT TESTIMONIALS (Google Reviews)
+            SECTION 3: CLIENT TESTIMONIALS (Google Reviews)
         ============================================================ */}
         <TestimonialsCarousel />
 
         {/* ============================================================
-            SECTION 5: ENQUIRY CONSULTATION FORM
+            SECTION 4: CLEAN DIRECT CONTACT CARD
         ============================================================ */}
-        <section id="enquiry" className="max-w-7xl mx-auto pt-6">
-          <EnquiryForm
-            title="Start Your Project with My Space"
-            subtitle="Tell us about your plot location or requirements. Our engineers will get back to you with structured advice."
-          />
+        <section className="rounded-3xl bg-navy-950 text-white p-8 sm:p-12 border border-navy-800 shadow-2xl relative overflow-hidden">
+          <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div className="md:col-span-7 space-y-4">
+              <span className="text-xs font-bold text-sky-400 uppercase tracking-widest block">
+                Direct Engineering Consultation
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
+                Start Your Project With Our Engineering Team
+              </h2>
+              <p className="text-sm text-slate-300 font-sans leading-relaxed">
+                Connect directly with practicing civil engineers and accredited valuers to discuss your plot location, design requirements, or valuation needs.
+              </p>
+
+              <div className="pt-2 flex flex-wrap items-center gap-4">
+                <a
+                  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-blue text-white text-xs font-bold hover:bg-sky-500 transition-all shadow-md"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>Call {siteConfig.contact.phoneDisplay}</span>
+                </a>
+
+                <a
+                  href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md"
+                >
+                  <MessageSquare className="w-3.5 h-3.5" />
+                  <span>WhatsApp Desk</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="md:col-span-5 bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/15 space-y-3.5 text-xs text-slate-200">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-white block font-sans">Office Location:</strong>
+                  <span>{siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.state} - {siteConfig.address.postalCode}</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Clock className="w-4 h-4 text-sky-400 shrink-0" />
+                <div>
+                  <strong className="text-white block font-sans">Working Hours:</strong>
+                  <span>Mon - Sat: 9:30 AM – 7:00 PM</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-sky-400 shrink-0" />
+                <div>
+                  <strong className="text-white block font-sans">Email:</strong>
+                  <span>{siteConfig.contact.email}</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
