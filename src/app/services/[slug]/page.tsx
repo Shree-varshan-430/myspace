@@ -845,56 +845,55 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       </section>
 
       {/* ============================================================
-          SERVICES INTRO SECTION
-      ============================================================ */}
-      <section className="py-12 lg:py-16 bg-white border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <span className="text-xs font-bold text-brand-blue uppercase tracking-widest block">
-            Our Bengaluru Expertise
-          </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight">
-            {service.h1}
-          </h2>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl mx-auto">
-            {service.summary}
-          </p>
-        </div>
-      </section>
-
-      {/* ============================================================
-          SERVICES INTERLEAVED ZIG-ZAG 4-BLOCK CONTENT & IMAGE SHOWCASE
+          SCOPE & KEY DELIVERABLES (2-COLUMN CLEAN ARCHITECTURE)
       ============================================================ */}
       <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 lg:space-y-28">
-
-          {/* BLOCK 1: WHAT WE BUILD & IMAGE 1 */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            {/* Left Column: Scope & Deliverables Checklist */}
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
-                01
-              </span>
               <div className="space-y-2">
+                <span className="text-xs font-bold text-brand-blue uppercase tracking-widest block">
+                  Core Engineering Scope
+                </span>
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                  {details.typologiesTitle}
+                  Scope & Key Deliverables
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                  {details.typologiesSubtitle}
+                  {service.summary}
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                {details.typologies.map((item, idx) => (
+              {/* Inclusions List */}
+              <div className="space-y-3 pt-2">
+                {service.scopeInclusions.map((inclusion, idx) => (
                   <div
                     key={idx}
-                    className="bg-surface-ice rounded-2xl p-5 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all space-y-3 group"
+                    className="flex items-start gap-3 p-4 rounded-2xl bg-surface-ice border border-slate-200/80 hover:border-brand-blue/40 transition-colors"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center group-hover:scale-105 transition-transform">
-                      {renderTypologyIcon(item.iconType)}
-                    </div>
-                    <h3 className="text-base font-bold text-navy-950 tracking-tight">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span className="text-xs sm:text-sm font-semibold text-navy-950 leading-relaxed">
+                      {inclusion}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Execution Workflow / Process Stages */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                {service.whatWeHelpWith.slice(0, 4).map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="p-4 rounded-xl bg-slate-50 border border-slate-200/70 space-y-1"
+                  >
+                    <span className="text-[10px] font-bold font-mono text-amber-600 uppercase tracking-wider block">
+                      Stage 0{idx + 1}
+                    </span>
+                    <h3 className="text-xs sm:text-sm font-bold text-navy-950">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-[11px] text-slate-600 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -902,121 +901,22 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </div>
             </div>
 
+            {/* Right Column: Contextual Feature Image */}
             <div className="lg:col-span-5 space-y-3">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[4/3] group">
                 <img
                   src={img1.url}
                   alt={img1.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="px-1 pt-1">
+              <div className="px-1 pt-1 space-y-1">
                 <h4 className="font-bold text-base text-navy-950">{img1.title}</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img1.caption}</p>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{img1.caption}</p>
               </div>
             </div>
+
           </div>
-
-          {/* BLOCK 2: IMAGE 2 & PROCESS */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-5 order-2 lg:order-1 space-y-3">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
-                <img
-                  src={img2.url}
-                  alt={img2.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="px-1 pt-1">
-                <h4 className="font-bold text-base text-navy-950">{img2.title}</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img2.caption}</p>
-              </div>
-            </div>
-
-            <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
-              <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
-                02
-              </span>
-              <div className="space-y-2">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                  {details.processTitle}
-                </h2>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                  {details.processSubtitle}
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                {details.processStages.map((stage, idx) => (
-                  <div
-                    key={idx}
-                    className="relative bg-surface-ice rounded-2xl p-5 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all overflow-hidden space-y-1.5"
-                  >
-                    <span className="absolute top-3 right-4 text-3xl sm:text-4xl font-mono font-black text-amber-500/20 select-none pointer-events-none">
-                      {stage.stageNumber}
-                    </span>
-                    <h3 className="text-sm sm:text-base font-bold text-navy-950 pr-10">
-                      {stage.title}
-                    </h3>
-                    <p className="text-xs text-slate-600 leading-relaxed pt-0.5">
-                      {stage.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* BLOCK 3: WHAT IS INCLUDED & IMAGE 3 */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
-                03
-              </span>
-              <div className="space-y-2">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                  {details.scopeTitle}
-                </h2>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                  {details.scopeSubtitle}
-                </p>
-              </div>
-
-              <div className="space-y-3 pt-2">
-                {details.detailedScope.map((scope, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-start gap-3.5 p-4 rounded-2xl bg-surface-ice border border-slate-200/80 hover:border-brand-blue/40 transition-colors"
-                  >
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                    <div>
-                      <h3 className="font-bold text-sm sm:text-base text-navy-950">
-                        {scope.title}
-                      </h3>
-                      <p className="text-xs text-slate-600 mt-0.5 leading-relaxed">
-                        {scope.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="lg:col-span-5 space-y-3">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
-                <img
-                  src={img3.url}
-                  alt={img3.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="px-1 pt-1">
-                <h4 className="font-bold text-base text-navy-950">{img3.title}</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img3.caption}</p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -1262,38 +1162,6 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
           viewAllText="Explore all general FAQs"
         />
       </section>
-
-      {/* ============================================================
-          RELATED SERVICES
-      ============================================================ */}
-      {relatedServices.length > 0 && (
-        <section className="py-12 bg-white border-b border-slate-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-lg font-bold text-navy-950 mb-5">
-              Complementary Services
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {relatedServices.map((rel) => (
-                <Link
-                  key={rel.id}
-                  href={`/services/${rel.slug}`}
-                  className="group p-4 rounded-xl border border-slate-200 bg-surface-ice hover:border-brand-blue hover:shadow-card transition-all flex items-center justify-between"
-                >
-                  <div>
-                    <span className="text-[10px] font-bold text-brand-blue uppercase tracking-wider block">
-                      {rel.category}
-                    </span>
-                    <span className="text-xs sm:text-sm font-bold text-navy-950 group-hover:text-brand-blue transition-colors">
-                      {rel.title}
-                    </span>
-                  </div>
-                  <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-brand-blue group-hover:translate-x-1 transition-all" />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ============================================================
           CLEAN DIRECT CONTACT / NEXT STEPS

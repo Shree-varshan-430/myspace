@@ -12,26 +12,14 @@ import {
 } from '@/data/packages';
 import { siteConfig } from '@/data/siteConfig';
 import {
-  Check,
   CheckCircle2,
-  ShieldCheck,
   Building2,
-  Home,
   Sparkles,
   ArrowRight,
-  HelpCircle,
-  FileSpreadsheet,
-  Layers,
-  Ruler,
-  Award,
   Paintbrush,
-  Hammer,
   Clock,
   ChevronDown,
   ChevronUp,
-  Info,
-  PhoneCall,
-  Download,
   Phone,
   MessageSquare,
   MapPin,
@@ -41,7 +29,6 @@ import {
 export default function PackagesPage() {
   const [activeTab, setActiveTab] = useState<'construction' | 'interior'>('construction');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
-  const [specSubTab, setSpecSubTab] = useState<'civil' | 'flooring' | 'doors' | 'painting' | 'kitchen' | 'electrical'>('civil');
 
   const toggleFaq = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
@@ -235,252 +222,6 @@ export default function PackagesPage() {
             ))}
           </div>
 
-          {/* Technical Specifications Tabbed Deep Dive */}
-          <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-8">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <div>
-                <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block mb-1">
-                  Detailed Technical Specifications
-                </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-navy-950">
-                  Comprehensive Material Comparison by Component
-                </h3>
-              </div>
-
-              {/* Sub-Tabs for Component View */}
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { id: 'civil', label: 'Civil Work' },
-                  { id: 'flooring', label: 'Flooring' },
-                  { id: 'doors', label: 'Doors & Windows' },
-                  { id: 'painting', label: 'Painting' },
-                  { id: 'kitchen', label: 'Kitchen & Plumbing' },
-                  { id: 'electrical', label: 'Electrical' }
-                ].map((tab) => (
-                  <button
-                    key={tab.id}
-                    type="button"
-                    onClick={() => setSpecSubTab(tab.id as any)}
-                    className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                      specSubTab === tab.id
-                        ? 'bg-navy-950 text-white shadow-sm'
-                        : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                    }`}
-                  >
-                    {tab.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Sub-Tab Content Comparison */}
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs text-slate-700">
-                <thead>
-                  <tr className="border-b border-slate-200 bg-slate-50 text-navy-950 font-bold">
-                    <th className="p-3.5 rounded-l-xl w-1/4">Specification Item</th>
-                    <th className="p-3.5 w-1/4">Basic Package (₹1,950)</th>
-                    <th className="p-3.5 w-1/4 bg-blue-50/60 text-brand-blue">Premium Package (₹2,150)</th>
-                    <th className="p-3.5 w-1/4 rounded-r-xl">Luxury Package (₹2,600)</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100">
-                  {specSubTab === 'civil' && (
-                    <>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Steel Rebar Grade</td>
-                        <td className="p-3.5">{constructionPackagesData[0].civilWork.steel}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].civilWork.steel}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].civilWork.steel}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Cement Brands & Grade</td>
-                        <td className="p-3.5">{constructionPackagesData[0].civilWork.cement}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].civilWork.cement}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].civilWork.cement}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Masonry / Blockwork</td>
-                        <td className="p-3.5">{constructionPackagesData[0].civilWork.masonry}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].civilWork.masonry}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].civilWork.masonry}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Concrete Mix & RCC Design</td>
-                        <td className="p-3.5">{constructionPackagesData[0].civilWork.rcc}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].civilWork.rcc}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].civilWork.rcc}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Curing Cycle Protocol</td>
-                        <td className="p-3.5">{constructionPackagesData[0].civilWork.curing}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].civilWork.curing}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].civilWork.curing}</td>
-                      </tr>
-                    </>
-                  )}
-
-                  {specSubTab === 'flooring' && (
-                    <>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Living & Dining Flooring</td>
-                        <td className="p-3.5">{constructionPackagesData[0].flooring.livingDining}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].flooring.livingDining}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].flooring.livingDining}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Bedroom Flooring</td>
-                        <td className="p-3.5">{constructionPackagesData[0].flooring.bedrooms}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].flooring.bedrooms}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].flooring.bedrooms}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Kitchen Flooring & Counter</td>
-                        <td className="p-3.5">{constructionPackagesData[0].flooring.kitchen}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].flooring.kitchen}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].flooring.kitchen}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Balcony & Utility Tiles</td>
-                        <td className="p-3.5">{constructionPackagesData[0].flooring.balconyUtility}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].flooring.balconyUtility}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].flooring.balconyUtility}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Staircase Steps & Railings</td>
-                        <td className="p-3.5">{constructionPackagesData[0].flooring.staircase}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].flooring.staircase}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].flooring.staircase}</td>
-                      </tr>
-                    </>
-                  )}
-
-                  {specSubTab === 'doors' && (
-                    <>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Main Entrance Door</td>
-                        <td className="p-3.5">{constructionPackagesData[0].doorsWindows.mainDoor}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].doorsWindows.mainDoor}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].doorsWindows.mainDoor}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Internal Room Doors</td>
-                        <td className="p-3.5">{constructionPackagesData[0].doorsWindows.internalDoors}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].doorsWindows.internalDoors}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].doorsWindows.internalDoors}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Bathroom Doors</td>
-                        <td className="p-3.5">{constructionPackagesData[0].doorsWindows.bathroomDoors}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].doorsWindows.bathroomDoors}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].doorsWindows.bathroomDoors}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Windows & Glazing</td>
-                        <td className="p-3.5">{constructionPackagesData[0].doorsWindows.windows}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].doorsWindows.windows}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].doorsWindows.windows}</td>
-                      </tr>
-                    </>
-                  )}
-
-                  {specSubTab === 'painting' && (
-                    <>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Interior Wall Painting</td>
-                        <td className="p-3.5">{constructionPackagesData[0].painting.interior}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].painting.interior}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].painting.interior}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Exterior Façade Painting</td>
-                        <td className="p-3.5">{constructionPackagesData[0].painting.exterior}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].painting.exterior}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].painting.exterior}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Ceiling & False Ceiling</td>
-                        <td className="p-3.5">{constructionPackagesData[0].painting.ceiling}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].painting.ceiling}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].painting.ceiling}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Wood & Metal Grills</td>
-                        <td className="p-3.5">{constructionPackagesData[0].painting.metalWood}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].painting.metalWood}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].painting.metalWood}</td>
-                      </tr>
-                    </>
-                  )}
-
-                  {specSubTab === 'kitchen' && (
-                    <>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Kitchen Countertop</td>
-                        <td className="p-3.5">{constructionPackagesData[0].kitchenPlumbing.countertop}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].kitchenPlumbing.countertop}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].kitchenPlumbing.countertop}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Kitchen Sink</td>
-                        <td className="p-3.5">{constructionPackagesData[0].kitchenPlumbing.sink}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].kitchenPlumbing.sink}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].kitchenPlumbing.sink}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">CP Fittings & Taps</td>
-                        <td className="p-3.5">{constructionPackagesData[0].kitchenPlumbing.cpFittings}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].kitchenPlumbing.cpFittings}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].kitchenPlumbing.cpFittings}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Sanitaryware Commodes</td>
-                        <td className="p-3.5">{constructionPackagesData[0].kitchenPlumbing.sanitaryware}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].kitchenPlumbing.sanitaryware}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].kitchenPlumbing.sanitaryware}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Plumbing Piping Network</td>
-                        <td className="p-3.5">{constructionPackagesData[0].kitchenPlumbing.pipes}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].kitchenPlumbing.pipes}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].kitchenPlumbing.pipes}</td>
-                      </tr>
-                    </>
-                  )}
-
-                  {specSubTab === 'electrical' && (
-                    <>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Electrical Copper Cabling</td>
-                        <td className="p-3.5">{constructionPackagesData[0].electrical.wiring}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].electrical.wiring}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].electrical.wiring}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Switches & Sockets</td>
-                        <td className="p-3.5">{constructionPackagesData[0].electrical.switches}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].electrical.switches}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].electrical.switches}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Power Distribution & MCBs</td>
-                        <td className="p-3.5">{constructionPackagesData[0].electrical.distribution}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].electrical.distribution}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].electrical.distribution}</td>
-                      </tr>
-                      <tr>
-                        <td className="p-3.5 font-bold text-navy-950">Provisions & Smart Home</td>
-                        <td className="p-3.5">{constructionPackagesData[0].electrical.provisions}</td>
-                        <td className="p-3.5 bg-blue-50/20 font-semibold text-brand-blue">{constructionPackagesData[1].electrical.provisions}</td>
-                        <td className="p-3.5">{constructionPackagesData[2].electrical.provisions}</td>
-                      </tr>
-                    </>
-                  )}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
           {/* Key Factors Impacting Construction Cost in Bangalore */}
           <div className="bg-gradient-to-br from-navy-950 to-[#132238] rounded-3xl p-8 sm:p-12 text-white space-y-8">
             <div className="max-w-3xl">
@@ -669,124 +410,13 @@ export default function PackagesPage() {
               </div>
             ))}
           </div>
-
-          {/* Per-Sq-Ft Rate Breakdown Table (Carpenter vs Factory Modular) */}
-          <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-6">
-            <div>
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
-                Itemized Unit Pricing
-              </span>
-              <h3 className="text-xl sm:text-2xl font-bold text-navy-950">
-                Per-Square-Foot Rates for Modular vs. On-Site Carpenter Execution
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                Below are the transparent per-sq.ft rates for custom wardrobes, modular kitchens, and TV units across all 3 tiers.
-              </p>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs text-slate-700">
-                <thead>
-                  <tr className="border-b border-slate-200 bg-slate-50 text-navy-950 font-bold">
-                    <th className="p-3.5 rounded-l-xl">Interior Unit Type</th>
-                    <th className="p-3.5">Basic (Carpenter / Modular)</th>
-                    <th className="p-3.5 bg-blue-50/60 text-brand-blue">Premium (Carpenter / Modular)</th>
-                    <th className="p-3.5 rounded-r-xl">Luxury (Carpenter / Modular)</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100">
-                  <tr>
-                    <td className="p-3.5 font-bold text-navy-950">Floor-to-Ceiling Wardrobes</td>
-                    <td className="p-3.5">
-                      <span className="font-semibold text-navy-950">{interiorPackagesData[0].sqFtRates.wardrobeCarpenter}</span> (Carp.) / <span className="text-brand-blue font-bold">{interiorPackagesData[0].sqFtRates.wardrobeModular}</span> (Mod.)
-                    </td>
-                    <td className="p-3.5 bg-blue-50/20">
-                      <span className="font-semibold text-navy-950">{interiorPackagesData[1].sqFtRates.wardrobeCarpenter}</span> (Carp.) / <span className="text-brand-blue font-bold">{interiorPackagesData[1].sqFtRates.wardrobeModular}</span> (Mod.)
-                    </td>
-                    <td className="p-3.5">
-                      <span className="font-semibold text-navy-950">{interiorPackagesData[2].sqFtRates.wardrobeCarpenter}</span> (Carp.) / <span className="text-brand-blue font-bold">{interiorPackagesData[2].sqFtRates.wardrobeModular}</span> (Mod.)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-3.5 font-bold text-navy-950">Modular Kitchen (Base + Wall)</td>
-                    <td className="p-3.5">
-                      <span className="font-semibold text-navy-950">{interiorPackagesData[0].sqFtRates.kitchenCarpenter}</span> (Carp.) / <span className="text-brand-blue font-bold">{interiorPackagesData[0].sqFtRates.kitchenModular}</span> (Mod.)
-                    </td>
-                    <td className="p-3.5 bg-blue-50/20">
-                      <span className="font-semibold text-navy-950">{interiorPackagesData[1].sqFtRates.kitchenCarpenter}</span> (Carp.) / <span className="text-brand-blue font-bold">{interiorPackagesData[1].sqFtRates.kitchenModular}</span> (Mod.)
-                    </td>
-                    <td className="p-3.5">
-                      <span className="font-semibold text-navy-950">{interiorPackagesData[2].sqFtRates.kitchenCarpenter}</span> (Carp.) / <span className="text-brand-blue font-bold">{interiorPackagesData[2].sqFtRates.kitchenModular}</span> (Mod.)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-3.5 font-bold text-navy-950">Designer TV Entertainment Unit</td>
-                    <td className="p-3.5">
-                      <span className="font-semibold text-navy-950">{interiorPackagesData[0].sqFtRates.tvUnitCarpenter}</span> (Carp.) / <span className="text-brand-blue font-bold">{interiorPackagesData[0].sqFtRates.tvUnitModular}</span> (Mod.)
-                    </td>
-                    <td className="p-3.5 bg-blue-50/20">
-                      <span className="font-semibold text-navy-950">{interiorPackagesData[1].sqFtRates.tvUnitCarpenter}</span> (Carp.) / <span className="text-brand-blue font-bold">{interiorPackagesData[1].sqFtRates.tvUnitModular}</span> (Mod.)
-                    </td>
-                    <td className="p-3.5">
-                      <span className="font-semibold text-navy-950">{interiorPackagesData[2].sqFtRates.tvUnitCarpenter}</span> (Carp.) / <span className="text-brand-blue font-bold">{interiorPackagesData[2].sqFtRates.tvUnitModular}</span> (Mod.)
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
         </div>
       )}
 
       {/* ============================================================
-          SECTION 3: ENGINEERING & PROCESS GUARANTEE
+          SECTION 3: FAQS & DIRECT CONSULTATION
       ============================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-16">
-        <div className="bg-navy-950 text-white rounded-3xl p-8 sm:p-12 border border-navy-800 space-y-8 relative overflow-hidden">
-          <div className="relative z-10 max-w-2xl">
-            <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block mb-1">
-              Engineering Guarantee
-            </span>
-            <h3 className="text-xl sm:text-2xl font-bold text-white">
-              Why Homeowners Choose My Space
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-            <div className="p-4 rounded-2xl bg-navy-900 border border-navy-700 space-y-2">
-              <ShieldCheck className="w-6 h-6 text-brand-blue" />
-              <h4 className="font-bold text-sm text-white">430+ QA Checkpoints</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Dedicated site engineer assigned with daily digital photo logs and structural laboratory testing.
-              </p>
-            </div>
-
-            <div className="p-4 rounded-2xl bg-navy-900 border border-navy-700 space-y-2">
-              <FileSpreadsheet className="w-6 h-6 text-amber-400" />
-              <h4 className="font-bold text-sm text-white">Guaranteed Fixed BOQ</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Zero price escalations once approved. Every single bag of cement and fitting brand is locked.
-              </p>
-            </div>
-
-            <div className="p-4 rounded-2xl bg-navy-900 border border-navy-700 space-y-2">
-              <Layers className="w-6 h-6 text-brand-blue" />
-              <h4 className="font-bold text-sm text-white">Milestone Stage Payments</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Escrow-style billing released strictly after you inspect and sign off on each structural stage.
-              </p>
-            </div>
-
-            <div className="p-4 rounded-2xl bg-navy-900 border border-navy-700 space-y-2">
-              <Award className="w-6 h-6 text-amber-400" />
-              <h4 className="font-bold text-sm text-white">10-Year Written Warranty</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Comprehensive 10-year structural warranty pack and as-built MEP conduit blueprints at handover.
-              </p>
-            </div>
-          </div>
-        </div>
-
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
         {/* FAQ Accordion Section */}
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 space-y-6">
           <div className="text-center max-w-2xl mx-auto space-y-2">
