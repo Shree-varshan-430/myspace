@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import MobileContactBar from '@/components/layout/MobileContactBar';
+import FloatingContactDock from '@/components/layout/FloatingContactDock';
 import { siteConfig } from '@/data/siteConfig';
 
 const inter = Inter({
@@ -132,6 +133,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <FloatingContactDock />
         <MobileContactBar />
       </body>
     </html>
