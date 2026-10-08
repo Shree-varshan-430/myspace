@@ -215,7 +215,7 @@ const residentialPreviousProjects = [
     location: "Sarjapur Road, Bengaluru",
     area: "4,800 sq.ft (G+2 Duplex)",
     desc: "An expansive modern residence designed with cantilevered terrace decks, double-height living spaces, and natural cross-ventilation.",
-    image: "/images/company/real-project-80.jpeg",
+    image: "/images/company/turnkey-house-hero.jpeg",
     tag: "Custom Villa"
   },
   {
@@ -304,7 +304,7 @@ const interiorPreviousProjects = [
     location: "Whitefield, Bengaluru",
     scope: "Custom Wardrobes & Paneling",
     desc: "Floor-to-ceiling tinted glass wardrobes, integrated warm LED cove lighting, and bespoke upholstered headboard wall.",
-    image: "/images/company/real-project-80.jpeg",
+    image: "/images/company/real-project-44.jpeg",
     tag: "Master Suite"
   }
 ];
