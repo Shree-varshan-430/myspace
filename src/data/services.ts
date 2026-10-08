@@ -67,10 +67,12 @@ export const servicesData: ServiceItem[] = [
     primaryCta: "Discuss Your Home Project",
     summary: "Architectural planning, structural engineering, civil execution, and quality-controlled handover under single-point accountability.",
     whoIsThisFor: [
-      "Independent Houses & Custom Duplexes",
-      "Contemporary Luxury Family Villas",
-      "Multi-Storey Residential Rental Units",
-      "Turnkey Civil Execution & Interior Finishes"
+      "Duplex & Triplex House Construction",
+      "Luxury Independent Villas & Bungalows",
+      "G+2 / G+3 / G+4 Rental Income Units",
+      "Turnkey Villa Construction on 30x40 / 40x60 Plots",
+      "Complete RCC Framing, Masonry & Plastering",
+      "End-to-End Civil, Electrical & Plumbing Execution"
     ],
     whatWeHelpWith: [
       {
@@ -172,7 +174,9 @@ export const servicesData: ServiceItem[] = [
       "Commercial Rental Complexes & Office Hubs",
       "High-Street Retail Stores & Showrooms",
       "Diagnostic Centers & Specialty Clinics",
-      "Turnkey Shell & Core Civil Execution"
+      "Turnkey Shell & Core Civil Execution",
+      "Open-Span Column Grids & High Live-Load RCC",
+      "Acoustic Curtain Glazing & Façade ACP Cladding"
     ],
     whatWeHelpWith: [
       {
@@ -272,7 +276,9 @@ export const servicesData: ServiceItem[] = [
       "Pre-Engineered Steel Buildings (PEB)",
       "Manufacturing Plants & Factory Sheds",
       "Logistics Warehouses & Heavy Storage Hubs",
-      "Industrial Heavy-Duty Tremix VDF Flooring"
+      "Industrial Heavy-Duty Tremix VDF Flooring",
+      "Heavy Vibration-Isolated Machine Foundations",
+      "Transformer Yards & Crane Runway Girders"
     ],
     whatWeHelpWith: [
       {
@@ -371,7 +377,9 @@ export const servicesData: ServiceItem[] = [
       "RCC Framed Structure Construction",
       "Deep Foundation & Raft Footing Casting",
       "Solid Concrete Blockwork & Plastering",
-      "Basement Retaining Walls & Multi-Tier Waterproofing"
+      "Basement Retaining Walls & Multi-Tier Waterproofing",
+      "Certified 550D TMT Steel Rebar Fabrication",
+      "Terrace Waterproofing & Parapet Construction"
     ],
     whatWeHelpWith: [
       {
@@ -469,8 +477,10 @@ export const servicesData: ServiceItem[] = [
     whoIsThisFor: [
       "Turnkey Apartment & Villa Interiors",
       "Custom Modular Kitchens with Quartz Counters",
-      "Floor-to-Ceiling Wardrobes & Storage Units",
-      "Designer Living Room Paneling & False Ceilings"
+      "Floor-to-Ceiling Wardrobes & Walk-In Closets",
+      "Designer Living Room Paneling & TV Units",
+      "Gypsum False Ceilings & Magnetic Track Lights",
+      "IS 710 BWP Marine Plywood & German Hardware"
     ],
     whatWeHelpWith: [
       {
@@ -569,7 +579,9 @@ export const servicesData: ServiceItem[] = [
       "2D Working Floor Plans & Vastu Layouts",
       "BBMP & BDA Municipal Sanction Blueprints",
       "Photorealistic 3D Elevations & Façade Views",
-      "Civil Centerline Grids & Door/Window Schedules"
+      "Civil Centerline Grids & Column Excavation Layouts",
+      "Door, Window & Ventilation Schedules",
+      "Concealed Electrical & Plumbing Conduit Schematics"
     ],
     whatWeHelpWith: [
       {
@@ -669,7 +681,9 @@ export const servicesData: ServiceItem[] = [
       "Vastu Residential 2D Floor Plans",
       "BBMP & BDA Municipal Sanction Approvals",
       "Column Centerline & Excavation Grids",
-      "Concealed Electrical & Plumbing Conduit Schematics"
+      "Concealed Electrical & Plumbing Conduit Schematics",
+      "Staircase Geometry & Setback Bylaw Blueprints",
+      "True-to-Scale Room Dimension Schedules"
     ],
     whatWeHelpWith: [
       {
@@ -766,7 +780,9 @@ export const servicesData: ServiceItem[] = [
       "Photorealistic 3D Exterior Elevations",
       "Furnished 3D Isometric Floor Cutaways",
       "Daylight & Night Illumination Studies",
-      "Architectural Façade Visualization"
+      "Architectural Façade Visualization",
+      "Material & Texture Palette Rendering",
+      "Virtual 3D Walkthrough Perspectives"
     ],
     whatWeHelpWith: [
       {
@@ -858,10 +874,12 @@ export const servicesData: ServiceItem[] = [
     primaryCta: "Consult Structural Engineers",
     summary: "Certified structural load analysis, IS 456 RCC frame design, seismic engineering (IS 1893), and Bar Bending Schedules for safe construction.",
     whoIsThisFor: [
-      "IS 456 RCC Structural Analysis & Framing",
+      "IS 456 RCC Column, Beam & Slab Design",
       "Soil-Matched Foundation & Raft Design",
       "Bar Bending Schedules (BBS) to Minimize Waste",
-      "Chartered Engineer Stability Certificates"
+      "Chartered Structural Stability Certificates",
+      "Seismic Resistance Analysis (IS 1893)",
+      "Pre-Pour Site Checking of Rebar Spacing & Cover"
     ],
     whatWeHelpWith: [
       {
@@ -957,7 +975,9 @@ export const servicesData: ServiceItem[] = [
       "Contemporary & Modern Villa Elevations",
       "Terracotta Jali & HPL Louvered Façades",
       "Cantilever Balconies & Glass Railing Styling",
-      "Façade Texture Palettes & Exterior Lighting"
+      "Façade Texture Palettes & Exterior Lighting",
+      "Dimensioned 2D Blueprints for Site Fabricators",
+      "Day & Evening Architectural Accent Illumination"
     ],
     whatWeHelpWith: [
       {
@@ -1055,7 +1075,9 @@ export const servicesData: ServiceItem[] = [
       "Furnished 3D Isometric Floor Plans",
       "Duplex Courtyard & Double-Height Void Views",
       "True-to-Scale Furniture Clearance Layouts",
-      "Natural Light & Cross-Ventilation Studies"
+      "Natural Light & Cross-Ventilation Studies",
+      "Spatial Circulation Flow Optimization",
+      "High-Resolution PDF Package for On-Site Masons"
     ],
     whatWeHelpWith: [
       {

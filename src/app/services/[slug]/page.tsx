@@ -851,64 +851,36 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             
-            {/* Left Column: What We Build & How We Do It */}
-            <div className="lg:col-span-7 space-y-8">
+            {/* Left Column: What We Build */}
+            <div className="lg:col-span-7 space-y-6">
               <div className="space-y-2">
                 <span className="text-xs font-bold text-brand-blue uppercase tracking-widest block">
-                  Scope & Execution
+                  Core Deliverables
                 </span>
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                  What We Build & How We Do It
+                  What We Build
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                   {service.summary}
                 </p>
               </div>
 
-              {/* 1. What We Build */}
-              <div className="space-y-3">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-navy-950 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-brand-blue" />
-                  <span>What We Build</span>
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {service.whoIsThisFor.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-start gap-2.5 p-3.5 rounded-xl bg-surface-ice border border-slate-200/80 shadow-xs"
-                    >
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span className="text-xs font-semibold text-navy-950 leading-snug">
-                        {item}
-                      </span>
+              {/* Search-Intent Deliverables Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+                {service.whoIsThisFor.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-start gap-3 p-4 rounded-2xl bg-surface-ice border border-slate-200/90 shadow-xs hover:border-brand-blue/50 transition-all group"
+                  >
+                    <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                      <CheckCircle2 className="w-3.5 h-3.5" />
                     </div>
-                  ))}
-                </div>
+                    <span className="text-xs sm:text-sm font-bold text-navy-950 leading-snug">
+                      {item}
+                    </span>
+                  </div>
+                ))}
               </div>
-
-              {/* 2. How We Do It */}
-              <div className="space-y-3 pt-2">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-navy-950 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-amber-500" />
-                  <span>How We Do It</span>
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {service.whatWeHelpWith.slice(0, 4).map((step, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 shadow-xs"
-                    >
-                      <span className="px-2 py-0.5 rounded-md bg-brand-blue/10 text-brand-blue text-[11px] font-bold font-mono shrink-0">
-                        0{idx + 1}
-                      </span>
-                      <h4 className="text-xs sm:text-sm font-bold text-navy-950 leading-snug">
-                        {step.title}
-                      </h4>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
             </div>
 
             {/* Right Column: Contextual Feature Image */}
