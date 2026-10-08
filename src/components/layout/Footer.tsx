@@ -14,12 +14,22 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Col 1: Brand & Identity */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-block bg-white p-2.5 sm:p-3 rounded-2xl border border-white/20 shadow-md group">
-              <img
-                src="/images/brand/logo.png"
-                alt="My Space Engineers, Contractors & Valuers"
-                className="h-10 sm:h-12 w-auto object-contain"
-              />
+            <Link href="/" className="inline-flex items-center gap-3 sm:gap-3.5 group">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 p-1 flex items-center justify-center border border-white/20 shadow-md group-hover:scale-105 transition-transform shrink-0">
+                <img
+                  src="/images/brand/logo-circle-transparent.png"
+                  alt="My Space Emblem"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="flex flex-col justify-center">
+                <span className="text-2xl sm:text-3xl font-black tracking-tight text-white group-hover:text-brand-blue transition-colors leading-none font-sans">
+                  MY SPACE
+                </span>
+                <span className="text-xs sm:text-sm font-medium text-slate-300 tracking-tight leading-none mt-1.5 font-sans">
+                  Engineers, Contractors &amp; Valuers
+                </span>
+              </div>
             </Link>
 
             <p className="text-sm text-slate-300 max-w-md leading-relaxed">

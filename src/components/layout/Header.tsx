@@ -185,13 +185,21 @@ export default function Header() {
       >
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center justify-between gap-4">
-            {/* Brand Logo */}
-            <Link href="/" className="flex items-center group focus:outline-none shrink-0 py-0.5">
+            {/* Brand Logo: Circle Emblem + HTML/CSS Text (Prominent & Crisp) */}
+            <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none shrink-0 py-0.5">
               <img
-                src="/images/brand/logo.png"
-                alt="My Space Engineers, Contractors & Valuers"
-                className="h-9 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+                src="/images/brand/logo-circle-transparent.png"
+                alt="My Space Emblem"
+                className="w-10 h-10 sm:w-12 sm:h-12 object-contain shrink-0 transition-transform duration-200 group-hover:scale-105"
               />
+              <div className="flex flex-col justify-center">
+                <span className="font-black text-xl sm:text-2xl tracking-tight text-[#0a2540] group-hover:text-brand-blue transition-colors leading-none font-sans">
+                  MY SPACE
+                </span>
+                <span className="text-[9.5px] sm:text-[11px] font-semibold text-slate-500 group-hover:text-slate-700 tracking-tight leading-none mt-1 sm:mt-1.5 font-sans whitespace-nowrap">
+                  Engineers, Contractors &amp; Valuers
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Navigation Links */}
