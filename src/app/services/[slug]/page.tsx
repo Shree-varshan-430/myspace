@@ -845,60 +845,73 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       </section>
 
       {/* ============================================================
-          SCOPE & KEY DELIVERABLES (2-COLUMN CLEAN ARCHITECTURE)
+          WHAT WE BUILD & HOW WE DO IT (CORE ARCHITECTURE)
       ============================================================ */}
       <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             
-            {/* Left Column: Scope & Deliverables Checklist */}
-            <div className="lg:col-span-7 space-y-6">
+            {/* Left Column: What We Build & How We Do It */}
+            <div className="lg:col-span-7 space-y-8">
               <div className="space-y-2">
                 <span className="text-xs font-bold text-brand-blue uppercase tracking-widest block">
-                  Core Engineering Scope
+                  Scope & Execution
                 </span>
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                  Scope & Key Deliverables
+                  What We Build & How We Do It
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                   {service.summary}
                 </p>
               </div>
 
-              {/* Inclusions List */}
-              <div className="space-y-3 pt-2">
-                {service.scopeInclusions.map((inclusion, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-start gap-3 p-4 rounded-2xl bg-surface-ice border border-slate-200/80 hover:border-brand-blue/40 transition-colors"
-                  >
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm font-semibold text-navy-950 leading-relaxed">
-                      {inclusion}
-                    </span>
-                  </div>
-                ))}
+              {/* 1. What We Build */}
+              <div className="space-y-3">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-navy-950 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-brand-blue" />
+                  <span>What We Build</span>
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {service.whoIsThisFor.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-start gap-2.5 p-3.5 rounded-xl bg-surface-ice border border-slate-200/80 shadow-xs"
+                    >
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span className="text-xs font-semibold text-navy-950 leading-snug">
+                        {item}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              {/* Execution Workflow / Process Stages */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                {service.whatWeHelpWith.slice(0, 4).map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="p-4 rounded-xl bg-slate-50 border border-slate-200/70 space-y-1"
-                  >
-                    <span className="text-[10px] font-bold font-mono text-amber-600 uppercase tracking-wider block">
-                      Stage 0{idx + 1}
-                    </span>
-                    <h3 className="text-xs sm:text-sm font-bold text-navy-950">
-                      {item.title}
-                    </h3>
-                    <p className="text-[11px] text-slate-600 leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
+              {/* 2. How We Do It */}
+              <div className="space-y-3 pt-2">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-navy-950 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-amber-500" />
+                  <span>How We Do It</span>
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {service.whatWeHelpWith.slice(0, 4).map((step, idx) => (
+                    <div
+                      key={idx}
+                      className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1"
+                    >
+                      <span className="text-[10px] font-bold font-mono text-brand-blue uppercase tracking-wider block">
+                        Step 0{idx + 1}
+                      </span>
+                      <h4 className="text-xs sm:text-sm font-bold text-navy-950">
+                        {step.title}
+                      </h4>
+                      <p className="text-[11px] text-slate-600 leading-relaxed">
+                        {step.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
+
             </div>
 
             {/* Right Column: Contextual Feature Image */}

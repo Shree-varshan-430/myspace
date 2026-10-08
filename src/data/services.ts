@@ -40,53 +40,54 @@ export const servicesData: ServiceItem[] = [
     metaTitle: "House Construction Company in Bangalore | My Space",
     metaDescription: "Plan and build your home in Bangalore with a clearer process for scope, design coordination, construction stages, and handover. Discuss your home project with My Space.",
     tagline: "Turnkey & Custom Residential Construction for Plots & Villas",
-    heroImage: "/images/company/turnkey-house-hero.jpeg",
+    heroImage: "/images/company/real-project-62.jpeg",
     galleryImages: [
       {
-        url: "/images/company/turnkey-house-hero.jpeg",
-        title: "Contemporary Villa Execution",
-        caption: "Turnkey multi-storey villa execution."
+        url: "/images/company/real-project-62.jpeg",
+        title: "Turnkey Residential Villa Construction",
+        caption: "Contemporary 4BHK duplex residence constructed with RCC framing in Bengaluru."
+      },
+      {
+        url: "/images/company/real-project-69.jpeg",
+        title: "Multi-Storey Villa Architecture",
+        caption: "Turnkey residential villa execution with cantilevered balconies."
       },
       {
         url: "/images/company/real-project-05.jpeg",
         title: "RCC Framing & Column Casting",
-        caption: "IS-standard rebar tying and casting."
+        caption: "IS-standard rebar tying and structural casting."
       },
       {
         url: "/images/company/real-project-09.jpeg",
         title: "Exterior Plastering & Joinery",
-        caption: "Double-coat weather-resistant plastering."
-      },
-      {
-        url: "/images/company/showroom-1.jpeg",
-        title: "Architectural Handover & Finishes",
-        caption: "Premium flooring and snag clearance."
+        caption: "Double-coat weather-resistant exterior plastering."
       }
     ],
     eyebrow: "RESIDENTIAL CONSTRUCTION IN BENGALURU",
     primaryCta: "Discuss Your Home Project",
     summary: "Architectural planning, structural engineering, civil execution, and quality-controlled handover under single-point accountability.",
     whoIsThisFor: [
-      "Plot owners planning a new independent house or duplex",
-      "Families building custom luxury villas",
-      "Homeowners building multi-storey units for rental income"
+      "Independent Houses & Custom Duplexes",
+      "Contemporary Luxury Family Villas",
+      "Multi-Storey Residential Rental Units",
+      "Turnkey Civil Execution & Interior Finishes"
     ],
     whatWeHelpWith: [
       {
         title: "Site & Soil Assessment",
-        desc: "Evaluating soil bearing capacity and municipal setback rules."
+        desc: "Soil testing, setback verification, and plot layout."
       },
       {
-        title: "Integrated Design & BOQ",
-        desc: "Coordinating 2D layouts, 3D elevations, and itemized material rates."
+        title: "Architectural Design & Fixed BOQ",
+        desc: "Coordinating 2D/3D plans and locked material pricing."
       },
       {
-        title: "Staged Civil Execution",
-        desc: "Milestone-driven casting, 21-day curing, and structured inspections."
+        title: "Milestone Civil Execution",
+        desc: "IS-standard RCC casting, block masonry, and structured curing."
       },
       {
-        title: "Quality Handover",
-        desc: "As-built drawings, warranties, and systematic snag rectifications."
+        title: "Quality Inspection & Handover",
+        desc: "430+ QA checks, as-built blueprints, and warranty handover."
       }
     ],
     whatToPrepare: [
@@ -168,25 +169,26 @@ export const servicesData: ServiceItem[] = [
     primaryCta: "Discuss a Commercial Project",
     summary: "Commercial complexes, offices, and retail spaces engineered for maximum usable carpet area, structural durability, and high rental yield.",
     whoIsThisFor: [
-      "Property owners developing commercial rental complexes",
-      "Corporate enterprises establishing bespoke office spaces",
-      "Retail brands needing durable shell-and-core fit-outs"
+      "Commercial Rental Complexes & Office Hubs",
+      "High-Street Retail Stores & Showrooms",
+      "Diagnostic Centers & Specialty Clinics",
+      "Turnkey Shell & Core Civil Execution"
     ],
     whatWeHelpWith: [
       {
         title: "Floor Plate Optimization",
-        desc: "Maximizing column-free usable carpet area and rental yields."
+        desc: "Maximizing open-span column grids and usable carpet area."
       },
       {
-        title: "MEP & Fire Integration",
-        desc: "Coordinating 3-phase power, HVAC ducting, and sprinkler loops."
+        title: "MEP & Electrical Infrastructure",
+        desc: "3-phase power risers, transformer yards, and fire systems."
       },
       {
         title: "Façade & Curtain Glazing",
         desc: "High-performance DGU glazing and weather-sealed canopies."
       },
       {
-        title: "Phased Handover",
+        title: "Phased Project Handover",
         desc: "Critical-path scheduling enabling early tenant fit-out access."
       }
     ],
@@ -436,22 +438,22 @@ export const servicesData: ServiceItem[] = [
     metaTitle: "Interior Design Company in Bangalore | Space Planning & Execution | My Space",
     metaDescription: "Tailored residential and commercial interior design in Bangalore. Space planning, modular joinery, custom woodwork, lighting design, and execution support.",
     tagline: "Ergonomic Layouts, Tactile Material Palettes & Direct Site Execution",
-    heroImage: "/images/company/showroom-3.jpeg",
+    heroImage: "/images/company/interior-design-hero.jpeg",
     galleryImages: [
+      {
+        url: "/images/company/interior-design-hero.jpeg",
+        title: "Modular Kitchen & Living Interiors",
+        caption: "BWP marine plywood cabinetry with quartz counters and ambient lighting."
+      },
       {
         url: "/images/company/showroom-3.jpeg",
         title: "Living & Lounge Space Planning",
         caption: "Bespoke media units with concealed cabling."
       },
       {
-        url: "/images/company/interior-design-hero.jpeg",
-        title: "Custom Modular Kitchen",
-        caption: "BWP marine plywood cabinetry with quartz counters."
-      },
-      {
         url: "/images/company/real-project-44.jpeg",
         title: "Floor-to-Ceiling Wardrobes",
-        caption: "Acrylic finish joinery with internal lighting."
+        caption: "Acrylic finish joinery with internal profile lighting."
       },
       {
         url: "/images/company/real-project-51.jpeg",
@@ -463,26 +465,27 @@ export const servicesData: ServiceItem[] = [
     primaryCta: "Plan Your Interiors",
     summary: "Bespoke modular woodwork, ergonomic kitchens, false ceilings, and ambient lighting executed with factory precision and durable marine ply.",
     whoIsThisFor: [
-      "Homeowners moving into newly constructed houses or apartments",
-      "Families renovating kitchens, wardrobes, and living rooms",
-      "Commercial offices requiring functional workstations and cabins"
+      "Turnkey Apartment & Villa Interiors",
+      "Custom Modular Kitchens with Quartz Counters",
+      "Floor-to-Ceiling Wardrobes & Storage Units",
+      "Designer Living Room Paneling & False Ceilings"
     ],
     whatWeHelpWith: [
       {
-        title: "Modular Kitchens & Storage",
-        desc: "BWP marine ply, soft-close German hardware, and quartz counters."
+        title: "Space Planning & 3D Design",
+        desc: "Room-by-room 3D layouts, storage ergonomics, and color palettes."
       },
       {
-        title: "Wardrobes & Joinery",
-        desc: "Floor-to-ceiling wardrobes with integrated profile illumination."
+        title: "Material & Hardware Selection",
+        desc: "IS 710 BWP marine plywood, quartz counters, and German soft-close fittings."
       },
       {
-        title: "Ceilings & Lighting",
-        desc: "Gypsum false ceilings with magnetic track lights and warm LED coves."
+        title: "Factory Precision Joinery",
+        desc: "CNC cutting and edge-banded carcass manufacturing."
       },
       {
-        title: "Living & Media Units",
-        desc: "Consoles with concealed cabling conduits and fluted wall paneling."
+        title: "On-Site Assembly & Handover",
+        desc: "Dust-free installation, electrical fixture setup, and 10-year warranty."
       }
     ],
     whatToPrepare: [
@@ -534,17 +537,17 @@ export const servicesData: ServiceItem[] = [
     metaTitle: "Architectural Drawing & 2D/3D Design Bangalore | My Space",
     metaDescription: "Comprehensive architectural drawings, Vastu 2D floor plans, BBMP sanction blueprints, 3D elevations, and furnished isometric layouts in Bangalore.",
     tagline: "2D Working Blueprints, Municipal Sanctions, 3D Elevations & Spatial Layouts",
-    heroImage: "/images/company/front-elevation-hero.jpeg",
+    heroImage: "/images/company/real-project-01.jpeg",
     galleryImages: [
+      {
+        url: "/images/company/real-project-01.jpeg",
+        title: "2D Dimensional Floor Plans & Vastu Layouts",
+        caption: "Precise working layouts conforming to BBMP setback bylaws."
+      },
       {
         url: "/images/company/front-elevation-hero.jpeg",
         title: "Photorealistic 3D Exterior Elevation",
-        caption: "Contemporary façade with terracotta louvers and lighting."
-      },
-      {
-        url: "/images/company/real-project-01.jpeg",
-        title: "2D Dimensional Floor Plans & Vastu Grid",
-        caption: "Precise working layouts conforming to BBMP setback bylaws."
+        caption: "Contemporary façade with terracotta louvers and architectural lighting."
       },
       {
         url: "/images/company/showroom-3.jpeg",
@@ -561,26 +564,27 @@ export const servicesData: ServiceItem[] = [
     primaryCta: "Request Architectural Drawings",
     summary: "Complete architectural drafting and visualization: dimensioned 2D floor plans, BBMP sanction blueprints, photorealistic 3D exterior elevations, and furnished isometric layouts.",
     whoIsThisFor: [
-      "Plot owners requiring custom 2D floor plans, Vastu compliance, and 3D visual clarity before building",
-      "Homeowners submitting architectural plans for BBMP/BDA municipal sanction approvals",
-      "Builders seeking comprehensive 2D working drawings and dimensioned 3D fabrication callouts"
+      "2D Working Floor Plans & Vastu Layouts",
+      "BBMP & BDA Municipal Sanction Blueprints",
+      "Photorealistic 3D Elevations & Façade Views",
+      "Civil Centerline Grids & Door/Window Schedules"
     ],
     whatWeHelpWith: [
       {
-        title: "2D Vastu Floor Plans & Spatial Flow",
-        desc: "Dimensioned room plans, wall thicknesses, stair geometry, and cross-ventilation."
+        title: "Site & Setback Evaluation",
+        desc: "Analyzing plot dimensions, road widths, and BBMP FAR bylaws."
       },
       {
-        title: "Photorealistic 3D Elevations",
-        desc: "Façade styling, terracotta/HPL textures, cantilever balconies, and dusk lighting."
+        title: "2D Vastu Spatial Planning",
+        desc: "Drafting dimensioned room plans with optimized light and air flow."
       },
       {
-        title: "Municipal Sanction Blueprint Sets",
-        desc: "Drafted strictly conforming to BBMP/BDA setbacks, road widths, and FAR bylaws."
+        title: "3D Elevation Design",
+        desc: "Façade textures, balcony styling, and lighting simulation."
       },
       {
-        title: "Working Civil & MEP Schematics",
-        desc: "Column centerline grids, door/window schedules, and electrical/plumbing drops."
+        title: "Sanction & Working Blueprint Sets",
+        desc: "Complete civil centerline, MEP, and sanction packages for site masons."
       }
     ],
     whatToPrepare: [
@@ -823,17 +827,17 @@ export const servicesData: ServiceItem[] = [
     metaTitle: "Structural Design & Engineering Services Bangalore | My Space",
     metaDescription: "Certified structural engineering, RCC detailing, bar bending schedules, foundation design, and seismic analysis in Bangalore conforming to IS codes.",
     tagline: "IS Code Compliance, Foundation Optimization & Structural Stability",
-    heroImage: "/images/company/real-project-18.jpeg",
+    heroImage: "/images/company/real-project-05.jpeg",
     galleryImages: [
+      {
+        url: "/images/company/real-project-05.jpeg",
+        title: "Certified Rebar Detailing & Column Framing",
+        caption: "IS 456 compliant structural rebar layout and bar bending schedules."
+      },
       {
         url: "/images/company/real-project-18.jpeg",
         title: "RCC Frame & Column Design",
         caption: "IS 456 compliant reinforced concrete calculations."
-      },
-      {
-        url: "/images/company/real-project-05.jpeg",
-        title: "Bar Bending Schedules (BBS)",
-        caption: "Rebar cut and bend schedules reducing steel waste."
       },
       {
         url: "/images/company/real-project-25.jpeg",
@@ -850,26 +854,27 @@ export const servicesData: ServiceItem[] = [
     primaryCta: "Consult Structural Engineers",
     summary: "Certified structural load analysis, IS 456 RCC frame design, seismic engineering (IS 1893), and Bar Bending Schedules for safe construction.",
     whoIsThisFor: [
-      "Homeowners needing certified structural drawings for new builds",
-      "Developers adding extra floors requiring load feasibility verification",
-      "Builders optimizing steel detailing to prevent costly over-design"
+      "IS 456 RCC Structural Analysis & Framing",
+      "Soil-Matched Foundation & Raft Design",
+      "Bar Bending Schedules (BBS) to Minimize Waste",
+      "Chartered Engineer Stability Certificates"
     ],
     whatWeHelpWith: [
       {
-        title: "Foundation & Raft Sizing",
-        desc: "Soil-matched foundation sizing to prevent differential settlement."
+        title: "Soil Report & Load Calculations",
+        desc: "Reviewing SBC values to prevent differential foundation sinking."
       },
       {
-        title: "RCC Frame & BBS Detailing",
-        desc: "Column, beam, and slab reinforcement drawings with cutting schedules."
+        title: "RCC Framework Modeling",
+        desc: "Column, beam, and slab sizing under IS 456 & IS 1893 seismic codes."
       },
       {
-        title: "Seismic Load Modeling",
-        desc: "IS 1893 compliant earthquake resistant framework calculations."
+        title: "Bar Bending Schedules (BBS)",
+        desc: "Exact rebar cut-lengths and bending schedules for site engineers."
       },
       {
-        title: "Engineer Certification",
-        desc: "Official calculation reports signed by Chartered Engineers."
+        title: "Pre-Pour Site Inspection",
+        desc: "Verifying steel placement, laps, and cover blocks before casting."
       }
     ],
     whatToPrepare: [
