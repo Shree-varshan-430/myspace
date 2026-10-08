@@ -15,6 +15,20 @@ const nextConfig = {
   experimental: {
     cpus: 1,
   },
+  async redirects() {
+    return [
+      {
+        source: '/services/land-valuation-bangalore',
+        destination: '/services/property-valuation-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/services/business-valuation-bangalore',
+        destination: '/services/property-valuation-bangalore',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

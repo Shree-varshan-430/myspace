@@ -6,33 +6,30 @@ import { servicesData, ServiceItem } from '@/data/services';
 import { serviceDetailsLookup, DetailedServiceData } from '@/data/serviceDetailsData';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import FaqAccordion from '@/components/faq/FaqAccordion';
-import EnquiryForm, { ServiceType } from '@/components/forms/EnquiryForm';
+import { FaqItem } from '@/data/faqs';
 import {
   CheckCircle2,
-  XCircle,
   AlertCircle,
   ArrowRight,
   ShieldCheck,
   Building2,
-  Check,
-  ClipboardList,
-  Sparkles,
-  Layers,
   Phone,
   Home,
-  Camera,
   MapPin,
   Clock,
   Award,
-  Eye,
-  CheckCheck,
   Compass,
   FileCheck2,
   Sliders,
+  Sparkles,
+  Layers,
   Scale,
-  Hammer,
-  Calculator,
-  Grid
+  Landmark,
+  FileText,
+  Briefcase,
+  Factory,
+  Mail,
+  MessageSquare
 } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 
@@ -72,14 +69,8 @@ function renderTypologyIcon(type: string) {
       return <Building2 className="w-6 h-6" />;
     case 'layers':
       return <Layers className="w-6 h-6" />;
-    case 'grid':
-      return <Grid className="w-6 h-6" />;
     case 'compass':
       return <Compass className="w-6 h-6" />;
-    case 'hammer':
-      return <Hammer className="w-6 h-6" />;
-    case 'calculator':
-      return <Calculator className="w-6 h-6" />;
     case 'file':
       return <FileCheck2 className="w-6 h-6" />;
     case 'shield':
@@ -279,6 +270,463 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
     notFound();
   }
 
+  const isValuation = [
+    'property-valuation-bangalore',
+    'land-valuation-bangalore',
+    'business-valuation-bangalore'
+  ].includes(service.slug);
+
+  // ============================================================
+  // UNIFIED 3-SECTION VALUATION PAGE LAYOUT
+  // ============================================================
+  if (isValuation) {
+    const valuationTypes = [
+      {
+        title: 'Residential Property Valuation',
+        icon: Home,
+        description: 'Independent houses, residential villas, duplexes, and apartment flats across BBMP & BDA layouts.',
+        deliverables: [
+          'CPWD structural replacement cost & age depreciation math',
+          'Locality land rate benchmarking against Sub-Registrar guidance',
+          'Accepted across SBI, HDFC, ICICI, Axis, Canara & nationalized banks',
+          'Includes building dimension audit and photo documentation'
+        ]
+      },
+      {
+        title: 'Land & Vacant Plot Valuation',
+        icon: Landmark,
+        description: 'Vacant residential, commercial, and agricultural plots across Bengaluru and surrounding zones.',
+        deliverables: [
+          'Physical survey boundary, road width & frontage verification',
+          'e-Khata, RTC, and revenue document authenticity review',
+          'Fair Market Value vs Guideline Value comparative analysis',
+          'Essential for capital gains tax (Sec 54/54EC) & mortgage loans'
+        ]
+      },
+      {
+        title: 'Commercial Property Valuation',
+        icon: Building2,
+        description: 'Office complexes, tech parks, shopping complexes, and retail high-street properties.',
+        deliverables: [
+          'Rental capitalization & Discounted Cash Flow (DCF) modeling',
+          'Commercial lease audit & yield rate assessment',
+          'Asset assessment for partnership buyouts & enterprise records',
+          'Institutional-grade report ready for bank credit committees'
+        ]
+      },
+      {
+        title: 'Industrial & Plant Asset Valuation',
+        icon: Factory,
+        description: 'Industrial plots, PEB warehouses, factory sheds, and plant & machinery registers in Peenya, Bommasandra, etc.',
+        deliverables: [
+          'On-site plant, machinery & technical asset register audit',
+          'Depreciated replacement value conforming to IS/CPWD standards',
+          'Custom clearance, insurance, and corporate restructuring reports',
+          'Strict NDA protected confidential handling'
+        ]
+      }
+    ];
+
+    const valuationFaqs: FaqItem[] = [
+      {
+        id: 'val-faq-1',
+        category: 'Valuation',
+        question: 'What is Property Valuation and why is it legally required?',
+        answer: 'Property Valuation is the formal, certified estimation of the fair market value of real estate based on land rates, structural condition, building age, and legal parameters. It is mandatory for bank loans, mortgage underwriting, capital gains tax calculation (under Section 54/54EC of the IT Act), visa net-worth solvency verification, and legal inheritance settlements.'
+      },
+      {
+        id: 'val-faq-2',
+        category: 'Valuation',
+        question: 'What is the difference between Guidance Value and Fair Market Value in Bangalore?',
+        answer: 'Guidance Value (Circle Rate) is the minimum statutory baseline determined by the Karnataka Government for collecting stamp duty and registration fees. Fair Market Value is the actual price a buyer is willing to pay in the open market, determined by location demand, infrastructure, construction quality, and amenities.'
+      },
+      {
+        id: 'val-faq-3',
+        category: 'Valuation',
+        question: 'What documents are required to initiate a Property Valuation?',
+        answer: 'We require a copy of the registered Sale Deed (Mother Deed chain), latest e-Khata extract/certificate, recent property tax paid receipt, and approved building sanction drawing (if available).'
+      },
+      {
+        id: 'val-faq-4',
+        category: 'Valuation',
+        question: 'How long does it take to deliver the signed valuation report?',
+        answer: 'Once property documents are verified and on-site physical inspection is concluded, the comprehensive valuation dossier is prepared and handed over within 2 to 4 working days.'
+      },
+      {
+        id: 'val-faq-5',
+        category: 'Valuation',
+        question: 'Are your valuation reports accepted by nationalized and private banks in Bangalore?',
+        answer: 'Yes. Our reports are prepared strictly following government-approved valuer guidelines, CPWD depreciation schedules, and bank mortgage documentation standards recognized across SBI, HDFC, ICICI, Axis, Canara Bank, and NBFCs.'
+      },
+      {
+        id: 'val-faq-6',
+        category: 'Valuation',
+        question: 'Can valuation reports be used for Foreign Visa Net Worth Certificates?',
+        answer: 'Yes. We prepare certified Net Worth & Property Asset Valuation dossiers formatted to meet the strict financial solvency requirements of US, UK, Canada, Australia, and European embassies.'
+      }
+    ];
+
+    return (
+      <div className="pt-20 bg-surface-ice text-slate-900">
+        {/* ============================================================
+            HERO BANNER
+        ============================================================ */}
+        <section className="bg-navy-950 text-white py-14 lg:py-20 relative overflow-hidden border-b border-navy-800">
+          <div className="absolute inset-0 bg-radial-vignette opacity-70 pointer-events-none" />
+          <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-brand-blue/15 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <Breadcrumbs
+              items={[
+                { name: 'Services', href: '/services' },
+                { name: 'Property Valuation', href: '/services/property-valuation-bangalore' },
+              ]}
+              theme="dark"
+              className="mb-6"
+            />
+
+            <div className="max-w-3xl space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/20 border border-brand-blue/30 text-sky-300 text-xs font-semibold">
+                <FileCheck2 className="w-3.5 h-3.5" />
+                <span>Government-Approved & Bank-Compliant Reports</span>
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+                Property Valuation in Bangalore
+              </h1>
+
+              <p className="text-base sm:text-lg text-slate-300 font-sans leading-relaxed">
+                Certified valuation reports for residential homes, vacant plots, commercial buildings, bank loans, visa solvency, and capital gains tax.
+              </p>
+
+              <div className="pt-4 flex flex-wrap items-center gap-3">
+                <a
+                  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-blue text-white text-xs font-bold hover:bg-sky-500 transition-all shadow-md"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>Call {siteConfig.contact.phoneDisplay}</span>
+                </a>
+
+                <a
+                  href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md"
+                >
+                  <MessageSquare className="w-3.5 h-3.5" />
+                  <span>WhatsApp Valuation Desk</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================================
+            SECTION 1: WHAT IS PROPERTY VALUATION?
+        ============================================================ */}
+        <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div className="max-w-3xl space-y-3">
+              <span className="text-xs font-bold text-brand-blue uppercase tracking-widest block">
+                Section 01 • Definition & Purpose
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight">
+                What is Property Valuation?
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
+                Property Valuation is the structured, technical determination of the realistic economic worth of a property. Our certified engineering valuation incorporates physical land inspection, building replacement cost analysis, CPWD structural depreciation, and prevailing Bengaluru micro-market transactions.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              {/* Left Column: Key Pillars */}
+              <div className="lg:col-span-7 space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="p-5 rounded-2xl bg-surface-ice border border-slate-200 space-y-2">
+                    <div className="w-9 h-9 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center font-bold text-sm">
+                      01
+                    </div>
+                    <h3 className="font-bold text-base text-navy-950">Bank Mortgage & Home Loans</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Determining accurate collateral security value for home loans, top-up loans, and LAP approval across leading banks.
+                    </p>
+                  </div>
+
+                  <div className="p-5 rounded-2xl bg-surface-ice border border-slate-200 space-y-2">
+                    <div className="w-9 h-9 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center font-bold text-sm">
+                      02
+                    </div>
+                    <h3 className="font-bold text-base text-navy-950">Capital Gains Tax (Sec 54/54EC)</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Fair market value computation as of April 1, 2001 or date of acquisition for accurate income tax deductions.
+                    </p>
+                  </div>
+
+                  <div className="p-5 rounded-2xl bg-surface-ice border border-slate-200 space-y-2">
+                    <div className="w-9 h-9 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center font-bold text-sm">
+                      03
+                    </div>
+                    <h3 className="font-bold text-base text-navy-950">Visa & Immigrant Net Worth</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Certified asset evaluation dossiers required by consulates and immigration authorities for student and investor visas.
+                    </p>
+                  </div>
+
+                  <div className="p-5 rounded-2xl bg-surface-ice border border-slate-200 space-y-2">
+                    <div className="w-9 h-9 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center font-bold text-sm">
+                      04
+                    </div>
+                    <h3 className="font-bold text-base text-navy-950">Family Settlement & Division</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Unbiased, transparent valuation to facilitate fair distribution of ancestral or joint family real estate assets.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Guidance vs Market Value Highlight */}
+                <div className="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs text-slate-700 space-y-1.5">
+                  <div className="flex items-center gap-2 text-amber-700 font-bold text-sm">
+                    <Scale className="w-4 h-4" />
+                    <span>Guideline Value vs. Fair Market Value</span>
+                  </div>
+                  <p className="leading-relaxed">
+                    While the <strong>Guidance Value</strong> is the government-fixed minimum threshold for stamp duty, our reports compute the true <strong>Fair Market Value</strong> by analyzing location growth, construction specifications, and verified market trends.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Column: Image */}
+              <div className="lg:col-span-5">
+                <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[4/3]">
+                  <img
+                    src="/images/company/real-project-75.jpeg"
+                    alt="Physical Property Valuation Audit Bangalore"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <span className="text-[11px] font-mono uppercase tracking-widest text-sky-300 block">
+                      Physical Inspection & Verification
+                    </span>
+                    <h4 className="font-bold text-base mt-0.5">On-Site Boundary & Structural Audit</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================================
+            SECTION 2: WHAT ARE THE VALUATIONS WE DO?
+        ============================================================ */}
+        <section className="py-16 lg:py-24 bg-surface-ice border-b border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div className="max-w-3xl space-y-3">
+              <span className="text-xs font-bold text-brand-blue uppercase tracking-widest block">
+                Section 02 • Scope & Asset Types
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight">
+                What Are The Valuations We Do?
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
+                We provide comprehensive property and asset assessment services across all property categories in Bengaluru.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+              {valuationTypes.map((val, idx) => {
+                const IconComponent = val.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="p-7 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:border-brand-blue/60 hover:shadow-xl transition-all duration-300 space-y-4"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center shrink-0">
+                        <IconComponent className="w-6 h-6" />
+                      </div>
+                      <h3 className="text-xl font-bold text-navy-950">
+                        {val.title}
+                      </h3>
+                    </div>
+
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      {val.description}
+                    </p>
+
+                    <div className="pt-3 border-t border-slate-100 space-y-2">
+                      <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+                        Included In Valuation Dossier:
+                      </span>
+                      <ul className="space-y-1.5">
+                        {val.deliverables.map((item, dIdx) => (
+                          <li key={dIdx} className="flex items-start gap-2 text-xs text-slate-700 leading-snug">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-brand-blue shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================================
+            SECTION 3: SIMPLE 3-STEP PROCESS & DIRECT CONSULTATION
+        ============================================================ */}
+        <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div className="max-w-3xl space-y-3">
+              <span className="text-xs font-bold text-brand-blue uppercase tracking-widest block">
+                Section 03 • Fast 3-Step Process
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight">
+                How Our Valuation Process Works
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
+                Get your certified valuation report delivered in 2 to 4 working days through our streamlined 3-step workflow.
+              </p>
+            </div>
+
+            {/* 3 Step Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+              <div className="p-6 sm:p-7 rounded-3xl bg-surface-ice border border-slate-200/90 shadow-sm space-y-3 relative overflow-hidden">
+                <span className="text-4xl sm:text-5xl font-mono font-black text-brand-blue/15 absolute top-4 right-4 select-none">
+                  01
+                </span>
+                <span className="text-xs font-mono font-bold text-brand-blue uppercase tracking-widest">
+                  Step 01
+                </span>
+                <h3 className="text-lg font-bold text-navy-950">
+                  Document Intake & Verification
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Share copies of your Sale Deed, e-Khata, and tax receipts via WhatsApp or email for initial legal review and boundary checks.
+                </p>
+              </div>
+
+              <div className="p-6 sm:p-7 rounded-3xl bg-surface-ice border border-slate-200/90 shadow-sm space-y-3 relative overflow-hidden">
+                <span className="text-4xl sm:text-5xl font-mono font-black text-brand-blue/15 absolute top-4 right-4 select-none">
+                  02
+                </span>
+                <span className="text-xs font-mono font-bold text-brand-blue uppercase tracking-widest">
+                  Step 02
+                </span>
+                <h3 className="text-lg font-bold text-navy-950">
+                  On-Site Inspection & CPWD Math
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Our practicing structural engineers visit the site, inspect building quality, take measurements, and calculate structural depreciation.
+                </p>
+              </div>
+
+              <div className="p-6 sm:p-7 rounded-3xl bg-surface-ice border border-slate-200/90 shadow-sm space-y-3 relative overflow-hidden">
+                <span className="text-4xl sm:text-5xl font-mono font-black text-brand-blue/15 absolute top-4 right-4 select-none">
+                  03
+                </span>
+                <span className="text-xs font-mono font-bold text-brand-blue uppercase tracking-widest">
+                  Step 03
+                </span>
+                <h3 className="text-lg font-bold text-navy-950">
+                  Certified Dossier Handover
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Receive the signed, stamped, bank-compliant valuation dossier with complete market calculations within 2–4 working days.
+                </p>
+              </div>
+            </div>
+
+            {/* Direct Contact Card */}
+            <div className="mt-12 rounded-3xl bg-navy-950 text-white p-8 sm:p-12 border border-navy-800 shadow-2xl relative overflow-hidden">
+              <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div className="md:col-span-7 space-y-4">
+                  <span className="text-xs font-bold text-sky-400 uppercase tracking-widest block">
+                    Fast Consultation & Document Review
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                    Need a Property Valuation Report?
+                  </h3>
+                  <p className="text-sm text-slate-300 leading-relaxed font-sans">
+                    Speak directly with our valuation engineers. We will review your documents and schedule an on-site inspection promptly.
+                  </p>
+
+                  <div className="pt-2 flex flex-wrap items-center gap-4">
+                    <a
+                      href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-blue text-white text-xs font-bold hover:bg-sky-500 transition-all shadow-md"
+                    >
+                      <Phone className="w-3.5 h-3.5" />
+                      <span>Call {siteConfig.contact.phoneDisplay}</span>
+                    </a>
+
+                    <a
+                      href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5" />
+                      <span>WhatsApp Valuation Desk</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="md:col-span-5 bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/15 space-y-3.5 text-xs text-slate-200">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <div>
+                      <strong className="text-white block font-sans">Office Location:</strong>
+                      <span>{siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.state} - {siteConfig.address.postalCode}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <Clock className="w-4 h-4 text-sky-400 shrink-0" />
+                    <div>
+                      <strong className="text-white block font-sans">Turnaround Time:</strong>
+                      <span>2–4 Working Days Post Inspection</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <Mail className="w-4 h-4 text-sky-400 shrink-0" />
+                    <div>
+                      <strong className="text-white block font-sans">Email Dossier Desk:</strong>
+                      <span>{siteConfig.contact.email}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================================
+            VALUATION FAQS SECTION
+        ============================================================ */}
+        <section className="bg-surface-ice py-16 lg:py-20 border-b border-slate-200">
+          <FaqAccordion
+            faqs={valuationFaqs}
+            title="Property Valuation FAQs"
+            subtitle="Frequently asked questions about property appraisals, banks, and tax rules in Bangalore."
+            showViewAll={true}
+            viewAllLink="/faqs"
+            viewAllText="Explore all FAQs"
+          />
+        </section>
+      </div>
+    );
+  }
+
+  // ============================================================
+  // STANDARD SERVICE PAGE LAYOUT (Construction, Interior, Design)
+  // ============================================================
   const isConstructionService = [
     'house-construction-bangalore',
     'commercial-construction-bangalore',
@@ -288,23 +736,12 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
 
   const isInteriorService = service.slug === 'interior-design-bangalore';
 
-  const isPlanningService = [
-    'architectural-drawing-bangalore',
-    'interior-design-bangalore',
-    '2d-design-bangalore',
-    '3d-design-bangalore',
-    'structural-design-bangalore',
-    'elevation-design-bangalore',
-    '3d-floor-plan-design-bangalore'
-  ].includes(service.slug);
-
-  // Get rich detailed service data or default from lookup
   const details: DetailedServiceData = serviceDetailsLookup[service.slug] || {
     typologiesTitle: `What We Deliver in ${service.title}`,
     typologiesSubtitle: `We deliver specialized solutions tailored to your plot and specifications in Bengaluru:`,
     typologies: [
       { title: `${service.title} Planning`, desc: service.summary, iconType: 'compass' },
-      { title: `Customized Execution`, desc: service.whoIsThisFor[0] || 'Engineered according to site specifications.', iconType: 'hammer' },
+      { title: `Customized Execution`, desc: service.whoIsThisFor[0] || 'Engineered according to site specifications.', iconType: 'shield' },
       { title: `Engineering Quality`, desc: service.whoIsThisFor[1] || 'Conforming to IS-Standards and quality checks.', iconType: 'shield' },
       { title: `Verified Handover`, desc: service.whoIsThisFor[2] || 'Complete documentation and warranty handover.', iconType: 'file' }
     ],
@@ -338,37 +775,15 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
     ]
   };
 
-  // Map service slug to form initial service
-  const serviceFormMap: Record<string, ServiceType> = {
-    'house-construction-bangalore': 'residential',
-    'commercial-construction-bangalore': 'commercial',
-    'industrial-construction-bangalore': 'commercial',
-    'civil-construction-bangalore': 'civil',
-    'architectural-drawing-bangalore': 'elevation-3d',
-    'interior-design-bangalore': 'interiors',
-    '2d-design-bangalore': 'elevation-3d',
-    '3d-design-bangalore': 'elevation-3d',
-    'structural-design-bangalore': 'civil',
-    'elevation-design-bangalore': 'elevation-3d',
-    '3d-floor-plan-design-bangalore': 'elevation-3d',
-    'land-valuation-bangalore': 'valuation',
-    'property-valuation-bangalore': 'valuation',
-    'business-valuation-bangalore': 'valuation',
-  };
-
-  const currentFormService: ServiceType = serviceFormMap[service.slug] || 'residential';
-
   const relatedServices = servicesData.filter((s) =>
     service.relatedServiceSlugs?.includes(s.slug)
   );
 
-  // 4 contextual images for the zig-zag layout
   const img1 = service.galleryImages?.[0] || { url: service.heroImage, title: service.title, caption: service.tagline };
   const img2 = service.galleryImages?.[1] || img1;
   const img3 = service.galleryImages?.[2] || img1;
   const img4 = service.galleryImages?.[3] || img2;
 
-  // JSON-LD Service Schema
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -452,18 +867,12 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 lg:space-y-28">
 
-          {/* ============================================================
-              BLOCK 1: WHAT WE BUILD / TYPOLOGIES (Left) & IMAGE 1 (Right)
-          ============================================================ */}
+          {/* BLOCK 1: WHAT WE BUILD & IMAGE 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Left: Content */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="flex items-center">
-                <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
-                  01
-                </span>
-              </div>
-
+              <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
+                01
+              </span>
               <div className="space-y-2">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
                   {details.typologiesTitle}
@@ -473,7 +882,6 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 </p>
               </div>
 
-              {/* Typology Cards Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 {details.typologies.map((item, idx) => (
                   <div
@@ -492,19 +900,8 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                   </div>
                 ))}
               </div>
-
-              <div className="pt-3">
-                <a
-                  href="#enquiry"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-steel transition-all shadow-blueprint hover:shadow-lg hover:translate-x-0.5"
-                >
-                  <span>{service.primaryCta || 'Plan Your Project'}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
             </div>
 
-            {/* Right: Image 1 */}
             <div className="lg:col-span-5 space-y-3">
               <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
                 <img
@@ -520,11 +917,8 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
             </div>
           </div>
 
-          {/* ============================================================
-              BLOCK 2: IMAGE 2 (Left) & OUR PROCESS WORKFLOW (Right)
-          ============================================================ */}
+          {/* BLOCK 2: IMAGE 2 & PROCESS */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Left: Image 2 */}
             <div className="lg:col-span-5 order-2 lg:order-1 space-y-3">
               <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
                 <img
@@ -539,14 +933,10 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               </div>
             </div>
 
-            {/* Right: Content */}
             <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
-              <div className="flex items-center">
-                <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
-                  02
-                </span>
-              </div>
-
+              <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
+                02
+              </span>
               <div className="space-y-2">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
                   {details.processTitle}
@@ -556,7 +946,6 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 </p>
               </div>
 
-              {/* Process Stages Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 {details.processStages.map((stage, idx) => (
                   <div
@@ -575,31 +964,15 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                   </div>
                 ))}
               </div>
-
-              <div className="pt-3">
-                <a
-                  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-navy-950 text-white text-xs font-bold uppercase tracking-wider hover:bg-navy-900 transition-all shadow-md"
-                >
-                  <Phone className="w-4 h-4 text-sky-400" />
-                  <span>Call: {siteConfig.contact.phoneDisplay}</span>
-                </a>
-              </div>
             </div>
           </div>
 
-          {/* ============================================================
-              BLOCK 3: WHAT IS INCLUDED (Left) & IMAGE 3 (Right)
-          ============================================================ */}
+          {/* BLOCK 3: WHAT IS INCLUDED & IMAGE 3 */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Left: Content */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="flex items-center">
-                <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
-                  03
-                </span>
-              </div>
-
+              <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
+                03
+              </span>
               <div className="space-y-2">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
                   {details.scopeTitle}
@@ -609,35 +982,26 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 </p>
               </div>
 
-              {/* Detailed Scope Grid with Left Amber Border Accent */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="space-y-3 pt-2">
                 {details.detailedScope.map((scope, idx) => (
                   <div
                     key={idx}
-                    className="bg-surface-ice rounded-2xl p-5 border border-slate-200/90 border-l-4 border-l-amber-500 shadow-sm hover:shadow-md hover:border-slate-300 transition-all space-y-1.5"
+                    className="flex items-start gap-3.5 p-4 rounded-2xl bg-surface-ice border border-slate-200/80 hover:border-brand-blue/40 transition-colors"
                   >
-                    <h3 className="text-sm sm:text-base font-bold text-navy-950">
-                      {scope.title}
-                    </h3>
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      {scope.desc}
-                    </p>
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-bold text-sm sm:text-base text-navy-950">
+                        {scope.title}
+                      </h3>
+                      <p className="text-xs text-slate-600 mt-0.5 leading-relaxed">
+                        {scope.desc}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
-
-              <div className="pt-3">
-                <a
-                  href="#enquiry"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-steel transition-all shadow-blueprint hover:shadow-lg hover:translate-x-0.5"
-                >
-                  <span>Request Scope & BOQ Consultation</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
             </div>
 
-            {/* Right: Image 3 */}
             <div className="lg:col-span-5 space-y-3">
               <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
                 <img
@@ -653,83 +1017,11 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
             </div>
           </div>
 
-          {/* ============================================================
-              BLOCK 4: SERVICE SUMMARY & KEY DELIVERABLES SHOWCASE
-          ============================================================ */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Left: Image 4 */}
-            <div className="lg:col-span-5 order-2 lg:order-1 space-y-3">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-[16/12] group">
-                <img
-                  src={img4.url}
-                  alt={img4.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="px-1 pt-1">
-                <h4 className="font-bold text-base text-navy-950">{img4.title}</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">{img4.caption}</p>
-              </div>
-            </div>
-
-            {/* Right: Content */}
-            <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
-              <div className="flex items-center">
-                <span className="text-5xl sm:text-6xl lg:text-7xl font-mono font-black text-brand-blue/20 tracking-tighter leading-none select-none">
-                  04
-                </span>
-              </div>
-
-              <div className="space-y-2">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight leading-snug">
-                  Engineering Quality & Certified Handover
-                </h2>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                  Every project delivered by My Space adheres strictly to Indian Standards (IS:456), structural quality checks, and transparent documentation.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="bg-surface-ice rounded-2xl p-5 border border-slate-200/90 space-y-2">
-                  <span className="font-bold text-sm text-navy-950 block">Single Accountability</span>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Direct execution by practicing civil engineers and architects without middlemen or subcontractors.
-                  </p>
-                </div>
-                <div className="bg-surface-ice rounded-2xl p-5 border border-slate-200/90 space-y-2">
-                  <span className="font-bold text-sm text-navy-950 block">Transparent Milestone Billing</span>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Stage-by-stage payments verified against physical work progress and itemized BOQ specifications.
-                  </p>
-                </div>
-              </div>
-
-              {service.disclaimer && (
-                <div className="flex items-start gap-2.5 p-3.5 rounded-xl bg-blue-50/70 border border-blue-200 text-xs text-slate-600 mt-2">
-                  <AlertCircle className="w-4 h-4 text-brand-blue shrink-0 mt-0.5" />
-                  <p>
-                    <strong className="text-navy-950">Notice:</strong> {service.disclaimer}
-                  </p>
-                </div>
-              )}
-
-              <div className="pt-3">
-                <a
-                  href="#enquiry"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-steel transition-all shadow-blueprint hover:shadow-lg hover:translate-x-0.5"
-                >
-                  <span>Request Engineering Consultation</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
       {/* ============================================================
-          SECTION: PACKAGES & PRICING (FOR CONSTRUCTION & INTERIORS)
+          PACKAGES & PRICING (FOR CONSTRUCTION & INTERIORS)
       ============================================================ */}
       {(isConstructionService || isInteriorService) && (
         <section className="py-16 lg:py-24 bg-surface-ice border-b border-slate-200" id="packages">
@@ -849,7 +1141,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                     }`}
                   >
                     <a
-                      href="#enquiry"
+                      href="#contact"
                       className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-semibold transition-all ${
                         pkg.popular
                           ? 'bg-brand-blue text-white hover:bg-sky-500 shadow-blueprint'
@@ -868,7 +1160,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       )}
 
       {/* ============================================================
-          SECTION: PREVIOUS PROJECTS SHOWCASE (CONSTRUCTION: 3 / DESIGN: 4)
+          PREVIOUS PROJECTS SHOWCASE
       ============================================================ */}
       <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -882,11 +1174,6 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                   ? 'Previous Construction Projects in Bangalore'
                   : 'Previous Planning, Design & Architecture Projects'}
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                {isConstructionService
-                  ? 'Selected residential villas, commercial complexes, and turnkey builds engineered by My Space.'
-                  : 'Selected 2D/3D architectural floor plans, façade elevations, and bespoke modular interior projects.'}
-              </p>
             </div>
 
             <Link
@@ -958,134 +1245,13 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       </section>
 
       {/* ============================================================
-          SECTION 5: COST DRIVERS & BUDGET GUIDANCE (Bangalore Market Transparency)
+          STANDARDIZED FAQ SECTION
       ============================================================ */}
-      <section className="py-16 lg:py-24 bg-surface-ice border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="space-y-3 max-w-3xl">
-            <span className="text-xs font-bold text-brand-blue uppercase tracking-wider block">
-              Budget & Cost Transparency
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-950 tracking-tight">
-              {details.costTitle}
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              {details.costSubtitle}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {details.costDrivers.map((cost, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-3xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-blue/50 transition-all space-y-2.5"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-600 font-mono font-bold text-sm flex items-center justify-center shrink-0">
-                    {cost.number}
-                  </span>
-                  <h3 className="text-base sm:text-lg font-bold text-navy-950">
-                    {cost.title}
-                  </h3>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-11">
-                  {cost.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          WHY CHOOSE MY SPACE SECTION
-      ============================================================ */}
-      <section className="py-16 lg:py-24 bg-surface-ice border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="text-center space-y-3 max-w-3xl mx-auto">
-            <span className="text-xs font-bold text-brand-blue uppercase tracking-widest block">
-              Why Choose Us
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-950 tracking-tight">
-              Why Bengaluru Chooses My Space
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600">
-              Built on engineering principles, certified materials, and transparent accountability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3 text-center flex flex-col items-center">
-              <div className="w-14 h-14 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-1">
-                <ShieldCheck className="w-7 h-7" />
-              </div>
-              <h3 className="font-bold text-base text-navy-950">IS-Standard Compliance</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Structural casting and rebar conforming strictly to Indian Standards.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3 text-center flex flex-col items-center">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center mb-1">
-                <Sliders className="w-7 h-7" />
-              </div>
-              <h3 className="font-bold text-base text-navy-950">Detailed Itemized BOQ</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Zero hidden costs with locked per-sq.ft rates and brand specs.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3 text-center flex flex-col items-center">
-              <div className="w-14 h-14 rounded-2xl bg-sky-500/10 text-sky-600 flex items-center justify-center mb-1">
-                <Clock className="w-7 h-7" />
-              </div>
-              <h3 className="font-bold text-base text-navy-950">Timely Delivery</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Critical-path scheduling with milestone-by-milestone inspections.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3 text-center flex flex-col items-center">
-              <div className="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center mb-1">
-                <FileCheck2 className="w-7 h-7" />
-              </div>
-              <h3 className="font-bold text-base text-navy-950">Certified Documentation</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Complete as-built drawings, structural calculations, and warranties.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3 text-center flex flex-col items-center">
-              <div className="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-600 flex items-center justify-center mb-1">
-                <Building2 className="w-7 h-7" />
-              </div>
-              <h3 className="font-bold text-base text-navy-950">Local Zonal Insight</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Deep expertise in Bengaluru soil, BBMP bylaws, and valuations.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-brand-blue/50 hover:shadow-card transition-all space-y-3 text-center flex flex-col items-center">
-              <div className="w-14 h-14 rounded-2xl bg-red-500/10 text-brand-steel flex items-center justify-center mb-1">
-                <Award className="w-7 h-7" />
-              </div>
-              <h3 className="font-bold text-base text-navy-950">Single Accountability</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Single dedicated team coordinating design, engineering, and handover.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          STANDARDIZED 2-COLUMN FAQ SECTION
-      ============================================================ */}
-      <section className="bg-white border-b border-slate-200">
+      <section className="bg-surface-ice border-b border-slate-200">
         <FaqAccordion
           faqs={service.faqs.map((f, i) => ({
             id: `service-faq-${i}`,
-            category: 'General',
+            category: 'General' as const,
             question: f.question,
             answer: f.answer,
           }))}
@@ -1101,7 +1267,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
           RELATED SERVICES
       ============================================================ */}
       {relatedServices.length > 0 && (
-        <section className="py-12 bg-surface-ice border-b border-slate-200">
+        <section className="py-12 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 className="text-lg font-bold text-navy-950 mb-5">
               Complementary Services
@@ -1111,7 +1277,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 <Link
                   key={rel.id}
                   href={`/services/${rel.slug}`}
-                  className="group p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue hover:shadow-card transition-all flex items-center justify-between"
+                  className="group p-4 rounded-xl border border-slate-200 bg-surface-ice hover:border-brand-blue hover:shadow-card transition-all flex items-center justify-between"
                 >
                   <div>
                     <span className="text-[10px] font-bold text-brand-blue uppercase tracking-wider block">
@@ -1130,15 +1296,73 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
       )}
 
       {/* ============================================================
-          CONTEXTUAL LEAD FORM
+          CLEAN DIRECT CONTACT / NEXT STEPS
       ============================================================ */}
-      <section id="enquiry" className="py-16 lg:py-20 bg-surface-ice">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <EnquiryForm
-            initialService={currentFormService}
-            title={`Discuss Your ${service.title} Project`}
-            subtitle="Tell us about your plot location, space requirements, or documentation status. We will begin with a structured consultation."
-          />
+      <section id="contact" className="py-16 lg:py-20 bg-surface-ice">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl bg-navy-950 text-white p-8 sm:p-12 border border-navy-800 shadow-2xl relative overflow-hidden">
+            <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+              <div className="md:col-span-7 space-y-4">
+                <span className="text-xs font-bold text-sky-400 uppercase tracking-widest block">
+                  Direct Engineering Consultation
+                </span>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
+                  Discuss Your {service.title} Project
+                </h2>
+                <p className="text-sm text-slate-300 font-sans leading-relaxed">
+                  Call us or message on WhatsApp to discuss plot location, space requirements, or timeline estimates directly with practicing engineers.
+                </p>
+
+                <div className="pt-2 flex flex-wrap items-center gap-4">
+                  <a
+                    href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-blue text-white text-xs font-bold hover:bg-sky-500 transition-all shadow-md"
+                  >
+                    <Phone className="w-3.5 h-3.5" />
+                    <span>Call {siteConfig.contact.phoneDisplay}</span>
+                  </a>
+
+                  <a
+                    href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md"
+                  >
+                    <MessageSquare className="w-3.5 h-3.5" />
+                    <span>WhatsApp Desk</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="md:col-span-5 bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/15 space-y-3.5 text-xs text-slate-200">
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white block font-sans">Office Location:</strong>
+                    <span>{siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.state} - {siteConfig.address.postalCode}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Clock className="w-4 h-4 text-sky-400 shrink-0" />
+                  <div>
+                    <strong className="text-white block font-sans">Working Hours:</strong>
+                    <span>Mon - Sat: 9:30 AM – 7:00 PM</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Mail className="w-4 h-4 text-sky-400 shrink-0" />
+                  <div>
+                    <strong className="text-white block font-sans">Email:</strong>
+                    <span>{siteConfig.contact.email}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
