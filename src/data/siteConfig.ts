@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "My Space Engineering, Construction & Valuers",
+  name: "My Space Engineers, Contractors & Valuers",
   shortName: "My Space",
   tagline: "Complete Building Solutions Under One Roof",
   location: "Bangalore / Bengaluru, Karnataka, India",
@@ -24,7 +24,7 @@ export const siteConfig = {
     titleTemplate: "%s | My Space Bangalore",
     description: "Complete building solutions under one roof in Bangalore: Turnkey residential construction, 2D/3D architectural planning, modular interiors, and professional property valuation with fixed milestone pricing.",
     url: "https://www.myspacebangalore.com",
-    ogImage: "/images/hero-banner.jpg",
+    ogImage: "/images/brand/logo.png",
   },
   navLinks: [
     { name: "About", href: "/about" },

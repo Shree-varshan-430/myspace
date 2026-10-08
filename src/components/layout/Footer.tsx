@@ -14,18 +14,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Col 1: Brand & Identity */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-lg bg-brand-blue flex items-center justify-center text-white font-bold text-xl shadow-blueprint">
-                <span className="font-bold tracking-tight">M</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl tracking-tight font-bold text-white">
-                  MY SPACE
-                </span>
-                <span className="text-[11px] tracking-wider text-slate-400 uppercase font-sans">
-                  Engineering, Construction & Valuers
-                </span>
-              </div>
+            <Link href="/" className="inline-block bg-white p-2.5 sm:p-3 rounded-2xl border border-white/20 shadow-md group">
+              <img
+                src="/images/brand/logo.png"
+                alt="My Space Engineers, Contractors & Valuers"
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
             </Link>
 
             <p className="text-sm text-slate-300 max-w-md leading-relaxed">

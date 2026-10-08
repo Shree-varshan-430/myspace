@@ -186,18 +186,12 @@ export default function Header() {
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center justify-between gap-4">
             {/* Brand Logo */}
-            <Link href="/" className="flex items-center gap-2.5 group focus:outline-none shrink-0">
-              <div className="w-9 h-9 rounded-xl bg-navy-950 flex items-center justify-center text-white font-bold text-lg shadow-sm group-hover:bg-brand-blue transition-colors">
-                <span className="font-bold tracking-tight">M</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-base sm:text-lg tracking-tight text-navy-950 group-hover:text-brand-blue transition-colors leading-tight">
-                  MY SPACE
-                </span>
-                <span className="text-[8.5px] sm:text-[9px] tracking-wider text-slate-500 uppercase font-medium">
-                  Engineering & Construction
-                </span>
-              </div>
+            <Link href="/" className="flex items-center group focus:outline-none shrink-0 py-0.5">
+              <img
+                src="/images/brand/logo.png"
+                alt="My Space Engineers, Contractors & Valuers"
+                className="h-9 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+              />
             </Link>
 
             {/* Desktop Navigation Links */}

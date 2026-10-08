@@ -65,6 +65,18 @@ export const metadata: Metadata = {
     description: siteConfig.meta.description,
     images: [siteConfig.meta.ogImage],
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png' },
+      { url: '/images/brand/logo-mark.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', type: 'image/png' },
+      { url: '/images/brand/logo-mark.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+  },
   robots: {
     index: true,
     follow: true,
@@ -90,7 +102,7 @@ export default function RootLayout({
     name: siteConfig.name,
     alternateName: siteConfig.shortName,
     url: siteConfig.meta.url,
-    logo: `${siteConfig.meta.url}/logo.png`,
+    logo: `${siteConfig.meta.url}/images/brand/logo.png`,
     image: siteConfig.meta.ogImage,
     description: siteConfig.meta.description,
     telephone: siteConfig.contact.phone,
