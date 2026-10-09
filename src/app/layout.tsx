@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, IBM_Plex_Mono } from 'next/font/google';
+import { Manrope, DM_Serif_Display } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -7,17 +7,18 @@ import MobileContactBar from '@/components/layout/MobileContactBar';
 import FloatingContactDock from '@/components/layout/FloatingContactDock';
 import { siteConfig } from '@/data/siteConfig';
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-manrope',
   display: 'swap',
 });
 
-const ibmPlexMono = IBM_Plex_Mono({
+const dmSerifDisplay = DM_Serif_Display({
   subsets: ['latin'],
-  style: ['normal'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-ibm-plex-mono',
+  weight: ['400'],
+  style: ['normal', 'italic'],
+  variable: '--font-dm-serif',
   display: 'swap',
 });
 
@@ -134,7 +135,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable} ${ibmPlexMono.variable}`}>
+    <html lang="en" className={`scroll-smooth ${manrope.variable} ${dmSerifDisplay.variable}`}>
       <head>
         <script
           type="application/ld+json"
