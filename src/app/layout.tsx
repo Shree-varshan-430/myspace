@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Manrope, DM_Serif_Display } from 'next/font/google';
+import { Roboto, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -7,18 +7,18 @@ import MobileContactBar from '@/components/layout/MobileContactBar';
 import FloatingContactDock from '@/components/layout/FloatingContactDock';
 import { siteConfig } from '@/data/siteConfig';
 
-const manrope = Manrope({
+const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-manrope',
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-roboto',
   display: 'swap',
 });
 
-const dmSerifDisplay = DM_Serif_Display({
+const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['400', '500', '600', '700', '800'],
   style: ['normal', 'italic'],
-  variable: '--font-dm-serif',
+  variable: '--font-playfair',
   display: 'swap',
 });
 
@@ -135,7 +135,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`scroll-smooth ${manrope.variable} ${dmSerifDisplay.variable}`}>
+    <html lang="en" className={`scroll-smooth ${roboto.variable} ${playfairDisplay.variable}`}>
       <head>
         <script
           type="application/ld+json"
